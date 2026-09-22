@@ -64,6 +64,16 @@ Status values: `not started` · `in progress` · `completed`
     stops the loop and the text is surfaced to the user; `tool_use` means execute the named tool and
     continue.
 
+### Appending tool results to conversation history (`tool_result` + `tool_use` ID pairing)
+- Module: 1 (Lesson 1.1)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-22` · application · just-taught · correct — reasoned that with no `tool_result` in
+    history Claude has no knowledge of the outcome, so it re-requests the tool. Right mechanism.
+    Told him the API-level detail (an unanswered `tool_use` is a 400, not a silent re-ask) and
+    flagged it as outside the course material.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
