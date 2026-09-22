@@ -74,6 +74,15 @@ Status values: `not started` · `in progress` · `completed`
     Told him the API-level detail (an unanswered `tool_use` is a 400, not a silent re-ask) and
     flagged it as outside the course material.
 
+### Model-driven decision-making vs pre-configured decision trees
+- Module: 1 (Lesson 1.1)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-22` · application · just-taught · correct — classified a fixed three-step invoice
+    pipeline as a workflow, and gave the right reason (steps never vary, so predictability and cost
+    win). Did not need the trade-off spelled out.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
