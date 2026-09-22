@@ -114,18 +114,28 @@ runs/claude-certified-architect-foundations/
 Paths inside the verdict files are relative to this repo root, so every citation in them resolves
 against the files shipped here.
 
-## Work in progress — no tutor yet
+## Learn it with Claude
 
-Right now this is **material you read yourself.** Open a `lesson.md`, work the quiz, do the
-exercise, mark your own answers.
+This repo ships a **tutor**. Open
+[`courses/claude-certified-architect-foundations/`](courses/claude-certified-architect-foundations)
+in [Claude Code](https://claude.com/claude-code) and type `/start`. Claude reads the
+course, asks how you like to learn, and teaches it one concept at a time.
 
-What's planned and not yet built is an **interactive tutor**: a `CLAUDE.md` plus skills shipped
-inside this repo, so you could open the folder in [Claude Code](https://claude.com/claude-code) and
-be taught through it one concept at a time — checked for understanding as you go, with your progress
-tracked across sessions rather than restarting each time.
+Two things it does that reading alone does not:
 
-Until then, treat the quizzes as self-assessment. The answers are marked in `quiz.md`, so the
-"never reveal before an attempt" discipline is on you, not on the repo.
+- **Tracks recall and application separately.** Being able to *use* a concept and being
+  able to *name* it are different, and they fail separately. Both are tracked per
+  concept in `progress/learner-progress.md`, closed independently, and a closed item is
+  never asked again.
+- **Won't hand you a quiz answer before you attempt it.** Answers live in
+  `quiz-answers.md`, deliberately apart from `quiz.md`, and your attempt is written to
+  the log before the answer file is opened.
+
+Being straight about that second one: it is a rule the tutor follows, not a wall it
+cannot cross. The attempt log is what makes a leak visible afterwards. Reading the
+material yourself works fine too — the quizzes and answers are both plain markdown.
+
+Commands: `/start` to begin, `/progress` to see where you stand.
 
 ## Limitations
 
