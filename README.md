@@ -32,7 +32,7 @@ eleven evaluation verdict files recording what was checked, what passed, what fa
 
 ## Start here
 
-1. Read [`courses/claude-certified-architect-foundations/course-outline.md`](courses/claude-certified-architect-foundations/course-outline.md)
+1. Read [`course-outline.md`](course-outline.md)
    — the module → domain → task-statement map, and the reasoning behind the teaching order.
 2. Work through the modules in order. Sequencing is deliberate: every concept's prerequisites are
    taught at an earlier module than the concept itself.
@@ -113,13 +113,18 @@ runs/claude-certified-architect-foundations/
 ```
 
 Paths inside the verdict files are relative to this repo root, so every citation in them resolves
-against the files shipped here.
+against the files shipped here — with one exception, left deliberately uncorrected. The
+`course-builder` verdict records its output as `courses/claude-certified-architect-foundations/`,
+which is where the pipeline wrote it. Publishing it as a standalone repo moved the modules to the
+root, so that one path no longer resolves.
+
+The verdict file was not edited to match. An audit trail you tidy afterwards is not an audit trail —
+it says what was checked at the time it was checked, and the discrepancy is explained here instead.
 
 ## Learn it with Claude
 
-This repo ships a **tutor**. Open
-[`courses/claude-certified-architect-foundations/`](courses/claude-certified-architect-foundations)
-in [Claude Code](https://claude.com/claude-code) and type `/start`. Claude reads the
+This repo ships a **tutor**. Clone it, open the folder in
+[Claude Code](https://claude.com/claude-code), and type `/start`. Claude reads the
 course, asks how you like to learn, and teaches it one concept at a time.
 
 Two things it does that reading alone does not:
