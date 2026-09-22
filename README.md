@@ -12,7 +12,7 @@
 &nbsp;
 [![Generated with Claude](https://img.shields.io/badge/Generated%20with-Claude%20Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white)](https://claude.com/claude-code)
 
-[**Start here**](#start-here) · [**The modules**](#the-modules) · [**How to check it**](#how-to-check-it) · [**How it was made**](#how-it-was-made) · [**Limitations**](#limitations)
+[**Start here**](#start-here) · [**The modules**](#the-modules) · [**How to check it**](#how-to-check-it) · [**How it was made**](#how-it-was-made) · [**Learn it with Claude**](#learn-it-with-claude) · [**Limitations**](#limitations)
 
 </div>
 
@@ -36,12 +36,13 @@ eleven evaluation verdict files recording what was checked, what passed, what fa
    — the module → domain → task-statement map, and the reasoning behind the teaching order.
 2. Work through the modules in order. Sequencing is deliberate: every concept's prerequisites are
    taught at an earlier module than the concept itself.
-3. Each module folder holds three files:
+3. Each module folder holds four files:
 
    | File | What's in it |
    |------|--------------|
    | `lesson.md` | Concept explanations with examples, in teaching order |
-   | `quiz.md` | That module's quizzes, answers marked |
+   | `quiz.md` | That module's quiz questions — no answers |
+   | `quiz-answers.md` | The answers, kept apart on purpose. Attempt first |
    | `exercises.md` | One hands-on exercise for the module |
 
 ## The modules
