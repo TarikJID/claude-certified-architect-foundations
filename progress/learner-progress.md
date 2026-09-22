@@ -46,13 +46,12 @@ Status values: `not started` · `in progress` · `completed`
      A closed item is not re-checked as an opener. Reopen it only if they get it
      wrong during normal work. -->
 
-### [concept name]
-- Module: [n]
-- recall: shaky | closed
-- application: shaky | closed
+### Messages API request/response cycle and `tool_use` blocks
+- Module: 1 (Lesson 1.1, prerequisite concept)
+- recall: shaky
+- application: shaky
 - Attempts:
-  - `YYYY-MM-DD` · recall · cold · correct
-  - `YYYY-MM-DD` · application · cued · wrong — [what went wrong]
+  - `2026-09-22` · application · just-taught · correct — said the caller's code executes the tool, not Claude. Surprised by it; asked a good follow-up about who the "caller" is on claude.ai.
 
 ## Quiz attempts
 
