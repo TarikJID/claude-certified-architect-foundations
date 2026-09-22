@@ -114,6 +114,19 @@ runs/claude-certified-architect-foundations/
 Paths inside the verdict files are relative to this repo root, so every citation in them resolves
 against the files shipped here.
 
+## Work in progress — no tutor yet
+
+Right now this is **material you read yourself.** Open a `lesson.md`, work the quiz, do the
+exercise, mark your own answers.
+
+What's planned and not yet built is an **interactive tutor**: a `CLAUDE.md` plus skills shipped
+inside this repo, so you could open the folder in [Claude Code](https://claude.com/claude-code) and
+be taught through it one concept at a time — checked for understanding as you go, with your progress
+tracked across sessions rather than restarting each time.
+
+Until then, treat the quizzes as self-assessment. The answers are marked in `quiz.md`, so the
+"never reveal before an attempt" discipline is on you, not on the repo.
+
 ## Limitations
 
 Read these before relying on it.
