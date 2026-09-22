@@ -2,166 +2,115 @@
 
 # 📘 Claude Certified Architect — Foundations
 
-### An unofficial study course, shipped with its receipts
+### An unofficial study course, with a tutor built in
 
 ![Modules](https://img.shields.io/badge/10%20Modules-30%20lessons-2EA043?style=for-the-badge)
 &nbsp;
-![Coverage](https://img.shields.io/badge/Coverage-240%2F240%20exam%20bullets-6E40C9?style=for-the-badge)
+![Tutor](https://img.shields.io/badge/Interactive%20tutor-included-6E40C9?style=for-the-badge)
 &nbsp;
-![Audit](https://img.shields.io/badge/Audit%20trail-11%20verdict%20files-FF6F61?style=for-the-badge)
+![Coverage](https://img.shields.io/badge/Covers-the%20full%20exam%20guide-FF6F61?style=for-the-badge)
 &nbsp;
-[![Generated with Claude](https://img.shields.io/badge/Generated%20with-Claude%20Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white)](https://claude.com/claude-code)
+[![Built with Claude](https://img.shields.io/badge/Learn%20with-Claude%20Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white)](https://claude.com/claude-code)
 
-[**Start here**](#start-here) · [**The modules**](#the-modules) · [**How to check it**](#how-to-check-it) · [**How it was made**](#how-it-was-made) · [**Learn it with Claude**](#learn-it-with-claude) · [**Limitations**](#limitations)
+[**Start here**](#start-here) · [**What you'll be able to do**](#what-youll-be-able-to-do) · [**The modules**](#the-modules) · [**How to study it**](#how-to-study-it) · [**Before you rely on it**](#before-you-rely-on-it)
 
 </div>
 
 ---
 
-> **Unofficial.** This is not produced, endorsed, or reviewed by Anthropic. The official exam guide
-> is the authority on what is tested; where this course and the exam guide disagree, the exam guide
-> is right. Use this as study material, not as a substitute for the real documentation.
-
-A complete study course for the **Claude Certified Architect – Foundations (CCAR-F)** exam:
-10 modules, 30 lessons, one lesson per exam task statement, with a quiz and a hands-on exercise
-attached to each.
-
-What makes it unusual is not the course. It is that **you do not have to take its word for
-anything.** The `runs/` folder ships alongside it: the domain map, the per-domain research, and
-eleven evaluation verdict files recording what was checked, what passed, what failed, and why.
+> **Unofficial.** Not produced, endorsed or reviewed by Anthropic. The official exam guide is the
+> authority on what is tested — where this course and the guide disagree, the guide is right.
 
 ## Start here
 
-1. Read [`course-outline.md`](course-outline.md)
-   — the module → domain → task-statement map, and the reasoning behind the teaching order.
-2. Work through the modules in order. Sequencing is deliberate: every concept's prerequisites are
-   taught at an earlier module than the concept itself.
-3. Each module folder holds four files:
+**With the tutor** — the way this course is meant to be taken:
 
-   | File | What's in it |
-   |------|--------------|
-   | `lesson.md` | Concept explanations with examples, in teaching order |
-   | `quiz.md` | That module's quiz questions — no answers |
-   | `quiz-answers.md` | The answers, kept apart on purpose. Attempt first |
-   | `exercises.md` | One hands-on exercise for the module |
+```
+git clone https://github.com/TarikJID/claude-certified-architect-foundations
+```
+
+Open the folder in [Claude Code](https://claude.com/claude-code) and type `/start`.
+
+Claude reads the course, asks how you like to learn, and teaches it one concept at a time —
+checking you've understood before moving on, and remembering where you got to between sessions.
+
+**Or read it yourself.** Everything is plain markdown. Begin with
+[`course-outline.md`](course-outline.md), then work the modules in order.
+
+## What you'll be able to do
+
+This exam is about **designing systems that use Claude** — not about using Claude as a chatbot.
+That is the shift the whole course is built around.
+
+By the end you should be able to:
+
+- **Reason about the agentic loop** — what makes it continue, what makes it stop, and why a tool
+  result has to be handed back explicitly rather than merely having happened
+- **Design a tool an agent can actually pick correctly**, and connect one through MCP
+- **Configure Claude Code deliberately** — memory, permissions, execution modes, CI
+- **Get structured output you can rely on**, instead of parsing prose and hoping
+- **Build for the failure cases** — context running out, errors propagating, knowing when a system
+  should stop and ask a human
 
 ## The modules
 
-| # | Module | Exam domain (weight) | Task statements |
-|---|--------|----------------------|-----------------|
-| 1 | The Agentic Loop and Multi-Agent Orchestration | Agentic Architecture & Orchestration (27%) | 1.1 – 1.3 |
-| 2 | Workflow Enforcement, Decomposition, and Sessions | Agentic Architecture & Orchestration (27%) | 1.4 – 1.7 |
-| 3 | Tool Design & MCP Integration | Tool Design & MCP Integration (18%) | 2.1 – 2.5 |
-| 4 | Claude Code Memory and Configuration | Claude Code Configuration & Workflows (20%) | 3.1 – 3.3 |
-| 5 | Claude Code Execution Modes and CI/CD Workflows | Claude Code Configuration & Workflows (20%) | 3.4 – 3.6 |
-| 6 | Precision Prompting and Structured Output Enforcement | Prompt Engineering & Structured Output (20%) | 4.1 – 4.3 |
-| 7 | Extraction Quality, Batching, and Review Architectures | Prompt Engineering & Structured Output (20%) | 4.4 – 4.6 |
-| 8 | Context Management and Escalation Design | Context Management & Reliability (15%) | 5.1 – 5.2 |
-| 9 | Error Propagation and Codebase Context | Context Management & Reliability (15%) | 5.3 – 5.4 |
-| 10 | Human Review, Confidence Calibration, and Provenance | Context Management & Reliability (15%) | 5.5 – 5.6 |
+Ten modules, thirty lessons — one per exam objective.
 
-Modules are grouped by domain but split where a domain is large, so no module runs longer than five
-lessons. Domain 1 is taught first because the agentic loop and the coordinator–subagent architecture
-are load-bearing for everything after them — not because it carries the heaviest exam weight.
+| # | Module | Exam area | Weight |
+|---|--------|-----------|--------|
+| 1 | The Agentic Loop and Multi-Agent Orchestration | Agentic architecture & orchestration | 27% |
+| 2 | Workflow Enforcement, Decomposition, and Sessions | Agentic architecture & orchestration | |
+| 3 | Tool Design & MCP Integration | Tool design & MCP integration | 18% |
+| 4 | Claude Code Memory and Configuration | Claude Code configuration & workflows | 20% |
+| 5 | Claude Code Execution Modes and CI/CD Workflows | Claude Code configuration & workflows | |
+| 6 | Precision Prompting and Structured Output Enforcement | Prompt engineering & structured output | 20% |
+| 7 | Extraction Quality, Batching, and Review Architectures | Prompt engineering & structured output | |
+| 8 | Context Management and Escalation Design | Context management & reliability | 15% |
+| 9 | Error Propagation and Codebase Context | Context management & reliability | |
+| 10 | Human Review, Confidence Calibration, and Provenance | Context management & reliability | |
 
-## How to check it
+**The order is not the exam's order — it's prerequisite order.** The agentic loop comes first
+because nearly everything else leans on it: tool design assumes you know how a tool call
+round-trips, structured output assumes you know what a tool-use block is, and the reliability
+material at the end pulls from every earlier module. So you start on the heaviest-weighted area
+*and* the foundation at the same time.
 
-This is the part worth knowing about. Three claims are made about this course, and all three can be
-checked from what is in this repo.
+## How to study it
 
-**1. Nothing was dropped.** The exam guide enumerates 240 `Knowledge of:` / `Skills in:` bullets
-across 30 task statements. Every one was given a stable ID at the mapping stage and cited through to
-the course outline's bullet-to-lesson table. The check is a set comparison in both directions —
-nothing in the guide missing from the course, nothing in the course invented:
+Each module folder holds four files:
 
-```
-bullet IDs in domain-map    : 240
-bullet IDs cited in outline : 240
-in map but not outline      : 0
-in outline but not map      : 0
-```
+| File | What's in it |
+|------|--------------|
+| `lesson.md` | The teaching — concepts with worked examples, in order |
+| `quiz.md` | Questions. No answers in this file, deliberately |
+| `quiz-answers.md` | The answers. Attempt first |
+| `exercises.md` | One hands-on exercise for the module |
 
-**2. Every claim traces to a source.** Concepts carry the source they came from, and those citations
-were verified by fetching the pages and searching them — not by trusting that the URL looked
-official. No concept in this course is marked `UNSOURCED`.
+**A note on the quizzes.** Answers sit in a separate file so that attempting a question is a real
+attempt. If you use the tutor, it logs your attempt before it opens the answers — and it tracks two
+things separately:
 
-**3. The checking itself is on the record.**
-[`runs/.../evaluations/`](runs/claude-certified-architect-foundations/evaluations) holds one verdict
-file per stage per round — eleven in total. Each lists every checklist item with an evidence column,
-including the ones that passed, plus a separate `Not checked` section stating what was *not*
-verified. A file recording only failures would be no evidence the rest was examined.
+- whether you can **use** a concept
+- whether you can **name** it cold
 
-Three of those rounds came back **REWORK**, all for the same reason: citation faithfulness. Real,
-official, on-topic pages carrying claims that were not actually on them. Open
-[`domain-researcher-tool-design-mcp-integration-round-1.md`](runs/claude-certified-architect-foundations/evaluations/domain-researcher-tool-design-mcp-integration-round-1.md)
-and then the round-2 file to see one caught and corrected.
+Those fail independently. It is common to reason your way to a correct answer and still not be able
+to produce the term under exam conditions, and an exam will find whichever one is weak. Tracking
+them apart is the point.
 
-## How it was made
-
-Generated by [**Certification Trainer**](https://github.com/TarikJID/certification-trainer), a
-multi-agent pipeline that maps a certification's domains, researches each one in parallel, and
-assembles a sequenced course — with an evaluator between every stage rather than one check at the
-end.
-
-```
-runs/claude-certified-architect-foundations/
-  sources/       the exam guide, archived as fetched
-  domain-map.md  domains, task statements verbatim, bullet IDs
-  dispatch/      the per-domain slice each researcher was given
-  research/      one file per domain — concepts, prerequisites, sources
-  evaluations/   11 verdict files, one per stage per round
-```
-
-Paths inside the verdict files are relative to this repo root, so every citation in them resolves
-against the files shipped here — with one exception, left deliberately uncorrected. The
-`course-builder` verdict records its output as `courses/claude-certified-architect-foundations/`,
-which is where the pipeline wrote it. Publishing it as a standalone repo moved the modules to the
-root, so that one path no longer resolves.
-
-The verdict file was not edited to match. An audit trail you tidy afterwards is not an audit trail —
-it says what was checked at the time it was checked, and the discrepancy is explained here instead.
-
-## Learn it with Claude
-
-This repo ships a **tutor**. Clone it, open the folder in
-[Claude Code](https://claude.com/claude-code), and type `/start`. Claude reads the
-course, asks how you like to learn, and teaches it one concept at a time.
-
-Two things it does that reading alone does not:
-
-- **Tracks recall and application separately.** Being able to *use* a concept and being
-  able to *name* it are different, and they fail separately. Both are tracked per
-  concept in `progress/learner-progress.md`, closed independently, and a closed item is
-  never asked again.
-- **Won't hand you a quiz answer before you attempt it.** Answers live in
-  `quiz-answers.md`, deliberately apart from `quiz.md`, and your attempt is written to
-  the log before the answer file is opened.
-
-Being straight about that second one: it is a rule the tutor follows, not a wall it
-cannot cross. The attempt log is what makes a leak visible afterwards. Reading the
-material yourself works fine too — the quizzes and answers are both plain markdown.
-
-Commands: `/start` to begin, `/progress` to see where you stand.
-
-## Limitations
-
-Read these before relying on it.
+## Before you rely on it
 
 - **Unofficial and unreviewed.** No Anthropic involvement. The official exam guide wins any
   disagreement.
-- **Coverage is not quality.** Every exam bullet has a lesson and every citation held up under
-  checking. Whether the course *teaches well* is a separate question that no automated check in this
-  repo answers.
-- **Written by agents.** Verify anything you intend to rely on. The audit trail exists so that you
-  can, and the sources are cited so you know where to look.
-- **A snapshot.** Certifications change. This reflects the exam guide as fetched at generation time;
-  the archived copy is in `runs/.../sources/` so you can tell whether it has moved since.
+- **Written by AI agents**, then checked by other agents. The checking was thorough and it is all on
+  the record — but verify anything you intend to lean on. Every concept carries its source.
+- **Complete coverage is not the same as good teaching.** Every exam objective has a lesson and
+  every citation held up when checked. Whether it *teaches well* is a judgement no automated check
+  in this repo makes.
+- **A snapshot.** Certifications change. This reflects the exam guide as it was when the course was
+  generated, and the copy it was built from is archived in `runs/` so you can tell whether it has
+  moved.
 
 ---
 
-<div align="center">
-
-Built with [Certification Trainer](https://github.com/TarikJID/certification-trainer) ·
-Not affiliated with Anthropic
-
-</div>
+**How this was built, and how to check any of it for yourself:**
+[`PROVENANCE.md`](PROVENANCE.md).
