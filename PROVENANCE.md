@@ -110,3 +110,8 @@ quietly corrected.
 section numbers like 1.1–5.6. That is coverage bookkeeping, and it is what makes claim 1 checkable.
 It is not how a learner should have to think about the material, which is why the README does not
 use it.
+
+**This is deliberate, not a gap to close.** The outline keeps the vocabulary that makes coverage
+checkable, and the tutor translates it — its instructions require saying "30 lessons, one per exam
+objective" rather than repeating the guide's numbering. Rewriting the outline for readability would
+cost the property that makes claim 1 above possible, to solve a problem the tutor already solves.
