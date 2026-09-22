@@ -10,11 +10,11 @@
 
 ## Learner profile
 
-- Name: [unset]
-- Preferred style: [unset — set during /start]
-- Started: [unset]
-- Last session: [unset]
-- Notes: [anything they tell you about how they learn, or what keeps tripping them up]
+- Name: Tarik
+- Preferred style: Lecture + checkpoints
+- Started: 2026-09-22
+- Last session: 2026-09-22
+- Notes: "i'm rather into short straight forward sentences, long texts and complicated sentences make me zone out" — keep chunks small, plain sentences, check in often.
 
 ## Module status
 
@@ -23,7 +23,7 @@
 
 | Module | Status | Notes |
 |--------|--------|-------|
-| | | |
+| Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22, Lesson 1.1 |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -74,3 +74,7 @@ Status values: `not started` · `in progress` · `completed`
 
 <!-- Newest first. What was taught, what landed, what did not, and anything about
      HOW to teach this learner that the next session should know. -->
+
+### 2026-09-22 — Session 1
+- Onboarded. Style: lecture + checkpoints. Asked explicitly for short plain sentences.
+- Started Module 1, Lesson 1.1.
