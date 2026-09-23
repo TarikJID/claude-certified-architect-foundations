@@ -21,6 +21,13 @@
 > **Unofficial.** Not produced, endorsed or reviewed by Anthropic. The official exam guide is the
 > authority on what is tested — where this course and the guide disagree, the guide is right.
 
+**This course exists to get you ready to sit the CCAR-F exam and pass it.** That is its only job.
+
+It is built backwards from the official exam guide: every objective the guide lists has a lesson
+teaching it, a quiz question testing it, and a place in a sequence designed so nothing arrives
+before the thing it depends on. Work through it and you will have covered what the exam actually
+tests — not a general tour of the subject that happens to overlap.
+
 ## Start here
 
 **With the tutor** — the way this course is meant to be taken:
