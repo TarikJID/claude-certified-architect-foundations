@@ -102,7 +102,9 @@ const ENTRIES = [
   { term: "Coordinator", tag: "Multi-agent", src: "Lesson 1.2", alt: "also: lead agent, orchestrator",
     def: "The agent at the hub. It hands out work, receives every result and error, and decides what happens next. Sees everything, but becomes a bottleneck if it does too much itself." },
   { term: "Subagent", tag: "Multi-agent", src: "Lesson 1.2", alt: "also: worker",
-    def: "An agent the coordinator sends out to do one piece of the job. It reports back only to the coordinator." }
+    def: "An agent the coordinator sends out to do one piece of the job. It reports back only to the coordinator." },
+  { term: "Subagent context isolation", tag: "Multi-agent", src: "Lesson 1.2",
+    def: "A subagent starts fresh. It does not inherit the coordinator's conversation, tool calls or results. It only gets the prompt the coordinator writes for it, its own setup, and usually the project's CLAUDE.md. Only its final answer comes back." }
 ];
 
 const state = { tag: "All", q: "" };
