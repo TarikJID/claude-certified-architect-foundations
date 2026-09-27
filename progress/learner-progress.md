@@ -68,6 +68,8 @@ Status values: `not started` · `in progress` · `completed`
     continue.
   - `2026-09-27` · recall · cold · wrong — asked for the `stop_reason` value that means "run a
     tool". Said `run_tool`. Answer: `tool_use`.
+  - `2026-09-27` · recall · cued · correct — L1.1 quiz Q1: named `stop_reason`, `tool_use`,
+    `end_turn` exactly. Cued (said many times this session); does not count toward closing.
 
 ### Appending tool results to conversation history (`tool_result` + `tool_use` ID pairing)
 - Module: 1 (Lesson 1.1)
@@ -121,6 +123,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-27 | 1 | L1.1 Q2 — why a tool result must be appended to history | yes: "so the next round of Claude's thinking can use it; otherwise it would never be used" | correct after 1 hint — retry: "Claude has no memory; it only works with what the harness provides". Right mechanism; didn't use the words *stateless* or `tool_result` |
 | 2026-09-27 | 1 | L1.1 Q4 — model-driven vs pre-configured decision tree | yes: "decision tree: next step known in advance (do this, then that, if X else Y). Agentic loop: model decides next step based on how the previous went; path not known in advance" | correct, clean, no hints |
 | 2026-09-27 | 1 | L1.1 Q3 — three termination anti-patterns + why | yes: (a) stop on any text — text can come with a tool request; (b) stop when Claude says it's done — ambiguous, unreliable; (c) couldn't recall | correct after 1 hint — 3rd: fixed round budget (e.g. 10) is wrong as the main rule: too few for some tasks, far more than needed for others. Did not add that a cap is fine as a safety backstop |
+| 2026-09-27 | 1 | L1.1 Q1 — field driving continue/stop + its two values | yes: "stop_reason, with values tool_use and end_turn" | correct, no hints — but heavily cued (answer said repeatedly this session) |
 
 ## Still open
 
@@ -140,6 +143,13 @@ Status values: `not started` · `in progress` · `completed`
   weak. Keep drilling exact names.
 - Taught the last Lesson 1.1 concept (termination anti-patterns). Checkpoint correct
   (just-taught). Asked a sharp roles question: who sets vs who reads `stop_reason`.
+- Asked what in the harness makes the decision: explained it is a plain if/else on `stop_reason`,
+  no second LLM — which is why a structured field exists. Landed.
+- Asked for a glossary artifact (link in profile). Built with 12 Lesson 1.1 terms.
+- L1.1 quiz: 4/4 with 2 hints (Q2 stateless why; Q3 iteration cap). All cued — same day as
+  teaching/drill. Names still the weak point: didn't produce *stateless* or `tool_result`.
+- Next session: cold drill on `tool_use` stop_reason value, *workflow*/decision tree, *stateless*,
+  iteration cap. Then Lesson 1.2.
 
 ### 2026-09-22 — Session 1
 - Onboarded. Style: lecture + checkpoints. Asked explicitly for short plain sentences.
