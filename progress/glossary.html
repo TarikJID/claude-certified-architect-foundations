@@ -112,7 +112,11 @@ const ENTRIES = [
   { term: "Partitioning", tag: "Multi-agent", src: "Lesson 1.2",
     def: "Give each subagent a distinct, non-overlapping slice of the job: by subtopic, source type or time period. Each slice still gets an objective, output format, tool/source guidance and boundaries, including what is out of scope."  },
   { term: "Iterative refinement loop", tag: "Multi-agent", src: "Lesson 1.2", alt: "also: coordinator re-delegation",
-    def: "After combining the subagents' results into a draft, the coordinator checks it for gaps. If something is missing, it starts new subagents aimed only at that gap, combines again, and repeats until coverage is good enough." }
+    def: "After combining the subagents' results into a draft, the coordinator checks it for gaps. If something is missing, it starts new subagents aimed only at that gap, combines again, and repeats until coverage is good enough."  },
+  { term: "<code>Task</code> / <code>Agent</code> tool", tag: "Tools", src: "Lesson 1.3",
+    def: "The tool a coordinator calls to start a subagent. The exam guide calls it <code>Task</code>; newer SDK versions show it as <code>\"Agent\"</code> in <code>tool_use</code> blocks. Code that detects subagent calls should match either name." },
+  { term: "<code>allowedTools</code>", tag: "Multi-agent", src: "Lesson 1.3",
+    def: "The list of tools an agent may use. A coordinator can only start subagents if <code>Task</code> / <code>Agent</code> is on its list, even when the subagents are already defined." }
 ];
 
 const state = { tag: "All", q: "" };

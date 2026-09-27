@@ -184,6 +184,16 @@ Status values: `not started` · `in progress` · `completed`
     researcher"; after hint: spawn a fresh subagent targeted at the gap (linked to context
     isolation himself), then check completeness and merge. Did not say "repeat until sufficient".
 
+### Task/Agent tool and the `allowedTools` requirement
+- Module: 1 (Lesson 1.3)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-27` · application · just-taught · correct — coordinator with allowed tools Read/Grep/
+    WebSearch never uses its defined subagents: said it lacks the Task/Agent tool; fix is to add
+    `Agent` to its allowed tools. Right.
+    Note: this checkpoint is close to L1.3 quiz Q1 — treat a same-day Q1 answer as heavily cued.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -205,6 +215,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
+- Task/Agent tool + allowedTools (L1.3): both axes shaky, just taught.
 - Hub-and-spoke, subagent context isolation, coordinator responsibilities, decomposition risks, partitioning, iterative refinement (L1.2): both axes shaky, just taught.
 - All five Lesson 1.1 concepts: recall and application both shaky (see tracker).
 
