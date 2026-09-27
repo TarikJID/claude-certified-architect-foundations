@@ -75,6 +75,9 @@ Status values: `not started` · `in progress` · `completed`
     history Claude has no knowledge of the outcome, so it re-requests the tool. Right mechanism.
     Told him the API-level detail (an unanswered `tool_use` is a 400, not a silent re-ask) and
     flagged it as outside the course material.
+  - `2026-09-27` · application · cued · correct (1 hint) — L1.1 quiz Q2. First answer gave only the
+    effect; after a hint said Claude has no memory and only sees what the harness sends. That is
+    the stateless-API point. Did not produce the words *stateless* / `tool_result` (recall gap).
 
 ### Model-driven decision-making vs pre-configured decision trees
 - Module: 1 (Lesson 1.1)
@@ -106,7 +109,7 @@ Status values: `not started` · `in progress` · `completed`
 
 | Date | Module | Question | Attempted | Outcome |
 |------|--------|----------|-----------|---------|
-| 2026-09-27 | 1 | L1.1 Q2 — why a tool result must be appended to history | yes: "so the next round of Claude's thinking can use it; otherwise it would never be used" | partial — right effect, missing the why (API is stateless). Hint given, retry pending |
+| 2026-09-27 | 1 | L1.1 Q2 — why a tool result must be appended to history | yes: "so the next round of Claude's thinking can use it; otherwise it would never be used" | correct after 1 hint — retry: "Claude has no memory; it only works with what the harness provides". Right mechanism; didn't use the words *stateless* or `tool_result` |
 
 ## Still open
 
