@@ -28,7 +28,7 @@
 
 | Module | Status | Notes |
 |--------|--------|-------|
-| Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 started 2026-09-27 |
+| Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught in full 2026-09-27 (not yet quizzed). All Module 1 lessons taught |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -251,6 +251,9 @@ Status values: `not started` · `in progress` · `completed`
     points (first result may be an ad / not in Lisbon; booking.com could be down). Rewrite was
     goal-oriented ("best rating/price ratio, reputable sites like booking.com") but thin: no output
     format, no boundaries (30 people, dates, budget, how many). Asked for a retry.
+  - `2026-09-27` · application · just-taught · correct (retry) — "Find 3 Lisbon hotels for 30 people,
+    27–30 September, list prices." Boundaries and a minimal output format now present, but dropped
+    the quality criterion and source guidance from v1. Showed him the merged version.
 
 ## Quiz attempts
 
@@ -298,6 +301,10 @@ Status values: `not started` · `in progress` · `completed`
 - L1.2 quiz: 4/4 with hints — Q1 2 hints (errors, info routing), Q2 clean, Q3 1 hint and incomplete
   (proposed one subagent; missed coverage gaps), Q4 1 hint. All cued (same session as teaching).
   Pattern: list-type answers come back with items missing; reasoning is sound when nudged.
+- Lesson 1.3 taught, all 7 concepts. All checkpoints correct (two needed a retry: explicit context
+  passing — tutor's scenario was ambiguous, learner said so; goal-oriented prompt — first rewrite
+  lacked format/boundaries). Pattern again: gets the idea, drops parts of a multi-part answer.
+- Glossary at 28 terms.
 
 ### 2026-09-22 — Session 1
 - Onboarded. Style: lecture + checkpoints. Asked explicitly for short plain sentences.

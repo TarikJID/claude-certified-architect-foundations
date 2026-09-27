@@ -126,7 +126,9 @@ const ENTRIES = [
   { term: "Structured findings (content separated from metadata)", tag: "Multi-agent", src: "Lesson 1.3",
     def: "Subagents return each finding as separate fields: <b>claim</b>, <b>evidence</b> (exact quote) and <b>source</b> (URL, document, page). Later summaries can shorten the claim without losing where it came from."  },
   { term: "Parallel subagent spawning", tag: "Multi-agent", src: "Lesson 1.3",
-    def: "The coordinator puts several <code>Task</code>/<code>Agent</code> calls in one single response, so independent subagents run at the same time. Total time is the slowest one, not the sum. Anthropic reports up to 90% less research time." }
+    def: "The coordinator puts several <code>Task</code>/<code>Agent</code> calls in one single response, so independent subagents run at the same time. Total time is the slowest one, not the sum. Anthropic reports up to 90% less research time."  },
+  { term: "Goal-oriented prompts", tag: "Multi-agent", src: "Lesson 1.3", alt: "vs procedural prompts",
+    def: "Tell a subagent what a good result looks like, not a fixed list of steps. Procedural steps break when reality differs. Goal-oriented still means concrete: objective, output format, tool/source guidance, boundaries." }
 ];
 
 const state = { tag: "All", q: "" };
