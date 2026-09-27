@@ -13,7 +13,7 @@
 - Name: Tarik
 - Preferred style: Lecture + checkpoints
 - Started: 2026-09-22
-- Last session: 2026-09-22
+- Last session: 2026-09-27
 - Notes: "i'm rather into short straight forward sentences, long texts and complicated sentences make me zone out" — keep chunks small, plain sentences, check in often.
   Also: "it's a bit weird that you call it 'my' code" — say **the harness**, not "your code". He is
   reasoning about the architecture, not writing it.
@@ -84,6 +84,10 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-22` · application · just-taught · correct — classified a fixed three-step invoice
     pipeline as a workflow, and gave the right reason (steps never vary, so predictability and cost
     win). Did not need the trade-off spelled out.
+  - `2026-09-27` · recall · cold · wrong — asked for the name of the design where the step order is
+    fixed in code ahead of time. Said "pipeline". Course terms: **workflow** / pre-configured
+    decision tree (vs model-driven, i.e. agent). Right idea, wrong word — he used "workflow"
+    himself on 09-22.
 
 ## Quiz attempts
 
@@ -99,12 +103,17 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
-- 
+- All four Lesson 1.1 concepts: recall and application both shaky (see tracker).
 
 ## Session log
 
 <!-- Newest first. What was taught, what landed, what did not, and anything about
      HOW to teach this learner that the next session should know. -->
+
+### 2026-09-27 — Session 2
+- Cold drill on two items. Both wrong on the exact word, right on the idea: `run_tool` for
+  `tool_use`, "pipeline" for workflow. Pattern matches the profile: reasoning strong, vocabulary
+  weak. Keep drilling exact names.
 
 ### 2026-09-22 — Session 1
 - Onboarded. Style: lecture + checkpoints. Asked explicitly for short plain sentences.
