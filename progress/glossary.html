@@ -120,7 +120,9 @@ const ENTRIES = [
   { term: "Explicit context passing", tag: "Multi-agent", src: "Lesson 1.3",
     def: "Everything a subagent needs (earlier findings, file paths, error messages, decisions already made) must be written into its prompt as actual content. \"See the earlier results\" fails: there is no shared memory and no automatic handover."  },
   { term: "<code>AgentDefinition</code>", tag: "Multi-agent", src: "Lesson 1.3",
-    def: "How a subagent is defined in code; the file version is a markdown file in <code>.claude/agents/</code>. Two required fields: <code>description</code> (when the coordinator should use it) and <code>prompt</code> (its own instructions). Common optional fields: <code>tools</code> (restrict what it can use) and <code>model</code>." }
+    def: "How a subagent is defined in code; the file version is a markdown file in <code>.claude/agents/</code>. Two required fields: <code>description</code> (when the coordinator should use it) and <code>prompt</code> (its own instructions). Common optional fields: <code>tools</code> (restrict what it can use) and <code>model</code>."  },
+  { term: "<code>fork_session</code>", tag: "Harness", src: "Lesson 1.3",
+    def: "Makes an independent copy of a session with its full history. The original is left unchanged, so both can continue separately. Use it to try two different directions from the same point." }
 ];
 
 const state = { tag: "All", q: "" };
