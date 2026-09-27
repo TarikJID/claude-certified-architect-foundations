@@ -194,6 +194,16 @@ Status values: `not started` · `in progress` · `completed`
     `Agent` to its allowed tools. Right.
     Note: this checkpoint is close to L1.3 quiz Q1 — treat a same-day Q1 answer as heavily cued.
 
+### Explicit context passing to subagents
+- Module: 1 (Lesson 1.3)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-27` · application · just-taught · partial — "Fix the failing test" with no context: said
+    the subagent won't know what the coordinator means (right, but general). Read "don't touch the
+    database code" as forbidding all code changes → "paradox". Tutor's scenario was ambiguous: the
+    bug is in auth.ts, the database code is a separate part. Clarified; asked for the better prompt.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
