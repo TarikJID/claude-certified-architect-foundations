@@ -1,0 +1,134 @@
+<title>Architect Course Glossary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f5f6f4; --surface:#ffffff; --ink:#1c2321; --muted:#5b6662; --line:#dde2df;
+  --accent:#2f6b5a; --accent-soft:#e3efea;
+  --t-api:#3d5a99; --t-tools:#8a5a1f; --t-loop:#2f6b5a; --t-design:#7a3f6e; --t-harness:#55605c;
+  --code-bg:#eef1ef;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#131816; --surface:#1b2220; --ink:#e4e9e6; --muted:#9aa6a1; --line:#2c3532;
+    --accent:#7cc4ad; --accent-soft:#1f302a;
+    --t-api:#93acea; --t-tools:#e0b070; --t-loop:#7cc4ad; --t-design:#d69ac8; --t-harness:#aab5b0;
+    --code-bg:#242d2a;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#131816; --surface:#1b2220; --ink:#e4e9e6; --muted:#9aa6a1; --line:#2c3532;
+  --accent:#7cc4ad; --accent-soft:#1f302a;
+  --t-api:#93acea; --t-tools:#e0b070; --t-loop:#7cc4ad; --t-design:#d69ac8; --t-harness:#aab5b0;
+  --code-bg:#242d2a;
+}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 "Public Sans",system-ui,sans-serif;}
+.wrap{max-width:760px;margin:0 auto;padding:40px 16px 64px;}
+header h1{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:2.1rem;line-height:1.15;margin:0 0 6px;text-wrap:balance;}
+header p{margin:0;color:var(--muted);max-width:60ch;}
+.controls{display:flex;flex-direction:column;gap:12px;margin:28px 0 20px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding-block:10px;z-index:1;}
+#q{width:100%;box-sizing:border-box;font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);}
+#q:focus-visible,.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{font:500 .85rem "Public Sans",sans-serif;padding:5px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer;}
+.chip[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--ink);}
+.count{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums;}
+dl{margin:0;display:flex;flex-direction:column;}
+.entry{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:16px 0;border-top:1px solid var(--line);}
+dt{font-weight:600;font-size:1.05rem;}
+dt code,dd code{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.9em;background:var(--code-bg);padding:1px 5px;border-radius:4px;}
+.tag{grid-column:2;grid-row:1;align-self:start;font:500 .72rem "Public Sans",sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:4px;border:1px solid currentColor;}
+dd{grid-column:1 / -1;margin:0;color:var(--ink);max-width:65ch;}
+.src{grid-column:1 / -1;font-size:.8rem;color:var(--muted);}
+.note{font-style:italic;}
+.empty{color:var(--muted);padding:24px 0;border-top:1px solid var(--line);}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Architect Course Glossary</h1>
+    <p>Exact names for everything taught so far. The exam tests the words, so the name on each line is the one to learn.</p>
+  </header>
+
+  <div class="controls">
+    <input id="q" type="search" placeholder="Search a term or definition" aria-label="Search the glossary">
+    <div class="chips" id="chips" role="group" aria-label="Filter by tag"></div>
+    <div class="count" id="count" aria-live="polite"></div>
+  </div>
+
+  <dl id="list"></dl>
+</div>
+
+<script>
+const TAGS = {
+  "API":     "var(--t-api)",
+  "Tools":   "var(--t-tools)",
+  "Loop":    "var(--t-loop)",
+  "Design":  "var(--t-design)",
+  "Harness": "var(--t-harness)"
+};
+
+// Only concepts that have been taught. Added to as the course goes on.
+const ENTRIES = [
+  { term: "Harness", tag: "Harness", src: "Tutor's word, not a course term",
+    def: "The code that wraps Claude. It calls the API, runs the tools Claude asks for, and decides whether to keep going. Claude Code, claude.ai and your own app each have one." },
+  { term: "Messages API", tag: "API", src: "Lesson 1.1",
+    def: "The endpoint the harness calls. Each call sends the whole conversation so far and gets back Claude's response." },
+  { term: "Stateless", tag: "API", src: "Lesson 1.1",
+    def: "Claude keeps no memory between calls. It only knows what is in the current request." },
+  { term: "<code>tool_use</code> block", tag: "Tools", src: "Lesson 1.1",
+    def: "The part of Claude's response that names a tool and its inputs. It is a request. Claude does not run the tool; the harness does." },
+  { term: "<code>tool_result</code> block", tag: "Tools", src: "Lesson 1.1",
+    def: "Carries a tool's output back into the conversation history. It is tied to the <code>tool_use</code> block's ID, so each result matches its request." },
+  { term: "<code>stop_reason</code>", tag: "Loop", src: "Lesson 1.1",
+    def: "A field on every response that says why Claude stopped. Claude sets it. The harness reads it to decide what happens next." },
+  { term: "<code>\"tool_use\"</code> (stop_reason value)", tag: "Loop", src: "Lesson 1.1",
+    def: "Claude wants a tool run. The harness runs it, adds the result, and calls Claude again." },
+  { term: "<code>\"end_turn\"</code> (stop_reason value)", tag: "Loop", src: "Lesson 1.1",
+    def: "Claude is finished. The harness stops the loop and shows the answer." },
+  { term: "Agentic loop", tag: "Loop", src: "Lesson 1.1",
+    def: "Send a request, run any tools Claude asks for, add the results, repeat. It ends when <code>stop_reason</code> is <code>\"end_turn\"</code>." },
+  { term: "Loop termination anti-patterns", tag: "Loop", src: "Lesson 1.1",
+    def: "Three wrong ways to decide when to stop. (1) Reading Claude's text for phrases like \"I'm done\". (2) An iteration cap as the main stop rule; a cap is only a safety backstop. (3) Stopping whenever the response has text; Claude can write text and request a tool in the same turn." },
+  { term: "Model-driven decision-making", tag: "Design", src: "Lesson 1.1",
+    def: "Claude picks the next step based on everything in context, adapting turn by turn. The path is not known in advance. This is an agent." },
+  { term: "Pre-configured decision tree", tag: "Design", src: "Lesson 1.1", alt: "also: workflow",
+    def: "The steps and branches are written in code in advance. The LLM only fills in specific sub-steps. Predictable and cheap when the steps never vary." }
+];
+
+const state = { tag: "All", q: "" };
+const $list = document.getElementById("list"), $chips = document.getElementById("chips"),
+      $count = document.getElementById("count"), $q = document.getElementById("q");
+
+function strip(html){ const d=document.createElement("div"); d.innerHTML=html; return d.textContent.toLowerCase(); }
+
+function renderChips(){
+  $chips.innerHTML = "";
+  ["All", ...Object.keys(TAGS)].forEach(t=>{
+    const b=document.createElement("button");
+    b.type="button"; b.className="chip"; b.textContent=t;
+    b.setAttribute("aria-pressed", String(state.tag===t));
+    b.addEventListener("click",()=>{ state.tag=t; renderChips(); render(); });
+    $chips.appendChild(b);
+  });
+}
+
+function render(){
+  const q=state.q.trim().toLowerCase();
+  const rows=ENTRIES.filter(e=>(state.tag==="All"||e.tag===state.tag) &&
+    (!q || strip(e.term+" "+e.def+" "+(e.alt||"")).includes(q)));
+  $list.innerHTML = rows.length ? rows.map(e=>`
+    <div class="entry">
+      <dt>${e.term}${e.alt?` <span class="src">(${e.alt})</span>`:""}</dt>
+      <span class="tag" style="color:${TAGS[e.tag]}">${e.tag}</span>
+      <dd>${e.def}</dd>
+      <span class="src${e.src.startsWith("Tutor")?" note":""}">${e.src}</span>
+    </div>`).join("") : `<div class="empty">No terms match.</div>`;
+  $count.textContent = `${rows.length} of ${ENTRIES.length} terms`;
+}
+
+$q.addEventListener("input",e=>{ state.q=e.target.value; render(); });
+renderChips(); render();
+</script>
