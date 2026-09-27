@@ -124,7 +124,9 @@ const ENTRIES = [
   { term: "<code>fork_session</code>", tag: "Harness", src: "Lesson 1.3",
     def: "Makes an independent copy of a session with its full history. The original is left unchanged, so both can continue separately. Use it to try two different directions from the same point."  },
   { term: "Structured findings (content separated from metadata)", tag: "Multi-agent", src: "Lesson 1.3",
-    def: "Subagents return each finding as separate fields: <b>claim</b>, <b>evidence</b> (exact quote) and <b>source</b> (URL, document, page). Later summaries can shorten the claim without losing where it came from." }
+    def: "Subagents return each finding as separate fields: <b>claim</b>, <b>evidence</b> (exact quote) and <b>source</b> (URL, document, page). Later summaries can shorten the claim without losing where it came from."  },
+  { term: "Parallel subagent spawning", tag: "Multi-agent", src: "Lesson 1.3",
+    def: "The coordinator puts several <code>Task</code>/<code>Agent</code> calls in one single response, so independent subagents run at the same time. Total time is the slowest one, not the sum. Anthropic reports up to 90% less research time." }
 ];
 
 const state = { tag: "All", q: "" };

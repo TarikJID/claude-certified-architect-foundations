@@ -234,6 +234,14 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-27` · application · just-taught · correct — rewrote "cost carmakers ~$210B in 2021,
     according to a report I read" as Claim / Evidence / Source fields. Right structure.
 
+### Parallel subagent spawning in a single turn
+- Module: 1 (Lesson 1.3)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-27` · application · just-taught · correct — 4+3+2 min sequential = 9 min; spawn all three
+    → 4 min (the slowest). Right. Didn't say "in one response" explicitly.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -255,7 +263,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
-- Task/Agent tool + allowedTools, explicit context passing, AgentDefinition, fork_session, structured claim/evidence/source (L1.3): both axes shaky, just taught.
+- Task/Agent tool + allowedTools, explicit context passing, AgentDefinition, fork_session, structured claim/evidence/source, parallel spawning (L1.3): both axes shaky, just taught.
 - Hub-and-spoke, subagent context isolation, coordinator responsibilities, decomposition risks, partitioning, iterative refinement (L1.2): both axes shaky, just taught.
 - All five Lesson 1.1 concepts: recall and application both shaky (see tracker).
 
