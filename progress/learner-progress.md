@@ -208,6 +208,15 @@ Status values: `not started` · `in progress` · `completed`
     error is 'XXX'. Fix it in auth.ts, never touch the database code." File, error, decision all
     passed as content. (Learner flagged the original question as unclear — fair.)
 
+### `AgentDefinition` configuration
+- Module: 1 (Lesson 1.3)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-27` · application · just-taught · correct — reviewer subagent with description "helps
+    with stuff" rarely used: said the coordinator needs a clear description of when/why to trigger
+    it. Right: `description` drives when it gets invoked.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -229,7 +238,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
-- Task/Agent tool + allowedTools, explicit context passing (L1.3): both axes shaky, just taught.
+- Task/Agent tool + allowedTools, explicit context passing, AgentDefinition (L1.3): both axes shaky, just taught.
 - Hub-and-spoke, subagent context isolation, coordinator responsibilities, decomposition risks, partitioning, iterative refinement (L1.2): both axes shaky, just taught.
 - All five Lesson 1.1 concepts: recall and application both shaky (see tracker).
 
