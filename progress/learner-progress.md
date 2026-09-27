@@ -121,6 +121,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-27` · application · just-taught · correct — a search subagent fails mid-task: said the
     orchestrator finds out and decides, e.g. re-runs the subagent. Right: all error handling routes
     through the coordinator.
+  - `2026-09-27` · application · cued · correct (2 hints) — L1.2 quiz Q1. "No direct talk" and
+    tasks/results unaided; needed hints for info routing between subagents and for error handling
+    (had applied the error case correctly himself ~40 min earlier).
 
 ### Subagent context isolation
 - Module: 1 (Lesson 1.2)
@@ -181,7 +184,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-27 | 1 | L1.1 Q4 — model-driven vs pre-configured decision tree | yes: "decision tree: next step known in advance (do this, then that, if X else Y). Agentic loop: model decides next step based on how the previous went; path not known in advance" | correct, clean, no hints |
 | 2026-09-27 | 1 | L1.1 Q3 — three termination anti-patterns + why | yes: (a) stop on any text — text can come with a tool request; (b) stop when Claude says it's done — ambiguous, unreliable; (c) couldn't recall | correct after 1 hint — 3rd: fixed round budget (e.g. 10) is wrong as the main rule: too few for some tasks, far more than needed for others. Did not add that a cap is fine as a safety backstop |
 | 2026-09-27 | 1 | L1.1 Q1 — field driving continue/stop + its two values | yes: "stop_reason, with values tool_use and end_turn" | correct, no hints — but heavily cued (answer said repeatedly this session) |
-| 2026-09-27 | 1 | L1.2 Q1 — can subagents talk directly; what passes through the coordinator | yes: "No, each subagent only speaks with the coordinator. Coordinator dispatches work (objective, tools, output, boundaries), receives results back" | partial — first half right; tasks-out/results-back right but missed errors and subagent-to-subagent info routing. Hint given, retry pending |
+| 2026-09-27 | 1 | L1.2 Q1 — can subagents talk directly; what passes through the coordinator | yes: "No, each subagent only speaks with the coordinator. Coordinator dispatches work (objective, tools, output, boundaries), receives results back" | partial — first half right; tasks-out/results-back right but missed errors and subagent-to-subagent info routing. Correct after 2 hints: got info routing on hint 1, errors on hint 2 |
 
 ## Still open
 
