@@ -28,7 +28,7 @@
 
 | Module | Status | Notes |
 |--------|--------|-------|
-| Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 started 2026-09-27 |
+| Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught in full 2026-09-27 (not yet quizzed) |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -159,6 +159,17 @@ Status values: `not started` · `in progress` · `completed`
     search), boundaries (plane, direct, no departures before 8am). Boundaries covered constraints but
     not what is out of scope (hotels/food/local transfers) — pointed that out as the non-overlap part.
 
+### Iterative refinement loop (coordinator re-delegation)
+- Module: 1 (Lesson 1.2)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-27` · application · just-taught · correct (partial) — Lisbon draft missing airport→hotel
+    transfer: said spawn a new subagent scoped to transfers for 30 people per arrival time. Right
+    re-delegation, well targeted. Didn't mention re-running synthesis and re-checking afterwards.
+    Also caught a sloppy tutor sentence ("the coordinator, not Claude") — correctly: the coordinator
+    is itself a Claude instance.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -176,7 +187,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
-- Hub-and-spoke, subagent context isolation, coordinator responsibilities, decomposition risks, partitioning (L1.2): both axes shaky, just taught.
+- Hub-and-spoke, subagent context isolation, coordinator responsibilities, decomposition risks, partitioning, iterative refinement (L1.2): both axes shaky, just taught.
 - All five Lesson 1.1 concepts: recall and application both shaky (see tracker).
 
 ## Session log
@@ -195,6 +206,8 @@ Status values: `not started` · `in progress` · `completed`
 - Asked for a glossary artifact (link in profile). Built with 12 Lesson 1.1 terms.
 - L1.1 quiz: 4/4 with 2 hints (Q2 stateless why; Q3 iteration cap). All cued — same day as
   teaching/drill. Names still the weak point: didn't produce *stateless* or `tool_result`.
+- Lesson 1.2 taught, all 6 concepts; every checkpoint correct (just-taught). Applied well in
+  scenarios (Lisbon offsite). Glossary extended with a Multi-agent tag.
 
 ### 2026-09-22 — Session 1
 - Onboarded. Style: lecture + checkpoints. Asked explicitly for short plain sentences.
