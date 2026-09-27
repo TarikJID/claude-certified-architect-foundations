@@ -263,6 +263,8 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-27` · application · just-taught · correct (retry) — "Find 3 Lisbon hotels for 30 people,
     27–30 September, list prices." Boundaries and a minimal output format now present, but dropped
     the quality criterion and source guidance from v1. Showed him the merged version.
+  - `2026-09-27` · application · cued · correct — L1.3 quiz Q5, no hints: procedural breaks when
+    reality diverges; listed all four elements. First complete four-item list unaided today.
 
 ## Quiz attempts
 
@@ -282,6 +284,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-27 | 1 | L1.3 Q2 — "use the findings from the earlier search": why it fails | yes: "subagent has no memory of earlier findings; coordinator should provide the findings, or a path to a file with them if the subagent has a read tool" | correct, no hints. File-path alternative is sensible but the course answer is: include the findings verbatim in the prompt |
 | 2026-09-27 | 1 | L1.3 Q3 — two required AgentDefinition fields + what each controls | yes: "description: when/why the coordinator should trigger it; prompt: how" | correct, no hints. Both field names exact (recall, cued). "how" is thin for prompt — it is the subagent's own system prompt (role, expertise, behaviour) |
 | 2026-09-27 | 1 | L1.3 Q4 — parallelism in one response + feature to branch completed analyses | yes: "spawn the three subagents in the same response using the Agent tool, each with its own structured prompt. You fork" | correct, no hints. Said "fork", not the exact name `fork_session` |
+| 2026-09-27 | 1 | L1.3 Q5 — why goal-oriented > procedural + four elements | yes: "step-by-step breaks if reality doesn't align with what's expected. Objective, tools, output format, boundaries" | correct, clean, no hints — all four elements |
 
 ## Still open
 
