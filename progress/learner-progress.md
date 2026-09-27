@@ -25,7 +25,7 @@
 
 | Module | Status | Notes |
 |--------|--------|-------|
-| Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22, Lesson 1.1 |
+| Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught in full (2026-09-27); next: Lesson 1.2 |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -89,6 +89,16 @@ Status values: `not started` · `in progress` · `completed`
     decision tree (vs model-driven, i.e. agent). Right idea, wrong word — he used "workflow"
     himself on 09-22.
 
+### Agentic loop termination anti-patterns
+- Module: 1 (Lesson 1.1)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-27` · application · just-taught · correct — on "stop when any text appears", with
+    Claude saying "Let me check the logs first" + a read request: said the harness stops, never
+    runs the tool, and the logs are never read. Right. Then asked unprompted who needs
+    `stop_reason`, the harness or the LLM. Answer given: Claude sets it, the harness reads it.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -103,7 +113,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
-- All four Lesson 1.1 concepts: recall and application both shaky (see tracker).
+- All five Lesson 1.1 concepts: recall and application both shaky (see tracker).
 
 ## Session log
 
@@ -114,6 +124,8 @@ Status values: `not started` · `in progress` · `completed`
 - Cold drill on two items. Both wrong on the exact word, right on the idea: `run_tool` for
   `tool_use`, "pipeline" for workflow. Pattern matches the profile: reasoning strong, vocabulary
   weak. Keep drilling exact names.
+- Taught the last Lesson 1.1 concept (termination anti-patterns). Checkpoint correct
+  (just-taught). Asked a sharp roles question: who sets vs who reads `stop_reason`.
 
 ### 2026-09-22 — Session 1
 - Onboarded. Style: lecture + checkpoints. Asked explicitly for short plain sentences.
