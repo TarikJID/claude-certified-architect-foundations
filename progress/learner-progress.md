@@ -180,6 +180,9 @@ Status values: `not started` · `in progress` · `completed`
     re-delegation, well targeted. Didn't mention re-running synthesis and re-checking afterwards.
     Also caught a sloppy tutor sentence ("the coordinator, not Claude") — correctly: the coordinator
     is itself a Claude instance.
+  - `2026-09-27` · application · cued · correct (1 hint) — L1.2 quiz Q4. First said "rework from the
+    researcher"; after hint: spawn a fresh subagent targeted at the gap (linked to context
+    isolation himself), then check completeness and merge. Did not say "repeat until sufficient".
 
 ## Quiz attempts
 
@@ -195,7 +198,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-27 | 1 | L1.2 Q1 — can subagents talk directly; what passes through the coordinator | yes: "No, each subagent only speaks with the coordinator. Coordinator dispatches work (objective, tools, output, boundaries), receives results back" | partial — first half right; tasks-out/results-back right but missed errors and subagent-to-subagent info routing. Correct after 2 hints: got info routing on hint 1, errors on hint 2 |
 | 2026-09-27 | 1 | L1.2 Q2 — subagent read 40 docs: are they in the coordinator's context? | yes: "No, it would clutter the coordinator's context for no good reason; the coordinator only gets the useful content" | correct, no hints — gave the purpose (keep coordinator context clean) and the result (only the summary returns); did not name *context isolation* / own context window |
 | 2026-09-27 | 1 | L1.2 Q3 — 3 unguided subagents on "semiconductor shortage": failure + fix | yes: "Duplicated work. The coordinator should have given the task to a single researcher subagent" | partial — failure half right (duplication; missed coverage gaps). Fix wrong: one subagent avoids overlap but drops the split; course answer is partitioning. After 1 hint: "clear objective, boundaries with do's and don'ts, tools, output format" — all four elements; didn't say *partitioning* / non-overlapping slices, and never named coverage gaps. Correct after 1 hint, incomplete |
-| 2026-09-27 | 1 | L1.2 Q4 — coordinator notices a topic gap after first draft | yes: "Request a rework from the researcher, with explicit mention of what needs to be done" | partial — targeted re-delegation right; but "rework from the researcher" (course: spawn new targeted subagents) and no re-synthesis / repeat. Hint given, retry pending |
+| 2026-09-27 | 1 | L1.2 Q4 — coordinator notices a topic gap after first draft | yes: "Request a rework from the researcher, with explicit mention of what needs to be done" | partial — targeted re-delegation right; but "rework from the researcher" (course: spawn new targeted subagents) and no re-synthesis / repeat. Correct after 1 hint: new subagent (the old one has no memory), targeted at what was missed; then check completeness and merge with the first output |
 
 ## Still open
 
@@ -223,6 +226,9 @@ Status values: `not started` · `in progress` · `completed`
   teaching/drill. Names still the weak point: didn't produce *stateless* or `tool_result`.
 - Lesson 1.2 taught, all 6 concepts; every checkpoint correct (just-taught). Applied well in
   scenarios (Lisbon offsite). Glossary extended with a Multi-agent tag.
+- L1.2 quiz: 4/4 with hints — Q1 2 hints (errors, info routing), Q2 clean, Q3 1 hint and incomplete
+  (proposed one subagent; missed coverage gaps), Q4 1 hint. All cued (same session as teaching).
+  Pattern: list-type answers come back with items missing; reasoning is sound when nudged.
 
 ### 2026-09-22 — Session 1
 - Onboarded. Style: lecture + checkpoints. Asked explicitly for short plain sentences.
