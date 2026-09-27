@@ -28,7 +28,7 @@
 
 | Module | Status | Notes |
 |--------|--------|-------|
-| Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught in full 2026-09-27 (not yet quizzed). All Module 1 lessons taught |
+| Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed; nothing closed yet |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -193,6 +193,7 @@ Status values: `not started` · `in progress` · `completed`
     WebSearch never uses its defined subagents: said it lacks the Task/Agent tool; fix is to add
     `Agent` to its allowed tools. Right.
     Note: this checkpoint is close to L1.3 quiz Q1 — treat a same-day Q1 answer as heavily cued.
+  - `2026-09-27` · application · cued · correct — L1.3 quiz Q1, no hints. Heavily cued.
 
 ### Explicit context passing to subagents
 - Module: 1 (Lesson 1.3)
@@ -285,6 +286,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-27 | 1 | L1.3 Q3 — two required AgentDefinition fields + what each controls | yes: "description: when/why the coordinator should trigger it; prompt: how" | correct, no hints. Both field names exact (recall, cued). "how" is thin for prompt — it is the subagent's own system prompt (role, expertise, behaviour) |
 | 2026-09-27 | 1 | L1.3 Q4 — parallelism in one response + feature to branch completed analyses | yes: "spawn the three subagents in the same response using the Agent tool, each with its own structured prompt. You fork" | correct, no hints. Said "fork", not the exact name `fork_session` |
 | 2026-09-27 | 1 | L1.3 Q5 — why goal-oriented > procedural + four elements | yes: "step-by-step breaks if reality doesn't align with what's expected. Objective, tools, output format, boundaries" | correct, clean, no hints — all four elements |
+| 2026-09-27 | 1 | L1.3 Q1 — reviewer defined, allowed_tools Read/Grep: can it be invoked? | yes: "No, it can't spawn a subagent; it's missing the Agent tool" | correct, no hints — heavily cued (near-identical checkpoint earlier today) |
 
 ## Still open
 
@@ -320,6 +322,9 @@ Status values: `not started` · `in progress` · `completed`
   passing — tutor's scenario was ambiguous, learner said so; goal-oriented prompt — first rewrite
   lacked format/boundaries). Pattern again: gets the idea, drops parts of a multi-part answer.
 - Glossary at 28 terms.
+- L1.3 quiz: 5/5, no hints. Exact names: `description`, `prompt` right; said "fork" not
+  `fork_session`. Listed all four goal-oriented prompt elements unaided — first complete list today.
+  All cued (same session as teaching).
 
 ### 2026-09-22 — Session 1
 - Onboarded. Style: lecture + checkpoints. Asked explicitly for short plain sentences.
