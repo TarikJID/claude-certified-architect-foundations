@@ -218,6 +218,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-27` · application · just-taught · correct — reviewer subagent with description "helps
     with stuff" rarely used: said the coordinator needs a clear description of when/why to trigger
     it. Right: `description` drives when it gets invoked.
+  - `2026-09-27` · recall · cued · correct — L1.3 quiz Q3: named `description` and `prompt` exactly.
+  - `2026-09-27` · application · cued · correct — description = when/why to trigger; prompt = "how"
+    (thin; should say the subagent's own system prompt: role and behaviour).
 
 ### Session forking (`fork_session`)
 - Module: 1 (Lesson 1.3)
@@ -273,6 +276,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-27 | 1 | L1.2 Q3 — 3 unguided subagents on "semiconductor shortage": failure + fix | yes: "Duplicated work. The coordinator should have given the task to a single researcher subagent" | partial — failure half right (duplication; missed coverage gaps). Fix wrong: one subagent avoids overlap but drops the split; course answer is partitioning. After 1 hint: "clear objective, boundaries with do's and don'ts, tools, output format" — all four elements; didn't say *partitioning* / non-overlapping slices, and never named coverage gaps. Correct after 1 hint, incomplete |
 | 2026-09-27 | 1 | L1.2 Q4 — coordinator notices a topic gap after first draft | yes: "Request a rework from the researcher, with explicit mention of what needs to be done" | partial — targeted re-delegation right; but "rework from the researcher" (course: spawn new targeted subagents) and no re-synthesis / repeat. Correct after 1 hint: new subagent (the old one has no memory), targeted at what was missed; then check completeness and merge with the first output |
 | 2026-09-27 | 1 | L1.3 Q2 — "use the findings from the earlier search": why it fails | yes: "subagent has no memory of earlier findings; coordinator should provide the findings, or a path to a file with them if the subagent has a read tool" | correct, no hints. File-path alternative is sensible but the course answer is: include the findings verbatim in the prompt |
+| 2026-09-27 | 1 | L1.3 Q3 — two required AgentDefinition fields + what each controls | yes: "description: when/why the coordinator should trigger it; prompt: how" | correct, no hints. Both field names exact (recall, cued). "how" is thin for prompt — it is the subagent's own system prompt (role, expertise, behaviour) |
 
 ## Still open
 
