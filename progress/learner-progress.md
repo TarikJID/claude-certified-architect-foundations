@@ -207,6 +207,8 @@ Status values: `not started` · `in progress` · `completed`
     subagent might change database code if it thinks that fixes the bug. Wrote: "Bug in auth.ts,
     error is 'XXX'. Fix it in auth.ts, never touch the database code." File, error, decision all
     passed as content. (Learner flagged the original question as unclear — fair.)
+  - `2026-09-27` · application · cued · correct — L1.3 quiz Q2, no hints: no memory of earlier
+    findings; pass them in the prompt (or a file path if it can read). Course answer: verbatim in prompt.
 
 ### `AgentDefinition` configuration
 - Module: 1 (Lesson 1.3)
@@ -270,6 +272,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-27 | 1 | L1.2 Q2 — subagent read 40 docs: are they in the coordinator's context? | yes: "No, it would clutter the coordinator's context for no good reason; the coordinator only gets the useful content" | correct, no hints — gave the purpose (keep coordinator context clean) and the result (only the summary returns); did not name *context isolation* / own context window |
 | 2026-09-27 | 1 | L1.2 Q3 — 3 unguided subagents on "semiconductor shortage": failure + fix | yes: "Duplicated work. The coordinator should have given the task to a single researcher subagent" | partial — failure half right (duplication; missed coverage gaps). Fix wrong: one subagent avoids overlap but drops the split; course answer is partitioning. After 1 hint: "clear objective, boundaries with do's and don'ts, tools, output format" — all four elements; didn't say *partitioning* / non-overlapping slices, and never named coverage gaps. Correct after 1 hint, incomplete |
 | 2026-09-27 | 1 | L1.2 Q4 — coordinator notices a topic gap after first draft | yes: "Request a rework from the researcher, with explicit mention of what needs to be done" | partial — targeted re-delegation right; but "rework from the researcher" (course: spawn new targeted subagents) and no re-synthesis / repeat. Correct after 1 hint: new subagent (the old one has no memory), targeted at what was missed; then check completeness and merge with the first output |
+| 2026-09-27 | 1 | L1.3 Q2 — "use the findings from the earlier search": why it fails | yes: "subagent has no memory of earlier findings; coordinator should provide the findings, or a path to a file with them if the subagent has a read tool" | correct, no hints. File-path alternative is sensible but the course answer is: include the findings verbatim in the prompt |
 
 ## Still open
 
