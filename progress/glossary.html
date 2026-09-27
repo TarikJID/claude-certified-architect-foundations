@@ -5,7 +5,7 @@
 :root{
   --bg:#f5f6f4; --surface:#ffffff; --ink:#1c2321; --muted:#5b6662; --line:#dde2df;
   --accent:#2f6b5a; --accent-soft:#e3efea;
-  --t-api:#3d5a99; --t-tools:#8a5a1f; --t-loop:#2f6b5a; --t-design:#7a3f6e; --t-harness:#55605c;
+  --t-api:#3d5a99; --t-tools:#8a5a1f; --t-loop:#2f6b5a; --t-design:#7a3f6e; --t-harness:#55605c; --t-multi:#a8432f;
   --code-bg:#eef1ef;
 }
 @media (prefers-color-scheme: dark){
@@ -13,7 +13,7 @@
     color-scheme:dark;
     --bg:#131816; --surface:#1b2220; --ink:#e4e9e6; --muted:#9aa6a1; --line:#2c3532;
     --accent:#7cc4ad; --accent-soft:#1f302a;
-    --t-api:#93acea; --t-tools:#e0b070; --t-loop:#7cc4ad; --t-design:#d69ac8; --t-harness:#aab5b0;
+    --t-api:#93acea; --t-tools:#e0b070; --t-loop:#7cc4ad; --t-design:#d69ac8; --t-harness:#aab5b0; --t-multi:#f0937c;
     --code-bg:#242d2a;
   }
 }
@@ -21,7 +21,7 @@
   color-scheme:dark;
   --bg:#131816; --surface:#1b2220; --ink:#e4e9e6; --muted:#9aa6a1; --line:#2c3532;
   --accent:#7cc4ad; --accent-soft:#1f302a;
-  --t-api:#93acea; --t-tools:#e0b070; --t-loop:#7cc4ad; --t-design:#d69ac8; --t-harness:#aab5b0;
+  --t-api:#93acea; --t-tools:#e0b070; --t-loop:#7cc4ad; --t-design:#d69ac8; --t-harness:#aab5b0; --t-multi:#f0937c;
   --code-bg:#242d2a;
 }
 body{background:var(--bg);color:var(--ink);font:16px/1.55 "Public Sans",system-ui,sans-serif;}
@@ -67,7 +67,8 @@ const TAGS = {
   "Tools":   "var(--t-tools)",
   "Loop":    "var(--t-loop)",
   "Design":  "var(--t-design)",
-  "Harness": "var(--t-harness)"
+  "Harness": "var(--t-harness)",
+  "Multi-agent": "var(--t-multi)"
 };
 
 // Only concepts that have been taught. Added to as the course goes on.
@@ -95,7 +96,13 @@ const ENTRIES = [
   { term: "Model-driven decision-making", tag: "Design", src: "Lesson 1.1",
     def: "Claude picks the next step based on everything in context, adapting turn by turn. The path is not known in advance. This is an agent." },
   { term: "Pre-configured decision tree", tag: "Design", src: "Lesson 1.1", alt: "also: workflow",
-    def: "The steps and branches are written in code in advance. The LLM only fills in specific sub-steps. Predictable and cheap when the steps never vary." }
+    def: "The steps and branches are written in code in advance. The LLM only fills in specific sub-steps. Predictable and cheap when the steps never vary." },
+  { term: "Hub-and-spoke architecture", tag: "Multi-agent", src: "Lesson 1.2", alt: "also: orchestrator-worker",
+    def: "One coordinator in the middle, subagents around it. Subagents talk only to the coordinator, never to each other. All information, errors and results pass through the coordinator." },
+  { term: "Coordinator", tag: "Multi-agent", src: "Lesson 1.2", alt: "also: lead agent, orchestrator",
+    def: "The agent at the hub. It hands out work, receives every result and error, and decides what happens next. Sees everything, but becomes a bottleneck if it does too much itself." },
+  { term: "Subagent", tag: "Multi-agent", src: "Lesson 1.2", alt: "also: worker",
+    def: "An agent the coordinator sends out to do one piece of the job. It reports back only to the coordinator." }
 ];
 
 const state = { tag: "All", q: "" };

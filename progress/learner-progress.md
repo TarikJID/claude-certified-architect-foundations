@@ -28,7 +28,7 @@
 
 | Module | Status | Notes |
 |--------|--------|-------|
-| Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught in full (2026-09-27); next: Lesson 1.2 |
+| Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 started 2026-09-27 |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -113,6 +113,15 @@ Status values: `not started` · `in progress` · `completed`
     "any text = done" and "Claude said I'm done" unaided; needed a hint ("the harness just counts")
     for the iteration cap, then reasoned it well. Taught ~20 min earlier, so cued at best.
 
+### Hub-and-spoke coordinator architecture
+- Module: 1 (Lesson 1.2)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-27` · application · just-taught · correct — a search subagent fails mid-task: said the
+    orchestrator finds out and decides, e.g. re-runs the subagent. Right: all error handling routes
+    through the coordinator.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -130,6 +139,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
+- Hub-and-spoke (L1.2): both axes shaky, just taught.
 - All five Lesson 1.1 concepts: recall and application both shaky (see tracker).
 
 ## Session log
