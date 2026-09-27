@@ -63,6 +63,8 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-22` · application · just-taught · correct — traced both branches unprompted: `end_turn`
     stops the loop and the text is surfaced to the user; `tool_use` means execute the named tool and
     continue.
+  - `2026-09-27` · recall · cold · wrong — asked for the `stop_reason` value that means "run a
+    tool". Said `run_tool`. Answer: `tool_use`.
 
 ### Appending tool results to conversation history (`tool_result` + `tool_use` ID pairing)
 - Module: 1 (Lesson 1.1)
