@@ -91,6 +91,9 @@ Status values: `not started` · `in progress` · `completed`
     fixed in code ahead of time. Said "pipeline". Course terms: **workflow** / pre-configured
     decision tree (vs model-driven, i.e. agent). Right idea, wrong word — he used "workflow"
     himself on 09-22.
+  - `2026-09-27` · application · cued · correct — L1.1 quiz Q4, no hints. Clear contrast: decision
+    tree = path fixed in advance with branches; agentic loop = model picks next step from results.
+    Cued: the drill earlier today named both terms.
 
 ### Agentic loop termination anti-patterns
 - Module: 1 (Lesson 1.1)
@@ -110,6 +113,7 @@ Status values: `not started` · `in progress` · `completed`
 | Date | Module | Question | Attempted | Outcome |
 |------|--------|----------|-----------|---------|
 | 2026-09-27 | 1 | L1.1 Q2 — why a tool result must be appended to history | yes: "so the next round of Claude's thinking can use it; otherwise it would never be used" | correct after 1 hint — retry: "Claude has no memory; it only works with what the harness provides". Right mechanism; didn't use the words *stateless* or `tool_result` |
+| 2026-09-27 | 1 | L1.1 Q4 — model-driven vs pre-configured decision tree | yes: "decision tree: next step known in advance (do this, then that, if X else Y). Agentic loop: model decides next step based on how the previous went; path not known in advance" | correct, clean, no hints |
 
 ## Still open
 
