@@ -148,8 +148,6 @@ Status values: `not started` · `in progress` · `completed`
 - Asked for a glossary artifact (link in profile). Built with 12 Lesson 1.1 terms.
 - L1.1 quiz: 4/4 with 2 hints (Q2 stateless why; Q3 iteration cap). All cued — same day as
   teaching/drill. Names still the weak point: didn't produce *stateless* or `tool_result`.
-- Next session: cold drill on `tool_use` stop_reason value, *workflow*/decision tree, *stateless*,
-  iteration cap. Then Lesson 1.2.
 
 ### 2026-09-22 — Session 1
 - Onboarded. Style: lecture + checkpoints. Asked explicitly for short plain sentences.
