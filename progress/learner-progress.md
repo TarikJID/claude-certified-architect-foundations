@@ -189,6 +189,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-27 | 1 | L1.1 Q1 — field driving continue/stop + its two values | yes: "stop_reason, with values tool_use and end_turn" | correct, no hints — but heavily cued (answer said repeatedly this session) |
 | 2026-09-27 | 1 | L1.2 Q1 — can subagents talk directly; what passes through the coordinator | yes: "No, each subagent only speaks with the coordinator. Coordinator dispatches work (objective, tools, output, boundaries), receives results back" | partial — first half right; tasks-out/results-back right but missed errors and subagent-to-subagent info routing. Correct after 2 hints: got info routing on hint 1, errors on hint 2 |
 | 2026-09-27 | 1 | L1.2 Q2 — subagent read 40 docs: are they in the coordinator's context? | yes: "No, it would clutter the coordinator's context for no good reason; the coordinator only gets the useful content" | correct, no hints — gave the purpose (keep coordinator context clean) and the result (only the summary returns); did not name *context isolation* / own context window |
+| 2026-09-27 | 1 | L1.2 Q3 — 3 unguided subagents on "semiconductor shortage": failure + fix | yes: "Duplicated work. The coordinator should have given the task to a single researcher subagent" | partial — failure half right (duplication; missed coverage gaps). Fix wrong: one subagent avoids overlap but drops the split; course answer is partitioning. Hint given, retry pending |
 
 ## Still open
 
