@@ -133,6 +133,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-27` · application · just-taught · correct — user told coordinator "2024 sources only";
     subagent prompted "research the chip shortage". Said the subagent won't respect it: it has no
     knowledge of the user–coordinator conversation. Right.
+  - `2026-09-27` · application · cued · correct — L1.2 quiz Q2 (40 documents), no hints. Explained
+    via purpose (avoid clutter) and outcome (only useful content returns). Didn't use the term
+    *context isolation* — recall still shaky.
 
 ### Coordinator responsibilities (decomposition, delegation, aggregation, dynamic subagent selection)
 - Module: 1 (Lesson 1.2)
@@ -185,6 +188,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-27 | 1 | L1.1 Q3 — three termination anti-patterns + why | yes: (a) stop on any text — text can come with a tool request; (b) stop when Claude says it's done — ambiguous, unreliable; (c) couldn't recall | correct after 1 hint — 3rd: fixed round budget (e.g. 10) is wrong as the main rule: too few for some tasks, far more than needed for others. Did not add that a cap is fine as a safety backstop |
 | 2026-09-27 | 1 | L1.1 Q1 — field driving continue/stop + its two values | yes: "stop_reason, with values tool_use and end_turn" | correct, no hints — but heavily cued (answer said repeatedly this session) |
 | 2026-09-27 | 1 | L1.2 Q1 — can subagents talk directly; what passes through the coordinator | yes: "No, each subagent only speaks with the coordinator. Coordinator dispatches work (objective, tools, output, boundaries), receives results back" | partial — first half right; tasks-out/results-back right but missed errors and subagent-to-subagent info routing. Correct after 2 hints: got info routing on hint 1, errors on hint 2 |
+| 2026-09-27 | 1 | L1.2 Q2 — subagent read 40 docs: are they in the coordinator's context? | yes: "No, it would clutter the coordinator's context for no good reason; the coordinator only gets the useful content" | correct, no hints — gave the purpose (keep coordinator context clean) and the result (only the summary returns); did not name *context isolation* / own context window |
 
 ## Still open
 
