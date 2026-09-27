@@ -140,6 +140,15 @@ Status values: `not started` · `in progress` · `completed`
     named dynamic subagent selection, zero subagents, coordinator answers itself. Added unprompted:
     if the setup forbids the coordinator doing work, it's one subagent via delegation. Good nuance.
 
+### Risks of overly narrow / vague task decomposition
+- Module: 1 (Lesson 1.2)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-27` · application · just-taught · correct — Lisbon offsite, three subagents with the same
+    vague prompt: named duplicated work, missed information (no subtask assigned), coverage gaps
+    (e.g. nobody does transport), and linked them causally. Strong.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -157,7 +166,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
-- Hub-and-spoke, subagent context isolation, coordinator responsibilities (L1.2): both axes shaky, just taught.
+- Hub-and-spoke, subagent context isolation, coordinator responsibilities, decomposition risks (L1.2): both axes shaky, just taught.
 - All five Lesson 1.1 concepts: recall and application both shaky (see tracker).
 
 ## Session log

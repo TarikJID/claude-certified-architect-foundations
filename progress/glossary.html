@@ -106,7 +106,9 @@ const ENTRIES = [
   { term: "Subagent context isolation", tag: "Multi-agent", src: "Lesson 1.2",
     def: "A subagent starts fresh. It does not inherit the coordinator's conversation, tool calls or results. It only gets the prompt the coordinator writes for it, its own setup, and usually the project's CLAUDE.md. Only its final answer comes back." },
   { term: "Coordinator responsibilities", tag: "Multi-agent", src: "Lesson 1.2",
-    def: "Four jobs. <b>Decomposition</b>: break the request into subtasks. <b>Delegation</b>: give each subtask to the right subagent. <b>Aggregation</b>: combine the answers into one result. <b>Dynamic subagent selection</b>: judge each request and use only the subagents it needs, sometimes none." }
+    def: "Four jobs. <b>Decomposition</b>: break the request into subtasks. <b>Delegation</b>: give each subtask to the right subagent. <b>Aggregation</b>: combine the answers into one result. <b>Dynamic subagent selection</b>: judge each request and use only the subagents it needs, sometimes none."  },
+  { term: "Risks of overly narrow task decomposition", tag: "Multi-agent", src: "Lesson 1.2",
+    def: "Vague or overlapping subagent tasks cause duplicated work, coverage gaps, and subagents that miss what they need, because each works alone and can't see the others. Fix: give each subagent an objective, an output format, tool/source guidance, and clear boundaries." }
 ];
 
 const state = { tag: "All", q: "" };
