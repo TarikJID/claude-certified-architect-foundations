@@ -230,6 +230,8 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-27` · application · just-taught · correct — slow checkout page, two fixes to try: said
     fork the session. Added "after asking Claude to log its conclusions" — unnecessary, the fork
     copies full history. Didn't say which branch runs A vs B; told him (fork → A, original → B).
+  - `2026-09-27` · recall · cued · partial — L1.3 quiz Q4b: said "you fork"; exact name is
+    `fork_session`.
 
 ### Structured data formats separating content from metadata
 - Module: 1 (Lesson 1.3)
@@ -246,6 +248,8 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-09-27` · application · just-taught · correct — 4+3+2 min sequential = 9 min; spawn all three
     → 4 min (the slowest). Right. Didn't say "in one response" explicitly.
+  - `2026-09-27` · application · cued · correct — L1.3 quiz Q4a: multiple Agent calls in the same
+    response, each with its own structured prompt. No hints.
 
 ### Goal-oriented coordinator prompts (vs step-by-step procedural)
 - Module: 1 (Lesson 1.3)
@@ -277,6 +281,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-27 | 1 | L1.2 Q4 — coordinator notices a topic gap after first draft | yes: "Request a rework from the researcher, with explicit mention of what needs to be done" | partial — targeted re-delegation right; but "rework from the researcher" (course: spawn new targeted subagents) and no re-synthesis / repeat. Correct after 1 hint: new subagent (the old one has no memory), targeted at what was missed; then check completeness and merge with the first output |
 | 2026-09-27 | 1 | L1.3 Q2 — "use the findings from the earlier search": why it fails | yes: "subagent has no memory of earlier findings; coordinator should provide the findings, or a path to a file with them if the subagent has a read tool" | correct, no hints. File-path alternative is sensible but the course answer is: include the findings verbatim in the prompt |
 | 2026-09-27 | 1 | L1.3 Q3 — two required AgentDefinition fields + what each controls | yes: "description: when/why the coordinator should trigger it; prompt: how" | correct, no hints. Both field names exact (recall, cued). "how" is thin for prompt — it is the subagent's own system prompt (role, expertise, behaviour) |
+| 2026-09-27 | 1 | L1.3 Q4 — parallelism in one response + feature to branch completed analyses | yes: "spawn the three subagents in the same response using the Agent tool, each with its own structured prompt. You fork" | correct, no hints. Said "fork", not the exact name `fork_session` |
 
 ## Still open
 
