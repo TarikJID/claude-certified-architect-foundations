@@ -149,6 +149,16 @@ Status values: `not started` · `in progress` · `completed`
     vague prompt: named duplicated work, missed information (no subtask assigned), coverage gaps
     (e.g. nobody does transport), and linked them causally. Strong.
 
+### Partitioning research scope across subagents
+- Module: 1 (Lesson 1.2)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-27` · application · just-taught · correct — wrote a full transport-subagent prompt with
+    objective (Paris→Lisbon, 30 people, dates), output format (flight list with fields), tools (live
+    search), boundaries (plane, direct, no departures before 8am). Boundaries covered constraints but
+    not what is out of scope (hotels/food/local transfers) — pointed that out as the non-overlap part.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -166,7 +176,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
-- Hub-and-spoke, subagent context isolation, coordinator responsibilities, decomposition risks (L1.2): both axes shaky, just taught.
+- Hub-and-spoke, subagent context isolation, coordinator responsibilities, decomposition risks, partitioning (L1.2): both axes shaky, just taught.
 - All five Lesson 1.1 concepts: recall and application both shaky (see tracker).
 
 ## Session log

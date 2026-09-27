@@ -108,7 +108,9 @@ const ENTRIES = [
   { term: "Coordinator responsibilities", tag: "Multi-agent", src: "Lesson 1.2",
     def: "Four jobs. <b>Decomposition</b>: break the request into subtasks. <b>Delegation</b>: give each subtask to the right subagent. <b>Aggregation</b>: combine the answers into one result. <b>Dynamic subagent selection</b>: judge each request and use only the subagents it needs, sometimes none."  },
   { term: "Risks of overly narrow task decomposition", tag: "Multi-agent", src: "Lesson 1.2",
-    def: "Vague or overlapping subagent tasks cause duplicated work, coverage gaps, and subagents that miss what they need, because each works alone and can't see the others. Fix: give each subagent an objective, an output format, tool/source guidance, and clear boundaries." }
+    def: "Vague or overlapping subagent tasks cause duplicated work, coverage gaps, and subagents that miss what they need, because each works alone and can't see the others. Fix: give each subagent an objective, an output format, tool/source guidance, and clear boundaries."  },
+  { term: "Partitioning", tag: "Multi-agent", src: "Lesson 1.2",
+    def: "Give each subagent a distinct, non-overlapping slice of the job: by subtopic, source type or time period. Each slice still gets an objective, output format, tool/source guidance and boundaries, including what is out of scope." }
 ];
 
 const state = { tag: "All", q: "" };
