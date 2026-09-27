@@ -203,6 +203,10 @@ Status values: `not started` · `in progress` · `completed`
     the subagent won't know what the coordinator means (right, but general). Read "don't touch the
     database code" as forbidding all code changes → "paradox". Tutor's scenario was ambiguous: the
     bug is in auth.ts, the database code is a separate part. Clarified; asked for the better prompt.
+  - `2026-09-27` · application · just-taught · correct — after clarification: without the rule the
+    subagent might change database code if it thinks that fixes the bug. Wrote: "Bug in auth.ts,
+    error is 'XXX'. Fix it in auth.ts, never touch the database code." File, error, decision all
+    passed as content. (Learner flagged the original question as unclear — fair.)
 
 ## Quiz attempts
 
@@ -225,7 +229,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
-- Task/Agent tool + allowedTools (L1.3): both axes shaky, just taught.
+- Task/Agent tool + allowedTools, explicit context passing (L1.3): both axes shaky, just taught.
 - Hub-and-spoke, subagent context isolation, coordinator responsibilities, decomposition risks, partitioning, iterative refinement (L1.2): both axes shaky, just taught.
 - All five Lesson 1.1 concepts: recall and application both shaky (see tracker).
 

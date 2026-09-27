@@ -116,7 +116,9 @@ const ENTRIES = [
   { term: "<code>Task</code> / <code>Agent</code> tool", tag: "Tools", src: "Lesson 1.3",
     def: "The tool a coordinator calls to start a subagent. The exam guide calls it <code>Task</code>; newer SDK versions show it as <code>\"Agent\"</code> in <code>tool_use</code> blocks. Code that detects subagent calls should match either name." },
   { term: "<code>allowedTools</code>", tag: "Multi-agent", src: "Lesson 1.3",
-    def: "The list of tools an agent may use. A coordinator can only start subagents if <code>Task</code> / <code>Agent</code> is on its list, even when the subagents are already defined." }
+    def: "The list of tools an agent may use. A coordinator can only start subagents if <code>Task</code> / <code>Agent</code> is on its list, even when the subagents are already defined."  },
+  { term: "Explicit context passing", tag: "Multi-agent", src: "Lesson 1.3",
+    def: "Everything a subagent needs (earlier findings, file paths, error messages, decisions already made) must be written into its prompt as actual content. \"See the earlier results\" fails: there is no shared memory and no automatic handover." }
 ];
 
 const state = { tag: "All", q: "" };
