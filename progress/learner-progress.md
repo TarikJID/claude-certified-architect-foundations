@@ -275,6 +275,9 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-09-28` · application · just-taught · correct — allow rule for `process_refund` + hook
     blocking refunds > $500, $800 request: "the hook blocks it, hooks run before allow rules." Right.
+  - `2026-09-28` · application · cued · partial (1 hint, then revealed) — L1.4 quiz Q2. Explained the
+    gate via determinism and "bypassPermissions only skips asking the user"; did not use the
+    evaluation order (hooks first, before permission mode) even after a hint pointing at it.
 
 ### Programmatic enforcement vs prompt-based guidance (deterministic vs probabilistic)
 - Module: 2 (Lesson 1.4)
@@ -339,7 +342,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-27 | 1 | L1.3 Q5 — why goal-oriented > procedural + four elements | yes: "step-by-step breaks if reality doesn't align with what's expected. Objective, tools, output format, boundaries" | correct, clean, no hints — all four elements |
 | 2026-09-27 | 1 | L1.3 Q1 — reviewer defined, allowed_tools Read/Grep: can it be invoked? | yes: "No, it can't spawn a subagent; it's missing the Agent tool" | correct, no hints — heavily cued (near-identical checkpoint earlier today) |
 | 2026-09-28 | 2 | L1.4 Q1 — why prompt-only ordering fails + deterministic alternative | yes: "prompting isn't infallible: can be forgotten when the context window is full, or misinterpreted. Alternative: code-based gating, e.g. PreToolUse, imposing a condition before a tool can be used" | correct, clean, no hints. Named `PreToolUse` exactly |
-| 2026-09-28 | 2 | L1.4 Q2 — how a PreToolUse gate guarantees order even in a permissive mode | yes: "the LLM has no influence on the PreToolUse condition check: either it happened or not" | partial — determinism right, but the "even in a permissive mode" part needs the evaluation order (hooks run before permission mode). Hint given, retry pending |
+| 2026-09-28 | 2 | L1.4 Q2 — how a PreToolUse gate guarantees order even in a permissive mode | yes: "the LLM has no influence on the PreToolUse condition check: either it happened or not" | partial — determinism right, but the "even in a permissive mode" part needs the evaluation order (hooks run before permission mode). Retry: "bypassPermissions skips asking the user, it doesn't change how the code works" — sound intuition, but still no evaluation order. Answer revealed. Partial after 1 hint |
 
 ## Still open
 
