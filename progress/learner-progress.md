@@ -29,7 +29,7 @@
 | Module | Status | Notes |
 |--------|--------|-------|
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed; exercise not done; nothing closed yet |
-| Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught in full (not yet quizzed) |
+| Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28 |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -321,6 +321,10 @@ Status values: `not started` · `in progress` · `completed`
     fields (customer ID, root cause "plan change failed 3 Sept", amount "€30 overcharge × months",
     action "refund overcharges"). Computed the €30 himself. Refinements given: state a concrete total
     rather than a formula; action should also fix the plan so it doesn't recur.
+  - `2026-09-28` · recall · cued · partial — L1.4 quiz Q4: listed root cause, amounts, recommended
+    action; first item muddled ("customer root cause" for customer details). Skipped the why.
+    Pushed back that the question is tied to customer service — gave a generic framing (on-call
+    engineer handoff) and explained the exam guide uses the support scenario itself.
 
 ## Quiz attempts
 
@@ -345,6 +349,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-28 | 2 | L1.4 Q1 — why prompt-only ordering fails + deterministic alternative | yes: "prompting isn't infallible: can be forgotten when the context window is full, or misinterpreted. Alternative: code-based gating, e.g. PreToolUse, imposing a condition before a tool can be used" | correct, clean, no hints. Named `PreToolUse` exactly |
 | 2026-09-28 | 2 | L1.4 Q2 — how a PreToolUse gate guarantees order even in a permissive mode | yes: "the LLM has no influence on the PreToolUse condition check: either it happened or not" | partial — determinism right, but the "even in a permissive mode" part needs the evaluation order (hooks run before permission mode). Retry: "bypassPermissions skips asking the user, it doesn't change how the code works" — sound intuition, but still no evaluation order. Answer revealed. Partial after 1 hint |
 | 2026-09-28 | 2 | L1.4 Q3 — damaged + charged twice: decomposition and reply structure | yes: "split into two issues, investigate both at once, one combined reply" | correct, no hints; omitted "same shared context" |
+| 2026-09-28 | 2 | L1.4 Q4 — four handoff elements + why transcript access matters | yes: "customer root cause [sic], problem root cause, amount if applicable, recommended action"; did not answer the 'why'; said the question felt tied to the customer-service example | partial — 3/4 elements clean ("customer root cause" likely meant customer details); 'why' part missing. No hints; answer given with a generic framing |
 
 ## Still open
 
@@ -368,6 +373,10 @@ Status values: `not started` · `in progress` · `completed`
 - No cold drill: the same conversation still has yesterday's answers on screen, so nothing asked
   here can count as `cold`. Cold checks need a fresh conversation.
 - Started Module 2, Lesson 1.4.
+- Lesson 1.4 taught (5 concepts, all checkpoints correct; multi-concern needed a retry).
+- L1.4 quiz: Q1 clean, Q2 partial (didn't use evaluation order, revealed), Q3 clean, Q4 partial
+  (3/4 elements, no 'why'). All cued. Recurring gap: the *mechanism name* behind an answer
+  (evaluation order) and complete lists.
 
 ### 2026-09-27 — Session 2
 - Cold drill on two items. Both wrong on the exact word, right on the idea: `run_tool` for
