@@ -283,6 +283,8 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-09-28` · application · just-taught · correct — bank, 10k refunds/month, prompt rule vs hook:
     "Team A, because rules in prompts can fail." Right; didn't use *probabilistic*/*deterministic*.
+  - `2026-09-28` · application · cued · correct — L1.4 quiz Q1, no hints: prompts can be forgotten
+    (full context) or misread; deterministic alternative = code-based gate, e.g. `PreToolUse`.
 
 ### Programmatic prerequisite gates (`PreToolUse` deny with reason)
 - Module: 2 (Lesson 1.4)
@@ -336,6 +338,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-27 | 1 | L1.3 Q4 — parallelism in one response + feature to branch completed analyses | yes: "spawn the three subagents in the same response using the Agent tool, each with its own structured prompt. You fork" | correct, no hints. Said "fork", not the exact name `fork_session` |
 | 2026-09-27 | 1 | L1.3 Q5 — why goal-oriented > procedural + four elements | yes: "step-by-step breaks if reality doesn't align with what's expected. Objective, tools, output format, boundaries" | correct, clean, no hints — all four elements |
 | 2026-09-27 | 1 | L1.3 Q1 — reviewer defined, allowed_tools Read/Grep: can it be invoked? | yes: "No, it can't spawn a subagent; it's missing the Agent tool" | correct, no hints — heavily cued (near-identical checkpoint earlier today) |
+| 2026-09-28 | 2 | L1.4 Q1 — why prompt-only ordering fails + deterministic alternative | yes: "prompting isn't infallible: can be forgotten when the context window is full, or misinterpreted. Alternative: code-based gating, e.g. PreToolUse, imposing a condition before a tool can be used" | correct, clean, no hints. Named `PreToolUse` exactly |
 
 ## Still open
 
