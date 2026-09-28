@@ -302,6 +302,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-28` · application · just-taught · partial — "can't log in + wrong plan on invoice": split
     into two issues (right), but handled them sequentially (login first, invoice only after login is
     fixed) and as two separate interactions; no shared context, no single combined reply. Hint given.
+  - `2026-09-28` · application · just-taught · correct (retry) — "investigate both at once, then send
+    one combined reply." Raised a fair point: actually fixing may take several exchanges. Agreed —
+    the rule is about the investigation and the first unified reply, not a one-message fix.
 
 ## Quiz attempts
 

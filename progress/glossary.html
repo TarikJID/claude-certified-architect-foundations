@@ -138,7 +138,9 @@ const ENTRIES = [
   { term: "Programmatic enforcement vs prompt-based guidance", tag: "Design", src: "Lesson 1.4", alt: "deterministic vs probabilistic",
     def: "A rule written in the prompt usually works but can fail, especially deep in a long conversation: <b>probabilistic</b>. A rule checked in code (a hook or gate) runs outside Claude's reasoning and cannot be forgotten: <b>deterministic</b>. If a rule must hold every time, enforce it in code."  },
   { term: "Prerequisite gate (<code>PreToolUse</code> hook)", tag: "Harness", src: "Lesson 1.4",
-    def: "A hook that runs before a tool call. It checks which tool is requested and whether a required earlier step has happened. If not, it denies the call with a reason (e.g. \"run <code>get_customer</code> first\") so Claude knows what to do next. If yes, it lets the call through; it never runs the tool itself." }
+    def: "A hook that runs before a tool call. It checks which tool is requested and whether a required earlier step has happened. If not, it denies the call with a reason (e.g. \"run <code>get_customer</code> first\") so Claude knows what to do next. If yes, it lets the call through; it never runs the tool itself."  },
+  { term: "Multi-concern request decomposition", tag: "Design", src: "Lesson 1.4",
+    def: "When one message raises several issues: split it into separate items, investigate each using the same shared context (e.g. verify the customer once), then combine the findings into one unified reply." }
 ];
 
 const state = { tag: "All", q: "" };
