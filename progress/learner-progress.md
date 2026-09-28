@@ -310,6 +310,7 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-28` · application · just-taught · correct (retry) — "investigate both at once, then send
     one combined reply." Raised a fair point: actually fixing may take several exchanges. Agreed —
     the rule is about the investigation and the first unified reply, not a one-message fix.
+  - `2026-09-28` · application · cued · correct — L1.4 quiz Q3, no hints. Missing: shared context.
 
 ### Structured handoff summaries for human escalation
 - Module: 2 (Lesson 1.4)
@@ -343,6 +344,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-27 | 1 | L1.3 Q1 — reviewer defined, allowed_tools Read/Grep: can it be invoked? | yes: "No, it can't spawn a subagent; it's missing the Agent tool" | correct, no hints — heavily cued (near-identical checkpoint earlier today) |
 | 2026-09-28 | 2 | L1.4 Q1 — why prompt-only ordering fails + deterministic alternative | yes: "prompting isn't infallible: can be forgotten when the context window is full, or misinterpreted. Alternative: code-based gating, e.g. PreToolUse, imposing a condition before a tool can be used" | correct, clean, no hints. Named `PreToolUse` exactly |
 | 2026-09-28 | 2 | L1.4 Q2 — how a PreToolUse gate guarantees order even in a permissive mode | yes: "the LLM has no influence on the PreToolUse condition check: either it happened or not" | partial — determinism right, but the "even in a permissive mode" part needs the evaluation order (hooks run before permission mode). Retry: "bypassPermissions skips asking the user, it doesn't change how the code works" — sound intuition, but still no evaluation order. Answer revealed. Partial after 1 hint |
+| 2026-09-28 | 2 | L1.4 Q3 — damaged + charged twice: decomposition and reply structure | yes: "split into two issues, investigate both at once, one combined reply" | correct, no hints; omitted "same shared context" |
 
 ## Still open
 
