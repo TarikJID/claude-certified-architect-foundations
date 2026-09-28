@@ -134,7 +134,9 @@ const ENTRIES = [
   { term: "Permission evaluation order", tag: "Harness", src: "Lesson 1.4",
     def: "The fixed sequence every tool call goes through: <b>hooks → deny rules → ask rules → permission mode → allow rules → <code>canUseTool</code></b>. Hooks come first, so a hook's deny wins over everything after it." },
   { term: "<code>bypassPermissions</code>", tag: "Harness", src: "Lesson 1.4",
-    def: "The most permissive permission mode. Even here, a hook that denies a call still blocks it, because hooks run before the permission mode is checked." }
+    def: "The most permissive permission mode. Even here, a hook that denies a call still blocks it, because hooks run before the permission mode is checked."  },
+  { term: "Programmatic enforcement vs prompt-based guidance", tag: "Design", src: "Lesson 1.4", alt: "deterministic vs probabilistic",
+    def: "A rule written in the prompt usually works but can fail, especially deep in a long conversation: <b>probabilistic</b>. A rule checked in code (a hook or gate) runs outside Claude's reasoning and cannot be forgotten: <b>deterministic</b>. If a rule must hold every time, enforce it in code." }
 ];
 
 const state = { tag: "All", q: "" };
