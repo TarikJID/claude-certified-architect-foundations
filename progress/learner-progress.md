@@ -17,6 +17,9 @@
 - Notes: "i'm rather into short straight forward sentences, long texts and complicated sentences make me zone out" — keep chunks small, plain sentences, check in often.
   Also: "it's a bit weird that you call it 'my' code" — say **the harness**, not "your code". He is
   reasoning about the architecture, not writing it.
+  Also (2026-09-27, 2026-09-28): twice flagged a checkpoint question as unclear. Scenarios must be
+  fully concrete — say exactly what each piece of data means, ask ONE question, no hidden
+  assumptions (e.g. an unexplained code like `status: 3`).
 - Glossary: https://claude.ai/artifact/DF2gqN4scYhQ6v9uyvVce6 (source: `progress/glossary.html`,
   republish with that `url`). Requested 2026-09-27. Add each concept's exact name, plain definition
   and tag (API / Tools / Loop / Design / Harness) as it is taught. Only taught material.
