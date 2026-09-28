@@ -128,7 +128,13 @@ const ENTRIES = [
   { term: "Parallel subagent spawning", tag: "Multi-agent", src: "Lesson 1.3",
     def: "The coordinator puts several <code>Task</code>/<code>Agent</code> calls in one single response, so independent subagents run at the same time. Total time is the slowest one, not the sum. Anthropic reports up to 90% less research time."  },
   { term: "Goal-oriented prompts", tag: "Multi-agent", src: "Lesson 1.3", alt: "vs procedural prompts",
-    def: "Tell a subagent what a good result looks like, not a fixed list of steps. Procedural steps break when reality differs. Goal-oriented still means concrete: objective, output format, tool/source guidance, boundaries." }
+    def: "Tell a subagent what a good result looks like, not a fixed list of steps. Procedural steps break when reality differs. Goal-oriented still means concrete: objective, output format, tool/source guidance, boundaries."  },
+  { term: "Hook", tag: "Harness", src: "Lesson 1.4",
+    def: "Your own code that the harness runs around a tool call, for example before it runs. A hook that returns deny blocks the call, and nothing later in the order can override it." },
+  { term: "Permission evaluation order", tag: "Harness", src: "Lesson 1.4",
+    def: "The fixed sequence every tool call goes through: <b>hooks → deny rules → ask rules → permission mode → allow rules → <code>canUseTool</code></b>. Hooks come first, so a hook's deny wins over everything after it." },
+  { term: "<code>bypassPermissions</code>", tag: "Harness", src: "Lesson 1.4",
+    def: "The most permissive permission mode. Even here, a hook that denies a call still blocks it, because hooks run before the permission mode is checked." }
 ];
 
 const state = { tag: "All", q: "" };

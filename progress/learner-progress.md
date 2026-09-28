@@ -268,6 +268,14 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-27` · application · cued · correct — L1.3 quiz Q5, no hints: procedural breaks when
     reality diverges; listed all four elements. First complete four-item list unaided today.
 
+### Permission evaluation order for tool calls (hooks first)
+- Module: 2 (Lesson 1.4, prerequisite)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-28` · application · just-taught · correct — allow rule for `process_refund` + hook
+    blocking refunds > $500, $800 request: "the hook blocks it, hooks run before allow rules." Right.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -294,6 +302,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
+- Permission evaluation order (L1.4): both axes shaky, just taught.
 - Task/Agent tool + allowedTools, explicit context passing, AgentDefinition, fork_session, structured claim/evidence/source, parallel spawning, goal-oriented prompts (L1.3): both axes shaky, just taught.
 - Hub-and-spoke, subagent context isolation, coordinator responsibilities, decomposition risks, partitioning, iterative refinement (L1.2): both axes shaky, just taught.
 - All five Lesson 1.1 concepts: recall and application both shaky (see tracker).
