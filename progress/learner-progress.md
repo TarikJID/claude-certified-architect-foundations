@@ -284,6 +284,16 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-28` · application · just-taught · correct — bank, 10k refunds/month, prompt rule vs hook:
     "Team A, because rules in prompts can fail." Right; didn't use *probabilistic*/*deterministic*.
 
+### Programmatic prerequisite gates (`PreToolUse` deny with reason)
+- Module: 2 (Lesson 1.4)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-28` · application · just-taught · correct — ship_order gated on charge_payment: checks
+    payment succeeded; if not, deny with reason "charge_payment has not happened or failed". Right.
+    Small slip: said "if yes, it calls ship_order" — the hook doesn't call the tool, it lets the
+    requested call through. Corrected.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -310,7 +320,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
-- Permission evaluation order, programmatic vs prompt enforcement (L1.4): both axes shaky, just taught.
+- Permission evaluation order, programmatic vs prompt enforcement, prerequisite gates (L1.4): both axes shaky, just taught.
 - Task/Agent tool + allowedTools, explicit context passing, AgentDefinition, fork_session, structured claim/evidence/source, parallel spawning, goal-oriented prompts (L1.3): both axes shaky, just taught.
 - Hub-and-spoke, subagent context isolation, coordinator responsibilities, decomposition risks, partitioning, iterative refinement (L1.2): both axes shaky, just taught.
 - All five Lesson 1.1 concepts: recall and application both shaky (see tracker).
