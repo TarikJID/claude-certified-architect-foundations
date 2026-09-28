@@ -343,6 +343,15 @@ Status values: `not started` · `in progress` · `completed`
     lacked. Point explained: agent likely reads 1 as "yes" → tells customer it's paid. Tutor's
     question design was the main problem here, not his reasoning.
 
+### `PostToolUse` hooks for result normalization
+- Module: 2 (Lesson 1.5)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-28` · application · just-taught · correct — said the hook should replace `paid: 1` with the
+    status it maps to in the tool's documentation, then the agent answers from that value. Right
+    mechanism (translate before Claude sees it). Didn't spell out the final customer answer.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -373,7 +382,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
-- MCP isError / inconsistent tool formats (L1.5): both axes shaky, just taught.
+- MCP isError / inconsistent tool formats, PostToolUse normalization (L1.5): both axes shaky, just taught.
 - Permission evaluation order, programmatic vs prompt enforcement, prerequisite gates, multi-concern decomposition, structured handoff (L1.4): both axes shaky, just taught.
 - Task/Agent tool + allowedTools, explicit context passing, AgentDefinition, fork_session, structured claim/evidence/source, parallel spawning, goal-oriented prompts (L1.3): both axes shaky, just taught.
 - Hub-and-spoke, subagent context isolation, coordinator responsibilities, decomposition risks, partitioning, iterative refinement (L1.2): both axes shaky, just taught.

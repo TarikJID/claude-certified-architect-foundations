@@ -146,7 +146,9 @@ const ENTRIES = [
   { term: "MCP (Model Context Protocol)", tag: "Tools", src: "Lesson 1.5 (prerequisite; full coverage in Module 3)",
     def: "A standard way to plug outside tools (each running on its own server) into Claude. Tools may describe the same thing differently, e.g. dates as <code>1727500000</code> or <code>2024-09-28</code>." },
   { term: "<code>isError</code>", tag: "Tools", src: "Lesson 1.5",
-    def: "A field in an MCP tool result. <code>true</code> means the tool failed. The failure comes back as normal content Claude can read, so it can react (retry, try another way) instead of crashing." }
+    def: "A field in an MCP tool result. <code>true</code> means the tool failed. The failure comes back as normal content Claude can read, so it can react (retry, try another way) instead of crashing."  },
+  { term: "<code>PostToolUse</code> hook", tag: "Harness", src: "Lesson 1.5",
+    def: "Runs after a tool returns and before Claude sees the result. It can rewrite the result, e.g. to <b>normalize</b> formats from different tools into one (<code>paid: 1</code> → <code>payment_status: \"not_paid\"</code>; all dates to one format), so Claude never has to guess." }
 ];
 
 const state = { tag: "All", q: "" };
