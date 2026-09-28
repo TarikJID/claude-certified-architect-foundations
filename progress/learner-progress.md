@@ -29,7 +29,7 @@
 | Module | Status | Notes |
 |--------|--------|-------|
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed; exercise not done; nothing closed yet |
-| Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28, Lesson 1.4 |
+| Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught in full (not yet quizzed) |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -306,6 +306,16 @@ Status values: `not started` · `in progress` · `completed`
     one combined reply." Raised a fair point: actually fixing may take several exchanges. Agreed —
     the rule is about the investigation and the first unified reply, not a one-message fix.
 
+### Structured handoff summaries for human escalation
+- Module: 2 (Lesson 1.4)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-28` · application · just-taught · correct — wrong-plan invoice escalation: all four
+    fields (customer ID, root cause "plan change failed 3 Sept", amount "€30 overcharge × months",
+    action "refund overcharges"). Computed the €30 himself. Refinements given: state a concrete total
+    rather than a formula; action should also fix the plan so it doesn't recur.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -332,7 +342,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
-- Permission evaluation order, programmatic vs prompt enforcement, prerequisite gates, multi-concern decomposition (L1.4): both axes shaky, just taught.
+- Permission evaluation order, programmatic vs prompt enforcement, prerequisite gates, multi-concern decomposition, structured handoff (L1.4): both axes shaky, just taught.
 - Task/Agent tool + allowedTools, explicit context passing, AgentDefinition, fork_session, structured claim/evidence/source, parallel spawning, goal-oriented prompts (L1.3): both axes shaky, just taught.
 - Hub-and-spoke, subagent context isolation, coordinator responsibilities, decomposition risks, partitioning, iterative refinement (L1.2): both axes shaky, just taught.
 - All five Lesson 1.1 concepts: recall and application both shaky (see tracker).

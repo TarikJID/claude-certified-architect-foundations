@@ -140,7 +140,9 @@ const ENTRIES = [
   { term: "Prerequisite gate (<code>PreToolUse</code> hook)", tag: "Harness", src: "Lesson 1.4",
     def: "A hook that runs before a tool call. It checks which tool is requested and whether a required earlier step has happened. If not, it denies the call with a reason (e.g. \"run <code>get_customer</code> first\") so Claude knows what to do next. If yes, it lets the call through; it never runs the tool itself."  },
   { term: "Multi-concern request decomposition", tag: "Design", src: "Lesson 1.4",
-    def: "When one message raises several issues: split it into separate items, investigate each using the same shared context (e.g. verify the customer once), then combine the findings into one unified reply." }
+    def: "When one message raises several issues: split it into separate items, investigate each using the same shared context (e.g. verify the customer once), then combine the findings into one unified reply."  },
+  { term: "Structured handoff summary", tag: "Design", src: "Lesson 1.4",
+    def: "When an agent escalates to a human who can't see the conversation, it hands over separate fields, not prose: <b>customer details</b>, <b>root cause</b>, <b>amounts</b>, <b>recommended action</b>. The human can act in seconds." }
 ];
 
 const state = { tag: "All", q: "" };
