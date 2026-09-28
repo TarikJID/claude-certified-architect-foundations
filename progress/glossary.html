@@ -142,7 +142,11 @@ const ENTRIES = [
   { term: "Multi-concern request decomposition", tag: "Design", src: "Lesson 1.4",
     def: "When one message raises several issues: split it into separate items, investigate each using the same shared context (e.g. verify the customer once), then combine the findings into one unified reply."  },
   { term: "Structured handoff summary", tag: "Design", src: "Lesson 1.4",
-    def: "When an agent escalates to a human who can't see the conversation, it hands over separate fields, not prose: <b>customer details</b>, <b>root cause</b>, <b>amounts</b>, <b>recommended action</b>. The human can act in seconds." }
+    def: "When an agent escalates to a human who can't see the conversation, it hands over separate fields, not prose: <b>customer details</b>, <b>root cause</b>, <b>amounts</b>, <b>recommended action</b>. The human can act in seconds."  },
+  { term: "MCP (Model Context Protocol)", tag: "Tools", src: "Lesson 1.5 (prerequisite; full coverage in Module 3)",
+    def: "A standard way to plug outside tools (each running on its own server) into Claude. Tools may describe the same thing differently, e.g. dates as <code>1727500000</code> or <code>2024-09-28</code>." },
+  { term: "<code>isError</code>", tag: "Tools", src: "Lesson 1.5",
+    def: "A field in an MCP tool result. <code>true</code> means the tool failed. The failure comes back as normal content Claude can read, so it can react (retry, try another way) instead of crashing." }
 ];
 
 const state = { tag: "All", q: "" };

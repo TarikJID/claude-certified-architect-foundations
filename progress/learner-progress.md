@@ -329,6 +329,17 @@ Status values: `not started` · `in progress` · `completed`
     Pushed back that the question is tied to customer service — gave a generic framing (on-call
     engineer handoff) and explained the exam guide uses the support scenario itself.
 
+### MCP tool results: `isError` and inconsistent formats across tools
+- Module: 2 (Lesson 1.5, prerequisite)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-28` · application · just-taught · partial — checkpoint needed two rewrites (learner rightly
+    said it lacked context). Final: `shipped: "yes"`, `paid: 1` where 1 = not paid, agent not told.
+    Answered "shipped and not paid" — used the meaning the tutor had given him, which the agent
+    lacked. Point explained: agent likely reads 1 as "yes" → tells customer it's paid. Tutor's
+    question design was the main problem here, not his reasoning.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -359,6 +370,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
+- MCP isError / inconsistent tool formats (L1.5): both axes shaky, just taught.
 - Permission evaluation order, programmatic vs prompt enforcement, prerequisite gates, multi-concern decomposition, structured handoff (L1.4): both axes shaky, just taught.
 - Task/Agent tool + allowedTools, explicit context passing, AgentDefinition, fork_session, structured claim/evidence/source, parallel spawning, goal-oriented prompts (L1.3): both axes shaky, just taught.
 - Hub-and-spoke, subagent context isolation, coordinator responsibilities, decomposition risks, partitioning, iterative refinement (L1.2): both axes shaky, just taught.
