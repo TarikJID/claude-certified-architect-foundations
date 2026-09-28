@@ -20,6 +20,9 @@
   Also (2026-09-27, 2026-09-28): twice flagged a checkpoint question as unclear. Scenarios must be
   fully concrete — say exactly what each piece of data means, ask ONE question, no hidden
   assumptions (e.g. an unexplained code like `status: 3`).
+  Also: state the premise a question depends on in the teaching itself, before asking. On the
+  MCP formats checkpoint the lesson said "tools format data differently" but never said "and
+  Claude has no key to decode them" — he fairly inferred Claude could decode per tool.
 - Glossary: https://claude.ai/artifact/DF2gqN4scYhQ6v9uyvVce6 (source: `progress/glossary.html`,
   republish with that `url`). Requested 2026-09-27. Add each concept's exact name, plain definition
   and tag (API / Tools / Loop / Design / Harness) as it is taught. Only taught material.
