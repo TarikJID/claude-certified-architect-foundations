@@ -339,6 +339,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-27 | 1 | L1.3 Q5 — why goal-oriented > procedural + four elements | yes: "step-by-step breaks if reality doesn't align with what's expected. Objective, tools, output format, boundaries" | correct, clean, no hints — all four elements |
 | 2026-09-27 | 1 | L1.3 Q1 — reviewer defined, allowed_tools Read/Grep: can it be invoked? | yes: "No, it can't spawn a subagent; it's missing the Agent tool" | correct, no hints — heavily cued (near-identical checkpoint earlier today) |
 | 2026-09-28 | 2 | L1.4 Q1 — why prompt-only ordering fails + deterministic alternative | yes: "prompting isn't infallible: can be forgotten when the context window is full, or misinterpreted. Alternative: code-based gating, e.g. PreToolUse, imposing a condition before a tool can be used" | correct, clean, no hints. Named `PreToolUse` exactly |
+| 2026-09-28 | 2 | L1.4 Q2 — how a PreToolUse gate guarantees order even in a permissive mode | yes: "the LLM has no influence on the PreToolUse condition check: either it happened or not" | partial — determinism right, but the "even in a permissive mode" part needs the evaluation order (hooks run before permission mode). Hint given, retry pending |
 
 ## Still open
 
