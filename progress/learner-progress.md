@@ -13,7 +13,7 @@
 - Name: Tarik
 - Preferred style: Lecture + checkpoints
 - Started: 2026-09-22
-- Last session: 2026-09-27
+- Last session: 2026-09-28
 - Notes: "i'm rather into short straight forward sentences, long texts and complicated sentences make me zone out" — keep chunks small, plain sentences, check in often.
   Also: "it's a bit weird that you call it 'my' code" — say **the harness**, not "your code". He is
   reasoning about the architecture, not writing it.
@@ -28,7 +28,8 @@
 
 | Module | Status | Notes |
 |--------|--------|-------|
-| Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed; nothing closed yet |
+| Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed; exercise not done; nothing closed yet |
+| Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28, Lesson 1.4 |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -301,6 +302,14 @@ Status values: `not started` · `in progress` · `completed`
 
 <!-- Newest first. What was taught, what landed, what did not, and anything about
      HOW to teach this learner that the next session should know. -->
+
+### 2026-09-28 — Session 2, continued (same conversation, new day)
+- Before Module 2, asked why his own multi-agent system spawned subagents with no tool list in
+  CLAUDE.md. Explained CLAUDE.md is instructions, not tool config; with no restriction, built-in
+  tools incl. Agent are available by default (flagged as outside course). Exam rule stands.
+- No cold drill: the same conversation still has yesterday's answers on screen, so nothing asked
+  here can count as `cold`. Cold checks need a fresh conversation.
+- Started Module 2, Lesson 1.4.
 
 ### 2026-09-27 — Session 2
 - Cold drill on two items. Both wrong on the exact word, right on the idea: `run_tool` for
