@@ -289,6 +289,10 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-09-27` · application · just-taught · correct — rewrote "cost carmakers ~$210B in 2021,
     according to a report I read" as Claim / Evidence / Source fields. Right structure.
+  - `2026-09-29` · application · cued · correct — M1 exercise step 8: pass findings to synthesis "in the same
+    structured format, one row per fact with source". Hint pointed at step 4. Then proposed, as his own
+    preference, writing findings to .md files and passing the paths (same idea as L1.3 Q2). Told him it's a
+    valid pattern if the subagent has Read, but the course/exam answer is findings pasted straight into the prompt.
 
 ### Parallel subagent spawning in a single turn
 - Module: 1 (Lesson 1.3)
