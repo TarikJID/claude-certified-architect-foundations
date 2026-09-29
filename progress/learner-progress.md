@@ -227,6 +227,8 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-29` · application · cued · correct — M1 exercise step 7 (China gap in the draft): "spawn a new
     China subagent targeting the gap, then re-synthesize." No hints. Re-synthesis now included (missed on
     09-27). Follow-up asked: what the new prompt says that the first didn't.
+  - `2026-09-29` · application · cued · correct — follow-up: "what was already found and exactly what's
+    missing." Right, and ties to context isolation.
 
 ### Task/Agent tool and the `allowedTools` requirement
 - Module: 1 (Lesson 1.3)
