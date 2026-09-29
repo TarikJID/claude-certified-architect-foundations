@@ -304,6 +304,9 @@ Status values: `not started` · `in progress` · `completed`
     comparing to the coordinator. Gaps: output format vague ("clean breakdown", no fields shared across the
     3 subagents); boundaries only restrict sources, nothing on what's out of scope (other regions, non-AI
     law), which is the same gap as the Lisbon prompt on 09-27; "past two years" has no concrete dates. Asked for a revision.
+  - `2026-09-29` · application · cued · correct (output half) — revised output format: date, measure name,
+    status, summary, source link. Good shared schema; source link per item = claim-source pairing. Left the
+    boundaries line out of the revision (asked for two lines, gave one). Asked again for the out-of-scope line.
 
 ### Permission evaluation order for tool calls (hooks first)
 - Module: 2 (Lesson 1.4, prerequisite)
