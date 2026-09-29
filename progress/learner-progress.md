@@ -447,6 +447,14 @@ Status values: `not started` · `in progress` · `completed`
     carried into the translation, which is the point of checks between steps. Argued B could also be a
     fixed chain (network → DB → compute → code). Used that as the bridge to dynamic decomposition.
 
+### Dynamic adaptive decomposition (orchestrator-workers pattern)
+- Module: 2 (Lesson 1.6)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-29` · application · just-taught · correct — slow site: network fine, DB 10× slower since
+    Tuesday → "dig into the database: what changed on Tuesday." Right: the next subtask comes from the finding.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
