@@ -370,6 +370,8 @@ Status values: `not started` · `in progress` · `completed`
     (probabilistic) — the block is guaranteed, the redirect is guidance.
   - `2026-09-29` · application · cued · correct — L1.5 quiz Q1 (Pre half): checks before the tool
     runs, against predefined conditions. Didn't mention deny/redirect.
+  - `2026-09-29` · application · cued · correct — L1.5 quiz Q3: deny + guide to escalate_to_human.
+    Didn't state the why (avoid a dead end). Heavily cued.
 
 ## Quiz attempts
 
@@ -397,6 +399,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-28 | 2 | L1.4 Q4 — four handoff elements + why transcript access matters | yes: "customer root cause [sic], problem root cause, amount if applicable, recommended action"; did not answer the 'why'; said the question felt tied to the customer-service example | partial — 3/4 elements clean ("customer root cause" likely meant customer details); 'why' part missing. No hints; answer given with a generic framing |
 | 2026-09-29 | 2 | L1.5 Q1 — PreToolUse vs PostToolUse: when + typical use | yes: "Pre checks before the tool runs whether the agent may use it, based on predefined conditions. Post prepares the tool's result before Claude sees it, rewriting it to make it clear" | correct, no hints. Missing the exam words: *deny/redirect* (Pre) and *normalize* (Post) |
 | 2026-09-29 | 2 | L1.5 Q2 — orders int vs billing string status: fix + why it exists | yes: "PostToolUse normalizes the results to remove ambiguity. Difference exists because the two MCP tools can be built by different owners with their own standards; PostToolUse handles it rather than asking owners to adapt" | correct, clean, no hints. Course phrasing: MCP lets each tool declare its own `outputSchema`, no requirement to match — his "different owners, own standards" is the same point |
+| 2026-09-29 | 2 | L1.5 Q3 — what a >$500 refund denial should also do, and why | yes: "deny and guide to the alternative tool decided by the developer, e.g. escalate_to_human" | correct, no hints; "why" (no dead end, productive next step) implied, not stated. Heavily cued (checkpoint same scenario earlier) |
 
 ## Still open
 
