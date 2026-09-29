@@ -150,7 +150,15 @@ const ENTRIES = [
   { term: "<code>PostToolUse</code> hook", tag: "Harness", src: "Lesson 1.5",
     def: "Runs after a tool returns and before Claude sees the result. It can rewrite the result, e.g. to <b>normalize</b> formats from different tools into one (<code>paid: 1</code> → <code>payment_status: \"not_paid\"</code>; all dates to one format), so Claude never has to guess."  },
   { term: "Deny reason as a redirect", tag: "Harness", src: "Lesson 1.5",
-    def: "A <code>PreToolUse</code> hook sees the tool name and its inputs. When it denies, its reason can say what to do instead, e.g. \"Refunds over $500 need human approval. Use <code>escalate_to_human</code> instead.\" The block is code (guaranteed); following the redirect is Claude (guidance)." }
+    def: "A <code>PreToolUse</code> hook sees the tool name and its inputs. When it denies, its reason can say what to do instead, e.g. \"Refunds over $500 need human approval. Use <code>escalate_to_human</code> instead.\" The block is code (guaranteed); following the redirect is Claude (guidance)." },
+  { term: "Prompt chaining", tag: "Design", src: "Lesson 1.6",
+    def: "Split a task into fixed steps decided in advance, always in the same order. Each step is a separate call working on the previous step's output; code can check results in between. Slower, but each step is more accurate. E.g. summarize → translate." },
+  { term: "Dynamic decomposition (orchestrator-workers)", tag: "Design", src: "Lesson 1.6",
+    def: "A central orchestrator decides the subtasks while running, based on what it just found. Nobody knows the steps in advance. For open-ended investigations, e.g. \"DB 10× slower since Tuesday\" → next subtask: what changed on Tuesday." },
+  { term: "Attention dilution", tag: "Design", src: "Lesson 1.6",
+    def: "One call asked to review many files in depth spreads its attention thin: uneven depth, missed issues. Fix: a <b>per-file local pass</b> (one call per file) plus a <b>cross-file integration pass</b> that looks only for problems between files (e.g. a function renamed in one file, still called by its old name in another)." },
+  { term: "Adaptive investigation planning", tag: "Design", src: "Lesson 1.6",
+    def: "For a task with no step list: map the structure first, find the high-impact areas, make a prioritized plan, and keep adjusting it as surprises turn up." }
 ];
 
 const state = { tag: "All", q: "" };
