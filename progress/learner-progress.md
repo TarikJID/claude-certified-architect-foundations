@@ -38,7 +38,7 @@
 | Module | Status | Notes |
 |--------|--------|-------|
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Nothing closed yet |
-| Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29) |
+| Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct) |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -464,6 +464,14 @@ Status values: `not started` · `in progress` · `completed`
     file 27: integration pass catches it, being the only call that sees both; per-file calls see one file each.
     Clean and complete.
 
+### Adaptive investigation planning (map → high-impact → prioritized plan → adapt)
+- Module: 2 (Lesson 1.6)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-29` · application · just-taught · correct — 200 undocumented endpoints, 10 carry 90% of
+    traffic: "start with the 10 busiest, they matter most." Right: prioritize high-impact areas from the map.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -498,6 +506,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
+- Prompt chaining, dynamic decomposition, per-file + integration pass, adaptive investigation planning (L1.6): both axes shaky, just taught; not quizzed yet.
 - MCP isError / inconsistent tool formats, PostToolUse normalization, PreToolUse deny+redirect (L1.5): both axes shaky, just taught.
 - Permission evaluation order, programmatic vs prompt enforcement, prerequisite gates, multi-concern decomposition, structured handoff (L1.4): both axes shaky, just taught.
 - Task/Agent tool + allowedTools, explicit context passing, AgentDefinition, fork_session, structured claim/evidence/source, parallel spawning, goal-oriented prompts (L1.3): both axes shaky, just taught.
@@ -524,6 +533,8 @@ Status values: `not started` · `in progress` · `completed`
   path is not a vague pointer; it saves the coordinator's context and output), noted the synthesis subagent
   still reads the same tokens, and it depends on Read. Flagged as outside the course.
 - Started Lesson 1.6.
+- Lesson 1.6 taught: all 4 checkpoints correct, answers short and precise. Argued a fixed chain could
+  work for an open investigation; used it as the bridge to dynamic decomposition. Landed.
 
 ### 2026-09-29 — Session 2, continued (same conversation, third day)
 - Finished Lesson 1.5 (PreToolUse redirect). Asked whether the redirect is code or LLM — explained
