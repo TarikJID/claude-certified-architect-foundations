@@ -465,6 +465,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-29` · application · just-taught · correct — `getUser`→`fetchUser` rename in file 3, old call in
     file 27: integration pass catches it, being the only call that sees both; per-file calls see one file each.
     Clean and complete.
+  - `2026-09-29` · recall · cued · correct — L1.6 quiz Q2: named *attention dilution* exactly. Taught ~30 min
+    earlier, so cued; doesn't count toward closing.
+  - `2026-09-29` · application · cued · correct — same Q2: attention stretched thin, uneven depth across files.
 
 ### Adaptive investigation planning (map → high-impact → prioritized plan → adapt)
 - Module: 2 (Lesson 1.6)
@@ -503,6 +506,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-29 | 2 | L1.5 Q3 — what a >$500 refund denial should also do, and why | yes: "deny and guide to the alternative tool decided by the developer, e.g. escalate_to_human" | correct, no hints; "why" (no dead end, productive next step) implied, not stated. Heavily cued (checkpoint same scenario earlier) |
 | 2026-09-29 | 2 | L1.5 Q4 (reworded: isError vs crash; JSON-RPC part not yet taught) | yes: "agent understands what's happening, can retry, escalate, use another tool; a crash leaves it in the dark" | correct, clean, no hints. Small wording: the tool didn't crash — it failed and reported it as content |
 | 2026-09-29 | 2 | L1.6 Q1 — 20 PRs/week, same 5 fixed criteria: chaining or dynamic? why | yes: "prompt chaining, the steps are fixed and known in advance" | correct, clean, no hints |
+| 2026-09-29 | 2 | L1.6 Q2 — 40-file PR in one call vs per-file + cross-file: why worse, name it | yes: "attention dilution; attention stretched too much, some files get good attention, others a superficial pass" | correct, clean, no hints. Named *attention dilution* exactly |
 
 ## Still open
 
