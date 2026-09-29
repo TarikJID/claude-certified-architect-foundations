@@ -79,6 +79,10 @@ Status values: `not started` · `in progress` · `completed`
     `end_turn` exactly. Cued (said many times this session); does not count toward closing.
   - `2026-09-29` · recall · cold · correct — fresh conversation drill: "what field tells the harness
     to continue or stop?" → `stop_reason`, exact. First clean cold recall; one more on a later day closes it.
+  - `2026-09-29` · application · cued · partial — M1 exercise step 1 (turn-by-turn stop_reasons). Turns 1
+    and 3 right (`tool_use` → spawn subagent). Turn 2 mixed levels: gave the *subagent's* `end_turn` as a
+    coordinator turn; the subagent's result actually comes back as a `tool_result`, not as a coordinator
+    turn. Also missed what the harness does at each step, and the final coordinator `end_turn`. Asked for a redo.
 
 ### Appending tool results to conversation history (`tool_result` + `tool_use` ID pairing)
 - Module: 1 (Lesson 1.1)
