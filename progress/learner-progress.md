@@ -83,6 +83,10 @@ Status values: `not started` · `in progress` · `completed`
     and 3 right (`tool_use` → spawn subagent). Turn 2 mixed levels: gave the *subagent's* `end_turn` as a
     coordinator turn; the subagent's result actually comes back as a `tool_result`, not as a coordinator
     turn. Also missed what the harness does at each step, and the final coordinator `end_turn`. Asked for a redo.
+  - `2026-09-29` · application · cued · correct (retry) — traced the coordinator only: `tool_use` (spawn
+    web_search) → `tool_use` (read) → `tool_use` (spawn document_analysis) → `end_turn` (final report to user).
+    Levels now right, final `end_turn` present. Still left out the harness's action at each turn (run the
+    tool, append `tool_result`, call again / stop and show text); tutor showed it.
 
 ### Appending tool results to conversation history (`tool_result` + `tool_use` ID pairing)
 - Module: 1 (Lesson 1.1)
