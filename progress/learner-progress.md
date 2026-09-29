@@ -92,6 +92,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-27` · application · cued · correct (1 hint) — L1.1 quiz Q2. First answer gave only the
     effect; after a hint said Claude has no memory and only sees what the harness sends. That is
     the stateless-API point. Did not produce the words *stateless* / `tool_result` (recall gap).
+  - `2026-09-29` · recall · cold · correct — fresh conversation drill: block type for sending tool output
+    back → `tool_result`, exact. Question named its sibling `tool_use`, which helps the pattern a little.
+    First clean cold recall.
 
 ### Model-driven decision-making vs pre-configured decision trees
 - Module: 1 (Lesson 1.1)
@@ -425,7 +428,7 @@ Status values: `not started` · `in progress` · `completed`
      HOW to teach this learner that the next session should know. -->
 
 ### 2026-09-29 — Session 3 (fresh conversation, so cold checks count)
-- Cold drill: `stop_reason` — correct, exact. `fork_session` — correct, exact (was "fork" on 09-27).
+- Cold drill: `stop_reason` — correct, exact. `fork_session` — correct, exact (was "fork" on 09-27). Learner asked for more drilling. `tool_result` — correct, exact.
 
 ### 2026-09-29 — Session 2, continued (same conversation, third day)
 - Finished Lesson 1.5 (PreToolUse redirect). Asked whether the redirect is code or LLM — explained
