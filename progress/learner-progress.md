@@ -136,6 +136,9 @@ Status values: `not started` · `in progress` · `completed`
     stop signal). Answered a different question: said the harness can't judge report *quality*, so add a
     QA agent with a "passed" verdict. Missed that the problem is *when to stop the loop*: text can come
     with a tool request, phrasing varies. Should check `stop_reason`. Hint given, retry asked.
+  - `2026-09-29` · application · cued · correct (1 hint) — retry: the phrase-check harness stops and returns
+    an incomplete report; check `stop_reason` = `end_turn` instead. Didn't add that the China search never
+    runs, or that the phrase may be worded differently or never appear. Tutor added both.
 
 ### Hub-and-spoke coordinator architecture
 - Module: 1 (Lesson 1.2)
