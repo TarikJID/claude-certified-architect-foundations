@@ -242,6 +242,8 @@ Status values: `not started` · `in progress` · `completed`
     copies full history. Didn't say which branch runs A vs B; told him (fork → A, original → B).
   - `2026-09-27` · recall · cued · partial — L1.3 quiz Q4b: said "you fork"; exact name is
     `fork_session`.
+  - `2026-09-29` · recall · cold · correct — fresh conversation drill, scenario-only question →
+    `fork_session`, exact. Fixed the 09-27 slip ("fork"). First clean cold recall.
 
 ### Structured data formats separating content from metadata
 - Module: 1 (Lesson 1.3)
@@ -423,7 +425,7 @@ Status values: `not started` · `in progress` · `completed`
      HOW to teach this learner that the next session should know. -->
 
 ### 2026-09-29 — Session 3 (fresh conversation, so cold checks count)
-- Cold drill: `stop_reason` — correct, exact.
+- Cold drill: `stop_reason` — correct, exact. `fork_session` — correct, exact (was "fork" on 09-27).
 
 ### 2026-09-29 — Session 2, continued (same conversation, third day)
 - Finished Lesson 1.5 (PreToolUse redirect). Asked whether the redirect is code or LLM — explained
