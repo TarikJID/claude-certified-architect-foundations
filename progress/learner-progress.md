@@ -198,6 +198,8 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-27` · application · cued · partial (1 hint) — L1.2 quiz Q3. First fix offered was "use a
     single subagent" (wrong direction). After hint, listed all four elements incl. don'ts. Did not
     produce the word *partitioning*.
+  - `2026-09-29` · application · cued · correct — M1 exercise step 3: "1 web_search = 1 country" (EU / US /
+    China). Clean non-overlapping split, no hints. (EU isn't a country, trivial.)
 
 ### Iterative refinement loop (coordinator re-delegation)
 - Module: 1 (Lesson 1.2)
@@ -297,6 +299,11 @@ Status values: `not started` · `in progress` · `completed`
     the quality criterion and source guidance from v1. Showed him the merged version.
   - `2026-09-27` · application · cued · correct — L1.3 quiz Q5, no hints: procedural breaks when
     reality diverges; listed all four elements. First complete four-item list unaided today.
+  - `2026-09-29` · application · cued · partial — M1 exercise step 4 (China subagent prompt). All four elements
+    present, written as a reusable `<country>` template. Nice: "do not interpret, factual only" leaves the
+    comparing to the coordinator. Gaps: output format vague ("clean breakdown", no fields shared across the
+    3 subagents); boundaries only restrict sources, nothing on what's out of scope (other regions, non-AI
+    law), which is the same gap as the Lisbon prompt on 09-27; "past two years" has no concrete dates. Asked for a revision.
 
 ### Permission evaluation order for tool calls (hooks first)
 - Module: 2 (Lesson 1.4, prerequisite)
