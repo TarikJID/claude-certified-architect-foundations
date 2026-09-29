@@ -446,6 +446,8 @@ Status values: `not started` · `in progress` · `completed`
     site got slow). Gave his own reason beyond the lesson: split so a summary error is caught before it is
     carried into the translation, which is the point of checks between steps. Argued B could also be a
     fixed chain (network → DB → compute → code). Used that as the bridge to dynamic decomposition.
+  - `2026-09-29` · application · cued · correct — L1.6 quiz Q1 (20 PRs, 5 fixed criteria): chaining, steps
+    fixed and known in advance. Clean. Taught ~30 min earlier.
 
 ### Dynamic adaptive decomposition (orchestrator-workers pattern)
 - Module: 2 (Lesson 1.6)
@@ -500,6 +502,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-29 | 2 | L1.5 Q2 — orders int vs billing string status: fix + why it exists | yes: "PostToolUse normalizes the results to remove ambiguity. Difference exists because the two MCP tools can be built by different owners with their own standards; PostToolUse handles it rather than asking owners to adapt" | correct, clean, no hints. Course phrasing: MCP lets each tool declare its own `outputSchema`, no requirement to match — his "different owners, own standards" is the same point |
 | 2026-09-29 | 2 | L1.5 Q3 — what a >$500 refund denial should also do, and why | yes: "deny and guide to the alternative tool decided by the developer, e.g. escalate_to_human" | correct, no hints; "why" (no dead end, productive next step) implied, not stated. Heavily cued (checkpoint same scenario earlier) |
 | 2026-09-29 | 2 | L1.5 Q4 (reworded: isError vs crash; JSON-RPC part not yet taught) | yes: "agent understands what's happening, can retry, escalate, use another tool; a crash leaves it in the dark" | correct, clean, no hints. Small wording: the tool didn't crash — it failed and reported it as content |
+| 2026-09-29 | 2 | L1.6 Q1 — 20 PRs/week, same 5 fixed criteria: chaining or dynamic? why | yes: "prompt chaining, the steps are fixed and known in advance" | correct, clean, no hints |
 
 ## Still open
 
