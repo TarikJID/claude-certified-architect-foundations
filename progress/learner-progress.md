@@ -476,6 +476,8 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-09-29` · application · just-taught · correct — 200 undocumented endpoints, 10 carry 90% of
     traffic: "start with the 10 busiest, they matter most." Right: prioritize high-impact areas from the map.
+  - `2026-09-29` · application · cued · correct (1 hint) — L1.6 quiz Q3: map → high-impact → prioritize
+    unaided; the 4th stage (keep adapting the plan during execution) only after a hint.
 
 ## Quiz attempts
 
@@ -507,7 +509,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-29 | 2 | L1.5 Q4 (reworded: isError vs crash; JSON-RPC part not yet taught) | yes: "agent understands what's happening, can retry, escalate, use another tool; a crash leaves it in the dark" | correct, clean, no hints. Small wording: the tool didn't crash — it failed and reported it as content |
 | 2026-09-29 | 2 | L1.6 Q1 — 20 PRs/week, same 5 fixed criteria: chaining or dynamic? why | yes: "prompt chaining, the steps are fixed and known in advance" | correct, clean, no hints |
 | 2026-09-29 | 2 | L1.6 Q2 — 40-file PR in one call vs per-file + cross-file: why worse, name it | yes: "attention dilution; attention stretched too much, some files get good attention, others a superficial pass" | correct, clean, no hints. Named *attention dilution* exactly |
-| 2026-09-29 | 2 | L1.6 Q3 — staged adaptive strategy for "add tests to a legacy codebase" | yes: "map the codebase; find the most important parts; prioritize the work; fourth: I don't know" | (grading) |
+| 2026-09-29 | 2 | L1.6 Q3 — staged adaptive strategy for "add tests to a legacy codebase" | yes: "map the codebase; find the most important parts; prioritize the work; fourth: I don't know" | correct after 1 hint: first three stages unaided; after hint (hidden billing dependency found mid-task) → "adapt the plan to include it". Missed on his own that the plan keeps adapting and is not fixed |
 
 ## Still open
 
