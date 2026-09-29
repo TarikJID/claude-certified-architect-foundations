@@ -437,6 +437,16 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-29` · application · cued · correct — L1.5 quiz Q3: deny + guide to escalate_to_human.
     Didn't state the why (avoid a dead end). Heavily cued.
 
+### Prompt chaining (fixed sequential decomposition)
+- Module: 2 (Lesson 1.6)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-29` · application · just-taught · correct — picked A (summary → translate) over B (why the
+    site got slow). Gave his own reason beyond the lesson: split so a summary error is caught before it is
+    carried into the translation, which is the point of checks between steps. Argued B could also be a
+    fixed chain (network → DB → compute → code). Used that as the bridge to dynamic decomposition.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
