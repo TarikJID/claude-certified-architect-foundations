@@ -456,6 +456,8 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-09-29` · application · just-taught · correct — slow site: network fine, DB 10× slower since
     Tuesday → "dig into the database: what changed on Tuesday." Right: the next subtask comes from the finding.
+  - `2026-09-29` · application · cued · correct — L1.6 quiz Q4: chaining = predefined steps; dynamic = next
+    step based on the previous finding. Clean. Didn't name the orchestrator as the one deciding.
 
 ### Per-file local analysis + cross-file integration pass (attention dilution)
 - Module: 2 (Lesson 1.6)
@@ -510,13 +512,14 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-29 | 2 | L1.6 Q1 — 20 PRs/week, same 5 fixed criteria: chaining or dynamic? why | yes: "prompt chaining, the steps are fixed and known in advance" | correct, clean, no hints |
 | 2026-09-29 | 2 | L1.6 Q2 — 40-file PR in one call vs per-file + cross-file: why worse, name it | yes: "attention dilution; attention stretched too much, some files get good attention, others a superficial pass" | correct, clean, no hints. Named *attention dilution* exactly |
 | 2026-09-29 | 2 | L1.6 Q3 — staged adaptive strategy for "add tests to a legacy codebase" | yes: "map the codebase; find the most important parts; prioritize the work; fourth: I don't know" | correct after 1 hint: first three stages unaided; after hint (hidden billing dependency found mid-task) → "adapt the plan to include it". Missed on his own that the plan keeps adapting and is not fixed |
+| 2026-09-29 | 2 | L1.6 Q4 — key difference: chaining vs dynamic decomposition | yes: "chaining predefines a list of steps; dynamic decomposition bases the next step on the findings of the previous one" | correct, clean, no hints. Didn't mention the central orchestrator doing the deciding |
 
 ## Still open
 
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
-- Prompt chaining, dynamic decomposition, per-file + integration pass, adaptive investigation planning (L1.6): both axes shaky, just taught; not quizzed yet.
+- Prompt chaining, dynamic decomposition, per-file + integration pass, adaptive investigation planning (L1.6): both axes shaky, just taught; quizzed 4/4 (1 hint), all cued.
 - MCP isError / inconsistent tool formats, PostToolUse normalization, PreToolUse deny+redirect (L1.5): both axes shaky, just taught.
 - Permission evaluation order, programmatic vs prompt enforcement, prerequisite gates, multi-concern decomposition, structured handoff (L1.4): both axes shaky, just taught.
 - Task/Agent tool + allowedTools, explicit context passing, AgentDefinition, fork_session, structured claim/evidence/source, parallel spawning, goal-oriented prompts (L1.3): both axes shaky, just taught.
@@ -545,6 +548,8 @@ Status values: `not started` · `in progress` · `completed`
 - Started Lesson 1.6.
 - Lesson 1.6 taught: all 4 checkpoints correct, answers short and precise. Argued a fixed chain could
   work for an open investigation; used it as the bridge to dynamic decomposition. Landed.
+- L1.6 quiz: 4/4, one hint (Q3, the 4th stage: keep adapting the plan). Named *attention dilution*
+  exactly. All cued (same session as teaching).
 
 ### 2026-09-29 — Session 2, continued (same conversation, third day)
 - Finished Lesson 1.5 (PreToolUse redirect). Asked whether the redirect is code or LLM — explained
