@@ -455,6 +455,15 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-29` · application · just-taught · correct — slow site: network fine, DB 10× slower since
     Tuesday → "dig into the database: what changed on Tuesday." Right: the next subtask comes from the finding.
 
+### Per-file local analysis + cross-file integration pass (attention dilution)
+- Module: 2 (Lesson 1.6)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-29` · application · just-taught · correct — `getUser`→`fetchUser` rename in file 3, old call in
+    file 27: integration pass catches it, being the only call that sees both; per-file calls see one file each.
+    Clean and complete.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
