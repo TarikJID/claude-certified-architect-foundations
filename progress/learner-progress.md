@@ -132,6 +132,10 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-27` · application · cued · correct (1 hint) — L1.1 quiz Q3. Named and justified
     "any text = done" and "Claude said I'm done" unaided; needed a hint ("the harness just counts")
     for the iteration cap, then reasoned it well. Taught ~20 min earlier, so cued at best.
+  - `2026-09-29` · application · cued · wrong (first try) — M1 exercise step 2 ("Report complete" phrase as the
+    stop signal). Answered a different question: said the harness can't judge report *quality*, so add a
+    QA agent with a "passed" verdict. Missed that the problem is *when to stop the loop*: text can come
+    with a tool request, phrasing varies. Should check `stop_reason`. Hint given, retry asked.
 
 ### Hub-and-spoke coordinator architecture
 - Module: 1 (Lesson 1.2)
