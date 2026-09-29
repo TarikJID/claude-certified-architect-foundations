@@ -23,6 +23,9 @@
   Also: state the premise a question depends on in the teaching itself, before asking. On the
   MCP formats checkpoint the lesson said "tools format data differently" but never said "and
   Claude has no key to decode them" — he fairly inferred Claude could decode per tool.
+  Also (2026-09-29): "I'm not going to write tons and tons of text each time I answer a question."
+  Read short answers charitably. If a specific piece is missing, ask for that one piece directly
+  instead of marking it as a gap afterwards. Don't ask for multi-part lists when one part is the point.
 - Glossary: https://claude.ai/artifact/DF2gqN4scYhQ6v9uyvVce6 (source: `progress/glossary.html`,
   republish with that `url`). Requested 2026-09-27. Add each concept's exact name, plain definition
   and tag (API / Tools / Loop / Design / Harness) as it is taught. Only taught material.
@@ -163,6 +166,13 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-27` · application · cued · correct — L1.2 quiz Q2 (40 documents), no hints. Explained
     via purpose (avoid clutter) and outcome (only useful content returns). Didn't use the term
     *context isolation* — recall still shaky.
+  - `2026-09-29` · application · cued · correct — M1 exercise step 5 (what goes in the prompt vs what the subagent
+    already knows). Unprompted split: the stable role (objective/output/sources/boundaries) can live in the
+    agent's definition file; the specific topic must be in the invocation prompt. Matches the course (system
+    prompt/`AgentDefinition` + CLAUDE.md are the only other channels). Thin on part 1: didn't list what else
+    must be passed (user's constraints, dates, prior findings, decisions). Tutor added those. Term was used in the question (cued).
+    Learner then clarified: "specific task" meant "all information gathered by the coordinator that is useful
+    to the subagent". That covers it, so upgraded to correct.
   - `2026-09-29` · recall · cold · wrong — fresh conversation drill (40 docs, coordinator sees only the
     summary): said "context preservation". Answer: *context isolation* (each subagent has its own context).
 
@@ -284,6 +294,10 @@ Status values: `not started` · `in progress` · `completed`
     → 4 min (the slowest). Right. Didn't say "in one response" explicitly.
   - `2026-09-27` · application · cued · correct — L1.3 quiz Q4a: multiple Agent calls in the same
     response, each with its own structured prompt. No hints.
+  - `2026-09-29` · application · cued · partial — M1 exercise step 6. Timing right: total = slowest, not the
+    sum, so ~2/3 saved if all three take about the same time. Mechanism: said "via tool_use, how exactly I
+    don't know". Missing: several Agent `tool_use` blocks in ONE coordinator response. He had this on 09-27
+    (L1.3 Q4a) and it has faded. Shown plainly.
 
 ### Goal-oriented coordinator prompts (vs step-by-step procedural)
 - Module: 1 (Lesson 1.3)
