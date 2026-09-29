@@ -35,7 +35,7 @@
 | Module | Status | Notes |
 |--------|--------|-------|
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed; exercise not done; nothing closed yet |
-| Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 started 2026-09-28 |
+| Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29) |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -344,6 +344,8 @@ Status values: `not started` · `in progress` · `completed`
     question design was the main problem here, not his reasoning.
   - `2026-09-29` · application · cued · correct — L1.5 quiz Q2: formats differ because separate tools
     set their own standards and MCP doesn't force a shared one. Didn't name `outputSchema`.
+  - `2026-09-29` · application · cued · correct — L1.5 quiz Q4 (reworded), no hints: failure arrives as
+    content Claude can read → retry / escalate / other tool; a crash gives nothing. Matches course.
 
 ### `PostToolUse` hooks for result normalization
 - Module: 2 (Lesson 1.5)
@@ -400,6 +402,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-29 | 2 | L1.5 Q1 — PreToolUse vs PostToolUse: when + typical use | yes: "Pre checks before the tool runs whether the agent may use it, based on predefined conditions. Post prepares the tool's result before Claude sees it, rewriting it to make it clear" | correct, no hints. Missing the exam words: *deny/redirect* (Pre) and *normalize* (Post) |
 | 2026-09-29 | 2 | L1.5 Q2 — orders int vs billing string status: fix + why it exists | yes: "PostToolUse normalizes the results to remove ambiguity. Difference exists because the two MCP tools can be built by different owners with their own standards; PostToolUse handles it rather than asking owners to adapt" | correct, clean, no hints. Course phrasing: MCP lets each tool declare its own `outputSchema`, no requirement to match — his "different owners, own standards" is the same point |
 | 2026-09-29 | 2 | L1.5 Q3 — what a >$500 refund denial should also do, and why | yes: "deny and guide to the alternative tool decided by the developer, e.g. escalate_to_human" | correct, no hints; "why" (no dead end, productive next step) implied, not stated. Heavily cued (checkpoint same scenario earlier) |
+| 2026-09-29 | 2 | L1.5 Q4 (reworded: isError vs crash; JSON-RPC part not yet taught) | yes: "agent understands what's happening, can retry, escalate, use another tool; a crash leaves it in the dark" | correct, clean, no hints. Small wording: the tool didn't crash — it failed and reported it as content |
 
 ## Still open
 
@@ -416,6 +419,14 @@ Status values: `not started` · `in progress` · `completed`
 
 <!-- Newest first. What was taught, what landed, what did not, and anything about
      HOW to teach this learner that the next session should know. -->
+
+### 2026-09-29 — Session 2, continued (same conversation, third day)
+- Finished Lesson 1.5 (PreToolUse redirect). Asked whether the redirect is code or LLM — explained
+  the split (check + reason text = code; following it = Claude).
+- L1.5 quiz: 4/4, no hints (Q4 reworded to skip untaught JSON-RPC part). Q3 heavily cued. Used
+  *normalizing* unprompted. Still omits "why" halves occasionally (Q3).
+- Earlier in Lesson 1.5 (09-28): pushed back twice on unclear checkpoint questions — both fair.
+  See profile note: state premises, fully concrete scenarios.
 
 ### 2026-09-28 — Session 2, continued (same conversation, new day)
 - Before Module 2, asked why his own multi-agent system spawned subagents with no tool list in
