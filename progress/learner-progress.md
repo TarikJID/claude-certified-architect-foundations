@@ -37,7 +37,7 @@
 
 | Module | Status | Notes |
 |--------|--------|-------|
-| Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed; exercise not done; nothing closed yet |
+| Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Nothing closed yet |
 | Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29) |
 
 Status values: `not started` · `in progress` · `completed`
@@ -240,6 +240,8 @@ Status values: `not started` · `in progress` · `completed`
     `Agent` to its allowed tools. Right.
     Note: this checkpoint is close to L1.3 quiz Q1 — treat a same-day Q1 answer as heavily cued.
   - `2026-09-27` · application · cued · correct — L1.3 quiz Q1, no hints. Heavily cued.
+  - `2026-09-29` · application · cued · correct — M1 exercise step 9 (coordinator without "Agent" in
+    allowedTools): "it can't spawn subagents, the Agent tool is missing." Clean, no hints.
 
 ### Explicit context passing to subagents
 - Module: 1 (Lesson 1.3)
@@ -484,6 +486,13 @@ Status values: `not started` · `in progress` · `completed`
 - Cold drill: `stop_reason` — correct, exact. `fork_session` — correct, exact (was "fork" on 09-27). Learner asked for more drilling. `tool_result` — correct, exact. Context isolation — wrong ("context preservation"); idea right, word wrong, same pattern as before.
 - Started the Module 1 exercise (build-along), research coordinator for EU/US/China AI regulation.
   Note: `Module_1_.../exercises.md` has the Module 10 exercise pasted above the Module 1 one. Skip it.
+- M1 exercise done, all 9 steps. Strong: split by region, output schema with a source per row, re-delegation
+  plus re-synthesis, parallel timing. Needed help: turn 2 mixed subagent/coordinator loops; step 2 answered
+  a quality question instead of a when-to-stop question; parallel mechanism (several Agent calls in one response) had faded.
+- Learner pushed back on answer length ("not going to write tons of text"). Fair. See profile note.
+- Asked where the exam says "paste findings into the prompt". Showed exam-guide skill bullet 1.3-S1 (from
+  the course's copy in `runs/.../domain-map.md`), the lesson passage and the L1.3 Q2 answer. Admitted
+  "the exam's answer" was overstated: the guide names inline passing as the skill but doesn't rule out file paths.
 
 ### 2026-09-29 — Session 2, continued (same conversation, third day)
 - Finished Lesson 1.5 (PreToolUse redirect). Asked whether the redirect is code or LLM — explained
