@@ -342,6 +342,8 @@ Status values: `not started` · `in progress` · `completed`
     Answered "shipped and not paid" — used the meaning the tutor had given him, which the agent
     lacked. Point explained: agent likely reads 1 as "yes" → tells customer it's paid. Tutor's
     question design was the main problem here, not his reasoning.
+  - `2026-09-29` · application · cued · correct — L1.5 quiz Q2: formats differ because separate tools
+    set their own standards and MCP doesn't force a shared one. Didn't name `outputSchema`.
 
 ### `PostToolUse` hooks for result normalization
 - Module: 2 (Lesson 1.5)
@@ -353,6 +355,8 @@ Status values: `not started` · `in progress` · `completed`
     mechanism (translate before Claude sees it). Didn't spell out the final customer answer.
   - `2026-09-29` · application · cued · correct — L1.5 quiz Q1 (Post half): rewrites the result before
     Claude sees it. Didn't say *normalize*.
+  - `2026-09-29` · application · cued · correct — L1.5 quiz Q2, no hints: PostToolUse normalizes;
+    used the word *normalizing* this time. Also gave the why (tools built separately, own formats).
 
 ### `PreToolUse` hooks for compliance interception (deny + redirect)
 - Module: 2 (Lesson 1.5)
@@ -392,6 +396,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-28 | 2 | L1.4 Q3 — damaged + charged twice: decomposition and reply structure | yes: "split into two issues, investigate both at once, one combined reply" | correct, no hints; omitted "same shared context" |
 | 2026-09-28 | 2 | L1.4 Q4 — four handoff elements + why transcript access matters | yes: "customer root cause [sic], problem root cause, amount if applicable, recommended action"; did not answer the 'why'; said the question felt tied to the customer-service example | partial — 3/4 elements clean ("customer root cause" likely meant customer details); 'why' part missing. No hints; answer given with a generic framing |
 | 2026-09-29 | 2 | L1.5 Q1 — PreToolUse vs PostToolUse: when + typical use | yes: "Pre checks before the tool runs whether the agent may use it, based on predefined conditions. Post prepares the tool's result before Claude sees it, rewriting it to make it clear" | correct, no hints. Missing the exam words: *deny/redirect* (Pre) and *normalize* (Post) |
+| 2026-09-29 | 2 | L1.5 Q2 — orders int vs billing string status: fix + why it exists | yes: "PostToolUse normalizes the results to remove ambiguity. Difference exists because the two MCP tools can be built by different owners with their own standards; PostToolUse handles it rather than asking owners to adapt" | correct, clean, no hints. Course phrasing: MCP lets each tool declare its own `outputSchema`, no requirement to match — his "different owners, own standards" is the same point |
 
 ## Still open
 
