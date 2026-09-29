@@ -13,7 +13,7 @@
 - Name: Tarik
 - Preferred style: Lecture + checkpoints
 - Started: 2026-09-22
-- Last session: 2026-09-28
+- Last session: 2026-09-29
 - Notes: "i'm rather into short straight forward sentences, long texts and complicated sentences make me zone out" — keep chunks small, plain sentences, check in often.
   Also: "it's a bit weird that you call it 'my' code" — say **the harness**, not "your code". He is
   reasoning about the architecture, not writing it.
@@ -352,6 +352,17 @@ Status values: `not started` · `in progress` · `completed`
     status it maps to in the tool's documentation, then the agent answers from that value. Right
     mechanism (translate before Claude sees it). Didn't spell out the final customer answer.
 
+### `PreToolUse` hooks for compliance interception (deny + redirect)
+- Module: 2 (Lesson 1.5)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-29` · application · just-taught · correct — $800 refund, rule > $500 needs a human: wrote
+    "Refunds over $500 need human approval, use escalate_to_human instead." Matches the course.
+    Then asked unprompted whether the "refused because X, do Y" is code or LLM. Explained: the
+    check and the reason text are code (deterministic); following the redirect is Claude
+    (probabilistic) — the block is guaranteed, the redirect is guidance.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -382,7 +393,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
-- MCP isError / inconsistent tool formats, PostToolUse normalization (L1.5): both axes shaky, just taught.
+- MCP isError / inconsistent tool formats, PostToolUse normalization, PreToolUse deny+redirect (L1.5): both axes shaky, just taught.
 - Permission evaluation order, programmatic vs prompt enforcement, prerequisite gates, multi-concern decomposition, structured handoff (L1.4): both axes shaky, just taught.
 - Task/Agent tool + allowedTools, explicit context passing, AgentDefinition, fork_session, structured claim/evidence/source, parallel spawning, goal-oriented prompts (L1.3): both axes shaky, just taught.
 - Hub-and-spoke, subagent context isolation, coordinator responsibilities, decomposition risks, partitioning, iterative refinement (L1.2): both axes shaky, just taught.

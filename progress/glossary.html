@@ -148,7 +148,9 @@ const ENTRIES = [
   { term: "<code>isError</code>", tag: "Tools", src: "Lesson 1.5",
     def: "A field in an MCP tool result. <code>true</code> means the tool failed. The failure comes back as normal content Claude can read, so it can react (retry, try another way) instead of crashing."  },
   { term: "<code>PostToolUse</code> hook", tag: "Harness", src: "Lesson 1.5",
-    def: "Runs after a tool returns and before Claude sees the result. It can rewrite the result, e.g. to <b>normalize</b> formats from different tools into one (<code>paid: 1</code> → <code>payment_status: \"not_paid\"</code>; all dates to one format), so Claude never has to guess." }
+    def: "Runs after a tool returns and before Claude sees the result. It can rewrite the result, e.g. to <b>normalize</b> formats from different tools into one (<code>paid: 1</code> → <code>payment_status: \"not_paid\"</code>; all dates to one format), so Claude never has to guess."  },
+  { term: "Deny reason as a redirect", tag: "Harness", src: "Lesson 1.5",
+    def: "A <code>PreToolUse</code> hook sees the tool name and its inputs. When it denies, its reason can say what to do instead, e.g. \"Refunds over $500 need human approval. Use <code>escalate_to_human</code> instead.\" The block is code (guaranteed); following the redirect is Claude (guidance)." }
 ];
 
 const state = { tag: "All", q: "" };
