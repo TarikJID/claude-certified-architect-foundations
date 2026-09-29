@@ -351,6 +351,8 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-28` · application · just-taught · correct — said the hook should replace `paid: 1` with the
     status it maps to in the tool's documentation, then the agent answers from that value. Right
     mechanism (translate before Claude sees it). Didn't spell out the final customer answer.
+  - `2026-09-29` · application · cued · correct — L1.5 quiz Q1 (Post half): rewrites the result before
+    Claude sees it. Didn't say *normalize*.
 
 ### `PreToolUse` hooks for compliance interception (deny + redirect)
 - Module: 2 (Lesson 1.5)
@@ -362,6 +364,8 @@ Status values: `not started` · `in progress` · `completed`
     Then asked unprompted whether the "refused because X, do Y" is code or LLM. Explained: the
     check and the reason text are code (deterministic); following the redirect is Claude
     (probabilistic) — the block is guaranteed, the redirect is guidance.
+  - `2026-09-29` · application · cued · correct — L1.5 quiz Q1 (Pre half): checks before the tool
+    runs, against predefined conditions. Didn't mention deny/redirect.
 
 ## Quiz attempts
 
@@ -387,6 +391,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-28 | 2 | L1.4 Q2 — how a PreToolUse gate guarantees order even in a permissive mode | yes: "the LLM has no influence on the PreToolUse condition check: either it happened or not" | partial — determinism right, but the "even in a permissive mode" part needs the evaluation order (hooks run before permission mode). Retry: "bypassPermissions skips asking the user, it doesn't change how the code works" — sound intuition, but still no evaluation order. Answer revealed. Partial after 1 hint |
 | 2026-09-28 | 2 | L1.4 Q3 — damaged + charged twice: decomposition and reply structure | yes: "split into two issues, investigate both at once, one combined reply" | correct, no hints; omitted "same shared context" |
 | 2026-09-28 | 2 | L1.4 Q4 — four handoff elements + why transcript access matters | yes: "customer root cause [sic], problem root cause, amount if applicable, recommended action"; did not answer the 'why'; said the question felt tied to the customer-service example | partial — 3/4 elements clean ("customer root cause" likely meant customer details); 'why' part missing. No hints; answer given with a generic framing |
+| 2026-09-29 | 2 | L1.5 Q1 — PreToolUse vs PostToolUse: when + typical use | yes: "Pre checks before the tool runs whether the agent may use it, based on predefined conditions. Post prepares the tool's result before Claude sees it, rewriting it to make it clear" | correct, no hints. Missing the exam words: *deny/redirect* (Pre) and *normalize* (Post) |
 
 ## Still open
 
