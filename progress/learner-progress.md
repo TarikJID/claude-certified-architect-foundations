@@ -493,6 +493,10 @@ Status values: `not started` · `in progress` · `completed`
 - Asked where the exam says "paste findings into the prompt". Showed exam-guide skill bullet 1.3-S1 (from
   the course's copy in `runs/.../domain-map.md`), the lesson passage and the L1.3 Q2 answer. Admitted
   "the exam's answer" was overstated: the guide names inline passing as the skill but doesn't rule out file paths.
+- Pushed back again: a precise path IS in the prompt, and saves context/money. Conceded the fair part (a
+  path is not a vague pointer; it saves the coordinator's context and output), noted the synthesis subagent
+  still reads the same tokens, and it depends on Read. Flagged as outside the course.
+- Started Lesson 1.6.
 
 ### 2026-09-29 — Session 2, continued (same conversation, third day)
 - Finished Lesson 1.5 (PreToolUse redirect). Asked whether the redirect is code or LLM — explained
