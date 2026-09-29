@@ -148,6 +148,8 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-27` · application · cued · correct — L1.2 quiz Q2 (40 documents), no hints. Explained
     via purpose (avoid clutter) and outcome (only useful content returns). Didn't use the term
     *context isolation* — recall still shaky.
+  - `2026-09-29` · recall · cold · wrong — fresh conversation drill (40 docs, coordinator sees only the
+    summary): said "context preservation". Answer: *context isolation* (each subagent has its own context).
 
 ### Coordinator responsibilities (decomposition, delegation, aggregation, dynamic subagent selection)
 - Module: 1 (Lesson 1.2)
@@ -428,7 +430,7 @@ Status values: `not started` · `in progress` · `completed`
      HOW to teach this learner that the next session should know. -->
 
 ### 2026-09-29 — Session 3 (fresh conversation, so cold checks count)
-- Cold drill: `stop_reason` — correct, exact. `fork_session` — correct, exact (was "fork" on 09-27). Learner asked for more drilling. `tool_result` — correct, exact.
+- Cold drill: `stop_reason` — correct, exact. `fork_session` — correct, exact (was "fork" on 09-27). Learner asked for more drilling. `tool_result` — correct, exact. Context isolation — wrong ("context preservation"); idea right, word wrong, same pattern as before.
 
 ### 2026-09-29 — Session 2, continued (same conversation, third day)
 - Finished Lesson 1.5 (PreToolUse redirect). Asked whether the redirect is code or LLM — explained
