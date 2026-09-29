@@ -77,6 +77,8 @@ Status values: `not started` · `in progress` · `completed`
     tool". Said `run_tool`. Answer: `tool_use`.
   - `2026-09-27` · recall · cued · correct — L1.1 quiz Q1: named `stop_reason`, `tool_use`,
     `end_turn` exactly. Cued (said many times this session); does not count toward closing.
+  - `2026-09-29` · recall · cold · correct — fresh conversation drill: "what field tells the harness
+    to continue or stop?" → `stop_reason`, exact. First clean cold recall; one more on a later day closes it.
 
 ### Appending tool results to conversation history (`tool_result` + `tool_use` ID pairing)
 - Module: 1 (Lesson 1.1)
@@ -419,6 +421,9 @@ Status values: `not started` · `in progress` · `completed`
 
 <!-- Newest first. What was taught, what landed, what did not, and anything about
      HOW to teach this learner that the next session should know. -->
+
+### 2026-09-29 — Session 3 (fresh conversation, so cold checks count)
+- Cold drill: `stop_reason` — correct, exact.
 
 ### 2026-09-29 — Session 2, continued (same conversation, third day)
 - Finished Lesson 1.5 (PreToolUse redirect). Asked whether the redirect is code or LLM — explained
