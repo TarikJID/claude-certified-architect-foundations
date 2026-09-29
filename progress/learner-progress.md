@@ -307,6 +307,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-29` · application · cued · correct (output half) — revised output format: date, measure name,
     status, summary, source link. Good shared schema; source link per item = claim-source pairing. Left the
     boundaries line out of the revision (asked for two lines, gave one). Asked again for the out-of-scope line.
+  - `2026-09-29` · application · cued · correct (1 of 2) — boundaries: "only <country>; ignore content about
+    other countries." That's the non-overlap part, which he missed on 09-27, so real progress. Asked for two
+    out-of-scope items, gave one; tutor added "non-AI rules, and anything outside the date window".
 
 ### Permission evaluation order for tool calls (hooks first)
 - Module: 2 (Lesson 1.4, prerequisite)
