@@ -288,6 +288,9 @@ Status values: `not started` · `in progress` · `completed`
     `fork_session`.
   - `2026-09-29` · recall · cold · correct — fresh conversation drill, scenario-only question →
     `fork_session`, exact. Fixed the 09-27 slip ("fork"). First clean cold recall.
+  - `2026-09-30` · recall · cued · correct — `fork_session`, exact. NOT cold: the tutor had named
+    `fork_session` in the message offering the question. Learner caught it. Does not close; needs one more
+    genuinely cold recall on a later day.
 
 ### Structured data formats separating content from metadata
 - Module: 1 (Lesson 1.3)
@@ -539,6 +542,8 @@ Status values: `not started` · `in progress` · `completed`
 ### 2026-09-30 — Session 4 (fresh conversation, so cold checks count)
 - Cold drill: `stop_reason` — correct, exact. `tool_result` — correct, exact. Both second cold recalls on
   separate days, so **recall closed on both**. The first two items closed in the course.
+- `fork_session`: correct but cued. Tutor named the term when offering the question; learner caught it.
+  Logged as cued, still open. Lesson: when offering a drill item, never name the term being drilled.
 - Tutor slip: the opening recap was read from a stale local copy (said Lesson 1.1). Corrected before the answers.
 
 ### 2026-09-29 — Session 3 (fresh conversation, so cold checks count)
