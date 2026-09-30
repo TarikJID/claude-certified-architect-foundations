@@ -401,6 +401,11 @@ Status values: `not started` · `in progress` · `completed`
     one combined reply." Raised a fair point: actually fixing may take several exchanges. Agreed —
     the rule is about the investigation and the first unified reply, not a one-message fix.
   - `2026-09-28` · application · cued · correct — L1.4 quiz Q3, no hints. Missing: shared context.
+  - `2026-09-30` · application · cued · partial — M2 exercise step 5 (damaged order + double charge):
+    split right; shared context right (get customer id once). Missed: investigate each issue with its own
+    lookup (orders vs billing), in parallel; reply = ONE reply with the findings for both (he wrote "both
+    will be fixed", a promise without findings). Flagged the question as weird: fair, "Reply: in what
+    form?" was vague and "think about what you'd only do once" was a half-hidden hint. Corrected plainly.
 
 ### Structured handoff summaries for human escalation
 - Module: 2 (Lesson 1.4)
@@ -627,6 +632,9 @@ Status values: `not started` · `in progress` · `completed`
   "one shared format for both tools" goal and dates at first; got dates after 1 hint.
 - Asked for a hooks section in the glossary. Added a "Hooks" tag (6 entries) incl. a new `PreToolUse` entry;
   `--resume` entry now shows the name without brackets. Republished (47 terms).
+- Step 5 (multi-concern): partial. Split + shared customer lookup right; missed separate per-issue lookups
+  and one reply with findings. Called the question weird (3rd time a checkpoint was flagged, fair again):
+  "in what form?" was vague. Avoid fill-in-the-blank frames with hidden expected words.
 - L1.7 quiz: 4/4, one hint (Q3: the why, "session saves conversation, not files"). All questions reworded
   with new scenarios. Two slips worth watching: angle brackets typed around names (twice), and `--resume`
   given a file name instead of a session name. All cued (same session as teaching).
