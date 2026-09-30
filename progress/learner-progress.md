@@ -38,7 +38,7 @@
 | Module | Status | Notes |
 |--------|--------|-------|
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Recall closed on 2 concepts (2026-09-30) |
-| Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught; L1.7 quiz and exercise not done |
+| Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught. L1.7 quiz 4/4 (1 hint) 2026-09-30. Module 2 exercise not done |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -529,6 +529,9 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-09-30` · application · just-taught · correct — codebase map 2 weeks old, half the folders
     renamed, DB layer rewritten → start fresh, "much of its context is stale". Right call, right reason.
+  - `2026-09-30` · application · cued · correct — L1.7 quiz Q4: nothing changed but 6h transcript full of
+    dead ends → start fresh with summary, dead ends clutter the context. Transferred to the noisy case
+    (the checkpoint only covered staleness). Clean.
 
 ## Quiz attempts
 
@@ -565,6 +568,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-30 | 2 | L1.7 Q1 (reworded) — 3 sessions, `--continue` opens what, what to type for `billing-bug` | yes: "`--continue` opens the last opened session, perf-audit. Type `--resume <billing-bug>`" | correct, clean, no hints. Angle brackets again (2nd time today) |
 | 2026-09-30 | 2 | L1.7 Q2 (reworded) — legacy DB mapped, test Postgres vs DynamoDB separately; feature + what happens to original | yes: "`fork_session`. Original stays untouched; two new forked sessions derived from the original are created" | correct, clean. Forks twice (valid, keeps a clean baseline); lesson's pattern is one fork + original |
 | 2026-09-30 | 2 | L1.7 Q3 (reworded) — session read auth.py + session.py; teammate changed session.py token expiry 24h→1h. What to tell Claude, why doesn't it know | yes: "`--resume <auth.py>`, tell Claude session.py was modified (1h not 24h) and adapt auth.py. Claude doesn't know because the session working on auth.py doesn't know what happens in session.py" | correct after 1 hint. Message content right (file + what changed + what to do). Why was wrong first (framed as file scope); retry: "the session saves the conversation, not the files". Also resumed by file name, not session name; corrected |
+| 2026-09-30 | 2 | L1.7 Q4 (reworded) — nothing changed, but 6h session full of dead ends, found what works. Resume or fresh? | yes: "start fresh with a summary; the dead ends are useless dead weight that clutters Claude's context window" | correct, clean. Got the noisy-transcript case (not only staleness) |
 
 ## Still open
 
@@ -591,6 +595,9 @@ Status values: `not started` · `in progress` · `completed`
   Logged as cued, still open. Lesson: when offering a drill item, never name the term being drilled.
 - Lesson 1.7 taught: 3 new concepts + forking refresh (no new checkpoint on forking). All 3 checkpoints
   correct, short answers. Asked where `~/.claude/projects/` lives, since it isn't in the repo. Good question.
+- L1.7 quiz: 4/4, one hint (Q3: the why, "session saves conversation, not files"). All questions reworded
+  with new scenarios. Two slips worth watching: angle brackets typed around names (twice), and `--resume`
+  given a file name instead of a session name. All cued (same session as teaching).
 - Glossary: added 3 L1.7 terms (republished, 46 terms).
 - Tutor slip: the opening recap was read from a stale local copy (said Lesson 1.1). Corrected before the answers.
 
