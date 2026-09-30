@@ -379,6 +379,9 @@ Status values: `not started` · `in progress` · `completed`
     Small slip: said "if yes, it calls ship_order" — the hook doesn't call the tool, it lets the
     requested call through. Corrected.
 
+  - `2026-09-30` · application · cued · correct — M2 exercise step 1a: match `process_refund`, check
+    `get_customer` succeeded, deny with redirect to `get_customer`. Unaided, all three parts.
+
 ### Multi-concern request decomposition with parallel investigation
 - Module: 2 (Lesson 1.4)
 - recall: shaky
@@ -595,6 +598,9 @@ Status values: `not started` · `in progress` · `completed`
   Logged as cued, still open. Lesson: when offering a drill item, never name the term being drilled.
 - Lesson 1.7 taught: 3 new concepts + forking refresh (no new checkpoint on forking). All 3 checkpoints
   correct, short answers. Asked where `~/.claude/projects/` lives, since it isn't in the repo. Good question.
+- Module 2 exercise (build-along, support agent) started. Step 1a (prerequisite gate design): match
+  `process_refund`, check `get_customer` succeeded, deny + redirect to `get_customer`. Correct, unaided.
+  Added: "succeeded" should mean returned a verified customer ID, and the harness must record that to check it.
 - L1.7 quiz: 4/4, one hint (Q3: the why, "session saves conversation, not files"). All questions reworded
   with new scenarios. Two slips worth watching: angle brackets typed around names (twice), and `--resume`
   given a file name instead of a session name. All cued (same session as teaching).
