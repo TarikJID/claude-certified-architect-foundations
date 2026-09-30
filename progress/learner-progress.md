@@ -601,6 +601,9 @@ Status values: `not started` · `in progress` · `completed`
 - Module 2 exercise (build-along, support agent) started. Step 1a (prerequisite gate design): match
   `process_refund`, check `get_customer` succeeded, deny + redirect to `get_customer`. Correct, unaided.
   Added: "succeeded" should mean returned a verified customer ID, and the harness must record that to check it.
+- Step 1b (why deny holds in bypassPermissions): first answer "hooks are code and intervene before tool use;
+  code doesn't care if Claude can bypass". Partial: right that it's code, missed the permission ORDER (hooks
+  run before the mode is checked). Also framed bypass as Claude's right, but it's a harness setting. Asked for that one piece.
 - L1.7 quiz: 4/4, one hint (Q3: the why, "session saves conversation, not files"). All questions reworded
   with new scenarios. Two slips worth watching: angle brackets typed around names (twice), and `--resume`
   given a file name instead of a session name. All cued (same session as teaching).
