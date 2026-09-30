@@ -488,6 +488,8 @@ Status values: `not started` · `in progress` · `completed`
     fixed chain (network → DB → compute → code). Used that as the bridge to dynamic decomposition.
   - `2026-09-29` · application · cued · correct — L1.6 quiz Q1 (20 PRs, 5 fixed criteria): chaining, steps
     fixed and known in advance. Clean. Taught ~30 min earlier.
+  - `2026-09-30` · application · cued · correct — M2 exercise step 7 (15 tickets, 4 fixed criteria, weekly):
+    "prompt chaining, steps are fixed and never change". Clean, a day after teaching. Named the pattern exactly.
 
 ### Dynamic adaptive decomposition (orchestrator-workers pattern)
 - Module: 2 (Lesson 1.6)
@@ -640,6 +642,7 @@ Status values: `not started` · `in progress` · `completed`
   and one reply with findings. Called the question weird (3rd time a checkpoint was flagged, fair again):
   "in what form?" was vague. Avoid fill-in-the-blank frames with hidden expected words.
 - Step 6 (handoff): all four field names exact. Tutor filled them in for this case.
+- Step 7 (chaining vs dynamic): prompt chaining, fixed steps. Correct, clean.
 - L1.7 quiz: 4/4, one hint (Q3: the why, "session saves conversation, not files"). All questions reworded
   with new scenarios. Two slips worth watching: angle brackets typed around names (twice), and `--resume`
   given a file name instead of a session name. All cued (same session as teaching).
