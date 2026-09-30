@@ -443,6 +443,11 @@ Status values: `not started` · `in progress` · `completed`
     Claude sees it. Didn't say *normalize*.
   - `2026-09-29` · application · cued · correct — L1.5 quiz Q2, no hints: PostToolUse normalizes;
     used the word *normalizing* this time. Also gave the why (tools built separately, own formats).
+  - `2026-09-30` · recall · cued · wrong — M2 exercise step 4: "don't know the name of the hook". Answer:
+    `PostToolUse`. (Named in this session's step list context only indirectly; he said so honestly.)
+  - `2026-09-30` · application · cued · partial — M2 exercise step 4: watches tool results, rewrites them
+    per the tool's docs, `2` → "paid". Right mechanism. Missed: dates, and that the goal is ONE shared
+    format across both tools (not just decoding one). Asked for the date piece.
 
 ### `PreToolUse` hooks for compliance interception (deny + redirect)
 - Module: 2 (Lesson 1.5)
