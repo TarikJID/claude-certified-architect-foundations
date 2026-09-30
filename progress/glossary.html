@@ -158,7 +158,13 @@ const ENTRIES = [
   { term: "Attention dilution", tag: "Design", src: "Lesson 1.6",
     def: "One call asked to review many files in depth spreads its attention thin: uneven depth, missed issues. Fix: a <b>per-file local pass</b> (one call per file) plus a <b>cross-file integration pass</b> that looks only for problems between files (e.g. a function renamed in one file, still called by its old name in another)." },
   { term: "Adaptive investigation planning", tag: "Design", src: "Lesson 1.6",
-    def: "For a task with no step list: map the structure first, find the high-impact areas, make a prioritized plan, and keep adjusting it as surprises turn up." }
+    def: "For a task with no step list: map the structure first, find the high-impact areas, make a prioritized plan, and keep adjusting it as surprises turn up." },
+  { term: "<code>--resume &lt;session-name&gt;</code>", tag: "Harness", src: "Lesson 1.7", alt: "vs --continue",
+    def: "Every session has an ID, and its full conversation is saved automatically to <code>~/.claude/projects/</code> on the machine running Claude Code. <code>--resume</code> picks up that exact named session, with its full history. <code>--continue</code> just picks up the most recent one." },
+  { term: "Telling a resumed session what changed", tag: "Harness", src: "Lesson 1.7",
+    def: "A session saves the conversation, not the files. If a file changed since Claude last read it, Claude's picture is stale. Tell it which file changed and how (e.g. \"payment.py now has idempotency keys, re-check your plan\"), so it re-reads only that file." },
+  { term: "Fresh session + structured summary", tag: "Harness", src: "Lesson 1.7", alt: "vs resuming",
+    def: "Resume when the old context is mostly still valid. When it's mostly stale or noisy, start a new session and paste a short structured summary of what was learned, instead of hoping Claude ignores the outdated tool results." }
 ];
 
 const state = { tag: "All", q: "" };

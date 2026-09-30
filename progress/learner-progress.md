@@ -38,7 +38,7 @@
 | Module | Status | Notes |
 |--------|--------|-------|
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Recall closed on 2 concepts (2026-09-30) |
-| Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct) |
+| Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught; L1.7 quiz and exercise not done |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -510,6 +510,14 @@ Status values: `not started` · `in progress` · `completed`
     machine running Claude Code, not the project folder; showed this container's own transcript file.
     Saved locally, never pushed, and lost when this cloud container is reclaimed (environment detail, outside course).
 
+### Fresh session + structured summary vs resuming with stale tool results
+- Module: 2 (Lesson 1.7)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-30` · application · just-taught · correct — codebase map 2 weeks old, half the folders
+    renamed, DB layer rewritten → start fresh, "much of its context is stale". Right call, right reason.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -548,6 +556,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
+- Named resumption, informing resumed sessions of file changes, fresh+summary vs resume (L1.7): both axes shaky, just taught.
 - Prompt chaining, dynamic decomposition, per-file + integration pass, adaptive investigation planning (L1.6): both axes shaky, just taught; quizzed 4/4 (1 hint), all cued.
 - MCP isError / inconsistent tool formats, PostToolUse normalization, PreToolUse deny+redirect (L1.5): both axes shaky, just taught.
 - Permission evaluation order, programmatic vs prompt enforcement, prerequisite gates, multi-concern decomposition, structured handoff (L1.4): both axes shaky, just taught.
@@ -565,6 +574,9 @@ Status values: `not started` · `in progress` · `completed`
   separate days, so **recall closed on both**. The first two items closed in the course.
 - `fork_session`: correct but cued. Tutor named the term when offering the question; learner caught it.
   Logged as cued, still open. Lesson: when offering a drill item, never name the term being drilled.
+- Lesson 1.7 taught: 3 new concepts + forking refresh (no new checkpoint on forking). All 3 checkpoints
+  correct, short answers. Asked where `~/.claude/projects/` lives, since it isn't in the repo. Good question.
+- Glossary: added 3 L1.7 terms (republished, 46 terms).
 - Tutor slip: the opening recap was read from a stale local copy (said Lesson 1.1). Corrected before the answers.
 
 ### 2026-09-29 — Session 3 (fresh conversation, so cold checks count)
