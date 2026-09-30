@@ -358,6 +358,10 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-28` · application · cued · partial (1 hint, then revealed) — L1.4 quiz Q2. Explained the
     gate via determinism and "bypassPermissions only skips asking the user"; did not use the
     evaluation order (hooks first, before permission mode) even after a hint pointing at it.
+  - `2026-09-30` · application · cued · correct (1 hint) — M2 exercise step 1b. Same pattern as L1.4 Q2:
+    first reached for "it's code" instead of order. After one hint ("where does the hook sit vs the
+    permission mode?"): "hooks come first, before the permission mode is checked". Improvement: on 09-28
+    the order didn't come even after a hint.
 
 ### Programmatic enforcement vs prompt-based guidance (deterministic vs probabilistic)
 - Module: 2 (Lesson 1.4)
@@ -604,6 +608,7 @@ Status values: `not started` · `in progress` · `completed`
 - Step 1b (why deny holds in bypassPermissions): first answer "hooks are code and intervene before tool use;
   code doesn't care if Claude can bypass". Partial: right that it's code, missed the permission ORDER (hooks
   run before the mode is checked). Also framed bypass as Claude's right, but it's a harness setting. Asked for that one piece.
+  Retry: "hooks come first, before the permission mode is checked". Correct after 1 hint.
 - L1.7 quiz: 4/4, one hint (Q3: the why, "session saves conversation, not files"). All questions reworded
   with new scenarios. Two slips worth watching: angle brackets typed around names (twice), and `--resume`
   given a file name instead of a session name. All cued (same session as teaching).
