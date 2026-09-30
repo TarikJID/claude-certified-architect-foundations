@@ -489,6 +489,15 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-29` · application · cued · correct (1 hint) — L1.6 quiz Q3: map → high-impact → prioritize
     unaided; the 4th stage (keep adapting the plan during execution) only after a hint.
 
+### Named session resumption (`--resume <session-name>` vs `--continue`; session IDs, saved transcripts)
+- Module: 2 (Lesson 1.7)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-30` · application · just-taught · correct — Monday's named session, two unrelated sessions
+    since, want Monday back → `--resume <auth-refactor-investigation>`. Right choice (not `--continue`).
+    Kept the angle brackets from the placeholder; told him they're not typed. Full form: `claude --resume auth-refactor-investigation`.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
