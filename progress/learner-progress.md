@@ -38,7 +38,7 @@
 | Module | Status | Notes |
 |--------|--------|-------|
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Recall closed on 2 concepts (2026-09-30) |
-| Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught. L1.7 quiz 4/4 (1 hint) 2026-09-30. Module 2 exercise not done |
+| Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught. L1.7 quiz 4/4 (1 hint) 2026-09-30. Exercise done 2026-09-30 (8 steps). Nothing closed yet |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -551,6 +551,10 @@ Status values: `not started` · `in progress` · `completed`
     given as file scope ("session on auth.py doesn't know session.py"); after hint that the session DID read
     session.py → "the session saves the conversation, not the files". Also wrote `--resume <auth.py>`, a file
     not a session name; corrected.
+  - `2026-09-30` · application · cued · partial — M2 exercise step 8 (billing-dispute-4471; plan Pro→Basic
+    AND one charge reversed): "tell Claude the customer moved Pro→Basic, because Claude doesn't know what
+    happened between sessions". Right move and roughly right why. Missed the reversed charge (tell it ALL
+    changes). Why less precise than his Q3 retry (session holds the old tool results, not live data).
 
 ### Fresh session + structured summary vs resuming with stale tool results
 - Module: 2 (Lesson 1.7)
@@ -643,6 +647,11 @@ Status values: `not started` · `in progress` · `completed`
   "in what form?" was vague. Avoid fill-in-the-blank frames with hidden expected words.
 - Step 6 (handoff): all four field names exact. Tutor filled them in for this case.
 - Step 7 (chaining vs dynamic): prompt chaining, fixed steps. Correct, clean.
+- Step 8 (resume after account change): partial. Told Claude about the plan change, missed the reversed charge.
+- **M2 exercise done, all 8 steps.** Clean: 1a, 2, 3, 6, 7. With a hint: 1b (permission order, better than
+  09-28), 4 (PostToolUse name unknown; dates). Partial: 5 (per-issue lookups, one reply with findings),
+  8 (missed one of two changes). Pattern: strong on mechanisms, weaker on exact names and on covering every
+  piece of a scenario.
 - L1.7 quiz: 4/4, one hint (Q3: the why, "session saves conversation, not files"). All questions reworded
   with new scenarios. Two slips worth watching: angle brackets typed around names (twice), and `--resume`
   given a file name instead of a session name. All cued (same session as teaching).
