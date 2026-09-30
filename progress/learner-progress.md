@@ -37,7 +37,7 @@
 
 | Module | Status | Notes |
 |--------|--------|-------|
-| Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Nothing closed yet |
+| Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Recall closed on 2 concepts (2026-09-30) |
 | Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct) |
 
 Status values: `not started` · `in progress` · `completed`
