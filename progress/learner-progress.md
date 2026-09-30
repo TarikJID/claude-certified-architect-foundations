@@ -516,6 +516,11 @@ Status values: `not started` · `in progress` · `completed`
   - Asked where `~/.claude/projects/` is, since it isn't in the GitHub repo. Explained `~` = home dir on the
     machine running Claude Code, not the project folder; showed this container's own transcript file.
     Saved locally, never pushed, and lost when this cloud container is reclaimed (environment detail, outside course).
+  - `2026-09-30` · application · cued · correct (1 hint) — L1.7 quiz Q3 (session.py token expiry 24h→1h):
+    message now names file + what changed + what to do (the upgrade from the checkpoint landed). Why first
+    given as file scope ("session on auth.py doesn't know session.py"); after hint that the session DID read
+    session.py → "the session saves the conversation, not the files". Also wrote `--resume <auth.py>`, a file
+    not a session name; corrected.
 
 ### Fresh session + structured summary vs resuming with stale tool results
 - Module: 2 (Lesson 1.7)
@@ -559,7 +564,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-29 | 2 | L1.6 Q4 — key difference: chaining vs dynamic decomposition | yes: "chaining predefines a list of steps; dynamic decomposition bases the next step on the findings of the previous one" | correct, clean, no hints. Didn't mention the central orchestrator doing the deciding |
 | 2026-09-30 | 2 | L1.7 Q1 (reworded) — 3 sessions, `--continue` opens what, what to type for `billing-bug` | yes: "`--continue` opens the last opened session, perf-audit. Type `--resume <billing-bug>`" | correct, clean, no hints. Angle brackets again (2nd time today) |
 | 2026-09-30 | 2 | L1.7 Q2 (reworded) — legacy DB mapped, test Postgres vs DynamoDB separately; feature + what happens to original | yes: "`fork_session`. Original stays untouched; two new forked sessions derived from the original are created" | correct, clean. Forks twice (valid, keeps a clean baseline); lesson's pattern is one fork + original |
-| 2026-09-30 | 2 | L1.7 Q3 (reworded) — session read auth.py + session.py; teammate changed session.py token expiry 24h→1h. What to tell Claude, why doesn't it know | yes: "`--resume <auth.py>`, tell Claude session.py was modified (1h not 24h) and adapt auth.py. Claude doesn't know because the session working on auth.py doesn't know what happens in session.py" | (grading) |
+| 2026-09-30 | 2 | L1.7 Q3 (reworded) — session read auth.py + session.py; teammate changed session.py token expiry 24h→1h. What to tell Claude, why doesn't it know | yes: "`--resume <auth.py>`, tell Claude session.py was modified (1h not 24h) and adapt auth.py. Claude doesn't know because the session working on auth.py doesn't know what happens in session.py" | correct after 1 hint. Message content right (file + what changed + what to do). Why was wrong first (framed as file scope); retry: "the session saves the conversation, not the files". Also resumed by file name, not session name; corrected |
 
 ## Still open
 
