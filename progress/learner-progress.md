@@ -420,6 +420,10 @@ Status values: `not started` · `in progress` · `completed`
     action; first item muddled ("customer root cause" for customer details). Skipped the why.
     Pushed back that the question is tied to customer service — gave a generic framing (on-call
     engineer handoff) and explained the exam guide uses the support scenario itself.
+  - `2026-09-30` · recall · cued · correct — M2 exercise step 6: "customer details, root cause, amounts,
+    recommended action". All four, exact, clean (fixed the 09-28 muddle). Cued: glossary entry exists in session.
+  - `2026-09-30` · application · cued · partial — gave the field names only, not filled for this case
+    (short answer, charitable read). Tutor showed a filled version.
 
 ### MCP tool results: `isError` and inconsistent formats across tools
 - Module: 2 (Lesson 1.5, prerequisite)
@@ -635,6 +639,7 @@ Status values: `not started` · `in progress` · `completed`
 - Step 5 (multi-concern): partial. Split + shared customer lookup right; missed separate per-issue lookups
   and one reply with findings. Called the question weird (3rd time a checkpoint was flagged, fair again):
   "in what form?" was vague. Avoid fill-in-the-blank frames with hidden expected words.
+- Step 6 (handoff): all four field names exact. Tutor filled them in for this case.
 - L1.7 quiz: 4/4, one hint (Q3: the why, "session saves conversation, not files"). All questions reworded
   with new scenarios. Two slips worth watching: angle brackets typed around names (twice), and `--resume`
   given a file name instead of a session name. All cued (same session as teaching).
