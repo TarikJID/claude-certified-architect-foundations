@@ -498,6 +498,18 @@ Status values: `not started` · `in progress` · `completed`
     since, want Monday back → `--resume <auth-refactor-investigation>`. Right choice (not `--continue`).
     Kept the angle brackets from the placeholder; told him they're not typed. Full form: `claude --resume auth-refactor-investigation`.
 
+### Informing resumed sessions about file changes (session saves conversation, not files)
+- Module: 2 (Lesson 1.7)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-09-30` · application · just-taught · correct — resume, then "read payment.py to acknowledge
+    changes made since your refactoring plan". Named the specific file (the core point). Did not say what
+    changed (idempotency keys) or ask to re-check the plan; told him saying what changed focuses the re-read.
+  - Asked where `~/.claude/projects/` is, since it isn't in the GitHub repo. Explained `~` = home dir on the
+    machine running Claude Code, not the project folder; showed this container's own transcript file.
+    Saved locally, never pushed, and lost when this cloud container is reclaimed (environment detail, outside course).
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
