@@ -70,7 +70,7 @@ Status values: `not started` · `in progress` · `completed`
 
 ### Agentic loop lifecycle (`stop_reason`-driven control flow)
 - Module: 1 (Lesson 1.1)
-- recall: shaky
+- recall: closed (2026-09-30)
 - application: shaky
 - Attempts:
   - `2026-09-22` · application · just-taught · correct — traced both branches unprompted: `end_turn`
@@ -90,10 +90,12 @@ Status values: `not started` · `in progress` · `completed`
     web_search) → `tool_use` (read) → `tool_use` (spawn document_analysis) → `end_turn` (final report to user).
     Levels now right, final `end_turn` present. Still left out the harness's action at each turn (run the
     tool, append `tool_result`, call again / stop and show text); tutor showed it.
+  - `2026-09-30` · recall · cold · correct — fresh conversation drill: "which field does the harness read to
+    decide keep looping or stop?" → `stop_reason`, exact. Second clean cold recall on a separate day. **recall closed.**
 
 ### Appending tool results to conversation history (`tool_result` + `tool_use` ID pairing)
 - Module: 1 (Lesson 1.1)
-- recall: shaky
+- recall: closed (2026-09-30)
 - application: shaky
 - Attempts:
   - `2026-09-22` · application · just-taught · correct — reasoned that with no `tool_result` in
@@ -106,6 +108,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-29` · recall · cold · correct — fresh conversation drill: block type for sending tool output
     back → `tool_result`, exact. Question named its sibling `tool_use`, which helps the pattern a little.
     First clean cold recall.
+  - `2026-09-30` · recall · cold · correct — fresh conversation drill: "the harness runs a tool and sends the
+    output back, what's that block called?" → `tool_result`, exact. No sibling term in the question this time.
+    Second clean cold recall on a separate day. **recall closed.**
 
 ### Model-driven decision-making vs pre-configured decision trees
 - Module: 1 (Lesson 1.1)
@@ -524,12 +529,17 @@ Status values: `not started` · `in progress` · `completed`
 - Permission evaluation order, programmatic vs prompt enforcement, prerequisite gates, multi-concern decomposition, structured handoff (L1.4): both axes shaky, just taught.
 - Task/Agent tool + allowedTools, explicit context passing, AgentDefinition, fork_session, structured claim/evidence/source, parallel spawning, goal-oriented prompts (L1.3): both axes shaky, just taught.
 - Hub-and-spoke, subagent context isolation, coordinator responsibilities, decomposition risks, partitioning, iterative refinement (L1.2): both axes shaky, just taught.
-- All five Lesson 1.1 concepts: recall and application both shaky (see tracker).
+- Lesson 1.1 concepts: application shaky on all five. Recall closed for `stop_reason` loop and `tool_result` (2026-09-30); still shaky on the other three.
 
 ## Session log
 
 <!-- Newest first. What was taught, what landed, what did not, and anything about
      HOW to teach this learner that the next session should know. -->
+
+### 2026-09-30 — Session 4 (fresh conversation, so cold checks count)
+- Cold drill: `stop_reason` — correct, exact. `tool_result` — correct, exact. Both second cold recalls on
+  separate days, so **recall closed on both**. The first two items closed in the course.
+- Tutor slip: the opening recap was read from a stale local copy (said Lesson 1.1). Corrected before the answers.
 
 ### 2026-09-29 — Session 3 (fresh conversation, so cold checks count)
 - Cold drill: `stop_reason` — correct, exact. `fork_session` — correct, exact (was "fork" on 09-27). Learner asked for more drilling. `tool_result` — correct, exact. Context isolation — wrong ("context preservation"); idea right, word wrong, same pattern as before.
