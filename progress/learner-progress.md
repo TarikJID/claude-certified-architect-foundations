@@ -372,6 +372,9 @@ Status values: `not started` · `in progress` · `completed`
     "Team A, because rules in prompts can fail." Right; didn't use *probabilistic*/*deterministic*.
   - `2026-09-28` · application · cued · correct — L1.4 quiz Q1, no hints: prompts can be forgotten
     (full context) or misread; deterministic alternative = code-based gate, e.g. `PreToolUse`.
+  - `2026-09-30` · application · cued · correct — M2 exercise step 3: prompt = "a guideline, maybe strong,
+    that could still be ignored or reasoned around"; hook = "hardcoded rule that can't be bypassed". Unaided.
+    Again didn't use the words *probabilistic* / *deterministic* (recall gap persists; 3rd time).
 
 ### Programmatic prerequisite gates (`PreToolUse` deny with reason)
 - Module: 2 (Lesson 1.4)
@@ -613,6 +616,7 @@ Status values: `not started` · `in progress` · `completed`
   run before the mode is checked). Also framed bypass as Claude's right, but it's a harness setting. Asked for that one piece.
   Retry: "hooks come first, before the permission mode is checked". Correct after 1 hint.
 - Step 2 ($500 hook, deny + redirect to escalate_to_human): correct, unaided. Boundary nit at exactly $500.
+- Step 3 (prompt vs hook): correct, unaided. Didn't use probabilistic/deterministic; gave him the words.
 - L1.7 quiz: 4/4, one hint (Q3: the why, "session saves conversation, not files"). All questions reworded
   with new scenarios. Two slips worth watching: angle brackets typed around names (twice), and `--resume`
   given a file name instead of a session name. All cued (same session as teaching).
