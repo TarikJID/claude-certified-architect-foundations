@@ -291,6 +291,10 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-30` · recall · cued · correct — `fork_session`, exact. NOT cold: the tutor had named
     `fork_session` in the message offering the question. Learner caught it. Does not close; needs one more
     genuinely cold recall on a later day.
+  - `2026-09-30` · recall · cued · correct — L1.7 quiz Q2: `fork_session`, exact. Cued (named earlier today).
+  - `2026-09-30` · application · cued · correct — L1.7 quiz Q2: legacy DB map, Postgres vs DynamoDB → fork;
+    original untouched. Chose two forks from the original (valid, keeps a clean baseline). Told him one fork
+    + the original also works, which is the lesson's pattern.
 
 ### Structured data formats separating content from metadata
 - Module: 1 (Lesson 1.3)
@@ -554,6 +558,7 @@ Status values: `not started` · `in progress` · `completed`
 | 2026-09-29 | 2 | L1.6 Q3 — staged adaptive strategy for "add tests to a legacy codebase" | yes: "map the codebase; find the most important parts; prioritize the work; fourth: I don't know" | correct after 1 hint: first three stages unaided; after hint (hidden billing dependency found mid-task) → "adapt the plan to include it". Missed on his own that the plan keeps adapting and is not fixed |
 | 2026-09-29 | 2 | L1.6 Q4 — key difference: chaining vs dynamic decomposition | yes: "chaining predefines a list of steps; dynamic decomposition bases the next step on the findings of the previous one" | correct, clean, no hints. Didn't mention the central orchestrator doing the deciding |
 | 2026-09-30 | 2 | L1.7 Q1 (reworded) — 3 sessions, `--continue` opens what, what to type for `billing-bug` | yes: "`--continue` opens the last opened session, perf-audit. Type `--resume <billing-bug>`" | correct, clean, no hints. Angle brackets again (2nd time today) |
+| 2026-09-30 | 2 | L1.7 Q2 (reworded) — legacy DB mapped, test Postgres vs DynamoDB separately; feature + what happens to original | yes: "`fork_session`. Original stays untouched; two new forked sessions derived from the original are created" | correct, clean. Forks twice (valid, keeps a clean baseline); lesson's pattern is one fork + original |
 
 ## Still open
 
