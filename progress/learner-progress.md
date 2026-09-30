@@ -455,6 +455,9 @@ Status values: `not started` · `in progress` · `completed`
     runs, against predefined conditions. Didn't mention deny/redirect.
   - `2026-09-29` · application · cued · correct — L1.5 quiz Q3: deny + guide to escalate_to_human.
     Didn't state the why (avoid a dead end). Heavily cued.
+  - `2026-09-30` · application · cued · correct — M2 exercise step 2: match `process_refund`, check amount,
+    deny > $500 citing the rule and recommending `escalate_to_human`. Unaided. Tiny boundary slip: check
+    "< $500" vs deny "> $500" leaves exactly $500 undefined; the rule says "over", so $500 passes.
 
 ### Prompt chaining (fixed sequential decomposition)
 - Module: 2 (Lesson 1.6)
@@ -609,6 +612,7 @@ Status values: `not started` · `in progress` · `completed`
   code doesn't care if Claude can bypass". Partial: right that it's code, missed the permission ORDER (hooks
   run before the mode is checked). Also framed bypass as Claude's right, but it's a harness setting. Asked for that one piece.
   Retry: "hooks come first, before the permission mode is checked". Correct after 1 hint.
+- Step 2 ($500 hook, deny + redirect to escalate_to_human): correct, unaided. Boundary nit at exactly $500.
 - L1.7 quiz: 4/4, one hint (Q3: the why, "session saves conversation, not files"). All questions reworded
   with new scenarios. Two slips worth watching: angle brackets typed around names (twice), and `--resume`
   given a file name instead of a session name. All cued (same session as teaching).
