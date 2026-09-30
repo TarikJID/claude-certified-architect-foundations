@@ -13,7 +13,7 @@
 - Name: Tarik
 - Preferred style: Lecture + checkpoints
 - Started: 2026-09-22
-- Last session: 2026-09-29
+- Last session: 2026-09-30
 - Notes: "i'm rather into short straight forward sentences, long texts and complicated sentences make me zone out" — keep chunks small, plain sentences, check in often.
   Also: "it's a bit weird that you call it 'my' code" — say **the harness**, not "your code". He is
   reasoning about the architecture, not writing it.
