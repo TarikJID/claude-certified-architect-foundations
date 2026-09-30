@@ -448,6 +448,7 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-30` · application · cued · partial — M2 exercise step 4: watches tool results, rewrites them
     per the tool's docs, `2` → "paid". Right mechanism. Missed: dates, and that the goal is ONE shared
     format across both tools (not just decoding one). Asked for the date piece.
+    Retry: "changes 1727500000 into 2024-09-28" (matches billing's format; conversion is exact). Correct after 1 hint.
 
 ### `PreToolUse` hooks for compliance interception (deny + redirect)
 - Module: 2 (Lesson 1.5)
@@ -622,6 +623,10 @@ Status values: `not started` · `in progress` · `completed`
   Retry: "hooks come first, before the permission mode is checked". Correct after 1 hint.
 - Step 2 ($500 hook, deny + redirect to escalate_to_human): correct, unaided. Boundary nit at exactly $500.
 - Step 3 (prompt vs hook): correct, unaided. Didn't use probabilistic/deterministic; gave him the words.
+- Step 4 (normalization): didn't know the name `PostToolUse` (recall gap). Mechanism right; missed the
+  "one shared format for both tools" goal and dates at first; got dates after 1 hint.
+- Asked for a hooks section in the glossary. Added a "Hooks" tag (6 entries) incl. a new `PreToolUse` entry;
+  `--resume` entry now shows the name without brackets. Republished (47 terms).
 - L1.7 quiz: 4/4, one hint (Q3: the why, "session saves conversation, not files"). All questions reworded
   with new scenarios. Two slips worth watching: angle brackets typed around names (twice), and `--resume`
   given a file name instead of a session name. All cued (same session as teaching).

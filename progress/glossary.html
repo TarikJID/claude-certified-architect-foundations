@@ -5,7 +5,7 @@
 :root{
   --bg:#f5f6f4; --surface:#ffffff; --ink:#1c2321; --muted:#5b6662; --line:#dde2df;
   --accent:#2f6b5a; --accent-soft:#e3efea;
-  --t-api:#3d5a99; --t-tools:#8a5a1f; --t-loop:#2f6b5a; --t-design:#7a3f6e; --t-harness:#55605c; --t-multi:#a8432f;
+  --t-api:#3d5a99; --t-tools:#8a5a1f; --t-loop:#2f6b5a; --t-design:#7a3f6e; --t-harness:#55605c; --t-multi:#a8432f; --t-hooks:#1f6a8a;
   --code-bg:#eef1ef;
 }
 @media (prefers-color-scheme: dark){
@@ -13,7 +13,7 @@
     color-scheme:dark;
     --bg:#131816; --surface:#1b2220; --ink:#e4e9e6; --muted:#9aa6a1; --line:#2c3532;
     --accent:#7cc4ad; --accent-soft:#1f302a;
-    --t-api:#93acea; --t-tools:#e0b070; --t-loop:#7cc4ad; --t-design:#d69ac8; --t-harness:#aab5b0; --t-multi:#f0937c;
+    --t-api:#93acea; --t-tools:#e0b070; --t-loop:#7cc4ad; --t-design:#d69ac8; --t-harness:#aab5b0; --t-multi:#f0937c; --t-hooks:#74c0e0;
     --code-bg:#242d2a;
   }
 }
@@ -21,7 +21,7 @@
   color-scheme:dark;
   --bg:#131816; --surface:#1b2220; --ink:#e4e9e6; --muted:#9aa6a1; --line:#2c3532;
   --accent:#7cc4ad; --accent-soft:#1f302a;
-  --t-api:#93acea; --t-tools:#e0b070; --t-loop:#7cc4ad; --t-design:#d69ac8; --t-harness:#aab5b0; --t-multi:#f0937c;
+  --t-api:#93acea; --t-tools:#e0b070; --t-loop:#7cc4ad; --t-design:#d69ac8; --t-harness:#aab5b0; --t-multi:#f0937c; --t-hooks:#74c0e0;
   --code-bg:#242d2a;
 }
 body{background:var(--bg);color:var(--ink);font:16px/1.55 "Public Sans",system-ui,sans-serif;}
@@ -68,7 +68,8 @@ const TAGS = {
   "Loop":    "var(--t-loop)",
   "Design":  "var(--t-design)",
   "Harness": "var(--t-harness)",
-  "Multi-agent": "var(--t-multi)"
+  "Multi-agent": "var(--t-multi)",
+  "Hooks":   "var(--t-hooks)"
 };
 
 // Only concepts that have been taught. Added to as the course goes on.
@@ -129,15 +130,17 @@ const ENTRIES = [
     def: "The coordinator puts several <code>Task</code>/<code>Agent</code> calls in one single response, so independent subagents run at the same time. Total time is the slowest one, not the sum. Anthropic reports up to 90% less research time."  },
   { term: "Goal-oriented prompts", tag: "Multi-agent", src: "Lesson 1.3", alt: "vs procedural prompts",
     def: "Tell a subagent what a good result looks like, not a fixed list of steps. Procedural steps break when reality differs. Goal-oriented still means concrete: objective, output format, tool/source guidance, boundaries."  },
-  { term: "Hook", tag: "Harness", src: "Lesson 1.4",
+  { term: "Hook", tag: "Hooks", src: "Lesson 1.4",
     def: "Your own code that the harness runs around a tool call, for example before it runs. A hook that returns deny blocks the call, and nothing later in the order can override it." },
-  { term: "Permission evaluation order", tag: "Harness", src: "Lesson 1.4",
+  { term: "<code>PreToolUse</code> hook", tag: "Hooks", src: "Lessons 1.4–1.5",
+    def: "Runs <b>before</b> a tool call. It sees the tool name and its inputs, and can <b>allow</b> the call or <b>deny</b> it with a reason. Used for prerequisite gates (\"run <code>get_customer</code> first\") and compliance rules (\"refunds over $500 → <code>escalate_to_human</code>\")." },
+  { term: "Permission evaluation order", tag: "Hooks", src: "Lesson 1.4",
     def: "The fixed sequence every tool call goes through: <b>hooks → deny rules → ask rules → permission mode → allow rules → <code>canUseTool</code></b>. Hooks come first, so a hook's deny wins over everything after it." },
   { term: "<code>bypassPermissions</code>", tag: "Harness", src: "Lesson 1.4",
     def: "The most permissive permission mode. Even here, a hook that denies a call still blocks it, because hooks run before the permission mode is checked."  },
   { term: "Programmatic enforcement vs prompt-based guidance", tag: "Design", src: "Lesson 1.4", alt: "deterministic vs probabilistic",
     def: "A rule written in the prompt usually works but can fail, especially deep in a long conversation: <b>probabilistic</b>. A rule checked in code (a hook or gate) runs outside Claude's reasoning and cannot be forgotten: <b>deterministic</b>. If a rule must hold every time, enforce it in code."  },
-  { term: "Prerequisite gate (<code>PreToolUse</code> hook)", tag: "Harness", src: "Lesson 1.4",
+  { term: "Prerequisite gate (<code>PreToolUse</code> hook)", tag: "Hooks", src: "Lesson 1.4",
     def: "A hook that runs before a tool call. It checks which tool is requested and whether a required earlier step has happened. If not, it denies the call with a reason (e.g. \"run <code>get_customer</code> first\") so Claude knows what to do next. If yes, it lets the call through; it never runs the tool itself."  },
   { term: "Multi-concern request decomposition", tag: "Design", src: "Lesson 1.4",
     def: "When one message raises several issues: split it into separate items, investigate each using the same shared context (e.g. verify the customer once), then combine the findings into one unified reply."  },
@@ -147,9 +150,9 @@ const ENTRIES = [
     def: "A standard way to plug outside tools (each running on its own server) into Claude. Tools may describe the same thing differently, e.g. dates as <code>1727500000</code> or <code>2024-09-28</code>." },
   { term: "<code>isError</code>", tag: "Tools", src: "Lesson 1.5",
     def: "A field in an MCP tool result. <code>true</code> means the tool failed. The failure comes back as normal content Claude can read, so it can react (retry, try another way) instead of crashing."  },
-  { term: "<code>PostToolUse</code> hook", tag: "Harness", src: "Lesson 1.5",
+  { term: "<code>PostToolUse</code> hook", tag: "Hooks", src: "Lesson 1.5",
     def: "Runs after a tool returns and before Claude sees the result. It can rewrite the result, e.g. to <b>normalize</b> formats from different tools into one (<code>paid: 1</code> → <code>payment_status: \"not_paid\"</code>; all dates to one format), so Claude never has to guess."  },
-  { term: "Deny reason as a redirect", tag: "Harness", src: "Lesson 1.5",
+  { term: "Deny reason as a redirect", tag: "Hooks", src: "Lesson 1.5",
     def: "A <code>PreToolUse</code> hook sees the tool name and its inputs. When it denies, its reason can say what to do instead, e.g. \"Refunds over $500 need human approval. Use <code>escalate_to_human</code> instead.\" The block is code (guaranteed); following the redirect is Claude (guidance)." },
   { term: "Prompt chaining", tag: "Design", src: "Lesson 1.6",
     def: "Split a task into fixed steps decided in advance, always in the same order. Each step is a separate call working on the previous step's output; code can check results in between. Slower, but each step is more accurate. E.g. summarize → translate." },
@@ -159,8 +162,8 @@ const ENTRIES = [
     def: "One call asked to review many files in depth spreads its attention thin: uneven depth, missed issues. Fix: a <b>per-file local pass</b> (one call per file) plus a <b>cross-file integration pass</b> that looks only for problems between files (e.g. a function renamed in one file, still called by its old name in another)." },
   { term: "Adaptive investigation planning", tag: "Design", src: "Lesson 1.6",
     def: "For a task with no step list: map the structure first, find the high-impact areas, make a prioritized plan, and keep adjusting it as surprises turn up." },
-  { term: "<code>--resume &lt;session-name&gt;</code>", tag: "Harness", src: "Lesson 1.7", alt: "vs --continue",
-    def: "Every session has an ID, and its full conversation is saved automatically to <code>~/.claude/projects/</code> on the machine running Claude Code. <code>--resume</code> picks up that exact named session, with its full history. <code>--continue</code> just picks up the most recent one." },
+  { term: "<code>--resume</code> <i>session-name</i>", tag: "Harness", src: "Lesson 1.7", alt: "vs --continue",
+    def: "Every session has an ID, and its full conversation is saved automatically to <code>~/.claude/projects/</code> on the machine running Claude Code. <code>--resume</code> picks up that exact named session, with its full history. Type the name without brackets: <code>claude --resume billing-bug</code>. It takes a session name, never a file name. <code>--continue</code> just picks up the most recent one." },
   { term: "Telling a resumed session what changed", tag: "Harness", src: "Lesson 1.7",
     def: "A session saves the conversation, not the files. If a file changed since Claude last read it, Claude's picture is stale. Tell it which file changed and how (e.g. \"payment.py now has idempotency keys, re-check your plan\"), so it re-reads only that file." },
   { term: "Fresh session + structured summary", tag: "Harness", src: "Lesson 1.7", alt: "vs resuming",
