@@ -589,6 +589,8 @@ Status values: `not started` · `in progress` · `completed`
     specified, the current weather". Right instinct (the description must set scope), but it describes a capability the
     tool does not have: no date parameter exists, so it invites a forecast call. Missing: say what the tool does NOT do
     ("current conditions only; no forecasts"). Explained; retry asked.
+  - `2026-10-28` · application · just-taught · correct (retry) — "Returns the current weather only, not forecasts or
+    future dates". States scope and what the tool is NOT for. Landed.
 
 ## Quiz attempts
 
