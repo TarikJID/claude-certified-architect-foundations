@@ -576,6 +576,8 @@ Status values: `not started` · `in progress` · `completed`
     Lisbon". Answered `"required": ["lisbon"]`: right value, wrong place. Put the value in the schema's
     `required` list, which names the fields that must be filled. Correct input: `{"location": "Lisbon"}`. Explained
     the schema as the form and `tool_use` as the filled-in form. Follow-up asked.
+  - `2026-10-28` · application · just-taught · correct — follow-up (optional `units` field, user gave no units):
+    `{"location": "Lisbon"}`. Required field filled, optional one left out. Landed.
 
 ## Quiz attempts
 
