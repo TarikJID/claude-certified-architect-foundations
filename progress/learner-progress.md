@@ -579,6 +579,17 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-10-28` · application · just-taught · correct — follow-up (optional `units` field, user gave no units):
     `{"location": "Lisbon"}`. Required field filled, optional one left out. Landed.
 
+### Tool description as the primary tool-selection signal
+- Module: 3 (Lesson 2.1)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-10-28` · application · just-taught · partial — tool returns current weather only; add one sentence so Claude
+    doesn't use it for "will it rain tomorrow?". Wrote: "Get weather at a specified date or, by default if no date is
+    specified, the current weather". Right instinct (the description must set scope), but it describes a capability the
+    tool does not have: no date parameter exists, so it invites a forecast call. Missing: say what the tool does NOT do
+    ("current conditions only; no forecasts"). Explained; retry asked.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
