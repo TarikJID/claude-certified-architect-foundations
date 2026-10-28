@@ -567,6 +567,16 @@ Status values: `not started` · `in progress` · `completed`
     dead ends → start fresh with summary, dead ends clutter the context. Transferred to the noisy case
     (the checkpoint only covered staleness). Clean.
 
+### Tool definition (`name`, `description`, `input_schema`)
+- Module: 3 (Lesson 2.1, prerequisite concept)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-10-28` · application · just-taught · partial — asked what goes in the `tool_use` input for "weather in
+    Lisbon". Answered `"required": ["lisbon"]`: right value, wrong place. Put the value in the schema's
+    `required` list, which names the fields that must be filled. Correct input: `{"location": "Lisbon"}`. Explained
+    the schema as the form and `tool_use` as the filled-in form. Follow-up asked.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
