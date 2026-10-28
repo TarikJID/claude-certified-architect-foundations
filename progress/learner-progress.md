@@ -612,6 +612,10 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-10-28` · application · just-taught · correct (why) — "always search for their problem first" vs `search_orders`
     for "look up my account". Said the word "search" in the system prompt matched "search" in the tool name and led
     Claude to it. Right mechanism. Did not give the fix (question asked why AND fix). Asked for the fix alone.
+  - `2026-10-28` · application · just-taught · partial — fix: "rename the tool `orders_lookup`". Removes this one overlap,
+    but course fix is to review the system prompt for words that overlap tool names/descriptions and reword it. Renaming
+    treats the symptom: the vague instruction stays, and the user's own "look up" now matches `orders_lookup`. Explained;
+    asked him to reword the system prompt sentence.
 
 ## Quiz attempts
 
