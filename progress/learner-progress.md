@@ -592,6 +592,15 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-10-28` · application · just-taught · correct (retry) — "Returns the current weather only, not forecasts or
     future dates". States scope and what the tool is NOT for. Landed.
 
+### Tool description ambiguity/overlap and the rename/split fix
+- Module: 3 (Lesson 2.1)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-10-28` · application · just-taught · correct (names) — `search_files` ("Searches files") vs `find_files`
+    ("Finds files"), content search vs name search. Chose rename: `search_files_content` / `find_files_by_name`. Right fix,
+    names say the job. Descriptions not mentioned (short answer, read charitably). Asked for one description line.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
