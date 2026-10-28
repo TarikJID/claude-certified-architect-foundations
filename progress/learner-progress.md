@@ -39,6 +39,7 @@
 |--------|--------|-------|
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Recall closed on 2 concepts (2026-09-30) |
 | Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught. L1.7 quiz 4/4 (1 hint) 2026-09-30. Exercise done 2026-09-30 (8 steps). Nothing closed yet |
+| Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). Quiz not yet taken |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -616,6 +617,8 @@ Status values: `not started` · `in progress` · `completed`
     but course fix is to review the system prompt for words that overlap tool names/descriptions and reword it. Renaming
     treats the symptom: the vague instruction stays, and the user's own "look up" now matches `orders_lookup`. Explained;
     asked him to reword the system prompt sentence.
+  - `2026-10-28` · application · just-taught · correct — reworded: "When a customer contacts us, first identify them with
+    get_customer". Drops the overlapping word and names the right first step. Fix landed.
 
 ## Quiz attempts
 
@@ -659,6 +662,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
+- Tool definition, description as selection signal, rename/split fix, system prompt keyword sensitivity (L2.1): both axes shaky, just taught.
 - Named resumption, informing resumed sessions of file changes, fresh+summary vs resume (L1.7): both axes shaky, just taught.
 - Prompt chaining, dynamic decomposition, per-file + integration pass, adaptive investigation planning (L1.6): both axes shaky, just taught; quizzed 4/4 (1 hint), all cued.
 - MCP isError / inconsistent tool formats, PostToolUse normalization, PreToolUse deny+redirect (L1.5): both axes shaky, just taught.
