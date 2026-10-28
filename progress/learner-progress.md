@@ -627,6 +627,7 @@ Status values: `not started` · `in progress` · `completed`
 
 | Date | Module | Question | Attempted | Outcome |
 |------|--------|----------|-----------|---------|
+| 2026-10-28 | 3 | L2.1 Q1 (reworded) — `get_data` / `fetch_data` / `load_data`, one-line descriptions: why unreliable + what each description should contain | yes: "it happens because descriptions are very close: the fix is a description that contains the specific use case of each tool" | (grading below) |
 | 2026-09-27 | 1 | L1.1 Q2 — why a tool result must be appended to history | yes: "so the next round of Claude's thinking can use it; otherwise it would never be used" | correct after 1 hint — retry: "Claude has no memory; it only works with what the harness provides". Right mechanism; didn't use the words *stateless* or `tool_result` |
 | 2026-09-27 | 1 | L1.1 Q4 — model-driven vs pre-configured decision tree | yes: "decision tree: next step known in advance (do this, then that, if X else Y). Agentic loop: model decides next step based on how the previous went; path not known in advance" | correct, clean, no hints |
 | 2026-09-27 | 1 | L1.1 Q3 — three termination anti-patterns + why | yes: (a) stop on any text — text can come with a tool request; (b) stop when Claude says it's done — ambiguous, unreliable; (c) couldn't recall | correct after 1 hint — 3rd: fixed round budget (e.g. 10) is wrong as the main rule: too few for some tasks, far more than needed for others. Did not add that a cap is fine as a safety backstop |
