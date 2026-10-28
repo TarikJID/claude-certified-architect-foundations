@@ -604,6 +604,15 @@ Status values: `not started` · `in progress` · `completed`
     name or extension, not their content". Says what it does and what it is NOT for (carried over from the weather
     checkpoint). Rename + rewrite both landed.
 
+### System prompt keyword sensitivity and tool selection
+- Module: 3 (Lesson 2.1)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-10-28` · application · just-taught · correct (why) — "always search for their problem first" vs `search_orders`
+    for "look up my account". Said the word "search" in the system prompt matched "search" in the tool name and led
+    Claude to it. Right mechanism. Did not give the fix (question asked why AND fix). Asked for the fix alone.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
