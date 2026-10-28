@@ -13,7 +13,7 @@
 - Name: Tarik
 - Preferred style: Lecture + checkpoints
 - Started: 2026-09-22
-- Last session: 2026-09-30
+- Last session: 2026-10-28
 - Notes: "i'm rather into short straight forward sentences, long texts and complicated sentences make me zone out" — keep chunks small, plain sentences, check in often.
   Also: "it's a bit weird that you call it 'my' code" — say **the harness**, not "your code". He is
   reasoning about the architecture, not writing it.
@@ -621,6 +621,12 @@ Status values: `not started` · `in progress` · `completed`
 
 <!-- Newest first. What was taught, what landed, what did not, and anything about
      HOW to teach this learner that the next session should know. -->
+
+### 2026-10-28 — Session 5 (after a 4-week break)
+- Same conversation as a refresher page and a 12-question mock exam (built 2026-10-27, outside the tutor),
+  which show the Module 1–2 terms and answers. So nothing asked in this conversation counts as `cold`.
+  No cold drill today; the next fresh conversation should open with one.
+- Started Module 3, Lesson 2.1.
 
 ### 2026-09-30 — Session 4 (fresh conversation, so cold checks count)
 - Cold drill: `stop_reason` — correct, exact. `tool_result` — correct, exact. Both second cold recalls on
