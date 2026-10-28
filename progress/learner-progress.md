@@ -39,7 +39,7 @@
 |--------|--------|-------|
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Recall closed on 2 concepts (2026-09-30) |
 | Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught. L1.7 quiz 4/4 (1 hint) 2026-09-30. Exercise done 2026-09-30 (8 steps). Nothing closed yet |
-| Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). Quiz not yet taken |
+| Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28 |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -622,6 +622,7 @@ Status values: `not started` · `in progress` · `completed`
     asked him to reword the system prompt sentence.
   - `2026-10-28` · application · just-taught · correct — reworded: "When a customer contacts us, first identify them with
     get_customer". Drops the overlapping word and names the right first step. Fix landed.
+  - `2026-10-28` · application · cued · correct — L2.1 quiz Q3 (translate vs summarize): cause = "summary" in the system prompt; fix = swap the word ("recap"). Mechanism right and the fix is the right kind. Synonym caveat given. No hints.
 
 ## Quiz attempts
 
@@ -630,6 +631,7 @@ Status values: `not started` · `in progress` · `completed`
 
 | Date | Module | Question | Attempted | Outcome |
 |------|--------|----------|-----------|---------|
+| 2026-10-28 | 3 | L2.1 Q3 (reworded) — `translate_text` / `summarize_text`, system prompt "Keep every answer short and plain, like a summary"; Claude calls `summarize_text` for a translation request: why, despite good descriptions | yes: "It happened because of the summary word in the system prompt. The fix is to use another word, like 'recap' for example" | correct, no hints. Cause right (shared keyword in the system prompt). Fix right in kind (reword the prompt), but "recap" is a near-synonym of summary and could keep the pull; better to describe the style without a tool-like word ("brief and plain"). Cued (taught earlier today) |
 | 2026-10-28 | 3 | L2.1 Q2 (reworded) — `summarize_report` / `summarize_document`, near-identical descriptions: name the two repair techniques + an example of each | yes: "rename the tools, rewrite the descriptions" | correct with 1 hint — first answer gave only one technique (rename + rewrite are one technique, not two). After hint: "its split". Split example: `extract_data_points`, `summarize_content`, `verify_claim_against_source` for a broad `analyze_report`. Caveat: those are the exact names the tutor showed when teaching this concept, so it is recall of the example as much as design. Rename example was done in the earlier checkpoint |
 | 2026-10-28 | 3 | L2.1 Q1 (reworded) — `get_data` / `fetch_data` / `load_data`, one-line descriptions: why unreliable + what each description should contain | yes: "it happens because descriptions are very close: the fix is a description that contains the specific use case of each tool" | correct, no hints. Right cause (descriptions too alike to tell apart) and right fix (specific use case each). Thin: didn't say the description is the ONLY signal Claude has for choosing, nor add when-NOT-to-use / parameters / caveats. Cued (taught earlier today) |
 | 2026-09-27 | 1 | L1.1 Q2 — why a tool result must be appended to history | yes: "so the next round of Claude's thinking can use it; otherwise it would never be used" | correct after 1 hint — retry: "Claude has no memory; it only works with what the harness provides". Right mechanism; didn't use the words *stateless* or `tool_result` |
@@ -667,7 +669,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
-- Tool definition, description as selection signal, rename/split fix, system prompt keyword sensitivity (L2.1): both axes shaky, just taught.
+- Tool definition, description as selection signal, rename/split fix, system prompt keyword sensitivity (L2.1): both axes shaky, just taught; quizzed 3/3 (1 hint), all cued.
 - Named resumption, informing resumed sessions of file changes, fresh+summary vs resume (L1.7): both axes shaky, just taught.
 - Prompt chaining, dynamic decomposition, per-file + integration pass, adaptive investigation planning (L1.6): both axes shaky, just taught; quizzed 4/4 (1 hint), all cued.
 - MCP isError / inconsistent tool formats, PostToolUse normalization, PreToolUse deny+redirect (L1.5): both axes shaky, just taught.
@@ -686,6 +688,16 @@ Status values: `not started` · `in progress` · `completed`
   which show the Module 1–2 terms and answers. So nothing asked in this conversation counts as `cold`.
   No cold drill today; the next fresh conversation should open with one.
 - Started Module 3, Lesson 2.1.
+- Lesson 2.1 taught: 4 concepts (tool definition, description as selection signal, rename/split, system prompt
+  keyword sensitivity). All checkpoints reached correct, but three needed a retry or an extra piece:
+  put `Lisbon` in `required` instead of the input; wrote a description claiming a date feature the tool lacks
+  (fix: say what it is NOT for); named the rename fix but not the description rewrite; fixed the keyword clash by
+  renaming a tool instead of rewording the system prompt. Pattern from before holds: right idea, drops one piece.
+- L2.1 quiz: 3/3, one hint (Q2: rename+rewrite is one technique, split is the second). All cued, same session as teaching.
+  Tutor slip: the answers file was opened with a command that printed Q2 and Q3 answers too, before they were attempted.
+  Not used to hint or grade differently, but it weakens the attempt-first control; noted. Also logged a Q3 row before
+  an attempt existed, then removed it.
+- Learner approved write access to the course repo; progress is now pushed after each step.
 
 ### 2026-09-30 — Session 4 (fresh conversation, so cold checks count)
 - Cold drill: `stop_reason` — correct, exact. `tool_result` — correct, exact. Both second cold recalls on
