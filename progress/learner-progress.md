@@ -605,6 +605,7 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-10-28` · application · just-taught · correct — description for `find_files_by_name`: "Finds files by matching their
     name or extension, not their content". Says what it does and what it is NOT for (carried over from the weather
     checkpoint). Rename + rewrite both landed.
+  - `2026-10-28` · recall · cued · correct (1 hint) — L2.1 quiz Q2: first said "rename the tools, rewrite the descriptions" (one technique); after hint named "split". Both technique names produced. Cued (taught earlier today).
 
 ### System prompt keyword sensitivity and tool selection
 - Module: 3 (Lesson 2.1)
@@ -628,7 +629,7 @@ Status values: `not started` · `in progress` · `completed`
 
 | Date | Module | Question | Attempted | Outcome |
 |------|--------|----------|-----------|---------|
-| 2026-10-28 | 3 | L2.1 Q2 (reworded) — `summarize_report` / `summarize_document`, near-identical descriptions: name the two repair techniques + an example of each | yes: "rename the tools, rewrite the descriptions" | (grading below) |
+| 2026-10-28 | 3 | L2.1 Q2 (reworded) — `summarize_report` / `summarize_document`, near-identical descriptions: name the two repair techniques + an example of each | yes: "rename the tools, rewrite the descriptions" | partial, 1 hint — first answer gave only one technique (rename + rewrite are one technique, not two). After hint: "its split", the second technique. No examples given yet; asked for the split example only. Rename example already done in the checkpoint earlier today |
 | 2026-10-28 | 3 | L2.1 Q1 (reworded) — `get_data` / `fetch_data` / `load_data`, one-line descriptions: why unreliable + what each description should contain | yes: "it happens because descriptions are very close: the fix is a description that contains the specific use case of each tool" | correct, no hints. Right cause (descriptions too alike to tell apart) and right fix (specific use case each). Thin: didn't say the description is the ONLY signal Claude has for choosing, nor add when-NOT-to-use / parameters / caveats. Cued (taught earlier today) |
 | 2026-09-27 | 1 | L1.1 Q2 — why a tool result must be appended to history | yes: "so the next round of Claude's thinking can use it; otherwise it would never be used" | correct after 1 hint — retry: "Claude has no memory; it only works with what the harness provides". Right mechanism; didn't use the words *stateless* or `tool_result` |
 | 2026-09-27 | 1 | L1.1 Q4 — model-driven vs pre-configured decision tree | yes: "decision tree: next step known in advance (do this, then that, if X else Y). Agentic loop: model decides next step based on how the previous went; path not known in advance" | correct, clean, no hints |
