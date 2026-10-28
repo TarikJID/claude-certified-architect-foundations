@@ -592,6 +592,7 @@ Status values: `not started` · `in progress` · `completed`
     ("current conditions only; no forecasts"). Explained; retry asked.
   - `2026-10-28` · application · just-taught · correct (retry) — "Returns the current weather only, not forecasts or
     future dates". States scope and what the tool is NOT for. Landed.
+  - `2026-10-28` · application · cued · correct — L2.1 quiz Q1 (three vague `*_data` tools): descriptions too alike; fix = specific use case for each. Thin on "only signal" and when-NOT-to-use. No hints.
 
 ### Tool description ambiguity/overlap and the rename/split fix
 - Module: 3 (Lesson 2.1)
@@ -627,7 +628,7 @@ Status values: `not started` · `in progress` · `completed`
 
 | Date | Module | Question | Attempted | Outcome |
 |------|--------|----------|-----------|---------|
-| 2026-10-28 | 3 | L2.1 Q1 (reworded) — `get_data` / `fetch_data` / `load_data`, one-line descriptions: why unreliable + what each description should contain | yes: "it happens because descriptions are very close: the fix is a description that contains the specific use case of each tool" | (grading below) |
+| 2026-10-28 | 3 | L2.1 Q1 (reworded) — `get_data` / `fetch_data` / `load_data`, one-line descriptions: why unreliable + what each description should contain | yes: "it happens because descriptions are very close: the fix is a description that contains the specific use case of each tool" | correct, no hints. Right cause (descriptions too alike to tell apart) and right fix (specific use case each). Thin: didn't say the description is the ONLY signal Claude has for choosing, nor add when-NOT-to-use / parameters / caveats. Cued (taught earlier today) |
 | 2026-09-27 | 1 | L1.1 Q2 — why a tool result must be appended to history | yes: "so the next round of Claude's thinking can use it; otherwise it would never be used" | correct after 1 hint — retry: "Claude has no memory; it only works with what the harness provides". Right mechanism; didn't use the words *stateless* or `tool_result` |
 | 2026-09-27 | 1 | L1.1 Q4 — model-driven vs pre-configured decision tree | yes: "decision tree: next step known in advance (do this, then that, if X else Y). Agentic loop: model decides next step based on how the previous went; path not known in advance" | correct, clean, no hints |
 | 2026-09-27 | 1 | L1.1 Q3 — three termination anti-patterns + why | yes: (a) stop on any text — text can come with a tool request; (b) stop when Claude says it's done — ambiguous, unreliable; (c) couldn't recall | correct after 1 hint — 3rd: fixed round budget (e.g. 10) is wrong as the main rule: too few for some tasks, far more than needed for others. Did not add that a cap is fine as a safety backstop |
