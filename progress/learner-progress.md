@@ -600,6 +600,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-10-28` · application · just-taught · correct (names) — `search_files` ("Searches files") vs `find_files`
     ("Finds files"), content search vs name search. Chose rename: `search_files_content` / `find_files_by_name`. Right fix,
     names say the job. Descriptions not mentioned (short answer, read charitably). Asked for one description line.
+  - `2026-10-28` · application · just-taught · correct — description for `find_files_by_name`: "Finds files by matching their
+    name or extension, not their content". Says what it does and what it is NOT for (carried over from the weather
+    checkpoint). Rename + rewrite both landed.
 
 ## Quiz attempts
 
