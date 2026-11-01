@@ -804,6 +804,14 @@ Status values: `not started` · `in progress` · `completed`
     the files it surfaces. Right; this also previews the Grep-then-Read concept. The six tool names were listed to him, not
     asked, so recall of them is untested.
 
+### Grep for content search
+- Module: 3 (Lesson 2.5)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-01` · application · just-taught · correct — find every place that throws `"Token expired"` (MCQ): "C", Grep with that
+    pattern. Right; avoided the Glob-by-filename distractor. Recognition from options.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
