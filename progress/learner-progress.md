@@ -647,6 +647,16 @@ Status values: `not started` · `in progress` · `completed`
     retry". Category and retry decision both right. Not yet asked: the other three categories, or the field names
     (`errorCategory`, `isRetryable`).
 
+### Retryable vs non-retryable errors and structured retry metadata (`isRetryable`)
+- Module: 3 (Lesson 2.2)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-01` · application · just-taught · correct — $800 refund, business error, `isRetryable: false`: explains
+    the limit to the customer, then escalates to the manager. Right: no retry, customer-facing explanation. Escalation
+    is sensible when the setup has a path for it (like `escalate_to_human`); the course example stops at explaining.
+    Didn't say "don't retry" in words (implied).
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
