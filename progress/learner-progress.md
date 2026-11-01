@@ -686,6 +686,15 @@ Status values: `not started` · `in progress` · `completed`
     worked and nothing matched"); timeout = `isError true`, `errorCategory transient`. No hints. Missed the why
     (opposite agent responses: trust the empty result vs consider a retry).
 
+### Tool-set size and selection reliability
+- Module: 3 (Lesson 2.3)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-01` · application · just-taught · correct — 18 tools given to every subagent: "there is a higher risk for the
+    subagents to pick the wrong tool". Right. Short answer; didn't add the cause (each tool adds a decision per turn,
+    worse when tools look alike). Charitable read.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
