@@ -39,7 +39,7 @@
 |--------|--------|-------|
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Recall closed on 2 concepts (2026-09-30) |
 | Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught. L1.7 quiz 4/4 (1 hint) 2026-09-30. Exercise done 2026-09-30 (8 steps). Nothing closed yet |
-| Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28 |
+| Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). Quiz not yet taken |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -666,6 +666,15 @@ Status values: `not started` · `in progress` · `completed`
     once: (1) transient, so retry should have fixed it; (2) coordinator flooded with something it can't fix. Both
     intended points. Not mentioned: the report had no detail (what was tried, partial results), and the fallback source.
 
+### Distinguishing access failures from valid empty results
+- Module: 3 (Lesson 2.2)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-01` · application · just-taught · correct — `lookup_order` returns `isError: true`, transient: "retry it,
+    don't say the order doesn't exist". Both halves right. Short answer, read charitably. Not yet asked: what the
+    valid-empty response looks like (`success` with empty results) and why a tool must report them differently.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -711,6 +720,8 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
+- MCP architecture (`tools/list`, `tools/call`), error taxonomy, `isRetryable`, local recovery, access failure vs empty result (L2.2): both axes shaky, just taught; not yet quizzed.
+- Context isolation (L1.2): recall one clean cold (2026-11-01); needs one more on a later day.
 - Tool definition, description as selection signal, rename/split fix, system prompt keyword sensitivity (L2.1): both axes shaky, just taught; quizzed 3/3 (1 hint), all cued.
 - Named resumption, informing resumed sessions of file changes, fresh+summary vs resume (L1.7): both axes shaky, just taught.
 - Prompt chaining, dynamic decomposition, per-file + integration pass, adaptive investigation planning (L1.6): both axes shaky, just taught; quizzed 4/4 (1 hint), all cued.
@@ -728,6 +739,8 @@ Status values: `not started` · `in progress` · `completed`
 ### 2026-11-01 — Session 6 (fresh conversation, so cold checks count)
 - Cold drill: `fork_session` — correct, exact. Recall closed (cold 09-29 + cold 11-01).
 - Cold drill: context isolation — correct, exact (was "context preservation" on 09-29). One clean cold so far.
+- Lesson 2.2 taught: MCP architecture prerequisite + 4 concepts (error categories, `isRetryable`, local recovery,
+  access failure vs empty result). Every checkpoint correct on the first try, short answers. Quiz not yet taken.
 
 ### 2026-10-28 — Session 5 (after a 4-week break)
 - Same conversation as a refresher page and a 12-question mock exam (built 2026-10-27, outside the tutor),
