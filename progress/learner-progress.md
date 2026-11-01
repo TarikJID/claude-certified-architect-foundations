@@ -653,7 +653,6 @@ Status values: `not started` · `in progress` · `completed`
     three no).
   - `2026-11-01` · application · cued · correct — L2.2 quiz Q2: a bare "Operation failed" hides the cause, so the agent
     can't tell whether to retry or what the fix is. No hints. (Answer text had been displayed early by a tutor slip.)
-
 ### Retryable vs non-retryable errors and structured retry metadata (`isRetryable`)
 - Module: 3 (Lesson 2.2)
 - recall: shaky
@@ -672,6 +671,8 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-01` · application · just-taught · correct — subagent hit a transient timeout and sent "search failed" at
     once: (1) transient, so retry should have fixed it; (2) coordinator flooded with something it can't fix. Both
     intended points. Not mentioned: the report had no detail (what was tried, partial results), and the fallback source.
+  - `2026-11-01` · application · cued · correct (thin) — L2.2 quiz Q3: retry with a narrower query first; report =
+    failure type + the attempts. Missed: alternate-source fallback and partial results. No hints.
 
 ### Distinguishing access failures from valid empty results
 - Module: 3 (Lesson 2.2)
@@ -689,6 +690,7 @@ Status values: `not started` · `in progress` · `completed`
 
 | Date | Module | Question | Attempted | Outcome |
 |------|--------|----------|-----------|---------|
+| 2026-11-01 | 3 | L2.2 Q3 — subagent's primary API times out: what to do before reporting, and what the report must include | yes: "it should retry with a narrower query. The report must include the failure type, and the different attempts" | correct, no hints, one piece thin. Local recovery by retry (narrower query) right; didn't mention falling back to an alternate source. Report: failure type + attempts right; missed partial results (also "what was attempted" matched). Same pattern as before: right idea, drops one piece |
 | 2026-11-01 | 3 | L2.2 Q2 — why "Operation failed" is worse than `errorCategory` + `isRetryable` + description | yes: "it doesn't point at the cause of the failure: without the cause, the agent doesn't know why it failed, if it should retry, and what could be the fix" | correct, no hints. Matches the course (agent forced to guess retry / apologize / escalate). Tutor slip: my Q1 answer lookup (grep with context lines) also printed the Q2 answer text before this attempt; not used to hint, but the attempt-first control was weakened for Q2 |
 | 2026-11-01 | 3 | L2.2 Q1 — name the four error categories + whether each is typically retryable | yes: "transient (retry) validation (no retry), business (no retry), process (no retry)" | partial — transient/validation/business names right, all four retry flags right (the 4th "no retry" is correct for the real category). 4th name wrong: said "process" (course: `permission`, needs escalation or different credentials). Hint given, retry asked. Retry: "permission" — correct after 1 hint |
 | 2026-10-28 | 3 | L2.1 Q3 (reworded) — `translate_text` / `summarize_text`, system prompt "Keep every answer short and plain, like a summary"; Claude calls `summarize_text` for a translation request: why, despite good descriptions | yes: "It happened because of the summary word in the system prompt. The fix is to use another word, like 'recap' for example" | correct, no hints. Cause right (shared keyword in the system prompt). Fix right in kind (reword the prompt), but "recap" is a near-synonym of summary and could keep the pull; better to describe the style without a tool-like word ("brief and plain"). Cued (taught earlier today) |
