@@ -754,6 +754,14 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-01` · application · just-taught · correct — which line is safe to commit (MCQ): "B", `Bearer ${GITHUB_TOKEN}`. Right.
     Recognition from options; the `${VAR:-default}` form and the "why" (file is committed) not yet produced by him.
 
+### Tools from all connected MCP servers available together
+- Module: 3 (Lesson 2.4)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-01` · application · just-taught · correct — Jira (project) + Postgres (user) both connected (MCQ): "C", tools
+    from both, available together. Right. Recognition; the wait-for-connecting detail and `mcp__server__tool` naming not yet produced by him.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
