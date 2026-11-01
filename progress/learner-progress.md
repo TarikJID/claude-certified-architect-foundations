@@ -26,6 +26,8 @@
   Also (2026-09-29): "I'm not going to write tons and tons of text each time I answer a question."
   Read short answers charitably. If a specific piece is missing, ask for that one piece directly
   instead of marking it as a gap afterwards. Don't ask for multi-part lists when one part is the point.
+- Quiz format (2026-11-01): wants quizzes as exam-style multiple choice (one best answer, plausible distractors).
+  Tutor writes them live; the quiz files are not rewritten. Keep cold drills as free recall.
 - Glossary: https://claude.ai/artifact/DF2gqN4scYhQ6v9uyvVce6 (source: `progress/glossary.html`,
   republish with that `url`). Requested 2026-09-27. Add each concept's exact name, plain definition
   and tag (API / Tools / Loop / Design / Harness) as it is taught. Only taught material.
@@ -39,7 +41,7 @@
 |--------|--------|-------|
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Recall closed on 2 concepts (2026-09-30) |
 | Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught. L1.7 quiz 4/4 (1 hint) 2026-09-30. Exercise done 2026-09-30 (8 steps). Nothing closed yet |
-| Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). L2.2 quiz 4/4 (1 hint, on Q1's fourth category name), all cued, 2026-11-01. Lesson 2.3 taught 2026-11-01 (4 concepts; all checkpoints correct first try, `tool_choice` value name `tool` slipped). Quiz not yet taken |
+| Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). L2.2 quiz 4/4 (1 hint, on Q1's fourth category name), all cued, 2026-11-01. Lesson 2.3 taught 2026-11-01 (4 concepts; all checkpoints correct first try, `tool_choice` value name `tool` slipped). L2.3 quiz 4/4 clean (MCQ format, tutor-written), all cued, 2026-11-01 |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -705,6 +707,8 @@ Status values: `not started` · `in progress` · `completed`
     Small slip: said "in the subagent's description"; `tools` is its own field on the `AgentDefinition`, next to `description`
     and `prompt` (L1.3). Used the field name from memory, good. Didn't state why it beats prompting (a restriction in
     config can't be ignored; a prompt can).
+  - `2026-11-01` · application · cued · correct — L2.3 quiz Q1 (MCQ): restrict the tool set to the role. Rejected
+    prompt-only, `tool_choice: none` and rename as distractors. No hints.
 
 ### Scoped tool access with limited cross-role tools
 - Module: 3 (Lesson 2.3)
@@ -715,6 +719,8 @@ Status values: `not started` · `in progress` · `completed`
     "narrow and won't enable the subagent to redo other agents' work". Right choice and right reason. Not yet covered:
     the second tactic (replace a generic tool with a narrow one that enforces its own limits, `fetch_url` → `load_document`)
     and that anything bigger goes through the coordinator.
+  - `2026-11-01` · application · cued · correct — L2.3 quiz Q2 (MCQ): narrow `verify_fact` + bigger work via the
+    coordinator. Heavily cued (near-identical to the checkpoint).
 
 ### `tool_choice` configuration (`auto` / `any` / `tool` / `none`)
 - Module: 3 (Lesson 2.3)
@@ -727,6 +733,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-01` · recall · just-taught · partial — did not produce the value name `tool` (put the tool's name in its place).
   - `2026-11-01` · application · just-taught · correct — three enrichment tools, must call one, Claude picks which:
     "tool_choice : any". Right value, exact. Retry of the first checkpoint's gap landed on the second value.
+  - `2026-11-01` · application · cued · correct — L2.3 quiz Q3 (MCQ): forced tool → `tool_use` directly, no text before it.
+  - `2026-11-01` · recall · cued · correct — L2.3 quiz Q4 (MCQ): `any` for "must call a tool, Claude picks which". Picked from
+    options, so recognition, not free recall: the `tool` value name is still untested as a free answer.
 
 ## Quiz attempts
 
@@ -735,6 +744,7 @@ Status values: `not started` · `in progress` · `completed`
 
 | Date | Module | Question | Attempted | Outcome |
 |------|--------|----------|-----------|---------|
+| 2026-11-01 | 3 | L2.3 Q4 (MCQ, tutor-written) — support agent, three tools, every turn must end in a tool call, Claude picks which. A `auto` / B `any` / C `tool` + name / D `none` | yes: "B" | correct (B), no hints. Cued. Tutor slip: the question stem had a garbled sentence ("Which Claude is allowed to pick for itself."); the intent was clear and he answered it |
 | 2026-11-01 | 3 | L2.3 Q3 (MCQ, tutor-written) — `tool_choice` forces `extract_metadata`: what does the response look like. A plan text then `tool_use` / B `tool_use` directly, no text before / C tool_use or text, Claude's choice / D tool_use waits for harness confirmation | yes: "B" | correct (B), no hints. Cued (taught earlier today). Tests the prefill side effect |
 | 2026-11-01 | 3 | L2.3 Q2 (MCQ, tutor-written) — synthesis agent needs to verify a single statistic, coordinator round trips are slow: best design. A give `web_search` / B narrow `verify_fact`, rest via coordinator / C merge into coordinator / D every subagent every tool | yes: "B" | correct (B), no hints. Heavily cued: near-identical to today's checkpoint |
 | 2026-11-01 | 3 | L2.3 Q1 (MCQ, tutor-written, not from quiz.md) — synthesis subagent with 18 tools keeps running its own `web_search`: best fix. A prompt rule / B restrict tool set to role / C `tool_choice` none / D rename `web_search` | yes: "B" | correct (B, restrict the tool set), no hints. Cued (taught earlier today). Quiz files and answer files not opened for this quiz |
@@ -780,7 +790,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
-- Tool-set size, tool misuse outside a role, scoped cross-role tools, `tool_choice` values (L2.3): both axes shaky, just taught; not yet quizzed.
+- Tool-set size, tool misuse outside a role, scoped cross-role tools, `tool_choice` values (L2.3): both axes shaky, just taught; quizzed 4/4 clean, all cued. The `tool` value name still untested as free recall.
 - MCP architecture (`tools/list`, `tools/call`), error taxonomy, `isRetryable`, local recovery, access failure vs empty result (L2.2): both axes shaky, just taught; quizzed 4/4 (1 hint), all cued. Exact names are the soft spot: "permission" came out as "process".
 - Context isolation (L1.2): recall one clean cold (2026-11-01); needs one more on a later day.
 - Tool definition, description as selection signal, rename/split fix, system prompt keyword sensitivity (L2.1): both axes shaky, just taught; quizzed 3/3 (1 hint), all cued.
@@ -807,7 +817,13 @@ Status values: `not started` · `in progress` · `completed`
   Tutor slip: the Q1 answer lookup printed the Q2 answer too before it was attempted. Not used; logged on the Q2 row.
   Pattern holds: mechanisms strong, exact names and complete lists weaker.
 - Lesson 2.3 taught: tool-set size, tool misuse outside a specialization, scoped cross-role tools, `tool_choice`.
-  All correct on the first try. One slip: wrote `tool_choice: extract_metadata` instead of value `tool` + name. Quiz not yet taken.
+  All correct on the first try. One slip: wrote `tool_choice: extract_metadata` instead of value `tool` + name.
+- L2.3 quiz: 4/4, no hints. Learner asked for ALL quizzes to be rewritten as multiple-choice, like the exam. Told him: rewriting
+  the quiz files is course-building (outside the tutor role) and would mean opening every answers file, which breaks
+  attempt-first. Offered instead: tutor writes fresh exam-style MCQs on the fly, files untouched. He accepted by answering.
+  So the 2.3 quiz was MCQ, tutor-written, quiz files and answers files NOT opened. Preference: **exam-style MCQs for quizzes**.
+  Caveat: MCQ is recognition, so it is cued at best and tests names less than free recall. Keep drills free-recall.
+  Tutor slip: Q4 stem had a garbled sentence.
 - Glossary: added 9 Module 3 terms (4 from L2.1, which had never been added, and 5 from L2.2). Republished, 56 terms.
 
 ### 2026-10-28 — Session 5 (after a 4-week break)
