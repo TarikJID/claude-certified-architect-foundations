@@ -695,6 +695,17 @@ Status values: `not started` · `in progress` · `completed`
     subagents to pick the wrong tool". Right. Short answer; didn't add the cause (each tool adds a decision per turn,
     worse when tools look alike). Charitable read.
 
+### Tool misuse outside an agent's specialization
+- Module: 3 (Lesson 2.3)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-01` · application · just-taught · correct — synthesis agent keeps running its own web searches: fix =
+    a `tools` input with only `format_report` and `cite_source`. Right: restrict the tool set instead of only prompting.
+    Small slip: said "in the subagent's description"; `tools` is its own field on the `AgentDefinition`, next to `description`
+    and `prompt` (L1.3). Used the field name from memory, good. Didn't state why it beats prompting (a restriction in
+    config can't be ignored; a prompt can).
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
