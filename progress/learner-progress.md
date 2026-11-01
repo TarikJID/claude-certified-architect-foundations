@@ -760,6 +760,7 @@ Status values: `not started` · `in progress` · `completed`
   clean. Q3 thin (no alternate-source fallback, no partial results). Q4 missed the "opposite responses" why. All cued.
   Tutor slip: the Q1 answer lookup printed the Q2 answer too before it was attempted. Not used; logged on the Q2 row.
   Pattern holds: mechanisms strong, exact names and complete lists weaker.
+- Glossary: added 9 Module 3 terms (4 from L2.1, which had never been added, and 5 from L2.2). Republished, 56 terms.
 
 ### 2026-10-28 — Session 5 (after a 4-week break)
 - Same conversation as a refresher page and a 12-question mock exam (built 2026-10-27, outside the tutor),

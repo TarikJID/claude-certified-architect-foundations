@@ -167,7 +167,25 @@ const ENTRIES = [
   { term: "Telling a resumed session what changed", tag: "Harness", src: "Lesson 1.7",
     def: "A session saves the conversation, not the files. If a file changed since Claude last read it, Claude's picture is stale. Tell it which file changed and how (e.g. \"payment.py now has idempotency keys, re-check your plan\"), so it re-reads only that file." },
   { term: "Fresh session + structured summary", tag: "Harness", src: "Lesson 1.7", alt: "vs resuming",
-    def: "Resume when the old context is mostly still valid. When it's mostly stale or noisy, start a new session and paste a short structured summary of what was learned, instead of hoping Claude ignores the outdated tool results." }
+    def: "Resume when the old context is mostly still valid. When it's mostly stale or noisy, start a new session and paste a short structured summary of what was learned, instead of hoping Claude ignores the outdated tool results." },
+  { term: "Tool definition", tag: "Tools", src: "Lesson 2.1",
+    def: "What Claude is given for each tool: a <code>name</code>, a <code>description</code>, and an <code>input_schema</code> (the form: which fields exist and which are <code>required</code>). When Claude uses the tool, the <code>tool_use</code> block is the filled-in form, e.g. <code>{\"location\": \"Lisbon\"}</code>." },
+  { term: "Tool description as the selection signal", tag: "Tools", src: "Lesson 2.1",
+    def: "The description is what Claude uses to choose between tools. It should say what the tool does <b>and what it is not for</b>, e.g. \"Returns the current weather only, not forecasts or future dates.\"" },
+  { term: "Rename / split fix for overlapping tools", tag: "Tools", src: "Lesson 2.1",
+    def: "When two tools have near-identical descriptions, Claude picks unreliably. Technique 1: <b>rename</b> the tools and <b>rewrite</b> their descriptions so each names its job (<code>search_files_content</code> vs <code>find_files_by_name</code>). Technique 2: <b>split</b> one broad tool into several narrow ones with one job each." },
+  { term: "System prompt keyword sensitivity", tag: "Tools", src: "Lesson 2.1",
+    def: "A word in the system prompt can pull Claude toward a tool whose name or description contains the same word (\"summary\" in the prompt, <code>summarize_text</code> chosen for a translation). Fix: reword the system prompt to drop the overlapping word, rather than only renaming a tool." },
+  { term: "MCP client and server (<code>tools/list</code>, <code>tools/call</code>)", tag: "Tools", src: "Lesson 2.2",
+    def: "An MCP <b>server</b> is a separate program that offers tools. A <b>client</b> (like Claude Code) connects to it over JSON-RPC. First the client sends <code>tools/list</code> (\"what do you offer?\"), then <code>tools/call</code> (\"run this one\"). Servers can also offer resources: <code>resources/list</code>, <code>resources/read</code>." },
+  { term: "Structured error categories", tag: "Tools", src: "Lesson 2.2",
+    def: "Four kinds of tool failure: <b>transient</b> (timeout; retry often works), <b>validation</b> (bad input; same input fails again), <b>business</b> (breaks a policy; no retry helps), <b>permission</b> (not allowed; escalate or use other credentials). A bare \"Operation failed\" hides which one, so Claude has to guess." },
+  { term: "<code>isRetryable</code> and <code>errorCategory</code>", tag: "Tools", src: "Lesson 2.2",
+    def: "Structured fields on an error result, plus a readable description. <code>isRetryable: false</code> stops pointless retry loops. For a business error, the description gives Claude words for the customer: \"Refunds over $500 require manager approval.\"" },
+  { term: "Local recovery before escalation", tag: "Multi-agent", src: "Lesson 2.2",
+    def: "A subagent that hits a transient failure fixes what it can first: retry, or fall back to another source. Only what it cannot fix goes up to the coordinator, with the error, what it tried, and any partial results." },
+  { term: "Valid empty result vs access failure", tag: "Tools", src: "Lesson 2.2",
+    def: "<code>{status: \"success\", results: []}</code> means the search worked and nothing matched: trust it. <code>{isError: true, errorCategory: \"transient\"}</code> means the search never completed: consider a retry. Never tell a customer \"no such order\" after a timeout." }
 ];
 
 const state = { tag: "All", q: "" };
