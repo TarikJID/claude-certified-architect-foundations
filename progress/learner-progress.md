@@ -629,6 +629,15 @@ Status values: `not started` · `in progress` · `completed`
     get_customer". Drops the overlapping word and names the right first step. Fix landed.
   - `2026-10-28` · application · cued · correct — L2.1 quiz Q3 (translate vs summarize): cause = "summary" in the system prompt; fix = swap the word ("recap"). Mechanism right and the fix is the right kind. Synonym caveat given. No hints.
 
+### MCP client-server architecture and protocol messages (`tools/list`, `tools/call`)
+- Module: 3 (Lesson 2.2, prerequisite concept)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-01` · application · just-taught · correct — new Jira server, what does Claude Code send first and why:
+    `tools/list`, "to know what tools are available". Right message, right reason. `tools/call` and the resources
+    messages not asked.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
