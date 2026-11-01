@@ -657,6 +657,15 @@ Status values: `not started` · `in progress` · `completed`
     is sensible when the setup has a path for it (like `escalate_to_human`); the course example stops at explaining.
     Didn't say "don't retry" in words (implied).
 
+### Local error recovery before escalation (subagent pattern)
+- Module: 3 (Lesson 2.2)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-01` · application · just-taught · correct — subagent hit a transient timeout and sent "search failed" at
+    once: (1) transient, so retry should have fixed it; (2) coordinator flooded with something it can't fix. Both
+    intended points. Not mentioned: the report had no detail (what was tried, partial results), and the fallback source.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
