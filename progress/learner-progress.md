@@ -638,6 +638,15 @@ Status values: `not started` · `in progress` · `completed`
     `tools/list`, "to know what tools are available". Right message, right reason. `tools/call` and the resources
     messages not asked.
 
+### Structured error categories (transient / validation / business / permission)
+- Module: 3 (Lesson 2.2)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-01` · application · just-taught · correct — `create_user` with email `bob@@example.com`: "validation, no
+    retry". Category and retry decision both right. Not yet asked: the other three categories, or the field names
+    (`errorCategory`, `isRetryable`).
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
