@@ -820,6 +820,14 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-01` · application · just-taught · correct — all `.yaml` files regardless of contents (MCQ): "B", Glob `**/*.yaml`.
     Right; avoided Grep and the Glob-for-contents distractor. Recognition from options; the sorting/cap details untested.
 
+### Read/Write for full file operations vs Edit for targeted modification
+- Module: 3 (Lesson 2.5)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-01` · application · just-taught · correct — add one function to a 600-line file (MCQ): "C", Edit anchored on a unique
+    line. Right; avoided rewriting the whole file. Recognition from options; the unique-`old_string` rule untested as free recall.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
