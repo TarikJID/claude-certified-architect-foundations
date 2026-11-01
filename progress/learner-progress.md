@@ -795,6 +795,15 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-01` · application · just-taught · correct — Slack + in-house inventory (MCQ): "C", adopt community Slack, build custom
     inventory. Right. Recognition from options; the "why" (duplicated effort vs nothing exists) not stated by him.
 
+### Claude Code built-in tools and context budget (Read, Write, Edit, Bash, Grep, Glob)
+- Module: 3 (Lesson 2.5, prerequisite concept)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-01` · application · just-taught · correct — find an obscure flag in a 400-file repo (MCQ): "C", narrow search then read only
+    the files it surfaces. Right; this also previews the Grep-then-Read concept. The six tool names were listed to him, not
+    asked, so recall of them is untested.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
