@@ -41,7 +41,7 @@
 |--------|--------|-------|
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Recall closed on 2 concepts (2026-09-30) |
 | Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught. L1.7 quiz 4/4 (1 hint) 2026-09-30. Exercise done 2026-09-30 (8 steps). Nothing closed yet |
-| Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). L2.2 quiz 4/4 (1 hint, on Q1's fourth category name), all cued, 2026-11-01. Lesson 2.3 taught 2026-11-01 (4 concepts; all checkpoints correct first try, `tool_choice` value name `tool` slipped). L2.3 quiz 4/4 clean (MCQ format, tutor-written), all cued, 2026-11-01. Lesson 2.4 taught 2026-11-01 (6 concepts; all checkpoints MCQ, all correct first try). Quiz not yet taken |
+| Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). L2.2 quiz 4/4 (1 hint, on Q1's fourth category name), all cued, 2026-11-01. Lesson 2.3 taught 2026-11-01 (4 concepts; all checkpoints correct first try, `tool_choice` value name `tool` slipped). L2.3 quiz 4/4 clean (MCQ format, tutor-written), all cued, 2026-11-01. Lesson 2.4 taught 2026-11-01 (6 concepts; all checkpoints MCQ, all correct first try). L2.4 quiz 4/4 clean (MCQ, tutor-written), all cued, 2026-11-01. Module 3: Lessons 2.1-2.4 taught and quizzed; 2.5 not yet |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -745,6 +745,8 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-01` · application · just-taught · correct — shared Jira server + a private experiment (MCQ): "B", Jira in
     `.mcp.json`, experiment in `~/.claude.json`. Right. Recognition from options, so recall of the file paths is untested.
     Not yet covered: higher-precedence definition wins, no merging.
+  - `2026-11-01` · application · cued · correct — L2.4 quiz Q1 (MCQ): same server in both files → highest-precedence
+    definition wins, no merge. No hints.
 
 ### Environment variable expansion in `.mcp.json` (`${VAR}`, `${VAR:-default}`)
 - Module: 3 (Lesson 2.4)
@@ -753,6 +755,8 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-11-01` · application · just-taught · correct — which line is safe to commit (MCQ): "B", `Bearer ${GITHUB_TOKEN}`. Right.
     Recognition from options; the `${VAR:-default}` form and the "why" (file is committed) not yet produced by him.
+  - `2026-11-01` · application · cued · correct — L2.4 quiz Q2 (MCQ): `${API_URL:-https://staging.example.com}` with `API_URL`
+    unset → the default URL. No hints.
 
 ### Tools from all connected MCP servers available together
 - Module: 3 (Lesson 2.4)
@@ -778,6 +782,8 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-01` · application · just-taught · correct — unused `search_code` MCP tool vs built-in Grep (MCQ): "C", rewrite the
     description to explain symbol-aware search and outputs. Right. Same principle as L2.1 (description is the selection
     signal), which probably helped. Recognition from options.
+  - `2026-11-01` · application · cued · correct — L2.4 quiz Q3 (MCQ): picked the description with capabilities, input,
+    output and a contrast with Grep over "powerful, always use" and "do not use Grep". No hints.
 
 ### Community MCP servers vs custom implementations
 - Module: 3 (Lesson 2.4)
@@ -794,6 +800,7 @@ Status values: `not started` · `in progress` · `completed`
 
 | Date | Module | Question | Attempted | Outcome |
 |------|--------|----------|-----------|---------|
+| 2026-11-01 | 3 | L2.4 Q4 (MCQ, tutor-written) — DB MCP server must let Claude plan queries and change data: best design. A schemas + `insert_record` as resources / B schemas as resources, `query` + `insert_record` as tools / C all tools, schemas via `describe_table` / D schemas in system prompt | yes: "B" | correct (B), no hints. Cued. Resources = read-only content, tools = actions |
 | 2026-11-01 | 3 | L2.4 Q3 (MCQ, tutor-written) — MCP `find_references` described as "finds things in code", Claude picks `Grep`: best new description. A "Finds references." / B "powerful, always use instead of Grep" / C specific capabilities, input, output and contrast with Grep / D "Do not use Grep" | yes: "C" | correct (C), no hints. Cued. Chose the description that states capabilities, inputs and outputs; rejected the shout-style and ban-style ones |
 | 2026-11-01 | 3 | L2.4 Q2 (MCQ, tutor-written) — `"url": "${API_URL:-https://staging.example.com}"`, `API_URL` unset: which URL is used. A fails to start / B the staging default / C empty string / D asks the developer | yes: "B" | correct (B), no hints. Cued. Tests the `${VAR:-default}` form, which he had not yet used himself |
 | 2026-11-01 | 3 | L2.4 Q1 (MCQ, tutor-written) — same server `db` defined in `.mcp.json` and `~/.claude.json` with different settings: what happens. A merge fields / B highest-precedence definition, no merge / C two servers / D refuses to start | yes: "B" | correct (B), no hints. Cued (taught earlier today). Quiz files and answer files not opened |
@@ -843,7 +850,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
-- MCP scoping, env var expansion, combined tools, MCP resources, description vs built-in, community vs custom (L2.4): both axes shaky, just taught; not yet quizzed. All checkpoints were MCQ, so recall of file paths (`.mcp.json`, `~/.claude.json`) and `${VAR:-default}` is untested as free recall.
+- MCP scoping, env var expansion, combined tools, MCP resources, description vs built-in, community vs custom (L2.4): both axes shaky, just taught; quizzed 4/4 clean, all cued. All checkpoints and quiz questions were MCQ, so recall of file paths (`.mcp.json`, `~/.claude.json`) and `${VAR:-default}` is untested as free recall.
 - Tool-set size, tool misuse outside a role, scoped cross-role tools, `tool_choice` values (L2.3): both axes shaky, just taught; quizzed 4/4 clean, all cued. The `tool` value name still untested as free recall.
 - MCP architecture (`tools/list`, `tools/call`), error taxonomy, `isRetryable`, local recovery, access failure vs empty result (L2.2): both axes shaky, just taught; quizzed 4/4 (1 hint), all cued. Exact names are the soft spot: "permission" came out as "process".
 - Context isolation (L1.2): recall one clean cold (2026-11-01); needs one more on a later day.
@@ -881,7 +888,11 @@ Status values: `not started` · `in progress` · `completed`
 - Lesson 2.4 taught in the same conversation: 6 concepts (scoping, env var expansion, combined tools, resources,
   description vs built-in, community vs custom). Checkpoints written as MCQs, all correct on the first try. Because they are MCQs,
   these are recognition checks; none of the exact names (`.mcp.json`, `~/.claude.json`, `${VAR}`) was produced from memory.
-  Quiz not yet taken. Same conversation as the morning drills, so nothing here counts as cold.
+  Same conversation as the morning drills, so nothing here counts as cold.
+- L2.4 quiz: 4/4, no hints (MCQ, tutor-written; quiz files and answers files not opened). Q1 precedence, Q2 `${VAR:-default}`,
+  Q3 description rewrite vs Grep, Q4 resources vs tools. All cued. A run of 14 correct MCQ answers today with no misses
+  is a weak signal: MCQ is recognition and the distractors may be too easy. Next session: free-recall drills first, and
+  write harder distractors (plausible, same vocabulary).
 - Glossary: added 9 Module 3 terms (4 from L2.1, which had never been added, and 5 from L2.2). Republished, 56 terms.
 
 ### 2026-10-28 — Session 5 (after a 4-week break)
