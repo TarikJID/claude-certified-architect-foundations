@@ -836,6 +836,15 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-01` · application · just-taught · correct — Edit fails on a non-unique match in a config file (MCQ): "B", Read the
     full file, then Write it back with only the intended occurrence changed. Right. Recognition from options.
 
+### Incremental codebase exploration (Grep-then-Read)
+- Module: 3 (Lesson 2.5)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-01` · application · just-taught · correct — understand how login works in a large repo (MCQ): "C", Grep `login`, Read the
+    surfaced files, Grep again for names found inside them. Right. He had already picked the same pattern in the lesson's first
+    check, so this is heavily cued. Recognition from options.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
