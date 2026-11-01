@@ -41,7 +41,7 @@
 |--------|--------|-------|
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Recall closed on 2 concepts (2026-09-30) |
 | Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught. L1.7 quiz 4/4 (1 hint) 2026-09-30. Exercise done 2026-09-30 (8 steps). Nothing closed yet |
-| Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). L2.2 quiz 4/4 (1 hint, on Q1's fourth category name), all cued, 2026-11-01. Lesson 2.3 taught 2026-11-01 (4 concepts; all checkpoints correct first try, `tool_choice` value name `tool` slipped). L2.3 quiz 4/4 clean (MCQ format, tutor-written), all cued, 2026-11-01. Lesson 2.4 taught 2026-11-01 (6 concepts; all checkpoints MCQ, all correct first try). L2.4 quiz 4/4 clean (MCQ, tutor-written), all cued, 2026-11-01. Module 3: Lessons 2.1-2.4 taught and quizzed; 2.5 not yet |
+| Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). L2.2 quiz 4/4 (1 hint, on Q1's fourth category name), all cued, 2026-11-01. Lesson 2.3 taught 2026-11-01 (4 concepts; all checkpoints correct first try, `tool_choice` value name `tool` slipped). L2.3 quiz 4/4 clean (MCQ format, tutor-written), all cued, 2026-11-01. Lesson 2.4 taught 2026-11-01 (6 concepts; all checkpoints MCQ, all correct first try). L2.4 quiz 4/4 clean (MCQ, tutor-written), all cued, 2026-11-01. Lesson 2.5 taught 2026-11-01 (prerequisite + 6 concepts; all checkpoints MCQ, all correct first try). All Module 3 lessons taught. Quiz for 2.5 and the exercise not yet done |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -845,6 +845,14 @@ Status values: `not started` · `in progress` · `completed`
     surfaced files, Grep again for names found inside them. Right. He had already picked the same pattern in the lesson's first
     check, so this is heavily cued. Recognition from options.
 
+### Tracing function usage across wrapper modules
+- Module: 3 (Lesson 2.5)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-01` · application · just-taught · correct — Grep for `validateUser` found 4 callers, suspects more (MCQ): "B", find the
+    other re-exported/wrapped names, then Grep for each. Right. Recognition from options.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -902,6 +910,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
+- Built-in tools, Grep, Glob, Read/Write/Edit, Edit fallback, Grep-then-Read, tracing wrapper names (L2.5): both axes shaky, just taught; not yet quizzed. All checkpoints MCQ, so tool names and patterns (`**/*.yaml`) are untested as free recall.
 - MCP scoping, env var expansion, combined tools, MCP resources, description vs built-in, community vs custom (L2.4): both axes shaky, just taught; quizzed 4/4 clean, all cued. All checkpoints and quiz questions were MCQ, so recall of file paths (`.mcp.json`, `~/.claude.json`) and `${VAR:-default}` is untested as free recall.
 - Tool-set size, tool misuse outside a role, scoped cross-role tools, `tool_choice` values (L2.3): both axes shaky, just taught; quizzed 4/4 clean, all cued. The `tool` value name still untested as free recall.
 - MCP architecture (`tools/list`, `tools/call`), error taxonomy, `isRetryable`, local recovery, access failure vs empty result (L2.2): both axes shaky, just taught; quizzed 4/4 (1 hint), all cued. Exact names are the soft spot: "permission" came out as "process".
@@ -941,6 +950,8 @@ Status values: `not started` · `in progress` · `completed`
   description vs built-in, community vs custom). Checkpoints written as MCQs, all correct on the first try. Because they are MCQs,
   these are recognition checks; none of the exact names (`.mcp.json`, `~/.claude.json`, `${VAR}`) was produced from memory.
   Same conversation as the morning drills, so nothing here counts as cold.
+- Lesson 2.5 taught in the same conversation: prerequisite (built-in tools and context budget) + Grep, Glob, Read/Write/Edit,
+  Edit failure fallback, Grep-then-Read, tracing wrapper names. 7 MCQ checkpoints, all correct first try. Quiz not yet taken.
 - L2.4 quiz: 4/4, no hints (MCQ, tutor-written; quiz files and answers files not opened). Q1 precedence, Q2 `${VAR:-default}`,
   Q3 description rewrite vs Grep, Q4 resources vs tools. All cued. A run of 14 correct MCQ answers today with no misses
   is a weak signal: MCQ is recognition and the distractors may be too easy. Next session: free-recall drills first, and
