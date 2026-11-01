@@ -39,7 +39,7 @@
 |--------|--------|-------|
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Recall closed on 2 concepts (2026-09-30) |
 | Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught. L1.7 quiz 4/4 (1 hint) 2026-09-30. Exercise done 2026-09-30 (8 steps). Nothing closed yet |
-| Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). Quiz not yet taken |
+| Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). L2.2 quiz 4/4 (1 hint, on Q1's fourth category name), all cued, 2026-11-01 |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -682,6 +682,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-01` · application · just-taught · correct — `lookup_order` returns `isError: true`, transient: "retry it,
     don't say the order doesn't exist". Both halves right. Short answer, read charitably. Not yet asked: what the
     valid-empty response looks like (`success` with empty results) and why a tool must report them differently.
+  - `2026-11-01` · application · cued · correct — L2.2 quiz Q4: empty `success` result is not a failure ("the search
+    worked and nothing matched"); timeout = `isError true`, `errorCategory transient`. No hints. Missed the why
+    (opposite agent responses: trust the empty result vs consider a retry).
 
 ## Quiz attempts
 
@@ -690,7 +693,7 @@ Status values: `not started` · `in progress` · `completed`
 
 | Date | Module | Question | Attempted | Outcome |
 |------|--------|----------|-----------|---------|
-| 2026-11-01 | 3 | L2.2 Q4 — `lookup_order("12345")` returns `status: success`, `results: []`: is it a failure + how should a timeout look different | yes (first half): "It's not a failure, the search worked and nothing matched" | half answered — not a failure, correct with the right reason. Timeout half not yet given; asked for that one piece directly (short answers read charitably) |
+| 2026-11-01 | 3 | L2.2 Q4 — `lookup_order("12345")` returns `status: success`, `results: []`: is it a failure + how should a timeout look different | yes (first half): "It's not a failure, the search worked and nothing matched" | half answered — not a failure, correct with the right reason. Timeout half not yet given; asked for that one piece directly (short answers read charitably). Second half given: "isError true, errorCategory transient, error timeout" | correct, no hints. Matches the course answer (`isError: true`, `errorCategory: "transient"`). Didn't state the why: the two need opposite responses (trust the empty result vs consider a retry) |
 | 2026-11-01 | 3 | L2.2 Q3 — subagent's primary API times out: what to do before reporting, and what the report must include | yes: "it should retry with a narrower query. The report must include the failure type, and the different attempts" | correct, no hints, one piece thin. Local recovery by retry (narrower query) right; didn't mention falling back to an alternate source. Report: failure type + attempts right; missed partial results (also "what was attempted" matched). Same pattern as before: right idea, drops one piece |
 | 2026-11-01 | 3 | L2.2 Q2 — why "Operation failed" is worse than `errorCategory` + `isRetryable` + description | yes: "it doesn't point at the cause of the failure: without the cause, the agent doesn't know why it failed, if it should retry, and what could be the fix" | correct, no hints. Matches the course (agent forced to guess retry / apologize / escalate). Tutor slip: my Q1 answer lookup (grep with context lines) also printed the Q2 answer text before this attempt; not used to hint, but the attempt-first control was weakened for Q2 |
 | 2026-11-01 | 3 | L2.2 Q1 — name the four error categories + whether each is typically retryable | yes: "transient (retry) validation (no retry), business (no retry), process (no retry)" | partial — transient/validation/business names right, all four retry flags right (the 4th "no retry" is correct for the real category). 4th name wrong: said "process" (course: `permission`, needs escalation or different credentials). Hint given, retry asked. Retry: "permission" — correct after 1 hint |
@@ -732,7 +735,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
-- MCP architecture (`tools/list`, `tools/call`), error taxonomy, `isRetryable`, local recovery, access failure vs empty result (L2.2): both axes shaky, just taught; not yet quizzed.
+- MCP architecture (`tools/list`, `tools/call`), error taxonomy, `isRetryable`, local recovery, access failure vs empty result (L2.2): both axes shaky, just taught; quizzed 4/4 (1 hint), all cued. Exact names are the soft spot: "permission" came out as "process".
 - Context isolation (L1.2): recall one clean cold (2026-11-01); needs one more on a later day.
 - Tool definition, description as selection signal, rename/split fix, system prompt keyword sensitivity (L2.1): both axes shaky, just taught; quizzed 3/3 (1 hint), all cued.
 - Named resumption, informing resumed sessions of file changes, fresh+summary vs resume (L1.7): both axes shaky, just taught.
@@ -752,7 +755,11 @@ Status values: `not started` · `in progress` · `completed`
 - Cold drill: `fork_session` — correct, exact. Recall closed (cold 09-29 + cold 11-01).
 - Cold drill: context isolation — correct, exact (was "context preservation" on 09-29). One clean cold so far.
 - Lesson 2.2 taught: MCP architecture prerequisite + 4 concepts (error categories, `isRetryable`, local recovery,
-  access failure vs empty result). Every checkpoint correct on the first try, short answers. Quiz not yet taken.
+  access failure vs empty result). Every checkpoint correct on the first try, short answers.
+- L2.2 quiz: 4/4, one hint (Q1: fourth category name — said "process", got "permission" after a hint). Q2, Q3, Q4
+  clean. Q3 thin (no alternate-source fallback, no partial results). Q4 missed the "opposite responses" why. All cued.
+  Tutor slip: the Q1 answer lookup printed the Q2 answer too before it was attempted. Not used; logged on the Q2 row.
+  Pattern holds: mechanisms strong, exact names and complete lists weaker.
 
 ### 2026-10-28 — Session 5 (after a 4-week break)
 - Same conversation as a refresher page and a 12-question mock exam (built 2026-10-27, outside the tutor),
