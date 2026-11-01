@@ -181,6 +181,8 @@ Status values: `not started` · `in progress` · `completed`
     to the subagent". That covers it, so upgraded to correct.
   - `2026-09-29` · recall · cold · wrong — fresh conversation drill (40 docs, coordinator sees only the
     summary): said "context preservation". Answer: *context isolation* (each subagent has its own context).
+  - `2026-11-01` · recall · cold · correct — fresh conversation drill (3 subagents read 40 docs, coordinator sees
+    only summaries): "context isolation", exact. Fixes the 09-29 miss. First clean cold recall; one more on a later day closes it.
 
 ### Coordinator responsibilities (decomposition, delegation, aggregation, dynamic subagent selection)
 - Module: 1 (Lesson 1.2)
@@ -688,6 +690,7 @@ Status values: `not started` · `in progress` · `completed`
 
 ### 2026-11-01 — Session 6 (fresh conversation, so cold checks count)
 - Cold drill: `fork_session` — correct, exact. Recall closed (cold 09-29 + cold 11-01).
+- Cold drill: context isolation — correct, exact (was "context preservation" on 09-29). One clean cold so far.
 
 ### 2026-10-28 — Session 5 (after a 4-week break)
 - Same conversation as a refresher page and a 12-question mock exam (built 2026-10-27, outside the tutor),
