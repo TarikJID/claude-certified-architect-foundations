@@ -737,6 +737,15 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-01` · recall · cued · correct — L2.3 quiz Q4 (MCQ): `any` for "must call a tool, Claude picks which". Picked from
     options, so recognition, not free recall: the `tool` value name is still untested as a free answer.
 
+### MCP server scoping (project `.mcp.json` vs user `~/.claude.json`)
+- Module: 3 (Lesson 2.4)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-01` · application · just-taught · correct — shared Jira server + a private experiment (MCQ): "B", Jira in
+    `.mcp.json`, experiment in `~/.claude.json`. Right. Recognition from options, so recall of the file paths is untested.
+    Not yet covered: higher-precedence definition wins, no merging.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
