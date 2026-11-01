@@ -706,6 +706,16 @@ Status values: `not started` · `in progress` · `completed`
     and `prompt` (L1.3). Used the field name from memory, good. Didn't state why it beats prompting (a restriction in
     config can't be ignored; a prompt can).
 
+### Scoped tool access with limited cross-role tools
+- Module: 3 (Lesson 2.3)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-01` · application · just-taught · correct — synthesis agent needs quick single-stat checks: `verify_fact`,
+    "narrow and won't enable the subagent to redo other agents' work". Right choice and right reason. Not yet covered:
+    the second tactic (replace a generic tool with a narrow one that enforces its own limits, `fetch_url` → `load_document`)
+    and that anything bigger goes through the coordinator.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
