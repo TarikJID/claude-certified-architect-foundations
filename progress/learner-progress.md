@@ -651,6 +651,8 @@ Status values: `not started` · `in progress` · `completed`
     the teaching). Cued, same session.
   - `2026-11-01` · application · cued · correct — L2.2 quiz Q1: retryability of all four right (transient yes, other
     three no).
+  - `2026-11-01` · application · cued · correct — L2.2 quiz Q2: a bare "Operation failed" hides the cause, so the agent
+    can't tell whether to retry or what the fix is. No hints. (Answer text had been displayed early by a tutor slip.)
 
 ### Retryable vs non-retryable errors and structured retry metadata (`isRetryable`)
 - Module: 3 (Lesson 2.2)
@@ -687,6 +689,7 @@ Status values: `not started` · `in progress` · `completed`
 
 | Date | Module | Question | Attempted | Outcome |
 |------|--------|----------|-----------|---------|
+| 2026-11-01 | 3 | L2.2 Q2 — why "Operation failed" is worse than `errorCategory` + `isRetryable` + description | yes: "it doesn't point at the cause of the failure: without the cause, the agent doesn't know why it failed, if it should retry, and what could be the fix" | correct, no hints. Matches the course (agent forced to guess retry / apologize / escalate). Tutor slip: my Q1 answer lookup (grep with context lines) also printed the Q2 answer text before this attempt; not used to hint, but the attempt-first control was weakened for Q2 |
 | 2026-11-01 | 3 | L2.2 Q1 — name the four error categories + whether each is typically retryable | yes: "transient (retry) validation (no retry), business (no retry), process (no retry)" | partial — transient/validation/business names right, all four retry flags right (the 4th "no retry" is correct for the real category). 4th name wrong: said "process" (course: `permission`, needs escalation or different credentials). Hint given, retry asked. Retry: "permission" — correct after 1 hint |
 | 2026-10-28 | 3 | L2.1 Q3 (reworded) — `translate_text` / `summarize_text`, system prompt "Keep every answer short and plain, like a summary"; Claude calls `summarize_text` for a translation request: why, despite good descriptions | yes: "It happened because of the summary word in the system prompt. The fix is to use another word, like 'recap' for example" | correct, no hints. Cause right (shared keyword in the system prompt). Fix right in kind (reword the prompt), but "recap" is a near-synonym of summary and could keep the pull; better to describe the style without a tool-like word ("brief and plain"). Cued (taught earlier today) |
 | 2026-10-28 | 3 | L2.1 Q2 (reworded) — `summarize_report` / `summarize_document`, near-identical descriptions: name the two repair techniques + an example of each | yes: "rename the tools, rewrite the descriptions" | correct with 1 hint — first answer gave only one technique (rename + rewrite are one technique, not two). After hint: "its split". Split example: `extract_data_points`, `summarize_content`, `verify_claim_against_source` for a broad `analyze_report`. Caveat: those are the exact names the tutor showed when teaching this concept, so it is recall of the example as much as design. Rename example was done in the earlier checkpoint |
