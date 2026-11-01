@@ -39,7 +39,7 @@
 |--------|--------|-------|
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Recall closed on 2 concepts (2026-09-30) |
 | Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught. L1.7 quiz 4/4 (1 hint) 2026-09-30. Exercise done 2026-09-30 (8 steps). Nothing closed yet |
-| Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). L2.2 quiz 4/4 (1 hint, on Q1's fourth category name), all cued, 2026-11-01 |
+| Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). L2.2 quiz 4/4 (1 hint, on Q1's fourth category name), all cued, 2026-11-01. Lesson 2.3 taught 2026-11-01 (4 concepts; all checkpoints correct first try, `tool_choice` value name `tool` slipped). Quiz not yet taken |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -725,6 +725,8 @@ Status values: `not started` · `in progress` · `completed`
     "tool_choice : extract_metadata". Right: force that named tool. Form slightly off: the value is `tool`, with the name
     alongside: `{"type": "tool", "name": "extract_metadata"}`. Told him.
   - `2026-11-01` · recall · just-taught · partial — did not produce the value name `tool` (put the tool's name in its place).
+  - `2026-11-01` · application · just-taught · correct — three enrichment tools, must call one, Claude picks which:
+    "tool_choice : any". Right value, exact. Retry of the first checkpoint's gap landed on the second value.
 
 ## Quiz attempts
 
@@ -775,6 +777,7 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
+- Tool-set size, tool misuse outside a role, scoped cross-role tools, `tool_choice` values (L2.3): both axes shaky, just taught; not yet quizzed.
 - MCP architecture (`tools/list`, `tools/call`), error taxonomy, `isRetryable`, local recovery, access failure vs empty result (L2.2): both axes shaky, just taught; quizzed 4/4 (1 hint), all cued. Exact names are the soft spot: "permission" came out as "process".
 - Context isolation (L1.2): recall one clean cold (2026-11-01); needs one more on a later day.
 - Tool definition, description as selection signal, rename/split fix, system prompt keyword sensitivity (L2.1): both axes shaky, just taught; quizzed 3/3 (1 hint), all cued.
@@ -800,6 +803,8 @@ Status values: `not started` · `in progress` · `completed`
   clean. Q3 thin (no alternate-source fallback, no partial results). Q4 missed the "opposite responses" why. All cued.
   Tutor slip: the Q1 answer lookup printed the Q2 answer too before it was attempted. Not used; logged on the Q2 row.
   Pattern holds: mechanisms strong, exact names and complete lists weaker.
+- Lesson 2.3 taught: tool-set size, tool misuse outside a specialization, scoped cross-role tools, `tool_choice`.
+  All correct on the first try. One slip: wrote `tool_choice: extract_metadata` instead of value `tool` + name. Quiz not yet taken.
 - Glossary: added 9 Module 3 terms (4 from L2.1, which had never been added, and 5 from L2.2). Republished, 56 terms.
 
 ### 2026-10-28 — Session 5 (after a 4-week break)
