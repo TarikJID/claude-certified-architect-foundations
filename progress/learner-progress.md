@@ -812,6 +812,14 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-01` · application · just-taught · correct — find every place that throws `"Token expired"` (MCQ): "C", Grep with that
     pattern. Right; avoided the Glob-by-filename distractor. Recognition from options.
 
+### Glob for file path pattern matching
+- Module: 3 (Lesson 2.5)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-01` · application · just-taught · correct — all `.yaml` files regardless of contents (MCQ): "B", Glob `**/*.yaml`.
+    Right; avoided Grep and the Glob-for-contents distractor. Recognition from options; the sorting/cap details untested.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
