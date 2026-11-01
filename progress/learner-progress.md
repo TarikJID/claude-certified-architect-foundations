@@ -716,6 +716,16 @@ Status values: `not started` · `in progress` · `completed`
     the second tactic (replace a generic tool with a narrow one that enforces its own limits, `fetch_url` → `load_document`)
     and that anything bigger goes through the coordinator.
 
+### `tool_choice` configuration (`auto` / `any` / `tool` / `none`)
+- Module: 3 (Lesson 2.3)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-01` · application · just-taught · correct (idea) — pipeline must always start with `extract_metadata`: answered
+    "tool_choice : extract_metadata". Right: force that named tool. Form slightly off: the value is `tool`, with the name
+    alongside: `{"type": "tool", "name": "extract_metadata"}`. Told him.
+  - `2026-11-01` · recall · just-taught · partial — did not produce the value name `tool` (put the tool's name in its place).
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
