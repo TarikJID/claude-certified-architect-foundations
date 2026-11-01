@@ -762,6 +762,14 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-01` · application · just-taught · correct — Jira (project) + Postgres (user) both connected (MCQ): "C", tools
     from both, available together. Right. Recognition; the wait-for-connecting detail and `mcp__server__tool` naming not yet produced by him.
 
+### MCP resources for content catalogs
+- Module: 3 (Lesson 2.4)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-01` · application · just-taught · correct — DB server wants table layouts visible without exploratory calls (MCQ):
+    "A", expose schemas as resources. Right. Recognition; B (list/describe tools) was the tempting distractor, he avoided it.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
