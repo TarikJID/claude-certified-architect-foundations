@@ -279,7 +279,7 @@ Status values: `not started` · `in progress` · `completed`
 
 ### Session forking (`fork_session`)
 - Module: 1 (Lesson 1.3)
-- recall: shaky
+- recall: closed (2026-11-01)
 - application: shaky
 - Attempts:
   - `2026-09-27` · application · just-taught · correct — slow checkout page, two fixes to try: said
@@ -296,6 +296,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-09-30` · application · cued · correct — L1.7 quiz Q2: legacy DB map, Postgres vs DynamoDB → fork;
     original untouched. Chose two forks from the original (valid, keeps a clean baseline). Told him one fork
     + the original also works, which is the lesson's pattern.
+  - `2026-11-01` · recall · cold · correct — fresh conversation drill, scenario only (slow checkout page, try fixes
+    A and B from the same point): `fork_session`, exact, term not named in the question. Second clean cold recall
+    on a separate day (first 09-29). **recall closed.**
 
 ### Structured data formats separating content from metadata
 - Module: 1 (Lesson 1.3)
@@ -682,6 +685,9 @@ Status values: `not started` · `in progress` · `completed`
 
 <!-- Newest first. What was taught, what landed, what did not, and anything about
      HOW to teach this learner that the next session should know. -->
+
+### 2026-11-01 — Session 6 (fresh conversation, so cold checks count)
+- Cold drill: `fork_session` — correct, exact. Recall closed (cold 09-29 + cold 11-01).
 
 ### 2026-10-28 — Session 5 (after a 4-week break)
 - Same conversation as a refresher page and a 12-question mock exam (built 2026-10-27, outside the tutor),
