@@ -813,6 +813,9 @@ Status values: `not started` · `in progress` · `completed`
     `.mcp.json`, exact. Caveat: the tutor gave this name earlier the same day in the previous conversation, so it shows
     the name held across a conversation break, not across days. First clean cold recall; one more on a later day closes it.
     `~/.claude.json` (user scope) not drilled today, still never produced in free recall.
+  - `2026-11-03` · recall · cold · partial (logged wrong for the file name) — Session 8 drill (exact file name for a personal
+    MCP server config): "user", sent three times before "it's user" (tutor misread the first replies as empty). Scope right,
+    and that fixes the exercise slip ("local folder") from earlier today. File name `~/.claude.json` not produced. Tutor gave it.
 
 ### Environment variable expansion in `.mcp.json` (`${VAR}`, `${VAR:-default}`)
 - Module: 3 (Lesson 2.4)
@@ -1089,6 +1092,11 @@ Status values: `not started` · `in progress` · `completed`
      HOW to teach this learner that the next session should know. -->
 
 
+### 2026-11-03 — Session 8 (fresh conversation, same day as Session 7)
+- Same date as Session 7, so `tool_choice` `tool` and `.mcp.json` were not drilled: their second cold recall must be on a later day.
+- Tutor slip: the learner answered "user" three times and the tutor read those replies as empty messages. Read every reply
+  literally, even one word.
+- Drill 1 (personal MCP server config file): "user". Scope right, file name `~/.claude.json` not produced. Given.
 ### 2026-11-03 — Session 7 (fresh conversation, so cold checks count)
 - Tutor slip, again: the local checkout was stale (unrelated history from 10-28). Read the pushed branch instead; local
   copy kept on a backup branch. Always fetch and read the pushed progress file before the recap.
