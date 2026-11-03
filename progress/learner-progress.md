@@ -705,6 +705,8 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-03` · application · cued · correct — M3 exercise step 6a: timeout on the knowledge base: "retry once, then try with
     smaller requests, then try another endpoint if there's one able to provide the answer". All three recovery moves, in order,
     including the alternate source he missed in the 11-01 quiz. Report half asked next.
+  - `2026-11-03` · application · cued · partial — M3 exercise step 6b: report = "the error" + "the different alternatives that were
+    tried". Right two of three. Missing again: partial results (also missed in the 11-01 quiz Q3). Asked for that one piece directly.
 
 ### Distinguishing access failures from valid empty results
 - Module: 3 (Lesson 2.2)
