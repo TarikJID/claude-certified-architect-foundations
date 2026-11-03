@@ -755,6 +755,10 @@ Status values: `not started` · `in progress` · `completed`
     "tool_choice : extract_metadata". Right: force that named tool. Form slightly off: the value is `tool`, with the name
     alongside: `{"type": "tool", "name": "extract_metadata"}`. Told him.
   - `2026-11-01` · recall · just-taught · partial — did not produce the value name `tool` (put the tool's name in its place).
+  - `2026-11-03` · application · cued · correct — M3 exercise step 4: step 1 "tool_choice : tool extract_metadata", step 2
+    "tool_choice : any". Both values right, and `tool` was produced this time (on 11-01 he put the tool's name in its place).
+    Cued: the JSON form `{"type": "tool", "name": ...}` was shown earlier in this conversation. Exact API shape not written;
+    tutor showed `{"type": "tool", "name": "extract_metadata"}` and `{"type": "any"}`.
   - `2026-11-01` · application · just-taught · correct — three enrichment tools, must call one, Claude picks which:
     "tool_choice : any". Right value, exact. Retry of the first checkpoint's gap landed on the second value.
   - `2026-11-01` · application · cued · correct — L2.3 quiz Q3 (MCQ): forced tool → `tool_use` directly, no text before it.
