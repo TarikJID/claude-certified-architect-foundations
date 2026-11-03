@@ -978,6 +978,7 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-03` · application · just-taught · correct — after the restart (tree + "each `..` = up one level"):
     `@../billing/rules.md` from `payments/CLAUDE.md` → "in billing" (`packages/billing/`). Landed. Still shaky: one correct
     answer right after a re-teach. Revisit `..` counting with a two-`..` case in a later session.
+  - `2026-11-03` · application · cued · correct — L3.1 quiz Q2 (MCQ): two-`..` case from `services/auth/` → root `standards/`. Avoided the off-by-one and the launch-folder distractor. Same day as the re-teach, so still revisit on a later day.
 
 ### `.claude/rules/` directory as an alternative to a monolithic CLAUDE.md
 - Module: 4 (Lesson 3.1)
@@ -1002,6 +1003,7 @@ Status values: `not started` · `in progress` · `completed`
 
 | Date | Module | Question | Attempted | Outcome |
 |------|--------|----------|-----------|---------|
+| 2026-11-03 | 4 | L3.1 Q2 (MCQ, tutor-written) — `services/auth/CLAUDE.md` has `@../../standards/security.md`: which file? A `services/auth/standards/` B `services/standards/` C root `standards/` D depends on launch folder | yes: "C" | correct, no hints. The two-`..` case he missed at the checkpoint earlier today; avoided both the off-by-one (B) and the launch-folder trap (D). Cued, MCQ |
 | 2026-11-03 | 4 | L3.1 Q1 (MCQ, tutor-written) — Lena's `pnpm` rule works in every project incl. a new repo with no CLAUDE.md; teammates don't get it. Where is it? A `./CLAUDE.md` B `./.claude/CLAUDE.md` C `~/.claude/CLAUDE.md` D `.claude/rules/pnpm.md` | yes: "C" | correct, no hints. Cued (taught earlier today); MCQ = recognition |
 | 2026-11-01 | 3 | L2.5 Q4 (MCQ, tutor-written) — `validateUser` re-exported as `checkAuth`, wrapped as `requireAuth`: plan to find all dependents. A Grep original name only / B Grep, find re-export/wrap names, Grep each / C Grep `auth` / D Glob `**/*validateUser*` | yes: "B" | correct (B), no hints. Cued. Rejected "re-exports keep the original name" |
 | 2026-11-01 | 3 | L2.5 Q3 (MCQ, tutor-written, harder distractors) — session refresh in a 600-file repo: best approach. A Glob `**/*session*` then Read all / B Grep `refreshToken`+`session`, Read surfaced files, follow imports with targeted searches / C Read all of `src/auth/` / D Grep matching lines only, no reads | yes: "B" | correct (B), no hints. Cued. Rejected both the name-guessing option (A) and the no-reads option (D) |
