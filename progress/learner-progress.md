@@ -950,6 +950,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-03` · application · just-taught · correct (which) — `packages/web/` task: user + root load; `packages/api/` does not,
     "different folder at the same level". Right set, right reason for on-demand loading. Gave the order as "root then user",
     which is backwards (user loads first). Order wasn't asked but he stated it; corrected.
+  - `2026-11-03` · application · cued · correct (2 hints) — L3.1 quiz Q3 (MCQ): which change alone loads less? Picked B (`@import`)
+    first; knew imports load at launch but didn't connect it to the choice. After a 2nd hint pointing at on-demand loading → C
+    (`packages/api/CLAUDE.md`). Gap: using on-demand directory loading as a *fix* for context cost, not just knowing it exists.
 
 ### User-level CLAUDE.md is personal, not shared via version control
 - Module: 4 (Lesson 3.1)
@@ -969,6 +972,7 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-03` · application · just-taught · wrong — `packages/payments/CLAUDE.md` has `@../../docs/pci-standards.md`: answered
     `packages/docs/pci-standards.md`. Went up one folder, not two. Did start from the importing file's folder (the rule taught),
     so the slip is in counting `..`, not in where the path starts. Walked through it; follow-up asked.
+  - `2026-11-03` · application · cued · wrong (first try) — L3.1 quiz Q3: chose `@import` as a way to load less. Knew imports expand at launch; didn't apply it.
   - `2026-11-03` · application · just-taught · wrong — follow-up, same file, `@../shared/style.md`: answered
     `payments/shared/style.md` (right: `packages/shared/style.md`). Consistent with the first miss: he treats the first `..`
     as "this folder" and only the second one as "up". So the error is the meaning of `..` (general path syntax, which the
@@ -1003,7 +1007,7 @@ Status values: `not started` · `in progress` · `completed`
 
 | Date | Module | Question | Attempted | Outcome |
 |------|--------|----------|-----------|---------|
-| 2026-11-03 | 4 | L3.1 Q3 (MCQ, tutor-written) — 600-line CLAUDE.md, 250 lines API-only; which change alone loads less per session? A split into `.claude/rules/` no paths B move to `docs/api.md` + `@import` C move to `packages/api/CLAUDE.md` D move to `./.claude/CLAUDE.md` | yes: "B" | first attempt wrong (B: imports expand at launch, so nothing saved). Hint given, retry pending |
+| 2026-11-03 | 4 | L3.1 Q3 (MCQ, tutor-written) — 600-line CLAUDE.md, 250 lines API-only; which change alone loads less per session? A split into `.claude/rules/` no paths B move to `docs/api.md` + `@import` C move to `packages/api/CLAUDE.md` D move to `./.claude/CLAUDE.md` | yes: "B", then "C" after 2 hints | correct after 2 hints. Picked B; hint 1 (when does an import load vs a subfolder CLAUDE.md) confused him: "I understood it would get loaded in any case", which is right and is why B is wrong. He knew the import fact but didn't apply it to the options. Hint 2 pointed at the on-demand level → C. Cued, MCQ |
 | 2026-11-03 | 4 | L3.1 Q2 (MCQ, tutor-written) — `services/auth/CLAUDE.md` has `@../../standards/security.md`: which file? A `services/auth/standards/` B `services/standards/` C root `standards/` D depends on launch folder | yes: "C" | correct, no hints. The two-`..` case he missed at the checkpoint earlier today; avoided both the off-by-one (B) and the launch-folder trap (D). Cued, MCQ |
 | 2026-11-03 | 4 | L3.1 Q1 (MCQ, tutor-written) — Lena's `pnpm` rule works in every project incl. a new repo with no CLAUDE.md; teammates don't get it. Where is it? A `./CLAUDE.md` B `./.claude/CLAUDE.md` C `~/.claude/CLAUDE.md` D `.claude/rules/pnpm.md` | yes: "C" | correct, no hints. Cued (taught earlier today); MCQ = recognition |
 | 2026-11-01 | 3 | L2.5 Q4 (MCQ, tutor-written) — `validateUser` re-exported as `checkAuth`, wrapped as `requireAuth`: plan to find all dependents. A Grep original name only / B Grep, find re-export/wrap names, Grep each / C Grep `auth` / D Glob `**/*validateUser*` | yes: "B" | correct (B), no hints. Cued. Rejected "re-exports keep the original name" |
