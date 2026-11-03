@@ -1046,6 +1046,15 @@ Status values: `not started` · `in progress` · `completed`
     this PR" → "B" (rewrite the description: what it does + when to use it). Right; linked to L2.1 tool descriptions in the
     teaching. Fallback (first non-empty body line when no description) taught, not tested.
 
+### `context: fork` frontmatter (isolated subagent execution)
+- Module: 4 (Lesson 3.2)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-03` · application · just-taught · correct — MCQ: `/audit-deps` with `context: fork` reads 300 files, writes long
+    notes; what reaches the main conversation? → "C" (only the subagent's final summary). Right. Linked to context isolation
+    (recall closed this morning).
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -1145,6 +1154,7 @@ Status values: `not started` · `in progress` · `completed`
 - Tool approval / `--allowedTools` prerequisite: MCQ checkpoint correct.
 - Project vs user scope: MCQ correct, but he didn't see how `.claude/commands/` maps to a real repo. Re-taught with this repo's tree. Also asked what `-p` is: tutor used it before defining it.
 - SKILL.md frontmatter: MCQ correct (fix a vague `description`).
+- `context: fork`: MCQ correct (only the summary returns).
 ### 2026-11-03 — Session 7 (fresh conversation, so cold checks count)
 - Tutor slip, again: the local checkout was stale (unrelated history from 10-28). Read the pushed branch instead; local
   copy kept on a backup branch. Always fetch and read the pushed progress file before the recap.
