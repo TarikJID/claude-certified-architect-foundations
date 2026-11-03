@@ -13,7 +13,7 @@
 - Name: Tarik
 - Preferred style: Lecture + checkpoints
 - Started: 2026-09-22
-- Last session: 2026-10-28
+- Last session: 2026-11-03
 - Notes: "i'm rather into short straight forward sentences, long texts and complicated sentences make me zone out" — keep chunks small, plain sentences, check in often.
   Also: "it's a bit weird that you call it 'my' code" — say **the harness**, not "your code". He is
   reasoning about the architecture, not writing it.
@@ -165,7 +165,7 @@ Status values: `not started` · `in progress` · `completed`
 
 ### Subagent context isolation
 - Module: 1 (Lesson 1.2)
-- recall: shaky
+- recall: closed (2026-11-03)
 - application: shaky
 - Attempts:
   - `2026-09-27` · application · just-taught · correct — user told coordinator "2024 sources only";
@@ -185,6 +185,8 @@ Status values: `not started` · `in progress` · `completed`
     summary): said "context preservation". Answer: *context isolation* (each subagent has its own context).
   - `2026-11-01` · recall · cold · correct — fresh conversation drill (3 subagents read 40 docs, coordinator sees
     only summaries): "context isolation", exact. Fixes the 09-29 miss. First clean cold recall; one more on a later day closes it.
+  - `2026-11-03` · recall · cold · correct — fresh conversation drill (coordinator sends a subagent to read 40 docs, sees
+    only the summary): "context isolation", exact. Second clean cold recall on a separate day. **recall closed.**
 
 ### Coordinator responsibilities (decomposition, delegation, aggregation, dynamic subagent selection)
 - Module: 1 (Lesson 1.2)
@@ -984,7 +986,6 @@ Status values: `not started` · `in progress` · `completed`
 - MCP scoping, env var expansion, combined tools, MCP resources, description vs built-in, community vs custom (L2.4): both axes shaky, just taught; quizzed 4/4 clean, all cued. All checkpoints and quiz questions were MCQ, so recall of file paths (`.mcp.json`, `~/.claude.json`) and `${VAR:-default}` is untested as free recall.
 - Tool-set size, tool misuse outside a role, scoped cross-role tools, `tool_choice` values (L2.3): both axes shaky, just taught; quizzed 4/4 clean, all cued. The `tool` value name still untested as free recall.
 - MCP architecture (`tools/list`, `tools/call`), error taxonomy, `isRetryable`, local recovery, access failure vs empty result (L2.2): both axes shaky, just taught; quizzed 4/4 (1 hint), all cued. Exact names are the soft spot: "permission" came out as "process".
-- Context isolation (L1.2): recall one clean cold (2026-11-01); needs one more on a later day.
 - Tool definition, description as selection signal, rename/split fix, system prompt keyword sensitivity (L2.1): both axes shaky, just taught; quizzed 3/3 (1 hint), all cued.
 - Named resumption, informing resumed sessions of file changes, fresh+summary vs resume (L1.7): both axes shaky, just taught.
 - Prompt chaining, dynamic decomposition, per-file + integration pass, adaptive investigation planning (L1.6): both axes shaky, just taught; quizzed 4/4 (1 hint), all cued.
