@@ -1037,6 +1037,15 @@ Status values: `not started` · `in progress` · `completed`
     a repo with no project commands simply has no `.claude/` folder. Re-taught with this course repo's own `.claude/` tree.
     Also asked what `-p` is (used in the prerequisite example, never defined; taught in Module 5). Defined briefly.
 
+### SKILL.md frontmatter configuration (`name`, `description`, plus `context`/`allowed-tools`/`argument-hint`)
+- Module: 4 (Lesson 3.2)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-03` · application · just-taught · correct — MCQ: skill with `description: Helper.` never auto-used for "summarise
+    this PR" → "B" (rewrite the description: what it does + when to use it). Right; linked to L2.1 tool descriptions in the
+    teaching. Fallback (first non-empty body line when no description) taught, not tested.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -1135,6 +1144,7 @@ Status values: `not started` · `in progress` · `completed`
 - Started Lesson 3.2 (custom slash commands and skills). YAML frontmatter prerequisite: MCQ checkpoint correct.
 - Tool approval / `--allowedTools` prerequisite: MCQ checkpoint correct.
 - Project vs user scope: MCQ correct, but he didn't see how `.claude/commands/` maps to a real repo. Re-taught with this repo's tree. Also asked what `-p` is: tutor used it before defining it.
+- SKILL.md frontmatter: MCQ correct (fix a vague `description`).
 ### 2026-11-03 — Session 7 (fresh conversation, so cold checks count)
 - Tutor slip, again: the local checkout was stale (unrelated history from 10-28). Read the pushed branch instead; local
   copy kept on a backup branch. Always fetch and read the pushed progress file before the recap.
