@@ -806,6 +806,10 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-03` · application · cued · correct — M3 exercise step 7b: `"Authorization": "Bearer ${KB_API_TOKEN}"`. Exact `${VAR}` form,
     own variable name, in the right header pattern. Produced from memory (the lesson's example used `${GITHUB_TOKEN}`). Each
     developer sets `KB_API_TOKEN` locally; not stated by him, tutor added.
+  - `2026-11-03` · recall · cold · correct — fresh conversation drill (team Jira server everyone gets on clone: which file?):
+    `.mcp.json`, exact. Caveat: the tutor gave this name earlier the same day in the previous conversation, so it shows
+    the name held across a conversation break, not across days. First clean cold recall; one more on a later day closes it.
+    `~/.claude.json` (user scope) not drilled today, still never produced in free recall.
 
 ### Environment variable expansion in `.mcp.json` (`${VAR}`, `${VAR:-default}`)
 - Module: 3 (Lesson 2.4)
@@ -1003,6 +1007,15 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Newest first. What was taught, what landed, what did not, and anything about
      HOW to teach this learner that the next session should know. -->
 
+
+### 2026-11-03 — Session 7 (fresh conversation, so cold checks count)
+- Tutor slip, again: the local checkout was stale (unrelated history from 10-28). Read the pushed branch instead; local
+  copy kept on a backup branch. Always fetch and read the pushed progress file before the recap.
+- Cold drill, 3 items, all correct and exact:
+  - context isolation — second cold on a separate day. **recall closed.**
+  - `tool_choice` value `tool` — first cold.
+  - `.mcp.json` for a shared team server — first cold (name was given earlier the same day, other conversation).
+- Still never produced in free recall: `~/.claude.json`, the four error categories, partial results in error replies.
 ### 2026-11-03 — Session 6, continued (same conversation, third day... date rolled over mid-session)
 - Module 3 exercise (build-along, document-processing toolset redesign): done, all 8 steps. Clean, unaided: step 1 (split into
   three one-job tools; full four-part description incl. the "not for" piece; schema), step 2 (keyword trap; nit: rewrite should name
