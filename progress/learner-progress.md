@@ -673,6 +673,12 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-03` · application · cued · correct — M3 exercise step 5a: timeout response: `isError: true`, `errorCategory:
     transient`, `isRetryable: true`, description "timeout". All fields and values right, unaided. Description is thin: a
     useful one says what happened and what to do ("The knowledge base did not respond in time; retrying may succeed").
+  - `2026-11-03` · application · cued · partial — M3 exercise step 5b: invalid parameter → `validation`, `isRetryable: false`;
+    policy-restricted document → `business`, `isRetryable: false`, but **`isError: false`** (should be `true`: the request failed);
+    permission failure → `permission`, `isRetryable: false`. All three categories and all retry flags right; `permission`
+    produced correctly this time (was "process" on 11-01), cued by earlier messages today. One slip: `isError: false` on the
+    business error, probably confusing it with a valid empty result. Corrected; why-check asked. Descriptions: #1 thin ("invalid
+    query parameter": say which and how to fix); #2 good (tells the agent what to say and to offer escalation); #3 fine.
   - `2026-11-01` · application · cued · correct — L2.2 quiz Q2: a bare "Operation failed" hides the cause, so the agent
     can't tell whether to retry or what the fix is. No hints. (Answer text had been displayed early by a tutor slip.)
 ### Retryable vs non-retryable errors and structured retry metadata (`isRetryable`)
