@@ -702,6 +702,9 @@ Status values: `not started` · `in progress` · `completed`
     intended points. Not mentioned: the report had no detail (what was tried, partial results), and the fallback source.
   - `2026-11-01` · application · cued · correct (thin) — L2.2 quiz Q3: retry with a narrower query first; report =
     failure type + the attempts. Missed: alternate-source fallback and partial results. No hints.
+  - `2026-11-03` · application · cued · correct — M3 exercise step 6a: timeout on the knowledge base: "retry once, then try with
+    smaller requests, then try another endpoint if there's one able to provide the answer". All three recovery moves, in order,
+    including the alternate source he missed in the 11-01 quiz. Report half asked next.
 
 ### Distinguishing access failures from valid empty results
 - Module: 3 (Lesson 2.2)
