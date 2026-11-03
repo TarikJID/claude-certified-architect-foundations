@@ -1017,6 +1017,15 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-03` · application · just-taught · correct — MCQ: whole `changelog` SKILL.md shown; which part is the
     instruction content? → "C" (the lines after the closing `---`). Right, no hesitation.
 
+### Tool permission approval and `--allowedTools` (prerequisite)
+- Module: 4 (Lesson 3.2)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-03` · application · just-taught · correct — MCQ: overnight `-p` run with `--allowedTools "Read,Edit"` needs Bash
+    → "B" (not on the list, so not pre-approved). Right. Tutor note: option B said "stops with a permission prompt"; with no
+    one at the keyboard the call is in practice refused. Flagged to learner as outside the course material.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -1113,6 +1122,7 @@ Status values: `not started` · `in progress` · `completed`
 - Drill 2 (user-level CLAUDE.md path): "user/claude/Claude.md". Shape right; `~`, the dot in `.claude` and the capitals missing. Given.
 - Drill 3 (four error categories): all four exact. First clean cold recall (was "process" for permission on 11-01).
 - Started Lesson 3.2 (custom slash commands and skills). YAML frontmatter prerequisite: MCQ checkpoint correct.
+- Tool approval / `--allowedTools` prerequisite: MCQ checkpoint correct.
 ### 2026-11-03 — Session 7 (fresh conversation, so cold checks count)
 - Tutor slip, again: the local checkout was stale (unrelated history from 10-28). Read the pushed branch instead; local
   copy kept on a backup branch. Always fetch and read the pushed progress file before the recap.
