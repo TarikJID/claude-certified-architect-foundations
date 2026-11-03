@@ -677,7 +677,8 @@ Status values: `not started` · `in progress` · `completed`
     policy-restricted document → `business`, `isRetryable: false`, but **`isError: false`** (should be `true`: the request failed);
     permission failure → `permission`, `isRetryable: false`. All three categories and all retry flags right; `permission`
     produced correctly this time (was "process" on 11-01), cued by earlier messages today. One slip: `isError: false` on the
-    business error, probably confusing it with a valid empty result. Corrected; why-check asked. Descriptions: #1 thin ("invalid
+    business error, probably confusing it with a valid empty result. Corrected; why-check asked. He said `isError: false` was a typo; his explanation of the difference was right: empty result =
+    "the search was performed and returned nothing", failure = "it was not performed". Accepted. Descriptions: #1 thin ("invalid
     query parameter": say which and how to fix); #2 good (tells the agent what to say and to offer escalation); #3 fine.
   - `2026-11-01` · application · cued · correct — L2.2 quiz Q2: a bare "Operation failed" hides the cause, so the agent
     can't tell whether to retry or what the fix is. No hints. (Answer text had been displayed early by a tutor slip.)
