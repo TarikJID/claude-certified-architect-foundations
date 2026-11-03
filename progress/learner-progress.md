@@ -1055,6 +1055,15 @@ Status values: `not started` · `in progress` · `completed`
     notes; what reaches the main conversation? → "C" (only the subagent's final summary). Right. Linked to context isolation
     (recall closed this morning).
 
+### `allowed-tools` frontmatter (pre-approve for the invoking turn; not a block list)
+- Module: 4 (Lesson 3.2)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-03` · application · just-taught · correct — MCQ: docs skill `allowed-tools: Write Edit`, Claude wants Bash `rm`
+    → "C" (normal permission settings apply). Right: unlisted tools are not blocked. Asked how many concepts were left before
+    answering (told 4 incl. this one). The "grant clears when the turn ends" detail was taught, not tested.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -1155,6 +1164,7 @@ Status values: `not started` · `in progress` · `completed`
 - Project vs user scope: MCQ correct, but he didn't see how `.claude/commands/` maps to a real repo. Re-taught with this repo's tree. Also asked what `-p` is: tutor used it before defining it.
 - SKILL.md frontmatter: MCQ correct (fix a vague `description`).
 - `context: fork`: MCQ correct (only the summary returns).
+- `allowed-tools`: MCQ correct (not a block list).
 ### 2026-11-03 — Session 7 (fresh conversation, so cold checks count)
 - Tutor slip, again: the local checkout was stale (unrelated history from 10-28). Read the pushed branch instead; local
   copy kept on a backup branch. Always fetch and read the pushed progress file before the recap.
