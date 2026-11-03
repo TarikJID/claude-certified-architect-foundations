@@ -707,6 +707,9 @@ Status values: `not started` · `in progress` · `completed`
     including the alternate source he missed in the 11-01 quiz. Report half asked next.
   - `2026-11-03` · application · cued · partial — M3 exercise step 6b: report = "the error" + "the different alternatives that were
     tried". Right two of three. Missing again: partial results (also missed in the 11-01 quiz Q3). Asked for that one piece directly.
+  - `2026-11-03` · application · cued · correct (1 hint) — step 6b retry: "include them as partial results". Complete after being asked for
+    the missing piece. Note: partial results has now been dropped twice unprompted (11-01 quiz Q3, 11-03 step 6b); watch it
+    in the next free-recall check.
 
 ### Distinguishing access failures from valid empty results
 - Module: 3 (Lesson 2.2)
