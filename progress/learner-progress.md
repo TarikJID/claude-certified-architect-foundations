@@ -784,6 +784,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-01` · application · cued · correct — L2.3 quiz Q3 (MCQ): forced tool → `tool_use` directly, no text before it.
   - `2026-11-01` · recall · cued · correct — L2.3 quiz Q4 (MCQ): `any` for "must call a tool, Claude picks which". Picked from
     options, so recognition, not free recall: the `tool` value name is still untested as a free answer.
+  - `2026-11-03` · recall · cold · correct — fresh conversation drill ("force `extract_metadata` and nothing else: which type
+    value?"): "tool_choice : tool extract_metadata". Value `tool` produced, name alongside. Shorthand, not the JSON shape, but the
+    value name is what was asked. First clean cold recall; one more on a later day closes it.
 
 ### MCP server scoping (project `.mcp.json` vs user `~/.claude.json`)
 - Module: 3 (Lesson 2.4)
