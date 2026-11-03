@@ -1009,6 +1009,14 @@ Status values: `not started` · `in progress` · `completed`
     session: "Slash context". Right, exact.
   - `2026-11-03` · application · cued · correct — L3.1 quiz Q4 (MCQ): every recognised location incl. non-existent → `/memory`. No hints.
 
+### YAML frontmatter in markdown config files (prerequisite)
+- Module: 4 (Lesson 3.2)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-03` · application · just-taught · correct — MCQ: whole `changelog` SKILL.md shown; which part is the
+    instruction content? → "C" (the lines after the closing `---`). Right, no hesitation.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -1104,6 +1112,7 @@ Status values: `not started` · `in progress` · `completed`
 - Drill 1 (personal MCP server config file): "user". Scope right, file name `~/.claude.json` not produced. Given.
 - Drill 2 (user-level CLAUDE.md path): "user/claude/Claude.md". Shape right; `~`, the dot in `.claude` and the capitals missing. Given.
 - Drill 3 (four error categories): all four exact. First clean cold recall (was "process" for permission on 11-01).
+- Started Lesson 3.2 (custom slash commands and skills). YAML frontmatter prerequisite: MCQ checkpoint correct.
 ### 2026-11-03 — Session 7 (fresh conversation, so cold checks count)
 - Tutor slip, again: the local checkout was stale (unrelated history from 10-28). Read the pushed branch instead; local
   copy kept on a backup branch. Always fetch and read the pushed progress file before the recap.
