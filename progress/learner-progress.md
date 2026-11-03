@@ -793,6 +793,11 @@ Status values: `not started` · `in progress` · `completed`
     Not yet covered: higher-precedence definition wins, no merging.
   - `2026-11-01` · application · cued · correct — L2.4 quiz Q1 (MCQ): same server in both files → highest-precedence
     definition wins, no merge. No hints.
+  - `2026-11-03` · recall · cold-ish (same conversation, so cued at best) · wrong — M3 exercise step 7a: shared knowledge-base server →
+    "project level mcp" (scope right, file not named); personal note-taking server → "local folder" (wrong: user scope,
+    `~/.claude.json`). Said "don't know the name of the files, seems a bit too micro to remember". Tutor gave the answer and a
+    memory hook (`.mcp.json` sits in the project and is committed; `~/.claude.json` is in your home folder). File names remain
+    the open recall gap, in free recall for the first time (MCQ on 11-01 was recognition only).
 
 ### Environment variable expansion in `.mcp.json` (`${VAR}`, `${VAR:-default}`)
 - Module: 3 (Lesson 2.4)
