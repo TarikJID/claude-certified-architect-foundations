@@ -26,6 +26,8 @@
   Also (2026-09-29): "I'm not going to write tons and tons of text each time I answer a question."
   Read short answers charitably. If a specific piece is missing, ask for that one piece directly
   instead of marking it as a gap afterwards. Don't ask for multi-part lists when one part is the point.
+  Also (2026-11-03): a re-explanation that stacks an analogy, a contrast and a diagram was "really not clear at all".
+  When re-teaching, use ONE picture and ONE rule. No analogy on top.
 - Quiz format (2026-11-01): wants quizzes as exam-style multiple choice (one best answer, plausible distractors).
   Tutor writes them live; the quiz files are not rewritten. Keep cold drills as free recall.
 - Glossary: https://claude.ai/artifact/DF2gqN4scYhQ6v9uyvVce6 (source: `progress/glossary.html`,
@@ -970,6 +972,8 @@ Status values: `not started` · `in progress` · `completed`
     `payments/shared/style.md` (right: `packages/shared/style.md`). Consistent with the first miss: he treats the first `..`
     as "this folder" and only the second one as "up". So the error is the meaning of `..` (general path syntax, which the
     lesson assumes), not the import rule. Two misses in a row: stopped asking, re-explained from scratch with `.` vs `..`.
+  - `2026-11-03` · learner: "That is really not clear at all. Start over and try to be more straightforward." The re-explanation
+    (rooms analogy + `.` vs `..` contrast + diagram) was too much at once. Restarted with a folder tree and one rule only.
 
 ## Quiz attempts
 
