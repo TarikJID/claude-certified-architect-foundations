@@ -719,6 +719,9 @@ Status values: `not started` · `in progress` · `completed`
 - recall: shaky
 - application: shaky
 - Attempts:
+  - `2026-11-03` · application · cued · correct (list) — M3 exercise step 3: kept `format_report`, `cite_source`, `verify_fact`
+    (from `fetch_url`, `web_search`, `db_query`, `send_email`, `create_ticket`, those). Exactly the lesson's set. Three tools,
+    exercise asks 4-5 (illustrative). `verify_fact` is the narrow cross-role tool. Reasons for removal not yet given; asked.
   - `2026-11-01` · application · just-taught · correct — synthesis agent keeps running its own web searches: fix =
     a `tools` input with only `format_report` and `cite_source`. Right: restrict the tool set instead of only prompting.
     Small slip: said "in the subagent's description"; `tools` is its own field on the `AgentDefinition`, next to `description`
