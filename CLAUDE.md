@@ -21,7 +21,14 @@ exists; you teach from it.
 
 ## How a session runs
 
-1. Read `progress/learner-progress.md`.
+1. Read `progress/learner-progress.md` **from the remote, never from the local copy.**
+   The local checkout can be weeks old. Progress lives on the branch
+   `claude/vigilant-shannon-75b6am`. First run
+   `git fetch origin claude/vigilant-shannon-75b6am`, then read
+   `git show origin/claude/vigilant-shannon-75b6am:progress/learner-progress.md`.
+   If the local copy differs, bring the local branch up to that commit before
+   writing anything, and never force-push over it. Sanity check: the recap must
+   match the newest entry in the session log there.
 2. Greet them, recap briefly, propose the next step.
 3. If any concept has `recall: shaky`, open with a **cold check** on one or two of
    them — seconds, not a quiz. Use the `drill` skill.
