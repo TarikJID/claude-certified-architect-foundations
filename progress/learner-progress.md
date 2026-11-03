@@ -41,7 +41,7 @@
 |--------|--------|-------|
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Recall closed on 2 concepts (2026-09-30) |
 | Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught. L1.7 quiz 4/4 (1 hint) 2026-09-30. Exercise done 2026-09-30 (8 steps). Nothing closed yet |
-| Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). L2.2 quiz 4/4 (1 hint, on Q1's fourth category name), all cued, 2026-11-01. Lesson 2.3 taught 2026-11-01 (4 concepts; all checkpoints correct first try, `tool_choice` value name `tool` slipped). L2.3 quiz 4/4 clean (MCQ format, tutor-written), all cued, 2026-11-01. Lesson 2.4 taught 2026-11-01 (6 concepts; all checkpoints MCQ, all correct first try). L2.4 quiz 4/4 clean (MCQ, tutor-written), all cued, 2026-11-01. Lesson 2.5 taught 2026-11-01 (prerequisite + 6 concepts; all checkpoints MCQ, all correct first try). All Module 3 lessons taught. L2.5 quiz 4/4 clean (MCQ, tutor-written, harder distractors), all cued, 2026-11-01. All Module 3 lessons taught and quizzed; exercise not yet done |
+| Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). L2.2 quiz 4/4 (1 hint, on Q1's fourth category name), all cued, 2026-11-01. Lesson 2.3 taught 2026-11-01 (4 concepts; all checkpoints correct first try, `tool_choice` value name `tool` slipped). L2.3 quiz 4/4 clean (MCQ format, tutor-written), all cued, 2026-11-01. Lesson 2.4 taught 2026-11-01 (6 concepts; all checkpoints MCQ, all correct first try). L2.4 quiz 4/4 clean (MCQ, tutor-written), all cued, 2026-11-01. Lesson 2.5 taught 2026-11-01 (prerequisite + 6 concepts; all checkpoints MCQ, all correct first try). All Module 3 lessons taught. L2.5 quiz 4/4 clean (MCQ, tutor-written, harder distractors), all cued, 2026-11-01. All Module 3 lessons taught and quizzed. Exercise done 2026-11-03 (8 steps; 1-4, 5a, 6a, 7b, 8 clean; 5b one slip `isError: false`; 6b missed partial results until asked; 7a personal-server scope wrong and file names not known). Nothing closed in Module 3 yet |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -914,6 +914,10 @@ Status values: `not started` · `in progress` · `completed`
     other re-exported/wrapped names, then Grep for each. Right. Recognition from options.
   - `2026-11-01` · application · cued · correct — L2.5 quiz Q4 (MCQ): `validateUser` re-exported/wrapped → Grep the original, find
     the other names, Grep each. Rejected "re-exports keep the original name". No hints.
+  - `2026-11-03` · application · cued · correct — M3 exercise step 8: callers of `sendNotification`, also `notify` and `pushAlert`:
+    "grep sendNotification, then grep notify, then grep pushAlert, then grep any other new name that comes up". All three names
+    plus the loop for newly found aliases, free recall of the tool (Grep). Could add Read on the surfaced files if match lines
+    are not enough.
 
 ## Quiz attempts
 
@@ -994,6 +998,19 @@ Status values: `not started` · `in progress` · `completed`
 
 <!-- Newest first. What was taught, what landed, what did not, and anything about
      HOW to teach this learner that the next session should know. -->
+
+### 2026-11-03 — Session 6, continued (same conversation, third day... date rolled over mid-session)
+- Module 3 exercise (build-along, document-processing toolset redesign): done, all 8 steps. Clean, unaided: step 1 (split into
+  three one-job tools; full four-part description incl. the "not for" piece; schema), step 2 (keyword trap; nit: rewrite should name
+  the right step), step 3 (kept `format_report`, `cite_source`, `verify_fact`; sound reasons), step 4 (`tool` and `any`),
+  step 5a (timeout JSON), step 6a (retry, smaller request, alternate endpoint), step 7b (`${KB_API_TOKEN}`), step 8 (Grep each alias).
+  Needed correction: 5b (`isError: false` on a business error; said typo, reasoning right), 6b (partial results dropped a
+  second time, given on a direct ask), 7a (personal server "local folder" → user scope; `.mcp.json` / `~/.claude.json` not
+  known; he said file names feel too micro to remember. Answered honestly: exam wording unknown, exam guide is the authority,
+  MCQ would only need recognition, gave a memory hook).
+- Pattern holds: strong on design reasoning, weaker on exact names and on completeness of lists (partial results twice).
+- No cold checks done: this is still the 11-01 conversation. Open the next fresh conversation with free-recall checks
+  (error categories, `tool_choice` values, `.mcp.json` / `~/.claude.json`, context isolation second cold, partial results).
 
 ### 2026-11-01 — Session 6 (fresh conversation, so cold checks count)
 - Cold drill: `fork_session` — correct, exact. Recall closed (cold 09-29 + cold 11-01).
