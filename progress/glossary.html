@@ -185,7 +185,17 @@ const ENTRIES = [
   { term: "Local recovery before escalation", tag: "Multi-agent", src: "Lesson 2.2",
     def: "A subagent that hits a transient failure fixes what it can first: retry, or fall back to another source. Only what it cannot fix goes up to the coordinator, with the error, what it tried, and any partial results." },
   { term: "Valid empty result vs access failure", tag: "Tools", src: "Lesson 2.2",
-    def: "<code>{status: \"success\", results: []}</code> means the search worked and nothing matched: trust it. <code>{isError: true, errorCategory: \"transient\"}</code> means the search never completed: consider a retry. Never tell a customer \"no such order\" after a timeout." }
+    def: "<code>{status: \"success\", results: []}</code> means the search worked and nothing matched: trust it. <code>{isError: true, errorCategory: \"transient\"}</code> means the search never completed: consider a retry. Never tell a customer \"no such order\" after a timeout." },
+  { term: "CLAUDE.md hierarchy", tag: "Harness", src: "Lesson 3.1",
+    def: "Three levels, read broad to narrow: <b>user</b> <code>~/.claude/CLAUDE.md</code> (you, every project) → <b>project</b> <code>./CLAUDE.md</code> or <code>./.claude/CLAUDE.md</code> (the team, via git) → <b>directory</b> <code>packages/api/CLAUDE.md</code> (that folder). User and project load at launch; a directory file loads only when Claude reads a file in that folder. Every CLAUDE.md loaded at launch costs context every session, so keep each under ~200 lines." },
+  { term: "User-level CLAUDE.md is not shared", tag: "Harness", src: "Lesson 3.1",
+    def: "<code>~/.claude/CLAUDE.md</code> lives in your home folder, outside every repo. Never committed, so teammates never get it. A rule the whole team needs goes in <code>./CLAUDE.md</code>, committed." },
+  { term: "<code>@import</code>", tag: "Harness", src: "Lesson 3.1",
+    def: "<code>@path/to/file</code> inside a CLAUDE.md pulls that file in at launch. The path starts from the folder of the file holding the <code>@</code>; each <code>..</code> goes up one level. Imports can nest up to 4 levels deep. Imported text still costs context." },
+  { term: "<code>.claude/rules/</code>", tag: "Harness", src: "Lesson 3.1",
+    def: "A folder of topic files (<code>testing.md</code>, <code>api-conventions.md</code>…) instead of one big CLAUDE.md. Every <code>.md</code> in it is found, subfolders too. Without <code>paths</code> frontmatter a rule loads every session, like the project CLAUDE.md: easier to organise, not cheaper." },
+  { term: "<code>/memory</code> vs <code>/context</code>", tag: "Harness", src: "Lesson 3.1",
+    def: "<code>/memory</code>: every place Claude Code would look for memory files, even ones not created yet; open and edit them. <code>/context</code>: what actually loaded in this session. Use <code>/context</code> to confirm a CLAUDE.md was picked up." }
 ];
 
 const state = { tag: "All", q: "" };

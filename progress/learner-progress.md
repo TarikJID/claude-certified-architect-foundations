@@ -1082,6 +1082,11 @@ Status values: `not started` · `in progress` · `completed`
   - `tool_choice` value `tool` — first cold.
   - `.mcp.json` for a shared team server — first cold (name was given earlier the same day, other conversation).
 - Still never produced in free recall: `~/.claude.json`, the four error categories, partial results in error replies.
+- Started Module 4. Lesson 3.1 taught: prerequisite (context budget) + 5 concepts. Hierarchy: learner flagged "closest to where
+  Claude is working" as contradictory (read it as closest to the person); fair, fixed. `@import`: missed `..` counting twice
+  (read the first `..` as "this folder"); a stacked re-explanation was "really not clear at all"; restarted with one tree + one
+  rule, then correct. Others correct first try, short answers.
+- Glossary: added 5 L3.1 terms (Harness tag). Republished, 61 terms.
 ### 2026-11-03 — Session 6, continued (same conversation, third day... date rolled over mid-session)
 - Module 3 exercise (build-along, document-processing toolset redesign): done, all 8 steps. Clean, unaided: step 1 (split into
   three one-job tools; full four-part description incl. the "not for" piece; schema), step 2 (keyword trap; nit: rewrite should name
