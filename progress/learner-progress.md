@@ -798,6 +798,9 @@ Status values: `not started` · `in progress` · `completed`
     `~/.claude.json`). Said "don't know the name of the files, seems a bit too micro to remember". Tutor gave the answer and a
     memory hook (`.mcp.json` sits in the project and is committed; `~/.claude.json` is in your home folder). File names remain
     the open recall gap, in free recall for the first time (MCQ on 11-01 was recognition only).
+  - `2026-11-03` · application · cued · correct — M3 exercise step 7b: `"Authorization": "Bearer ${KB_API_TOKEN}"`. Exact `${VAR}` form,
+    own variable name, in the right header pattern. Produced from memory (the lesson's example used `${GITHUB_TOKEN}`). Each
+    developer sets `KB_API_TOKEN` locally; not stated by him, tutor added.
 
 ### Environment variable expansion in `.mcp.json` (`${VAR}`, `${VAR:-default}`)
 - Module: 3 (Lesson 2.4)
