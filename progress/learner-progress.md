@@ -1026,6 +1026,17 @@ Status values: `not started` · `in progress` · `completed`
     → "B" (not on the list, so not pre-approved). Right. Tutor note: option B said "stops with a permission prompt"; with no
     one at the keyboard the call is in practice refused. Flagged to learner as outside the course material.
 
+### Project-scoped vs user-scoped commands and skills
+- Module: 4 (Lesson 3.2)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-03` · application · just-taught · correct — MCQ: Priya's `/release-notes` for every teammate on clone → "B"
+    (`.claude/commands/release-notes.md`). Right. Then said he didn't understand the project-scope paths: his own repo on
+    GitHub "looks nothing like .claude/commands/". Fair: the teaching never said the path starts at the repo root, or that
+    a repo with no project commands simply has no `.claude/` folder. Re-taught with this course repo's own `.claude/` tree.
+    Also asked what `-p` is (used in the prerequisite example, never defined; taught in Module 5). Defined briefly.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
@@ -1123,6 +1134,7 @@ Status values: `not started` · `in progress` · `completed`
 - Drill 3 (four error categories): all four exact. First clean cold recall (was "process" for permission on 11-01).
 - Started Lesson 3.2 (custom slash commands and skills). YAML frontmatter prerequisite: MCQ checkpoint correct.
 - Tool approval / `--allowedTools` prerequisite: MCQ checkpoint correct.
+- Project vs user scope: MCQ correct, but he didn't see how `.claude/commands/` maps to a real repo. Re-taught with this repo's tree. Also asked what `-p` is: tutor used it before defining it.
 ### 2026-11-03 — Session 7 (fresh conversation, so cold checks count)
 - Tutor slip, again: the local checkout was stale (unrelated history from 10-28). Read the pushed branch instead; local
   copy kept on a backup branch. Always fetch and read the pushed progress file before the recap.
