@@ -978,6 +978,14 @@ Status values: `not started` · `in progress` · `completed`
     `@../billing/rules.md` from `payments/CLAUDE.md` → "in billing" (`packages/billing/`). Landed. Still shaky: one correct
     answer right after a re-teach. Revisit `..` counting with a two-`..` case in a later session.
 
+### `.claude/rules/` directory as an alternative to a monolithic CLAUDE.md
+- Module: 4 (Lesson 3.1)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-03` · application · just-taught · correct — 400-line CLAUDE.md split into 3 rule files, no `paths`; teammate claims
+    less context used: "no, all three files still load every session". Right, connected it to the context-budget prerequisite.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
