@@ -586,6 +586,9 @@ Status values: `not started` · `in progress` · `completed`
     the schema as the form and `tool_use` as the filled-in form. Follow-up asked.
   - `2026-10-28` · application · just-taught · correct — follow-up (optional `units` field, user gave no units):
     `{"location": "Lisbon"}`. Required field filled, optional one left out. Landed.
+  - `2026-11-03` · application · cued · correct — M3 exercise step 1c: schema for `check_claim`: `claim` and `source`, both
+    mandatory. Right (field names + which are required). Short answer, read charitably; types and the `required` list
+    format not stated. Tutor showed the JSON form.
 
 ### Tool description as the primary tool-selection signal
 - Module: 3 (Lesson 2.1)
