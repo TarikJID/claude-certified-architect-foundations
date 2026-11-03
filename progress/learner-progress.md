@@ -966,6 +966,9 @@ Status values: `not started` · `in progress` · `completed`
     Tom doesn't get it: "move the rule in the ./CLAUDE.md file". Right. Didn't say "and commit it" (short answer, read
     charitably; tutor added).
   - `2026-11-03` · application · cued · correct — L3.1 quiz Q1 (MCQ): every-project rule teammates lack → `~/.claude/CLAUDE.md`. No hints.
+  - `2026-11-03` · recall · cold · wrong (close) — Session 8 drill (exact path of the user-level CLAUDE.md): "user/claude/Claude.md".
+    Shape right (home folder → claude folder → CLAUDE.md). Missing: `~` for the home folder, the dot in `.claude`, and the
+    capitals in `CLAUDE.md`. First free recall of this path. Tutor gave `~/.claude/CLAUDE.md`.
 
 ### `@import` syntax for modular CLAUDE.md (relative to the importing file, max 4 hops)
 - Module: 4 (Lesson 3.1)
@@ -1097,6 +1100,7 @@ Status values: `not started` · `in progress` · `completed`
 - Tutor slip: the learner answered "user" three times and the tutor read those replies as empty messages. Read every reply
   literally, even one word.
 - Drill 1 (personal MCP server config file): "user". Scope right, file name `~/.claude.json` not produced. Given.
+- Drill 2 (user-level CLAUDE.md path): "user/claude/Claude.md". Shape right; `~`, the dot in `.claude` and the capitals missing. Given.
 ### 2026-11-03 — Session 7 (fresh conversation, so cold checks count)
 - Tutor slip, again: the local checkout was stale (unrelated history from 10-28). Read the pushed branch instead; local
   copy kept on a backup branch. Always fetch and read the pushed progress file before the recap.
