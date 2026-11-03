@@ -687,6 +687,8 @@ Status values: `not started` · `in progress` · `completed`
     query parameter": say which and how to fix); #2 good (tells the agent what to say and to offer escalation); #3 fine.
   - `2026-11-01` · application · cued · correct — L2.2 quiz Q2: a bare "Operation failed" hides the cause, so the agent
     can't tell whether to retry or what the fix is. No hints. (Answer text had been displayed early by a tutor slip.)
+  - `2026-11-03` · recall · cold · correct — Session 8 drill (name the four error categories): "transient, validation,
+    business, permission". All four exact, no help, fresh conversation. First clean cold recall; one more on a later day closes it.
 ### Retryable vs non-retryable errors and structured retry metadata (`isRetryable`)
 - Module: 3 (Lesson 2.2)
 - recall: shaky
@@ -1101,6 +1103,7 @@ Status values: `not started` · `in progress` · `completed`
   literally, even one word.
 - Drill 1 (personal MCP server config file): "user". Scope right, file name `~/.claude.json` not produced. Given.
 - Drill 2 (user-level CLAUDE.md path): "user/claude/Claude.md". Shape right; `~`, the dot in `.claude` and the capitals missing. Given.
+- Drill 3 (four error categories): all four exact. First clean cold recall (was "process" for permission on 11-01).
 ### 2026-11-03 — Session 7 (fresh conversation, so cold checks count)
 - Tutor slip, again: the local checkout was stale (unrelated history from 10-28). Read the pushed branch instead; local
   copy kept on a backup branch. Always fetch and read the pushed progress file before the recap.
