@@ -44,7 +44,7 @@
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Recall closed on 2 concepts (2026-09-30) |
 | Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught. L1.7 quiz 4/4 (1 hint) 2026-09-30. Exercise done 2026-09-30 (8 steps). Nothing closed yet |
 | Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). L2.2 quiz 4/4 (1 hint, on Q1's fourth category name), all cued, 2026-11-01. Lesson 2.3 taught 2026-11-01 (4 concepts; all checkpoints correct first try, `tool_choice` value name `tool` slipped). L2.3 quiz 4/4 clean (MCQ format, tutor-written), all cued, 2026-11-01. Lesson 2.4 taught 2026-11-01 (6 concepts; all checkpoints MCQ, all correct first try). L2.4 quiz 4/4 clean (MCQ, tutor-written), all cued, 2026-11-01. Lesson 2.5 taught 2026-11-01 (prerequisite + 6 concepts; all checkpoints MCQ, all correct first try). All Module 3 lessons taught. L2.5 quiz 4/4 clean (MCQ, tutor-written, harder distractors), all cued, 2026-11-01. All Module 3 lessons taught and quizzed. Exercise done 2026-11-03 (8 steps; 1-4, 5a, 6a, 7b, 8 clean; 5b one slip `isError: false`; 6b missed partial results until asked; 7a personal-server scope wrong and file names not known). Nothing closed in Module 3 yet |
-| Module 4 — Claude Code Memory and Configuration | in progress | Started 2026-11-03. Lesson 3.1 taught 2026-11-03 (prerequisite + 5 concepts; all checkpoints correct in the end; hierarchy wording flagged by learner and fixed; `@import` needed a restart on `..` counting) |
+| Module 4 — Claude Code Memory and Configuration | in progress | Started 2026-11-03. Lesson 3.1 taught 2026-11-03 (prerequisite + 5 concepts; all checkpoints correct in the end; hierarchy wording flagged by learner and fixed; `@import` needed a restart on `..` counting). L3.1 quiz 4/4 (2 hints, on Q3), MCQ tutor-written, all cued, 2026-11-03 |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -999,6 +999,7 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-11-03` · application · just-taught · correct — rule in `packages/api/CLAUDE.md` ignored, confirm it loaded this
     session: "Slash context". Right, exact.
+  - `2026-11-03` · application · cued · correct — L3.1 quiz Q4 (MCQ): every recognised location incl. non-existent → `/memory`. No hints.
 
 ## Quiz attempts
 
@@ -1007,6 +1008,7 @@ Status values: `not started` · `in progress` · `completed`
 
 | Date | Module | Question | Attempted | Outcome |
 |------|--------|----------|-----------|---------|
+| 2026-11-03 | 4 | L3.1 Q4 (MCQ, tutor-written) — list every location Claude Code checks for memory files, incl. ones with no file yet: A `/context` B `/memory` C `/init` D `/config` | yes: "B" | correct, no hints. Distinguished it from `/context` (the checkpoint asked the other half). Cued, MCQ |
 | 2026-11-03 | 4 | L3.1 Q3 (MCQ, tutor-written) — 600-line CLAUDE.md, 250 lines API-only; which change alone loads less per session? A split into `.claude/rules/` no paths B move to `docs/api.md` + `@import` C move to `packages/api/CLAUDE.md` D move to `./.claude/CLAUDE.md` | yes: "B", then "C" after 2 hints | correct after 2 hints. Picked B; hint 1 (when does an import load vs a subfolder CLAUDE.md) confused him: "I understood it would get loaded in any case", which is right and is why B is wrong. He knew the import fact but didn't apply it to the options. Hint 2 pointed at the on-demand level → C. Cued, MCQ |
 | 2026-11-03 | 4 | L3.1 Q2 (MCQ, tutor-written) — `services/auth/CLAUDE.md` has `@../../standards/security.md`: which file? A `services/auth/standards/` B `services/standards/` C root `standards/` D depends on launch folder | yes: "C" | correct, no hints. The two-`..` case he missed at the checkpoint earlier today; avoided both the off-by-one (B) and the launch-folder trap (D). Cued, MCQ |
 | 2026-11-03 | 4 | L3.1 Q1 (MCQ, tutor-written) — Lena's `pnpm` rule works in every project incl. a new repo with no CLAUDE.md; teammates don't get it. Where is it? A `./CLAUDE.md` B `./.claude/CLAUDE.md` C `~/.claude/CLAUDE.md` D `.claude/rules/pnpm.md` | yes: "C" | correct, no hints. Cued (taught earlier today); MCQ = recognition |
@@ -1064,6 +1066,10 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
+- CLAUDE.md hierarchy, user-level not shared, `@import`, `.claude/rules/`, `/memory` vs `/context`, context budget (L3.1): both axes
+  shaky, just taught; quizzed 4/4 (2 hints on Q3), MCQ, all cued. Soft spots: `..` counting (needed a restart; got the two-`..`
+  case right in the quiz, same day), and using directory-level CLAUDE.md as the fix for context cost (Q3 picked `@import` first).
+  No L3.1 name produced in free recall yet (`~/.claude/CLAUDE.md`, `.claude/rules/`, `/context`).
 - Built-in tools, Grep, Glob, Read/Write/Edit, Edit fallback, Grep-then-Read, tracing wrapper names (L2.5): both axes shaky, just taught; quizzed 4/4 clean, all cued. All checkpoints and quiz questions MCQ, so tool names and patterns (`**/*.yaml`) are untested as free recall.
 - MCP scoping, env var expansion, combined tools, MCP resources, description vs built-in, community vs custom (L2.4): both axes shaky, just taught; quizzed 4/4 clean, all cued. All checkpoints and quiz questions were MCQ, so recall of file paths (`.mcp.json`, `~/.claude.json`) and `${VAR:-default}` is untested as free recall.
 - Tool-set size, tool misuse outside a role, scoped cross-role tools, `tool_choice` values (L2.3): both axes shaky, just taught; quizzed 4/4 clean, all cued. The `tool` value name still untested as free recall.
@@ -1096,6 +1102,11 @@ Status values: `not started` · `in progress` · `completed`
   (read the first `..` as "this folder"); a stacked re-explanation was "really not clear at all"; restarted with one tree + one
   rule, then correct. Others correct first try, short answers.
 - Glossary: added 5 L3.1 terms (Harness tag). Republished, 61 terms.
+- L3.1 quiz: 4/4, two hints (Q3: chose `@import` to cut per-session load; he knew imports load at launch but didn't apply it;
+  needed a pointer to on-demand directory loading). Q1, Q2, Q4 clean; Q2 was the two-`..` case missed at the checkpoint.
+  MCQ, tutor-written; quiz and answers files not opened. All cued.
+- Learner ended the session after the quiz. Next: a fresh conversation, open with free-recall checks (L3.1 file paths,
+  `~/.claude.json`, error categories, `tool_choice` `tool` second cold, `.mcp.json` second cold), then Lesson 3.2.
 ### 2026-11-03 — Session 6, continued (same conversation, third day... date rolled over mid-session)
 - Module 3 exercise (build-along, document-processing toolset redesign): done, all 8 steps. Clean, unaided: step 1 (split into
   three one-job tools; full four-part description incl. the "not for" piece; schema), step 2 (keyword trap; nit: rewrite should name
