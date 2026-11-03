@@ -600,6 +600,10 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-10-28` · application · just-taught · correct (retry) — "Returns the current weather only, not forecasts or
     future dates". States scope and what the tool is NOT for. Landed.
   - `2026-10-28` · application · cued · correct — L2.1 quiz Q1 (three vague `*_data` tools): descriptions too alike; fix = specific use case for each. Thin on "only signal" and when-NOT-to-use. No hints.
+  - `2026-11-03` · application · cued · correct — M3 exercise step 1b: description for `check_claim`: input (claim + its source),
+    task (read the source, judge whether it backs the claim), output (verdict: backed or not), and NOT for (finding sources or
+    inventing claims; only checks against provided sources). All four elements, unaided, including the "not for" piece that was
+    missing on 10-28. Could add: the verdict should carry the supporting quote. Strong.
 
 ### Tool description ambiguity/overlap and the rename/split fix
 - Module: 3 (Lesson 2.1)
