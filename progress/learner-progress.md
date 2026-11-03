@@ -974,6 +974,9 @@ Status values: `not started` · `in progress` · `completed`
     lesson assumes), not the import rule. Two misses in a row: stopped asking, re-explained from scratch with `.` vs `..`.
   - `2026-11-03` · learner: "That is really not clear at all. Start over and try to be more straightforward." The re-explanation
     (rooms analogy + `.` vs `..` contrast + diagram) was too much at once. Restarted with a folder tree and one rule only.
+  - `2026-11-03` · application · just-taught · correct — after the restart (tree + "each `..` = up one level"):
+    `@../billing/rules.md` from `payments/CLAUDE.md` → "in billing" (`packages/billing/`). Landed. Still shaky: one correct
+    answer right after a re-teach. Revisit `..` counting with a two-`..` case in a later session.
 
 ## Quiz attempts
 
