@@ -937,6 +937,15 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-03` · application · just-taught · correct — 1,000-line CLAUDE.md, task reads 30 large files: "less room for the
     30 files, performance degrades". Both pieces, short and exact.
 
+### CLAUDE.md configuration hierarchy (user, project, directory)
+- Module: 4 (Lesson 3.1)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-03` · (no attempt yet) — learner flagged the teaching as contradictory: "closest to where Claude is working"
+    read as "closest to me", which is the user level. Fair: "close" was never defined. It means closest in the folder tree
+    to the files being edited, not to the person. Re-explained; checkpoint re-asked.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
