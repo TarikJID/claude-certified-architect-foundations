@@ -614,6 +614,11 @@ Status values: `not started` · `in progress` · `completed`
     checkpoint). Rename + rewrite both landed.
   - `2026-10-28` · recall · cued · correct (1 hint) — L2.1 quiz Q2: first said "rename the tools, rewrite the descriptions" (one technique); after hint named "split". Both technique names produced. Cued (taught earlier today).
   - `2026-10-28` · application · cued · correct — L2.1 quiz Q2 (split): three tools, one job each (`extract_data_points`, `summarize_content`, `verify_claim_against_source`). Names match the lesson example the tutor showed, so cued; did not state the narrow input/output contract.
+  - `2026-11-03` · application · cued · correct — M3 exercise step 1a: split `analyze_content`/`analyze_document` (three shared jobs)
+    into `Data_extraction` (pull numbers/facts out of a report), `Summarize_data` (short summary of extracted data),
+    `Claim_checker` (check a claim against its source). One job each, no overlap, his own names (not the lesson's).
+    Nits: capitalised and mixed noun/verb naming (convention: lowercase snake_case, verb first, e.g. `extract_data_points`);
+    his summary tool takes extracted data, not the report, which is a valid narrow input contract if intended.
 
 ### System prompt keyword sensitivity and tool selection
 - Module: 3 (Lesson 2.1)
