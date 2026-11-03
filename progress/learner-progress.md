@@ -958,6 +958,15 @@ Status values: `not started` · `in progress` · `completed`
     Tom doesn't get it: "move the rule in the ./CLAUDE.md file". Right. Didn't say "and commit it" (short answer, read
     charitably; tutor added).
 
+### `@import` syntax for modular CLAUDE.md (relative to the importing file, max 4 hops)
+- Module: 4 (Lesson 3.1)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-03` · application · just-taught · wrong — `packages/payments/CLAUDE.md` has `@../../docs/pci-standards.md`: answered
+    `packages/docs/pci-standards.md`. Went up one folder, not two. Did start from the importing file's folder (the rule taught),
+    so the slip is in counting `..`, not in where the path starts. Walked through it; follow-up asked.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
