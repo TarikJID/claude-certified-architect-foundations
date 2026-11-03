@@ -642,6 +642,11 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-10-28` · application · just-taught · correct — reworded: "When a customer contacts us, first identify them with
     get_customer". Drops the overlapping word and names the right first step. Fix landed.
   - `2026-10-28` · application · cued · correct — L2.1 quiz Q3 (translate vs summarize): cause = "summary" in the system prompt; fix = swap the word ("recap"). Mechanism right and the fix is the right kind. Synonym caveat given. No hints.
+  - `2026-11-03` · application · cued · correct (with a nit) — M3 exercise step 2: original "evaluate the correctness of data
+    summary [ABC]" (the words "data" and "summary" match `summarize_data`); rewrite "evaluate the correctness of document [ABC]".
+    Right idea: drop the words that overlap a tool name. Nit: the rewrite changes the subject (summary → document) and doesn't
+    name the step Claude should take; a fix that names the intended step ("check each claim in the summary against its source")
+    is stronger, like his own get_customer fix on 10-28. Told him.
 
 ### MCP client-server architecture and protocol messages (`tools/list`, `tools/call`)
 - Module: 3 (Lesson 2.2, prerequisite concept)
