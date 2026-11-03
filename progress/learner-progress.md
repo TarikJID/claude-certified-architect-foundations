@@ -949,6 +949,15 @@ Status values: `not started` · `in progress` · `completed`
     "different folder at the same level". Right set, right reason for on-demand loading. Gave the order as "root then user",
     which is backwards (user loads first). Order wasn't asked but he stated it; corrected.
 
+### User-level CLAUDE.md is personal, not shared via version control
+- Module: 4 (Lesson 3.1)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-03` · application · just-taught · correct — Sara's "run tests before committing" in `~/.claude/CLAUDE.md`, new hire
+    Tom doesn't get it: "move the rule in the ./CLAUDE.md file". Right. Didn't say "and commit it" (short answer, read
+    charitably; tutor added).
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
