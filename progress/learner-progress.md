@@ -959,6 +959,7 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-03` · application · just-taught · correct — Sara's "run tests before committing" in `~/.claude/CLAUDE.md`, new hire
     Tom doesn't get it: "move the rule in the ./CLAUDE.md file". Right. Didn't say "and commit it" (short answer, read
     charitably; tutor added).
+  - `2026-11-03` · application · cued · correct — L3.1 quiz Q1 (MCQ): every-project rule teammates lack → `~/.claude/CLAUDE.md`. No hints.
 
 ### `@import` syntax for modular CLAUDE.md (relative to the importing file, max 4 hops)
 - Module: 4 (Lesson 3.1)
@@ -1001,6 +1002,7 @@ Status values: `not started` · `in progress` · `completed`
 
 | Date | Module | Question | Attempted | Outcome |
 |------|--------|----------|-----------|---------|
+| 2026-11-03 | 4 | L3.1 Q1 (MCQ, tutor-written) — Lena's `pnpm` rule works in every project incl. a new repo with no CLAUDE.md; teammates don't get it. Where is it? A `./CLAUDE.md` B `./.claude/CLAUDE.md` C `~/.claude/CLAUDE.md` D `.claude/rules/pnpm.md` | yes: "C" | correct, no hints. Cued (taught earlier today); MCQ = recognition |
 | 2026-11-01 | 3 | L2.5 Q4 (MCQ, tutor-written) — `validateUser` re-exported as `checkAuth`, wrapped as `requireAuth`: plan to find all dependents. A Grep original name only / B Grep, find re-export/wrap names, Grep each / C Grep `auth` / D Glob `**/*validateUser*` | yes: "B" | correct (B), no hints. Cued. Rejected "re-exports keep the original name" |
 | 2026-11-01 | 3 | L2.5 Q3 (MCQ, tutor-written, harder distractors) — session refresh in a 600-file repo: best approach. A Glob `**/*session*` then Read all / B Grep `refreshToken`+`session`, Read surfaced files, follow imports with targeted searches / C Read all of `src/auth/` / D Grep matching lines only, no reads | yes: "B" | correct (B), no hints. Cued. Rejected both the name-guessing option (A) and the no-reads option (D) |
 | 2026-11-01 | 3 | L2.5 Q2 (MCQ, tutor-written) — `retries: 3` in four sections, change only `[payments]`, Edit fails: next step. A Read whole file then Write back with only that occurrence changed / B rerun same Edit, first match / C Grep then same Edit per match / D Write new file with only the section | yes: "A" | correct (A), no hints. Cued |
