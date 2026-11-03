@@ -44,7 +44,7 @@
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Recall closed on 2 concepts (2026-09-30) |
 | Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught. L1.7 quiz 4/4 (1 hint) 2026-09-30. Exercise done 2026-09-30 (8 steps). Nothing closed yet |
 | Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). L2.2 quiz 4/4 (1 hint, on Q1's fourth category name), all cued, 2026-11-01. Lesson 2.3 taught 2026-11-01 (4 concepts; all checkpoints correct first try, `tool_choice` value name `tool` slipped). L2.3 quiz 4/4 clean (MCQ format, tutor-written), all cued, 2026-11-01. Lesson 2.4 taught 2026-11-01 (6 concepts; all checkpoints MCQ, all correct first try). L2.4 quiz 4/4 clean (MCQ, tutor-written), all cued, 2026-11-01. Lesson 2.5 taught 2026-11-01 (prerequisite + 6 concepts; all checkpoints MCQ, all correct first try). All Module 3 lessons taught. L2.5 quiz 4/4 clean (MCQ, tutor-written, harder distractors), all cued, 2026-11-01. All Module 3 lessons taught and quizzed. Exercise done 2026-11-03 (8 steps; 1-4, 5a, 6a, 7b, 8 clean; 5b one slip `isError: false`; 6b missed partial results until asked; 7a personal-server scope wrong and file names not known). Nothing closed in Module 3 yet |
-| Module 4 — Claude Code Memory and Configuration | in progress | Started 2026-11-03. Lesson 3.1 in progress |
+| Module 4 — Claude Code Memory and Configuration | in progress | Started 2026-11-03. Lesson 3.1 taught 2026-11-03 (prerequisite + 5 concepts; all checkpoints correct in the end; hierarchy wording flagged by learner and fixed; `@import` needed a restart on `..` counting) |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -985,6 +985,14 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-11-03` · application · just-taught · correct — 400-line CLAUDE.md split into 3 rule files, no `paths`; teammate claims
     less context used: "no, all three files still load every session". Right, connected it to the context-budget prerequisite.
+
+### `/memory` vs `/context` for inspecting loaded memory files
+- Module: 4 (Lesson 3.1)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-03` · application · just-taught · correct — rule in `packages/api/CLAUDE.md` ignored, confirm it loaded this
+    session: "Slash context". Right, exact.
 
 ## Quiz attempts
 
