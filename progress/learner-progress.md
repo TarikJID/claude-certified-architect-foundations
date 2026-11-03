@@ -966,6 +966,10 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-03` · application · just-taught · wrong — `packages/payments/CLAUDE.md` has `@../../docs/pci-standards.md`: answered
     `packages/docs/pci-standards.md`. Went up one folder, not two. Did start from the importing file's folder (the rule taught),
     so the slip is in counting `..`, not in where the path starts. Walked through it; follow-up asked.
+  - `2026-11-03` · application · just-taught · wrong — follow-up, same file, `@../shared/style.md`: answered
+    `payments/shared/style.md` (right: `packages/shared/style.md`). Consistent with the first miss: he treats the first `..`
+    as "this folder" and only the second one as "up". So the error is the meaning of `..` (general path syntax, which the
+    lesson assumes), not the import rule. Two misses in a row: stopped asking, re-explained from scratch with `.` vs `..`.
 
 ## Quiz attempts
 
