@@ -945,6 +945,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-03` · (no attempt yet) — learner flagged the teaching as contradictory: "closest to where Claude is working"
     read as "closest to me", which is the user level. Fair: "close" was never defined. It means closest in the folder tree
     to the files being edited, not to the person. Re-explained; checkpoint re-asked.
+  - `2026-11-03` · application · just-taught · correct (which) — `packages/web/` task: user + root load; `packages/api/` does not,
+    "different folder at the same level". Right set, right reason for on-demand loading. Gave the order as "root then user",
+    which is backwards (user loads first). Order wasn't asked but he stated it; corrected.
 
 ## Quiz attempts
 
