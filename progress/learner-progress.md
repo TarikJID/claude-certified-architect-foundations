@@ -44,7 +44,7 @@
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Recall closed on 2 concepts (2026-09-30) |
 | Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught. L1.7 quiz 4/4 (1 hint) 2026-09-30. Exercise done 2026-09-30 (8 steps). Nothing closed yet |
 | Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). L2.2 quiz 4/4 (1 hint, on Q1's fourth category name), all cued, 2026-11-01. Lesson 2.3 taught 2026-11-01 (4 concepts; all checkpoints correct first try, `tool_choice` value name `tool` slipped). L2.3 quiz 4/4 clean (MCQ format, tutor-written), all cued, 2026-11-01. Lesson 2.4 taught 2026-11-01 (6 concepts; all checkpoints MCQ, all correct first try). L2.4 quiz 4/4 clean (MCQ, tutor-written), all cued, 2026-11-01. Lesson 2.5 taught 2026-11-01 (prerequisite + 6 concepts; all checkpoints MCQ, all correct first try). All Module 3 lessons taught. L2.5 quiz 4/4 clean (MCQ, tutor-written, harder distractors), all cued, 2026-11-01. All Module 3 lessons taught and quizzed. Exercise done 2026-11-03 (8 steps; 1-4, 5a, 6a, 7b, 8 clean; 5b one slip `isError: false`; 6b missed partial results until asked; 7a personal-server scope wrong and file names not known). Nothing closed in Module 3 yet |
-| Module 4 — Claude Code Memory and Configuration | in progress | Started 2026-11-03. Lesson 3.1 taught 2026-11-03 (prerequisite + 5 concepts; all checkpoints correct in the end; hierarchy wording flagged by learner and fixed; `@import` needed a restart on `..` counting). L3.1 quiz 4/4 (2 hints, on Q3), MCQ tutor-written, all cued, 2026-11-03. Lesson 3.2 taught 2026-11-07 (2 prerequisites + 5 concepts; all checkpoints MCQ, all correct; `argument-hint` needed a second explanation). L3.2 quiz 5/5 (1 hint, on Q3), mixed reworded scenarios, all cued, 2026-11-07 |
+| Module 4 — Claude Code Memory and Configuration | in progress | Started 2026-11-03. Lesson 3.1 taught 2026-11-03 (prerequisite + 5 concepts; all checkpoints correct in the end; hierarchy wording flagged by learner and fixed; `@import` needed a restart on `..` counting). L3.1 quiz 4/4 (2 hints, on Q3), MCQ tutor-written, all cued, 2026-11-03. Lesson 3.2 taught 2026-11-07 (2 prerequisites + 5 concepts; all checkpoints MCQ, all correct; `argument-hint` needed a second explanation). L3.2 quiz 5/5 (1 hint, on Q3), mixed reworded scenarios, all cued, 2026-11-07. Lesson 3.3 taught 2026-11-07 (4 concepts; all checkpoints MCQ, all correct first try; first one under-specified by the tutor). L3.3 quiz not yet taken |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -1137,6 +1137,15 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-07` · application · just-taught · correct (B) — MCQ: one convention for every `.test.tsx` across `src/`, `lib/`,
     `tools/` → one `.claude/rules/` file with `paths: ["**/*.test.tsx"]`. Right. Bare letter answer. Close to the lesson's own
     example, so it also covers the start of the next concept (rule vs per-folder CLAUDE.md).
+
+### Choosing path-specific rules over subdirectory CLAUDE.md files
+- Module: 4 (Lesson 3.3)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-07` · application · just-taught · correct (B) — MCQ: which convention fits a path rule over a folder CLAUDE.md →
+    "every `*.tf` file in any folder must describe each variable" (file type, spread across folders); the other two were
+    place-bound (`services/billing/`, `docs/`). Right. Bare letter answer. Asked for a folder tree of every file discussed so far.
 
 ## Quiz attempts
 
