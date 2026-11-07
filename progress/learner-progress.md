@@ -818,6 +818,10 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-03` · recall · cold · partial (logged wrong for the file name) — Session 8 drill (exact file name for a personal
     MCP server config): "user", sent three times before "it's user" (tutor misread the first replies as empty). Scope right,
     and that fixes the exercise slip ("local folder") from earlier today. File name `~/.claude.json` not produced. Tutor gave it.
+  - `2026-11-07` · recall · cold · wrong — Session 9 drill (personal MCP server, not shared with the team: which file?):
+    `~/.claude/.mcp/.json`. Home folder right (`~`), but the path is invented: a `.mcp/` folder inside `.claude/` and a bare `.json`.
+    Mixes `.mcp.json` (project) with `~/.claude/` (the user config folder). Correct: `~/.claude.json`, a single file in the home
+    folder, not inside `.claude/`. Third miss on this name (11-03 exercise, 11-03 drill, now).
 
 ### Environment variable expansion in `.mcp.json` (`${VAR}`, `${VAR:-default}`)
 - Module: 3 (Lesson 2.4)
