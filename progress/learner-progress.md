@@ -1120,6 +1120,15 @@ Status values: `not started` · `in progress` · `completed`
     Fair: the question did not say the folders are separate at the project root (tutor's question was under-specified, 4th time
     this pattern). Answer right, reasoning cautious. Option A ("rule files always load") would be wrong whatever the layout.
 
+### Path-scoped conditional loading reduces context and token usage
+- Module: 4 (Lesson 3.3)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-07` · application · just-taught · correct (C) — MCQ: `testing.md` (no `paths`) + `terraform.md` (`paths: terraform/**/*`),
+    frontend-only session → only `testing.md` in context. Right: no-`paths` loads at launch, path-scoped waits for a matching
+    file. Bare letter answer; why not stated. The "reads a matching file, not every tool use" detail was taught, not tested.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
