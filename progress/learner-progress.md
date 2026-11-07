@@ -1072,6 +1072,17 @@ Status values: `not started` · `in progress` · `completed`
     → "C" (normal permission settings apply). Right: unlisted tools are not blocked. Asked how many concepts were left before
     answering (told 4 incl. this one). The "grant clears when the turn ends" detail was taught, not tested.
 
+### `argument-hint` frontmatter (display-only hint in the `/` menu)
+- Module: 4 (Lesson 3.2)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-07` · application · just-taught · correct (after re-teach) — first teaching (definition + `/convert` example) did not
+    land: "I did not understand the concept. Can you teach it again, with a practical example?" Re-taught with `/review-file` and
+    the grey placeholder text in a form field. MCQ: skill with `argument-hint: "[filename]"` run with no filename → "B"
+    (nothing, display hint only). Right. Recognition from options, so enforcement/default-fill misconceptions are only
+    weakly tested.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
