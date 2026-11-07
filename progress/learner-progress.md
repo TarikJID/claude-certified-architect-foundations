@@ -1092,6 +1092,18 @@ Status values: `not started` · `in progress` · `completed`
     team's → "B", `~/.claude/skills/review-anna/SKILL.md`. Right: home folder + different name. Recognition from options; the
     distractors (edit the repo file, same name in home folder) were the two collision cases. Why the name must differ was
     taught, not stated by him.
+  - `2026-11-07` · asked (outside course) — if she kept the SAME name in her home folder, which runs? Guessed the home-folder
+    one ("closer to user"). The lesson only says use a different name to avoid a collision; it gives no precedence rule for
+    skills. Tutor's general answer (flagged as outside the material, not verified in this session): personal beats project.
+
+### Choosing between skills and CLAUDE.md (always-loaded facts vs on-demand procedures)
+- Module: 4 (Lesson 3.2)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-07` · application · just-taught · correct — MCQ: "2-space indentation" + a 30-step monthly release checklist →
+    "C": indentation stays in CLAUDE.md, the checklist moves to a new `/release-publishing` skill. Right split. Named the skill
+    himself (option text had no name). Why not stated (every-session token cost vs on-demand), taught but not produced.
 
 ## Quiz attempts
 
