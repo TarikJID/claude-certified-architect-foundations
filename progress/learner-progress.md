@@ -1119,6 +1119,10 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-07` · application · just-taught · correct — MCQ: "2-space indentation" + a 30-step monthly release checklist →
     "C": indentation stays in CLAUDE.md, the checklist moves to a new `/release-publishing` skill. Right split. Named the skill
     himself (option text had no name). Why not stated (every-session token cost vs on-demand), taught but not produced.
+  - `2026-11-07` · application · cued · correct — M4 exercise step 3 (MCQ, 600-line CLAUDE.md): "B" — build commands and universal
+    standards stay in CLAUDE.md; Terraform/React/API conventions move to `.claude/rules/` files with `paths`; the 35-step
+    procedure becomes a skill. Right, and combines all three lessons. Bare letter; the context-budget justification asked for by
+    the exercise was not written.
 
 ### Path-specific rules (`paths` frontmatter in `.claude/rules/`)
 - Module: 4 (Lesson 3.3)
