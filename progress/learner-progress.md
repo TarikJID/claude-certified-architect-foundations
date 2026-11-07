@@ -44,7 +44,7 @@
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Recall closed on 2 concepts (2026-09-30) |
 | Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught. L1.7 quiz 4/4 (1 hint) 2026-09-30. Exercise done 2026-09-30 (8 steps). Nothing closed yet |
 | Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). L2.2 quiz 4/4 (1 hint, on Q1's fourth category name), all cued, 2026-11-01. Lesson 2.3 taught 2026-11-01 (4 concepts; all checkpoints correct first try, `tool_choice` value name `tool` slipped). L2.3 quiz 4/4 clean (MCQ format, tutor-written), all cued, 2026-11-01. Lesson 2.4 taught 2026-11-01 (6 concepts; all checkpoints MCQ, all correct first try). L2.4 quiz 4/4 clean (MCQ, tutor-written), all cued, 2026-11-01. Lesson 2.5 taught 2026-11-01 (prerequisite + 6 concepts; all checkpoints MCQ, all correct first try). All Module 3 lessons taught. L2.5 quiz 4/4 clean (MCQ, tutor-written, harder distractors), all cued, 2026-11-01. All Module 3 lessons taught and quizzed. Exercise done 2026-11-03 (8 steps; 1-4, 5a, 6a, 7b, 8 clean; 5b one slip `isError: false`; 6b missed partial results until asked; 7a personal-server scope wrong and file names not known). Nothing closed in Module 3 yet |
-| Module 4 — Claude Code Memory and Configuration | in progress | Started 2026-11-03. Lesson 3.1 taught 2026-11-03 (prerequisite + 5 concepts; all checkpoints correct in the end; hierarchy wording flagged by learner and fixed; `@import` needed a restart on `..` counting). L3.1 quiz 4/4 (2 hints, on Q3), MCQ tutor-written, all cued, 2026-11-03 |
+| Module 4 — Claude Code Memory and Configuration | in progress | Started 2026-11-03. Lesson 3.1 taught 2026-11-03 (prerequisite + 5 concepts; all checkpoints correct in the end; hierarchy wording flagged by learner and fixed; `@import` needed a restart on `..` counting). L3.1 quiz 4/4 (2 hints, on Q3), MCQ tutor-written, all cued, 2026-11-03. Lesson 3.2 taught 2026-11-07 (2 prerequisites + 5 concepts; all checkpoints MCQ, all correct; `argument-hint` needed a second explanation). L3.2 quiz 5/5 (1 hint, on Q3), mixed reworded scenarios, all cued, 2026-11-07 |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -1117,6 +1117,7 @@ Status values: `not started` · `in progress` · `completed`
 
 | Date | Module | Question | Attempted | Outcome |
 |------|--------|----------|-----------|---------|
+| 2026-11-07 | 4 | L3.2 Q5 (course scenario) — 40-step "migrate a service" procedure in CLAUDE.md, needed a few times a year: stay or move, why | yes: "no, it should become a skill that is called when need, because if it stays in the CLAUDE.md file, it will clutter the context of the conversation in each turn, while it's needed only a few times a year" | correct, no hints. Decision and reason both right (always-loaded cost vs on-demand). Small wording: CLAUDE.md loads once per session, not each turn (it stays in context). Cued (checkpoint on the same split earlier today) |
 | 2026-11-07 | 4 | L3.2 Q4 (same as course scenario: personal variant of team `/deploy`, don't affect teammates) | yes: "you copy the skill in your home repo and rename it like deploy-tarik" | correct, no hints. Two key points right: personal location + different name. "Home repo" is loose (it is the home folder: `~/.claude/skills/deploy-tarik/SKILL.md`); read charitably, path not asked again. Did not say why the name must differ (no collision) or that teammates never see it. Cued (taught earlier today) |
 | 2026-11-07 | 4 | L3.2 Q3 (reworded) — skill with `allowed-tools: Read Grep`, Claude wants a Bash command: what does it do / not do | yes: "1. allowed-tools does two things: explicitly grants access to Read Grep AND limits tool use to Read Grep. 2. it does not force claude to use Read Grep." Also: "I don't know what a Bash command is and what this info brings to the context of the question" | correct after 1 hint (first answer partial) — grant right; "limits tool use to Read Grep" is WRONG (it is not a block list; he got this right in the 11-03 MCQ). "Does not force use" is true but not the key point. Did not know what the Bash tool is, so the scenario could not be read; tutor to explain and hint. Hint first, retry asked. Retry: "it allows a specific tool that might not be allowed without it" — correct (pre-approval, no block list). Final: correct after 1 hint. Raised a real conflict: agent-definition tool list restricts, `allowed-tools` does not; tutor separated "which tools the agent has" from "whether a call needs approval" |
 | 2026-11-07 | 4 | L3.2 Q2 (reworded scenario) — `/analyze-codebase` reads ~200 files, short report; what does `context: fork` change and why does it help | yes: "Only the summary comes back to the main conversation. The context: fork setting sends the skill to be executed by a subagent with it's own context, only the report is sent back to the main conversation" | correct, no hints. Mechanism (subagent, own context) and result (only the report returns) both stated. Did not say the 200 file reads stay out of the main context, or that this keeps the main conversation clean for later work. Cued (taught earlier today). Side question before Q3: does the orchestrator need the Agent tool for `context: fork` to work (Module 1 link)? Not in the lesson; answered as outside the course |
@@ -1179,6 +1180,8 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Concepts with either axis shaky, and anything the learner asked to come back to.
      A concept that did not land belongs here until it does — never dropped quietly. -->
 
+- Project vs user skills, SKILL.md frontmatter, `context: fork`, `allowed-tools` (pre-approval, not a block list), `argument-hint`, personal skill variants, skills vs CLAUDE.md (L3.2): both axes shaky, just taught; quizzed 5/5 (1 hint, Q3), all cued. Soft spots: `allowed-tools` vs agent-definition `tools` (resolved today, table given); `argument-hint` needed a re-teach. Does not know the Bash tool by name.
+- Exact config file paths (`~/.claude.json`, `~/.claude/CLAUDE.md`): 3 cold misses in a row by 11-07. Learner says exact spelling seems too micro. Course names them in the skills list, so likely recognition on the exam. Decision: stop drilling spelling as free recall; keep checking the personal-vs-team decision.
 - CLAUDE.md hierarchy, user-level not shared, `@import`, `.claude/rules/`, `/memory` vs `/context`, context budget (L3.1): both axes
   shaky, just taught; quizzed 4/4 (2 hints on Q3), MCQ, all cued. Soft spots: `..` counting (needed a restart; got the two-`..`
   case right in the quiz, same day), and using directory-level CLAUDE.md as the fix for context cost (Q3 picked `@import` first).
@@ -1200,6 +1203,22 @@ Status values: `not started` · `in progress` · `completed`
 
 <!-- Newest first. What was taught, what landed, what did not, and anything about
      HOW to teach this learner that the next session should know. -->
+
+### 2026-11-07 — Session 9 (fresh conversation, so cold checks count)
+- Opening recap was wrong: read from a stale local copy (said Module 3, Lesson 2.1). Learner corrected it. Fetched the remote
+  branch (it had been force-updated), moved the local branch onto it. CLAUDE.md now says to read from the remote first.
+- Cold drill 1 (personal MCP server file): `~/.claude/.mcp/.json` — wrong, invented path. Cold drill 2 (user-level CLAUDE.md
+  path): `.mcp.json` — wrong, answered with the project MCP file. Both logged. Learner: "I don't get the importance of the
+  paths, it seems so micro level". Fair. Conceded: the course names them, but the point is personal vs team scope. Stopped
+  drilling spelling; added both paths plus a "yours vs the team's" map to the glossary (republished).
+- Finished Lesson 3.2: `argument-hint` (first explanation did not land; re-taught with a practical example, then correct),
+  personal skill variants (correct), skills vs CLAUDE.md (correct). Learner asked whether the same name in the home folder wins:
+  not in the course; answered as outside the material.
+- L3.2 quiz 5/5, one hint (Q3). Tutor slip: said four questions, the quiz has five. Learner flagged Q2 as missing the Agent tool
+  (valid link to Module 1; outside the lesson) and Q3 as unreadable because he does not know the Bash tool. Both fair; Q3
+  reworded. He also named the real conflict: agent-definition `tools` restricts, `allowed-tools` does not. Gave a table and a
+  side-by-side example. Pattern: he finds genuine inconsistencies; answer them in full.
+- Style reminders held: short chunks, one question at a time, define terms (Bash) before using them.
 
 
 ### 2026-11-03 — Session 8 (fresh conversation, same day as Session 7)
