@@ -1117,6 +1117,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-07` · asked (outside course) — if she kept the SAME name in her home folder, which runs? Guessed the home-folder
     one ("closer to user"). The lesson only says use a different name to avoid a collision; it gives no precedence rule for
     skills. Tutor's general answer (flagged as outside the material, not verified in this session): personal beats project.
+  - `2026-11-07` · application · cued · correct — M4 exercise step 7 (MCQ): senior's private variant of `add-microservice` →
+    "B", `~/.claude/skills/add-microservice-senior/SKILL.md`. Right. Bare letter. Same concept he got right as a checkpoint and
+    in quiz Q4 today, so this is the third cued success the same day; a later-day application would carry more weight.
 
 ### Choosing between skills and CLAUDE.md (always-loaded facts vs on-demand procedures)
 - Module: 4 (Lesson 3.2)
