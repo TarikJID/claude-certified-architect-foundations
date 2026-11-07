@@ -1097,6 +1097,10 @@ Status values: `not started` · `in progress` · `completed`
     the grey placeholder text in a form field. MCQ: skill with `argument-hint: "[filename]"` run with no filename → "B"
     (nothing, display hint only). Right. Recognition from options, so enforcement/default-fill misconceptions are only
     weakly tested.
+  - `2026-11-07` · application · cued · correct — M4 exercise step 6a (MCQ): sensible frontmatter for `add-microservice` →
+    "A": specific `description` (what + when) and `argument-hint: "[service-name]"`. Right. Bare letter; B's vague description
+    and C's wrong hint (`[PR-number]`) rejected without stated reasons. Used the `description` lesson from L3.2/L2.1 and the
+    hint lesson from today.
 
 ### Personal skill variants in `~/.claude/skills/<different-name>/`
 - Module: 4 (Lesson 3.2)
