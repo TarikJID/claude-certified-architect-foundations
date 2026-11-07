@@ -975,6 +975,10 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-03` · recall · cold · wrong (close) — Session 8 drill (exact path of the user-level CLAUDE.md): "user/claude/Claude.md".
     Shape right (home folder → claude folder → CLAUDE.md). Missing: `~` for the home folder, the dot in `.claude`, and the
     capitals in `CLAUDE.md`. First free recall of this path. Tutor gave `~/.claude/CLAUDE.md`.
+  - `2026-11-07` · recall · cold · wrong — Session 9 drill (CLAUDE.md that applies to you in every project, nobody else sees it:
+    exact path): `.mcp.json`. That is the project MCP config file, answered one question after missing `~/.claude.json`. Wrong
+    file type entirely (MCP config vs instructions), and the shape from 11-03 (home → `.claude` → CLAUDE.md) is gone. Likely
+    interference from the previous question. Tutor gave `~/.claude/CLAUDE.md`.
 
 ### `@import` syntax for modular CLAUDE.md (relative to the importing file, max 4 hops)
 - Module: 4 (Lesson 3.1)
