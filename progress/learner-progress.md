@@ -962,6 +962,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-03` · application · cued · correct (2 hints) — L3.1 quiz Q3 (MCQ): which change alone loads less? Picked B (`@import`)
     first; knew imports load at launch but didn't connect it to the choice. After a 2nd hint pointing at on-demand loading → C
     (`packages/api/CLAUDE.md`). Gap: using on-demand directory loading as a *fix* for context cost, not just knowing it exists.
+  - `2026-11-07` · application · cued · correct — M4 exercise step 1 (MCQ, monorepo): "B" — build commands + team standards in
+    root `./CLAUDE.md`, Python API rules in `packages/api/CLAUDE.md`, React rules in `packages/web/CLAUDE.md`, personal
+    preferences in `~/.claude/CLAUDE.md`. Right. Bare letter; the justification the exercise asks for was not written.
 
 ### User-level CLAUDE.md is personal, not shared via version control
 - Module: 4 (Lesson 3.1)
