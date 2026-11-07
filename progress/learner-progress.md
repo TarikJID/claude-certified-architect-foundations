@@ -44,7 +44,7 @@
 | Module 1 — The Agentic Loop and Multi-Agent Orchestration | in progress | Started 2026-09-22. Lesson 1.1 taught + quizzed (2026-09-27). Lesson 1.2 taught + quizzed 2026-09-27. Lesson 1.3 taught + quizzed 2026-09-27. All Module 1 lessons taught and quizzed. Exercise done 2026-09-29 (9 steps). Recall closed on 2 concepts (2026-09-30) |
 | Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught. L1.7 quiz 4/4 (1 hint) 2026-09-30. Exercise done 2026-09-30 (8 steps). Nothing closed yet |
 | Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). L2.2 quiz 4/4 (1 hint, on Q1's fourth category name), all cued, 2026-11-01. Lesson 2.3 taught 2026-11-01 (4 concepts; all checkpoints correct first try, `tool_choice` value name `tool` slipped). L2.3 quiz 4/4 clean (MCQ format, tutor-written), all cued, 2026-11-01. Lesson 2.4 taught 2026-11-01 (6 concepts; all checkpoints MCQ, all correct first try). L2.4 quiz 4/4 clean (MCQ, tutor-written), all cued, 2026-11-01. Lesson 2.5 taught 2026-11-01 (prerequisite + 6 concepts; all checkpoints MCQ, all correct first try). All Module 3 lessons taught. L2.5 quiz 4/4 clean (MCQ, tutor-written, harder distractors), all cued, 2026-11-01. All Module 3 lessons taught and quizzed. Exercise done 2026-11-03 (8 steps; 1-4, 5a, 6a, 7b, 8 clean; 5b one slip `isError: false`; 6b missed partial results until asked; 7a personal-server scope wrong and file names not known). Nothing closed in Module 3 yet |
-| Module 4 — Claude Code Memory and Configuration | in progress | Started 2026-11-03. Lesson 3.1 taught 2026-11-03 (prerequisite + 5 concepts; all checkpoints correct in the end; hierarchy wording flagged by learner and fixed; `@import` needed a restart on `..` counting). L3.1 quiz 4/4 (2 hints, on Q3), MCQ tutor-written, all cued, 2026-11-03. Lesson 3.2 taught 2026-11-07 (2 prerequisites + 5 concepts; all checkpoints MCQ, all correct; `argument-hint` needed a second explanation). L3.2 quiz 5/5 (1 hint, on Q3), mixed reworded scenarios, all cued, 2026-11-07. Lesson 3.3 taught 2026-11-07 (4 concepts; all checkpoints MCQ, all correct first try; first one under-specified by the tutor). L3.3 quiz 3/3 clean, MCQ tutor-written, all cued, 2026-11-07. All Module 4 lessons (3.1 to 3.3) taught and quizzed. Exercise not started. Nothing closed in Module 4 yet |
+| Module 4 — Claude Code Memory and Configuration | in progress | Started 2026-11-03. Lesson 3.1 taught 2026-11-03 (prerequisite + 5 concepts; all checkpoints correct in the end; hierarchy wording flagged by learner and fixed; `@import` needed a restart on `..` counting). L3.1 quiz 4/4 (2 hints, on Q3), MCQ tutor-written, all cued, 2026-11-03. Lesson 3.2 taught 2026-11-07 (2 prerequisites + 5 concepts; all checkpoints MCQ, all correct; `argument-hint` needed a second explanation). L3.2 quiz 5/5 (1 hint, on Q3), mixed reworded scenarios, all cued, 2026-11-07. Lesson 3.3 taught 2026-11-07 (4 concepts; all checkpoints MCQ, all correct first try; first one under-specified by the tutor). L3.3 quiz 3/3 clean, MCQ tutor-written, all cued, 2026-11-07. All Module 4 lessons (3.1 to 3.3) taught and quizzed. Exercise done 2026-11-07 (8 steps, MCQ at the learner's request; all correct first try; 2b weak evidence because the tutor's wording gave the answer away). Nothing closed in Module 4 yet |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -1133,6 +1133,9 @@ Status values: `not started` · `in progress` · `completed`
     standards stay in CLAUDE.md; Terraform/React/API conventions move to `.claude/rules/` files with `paths`; the 35-step
     procedure becomes a skill. Right, and combines all three lessons. Bare letter; the context-budget justification asked for by
     the exercise was not written.
+  - `2026-11-07` · application · cued · correct — M4 exercise step 8 (MCQ): where the 35-step procedure lives → "C", a skill,
+    because CLAUDE.md is in context every call and a skill loads only when invoked. Right. Bare letter. Same decision as step 3
+    and as L3.2 Q5, asked a third way; still cued, same day.
 
 ### Path-specific rules (`paths` frontmatter in `.claude/rules/`)
 - Module: 4 (Lesson 3.3)
@@ -1298,6 +1301,13 @@ Status values: `not started` · `in progress` · `completed`
   resent each call, which is right; tutor's earlier correction of his Q5 wording was too quick, owned). Taught Lesson 3.3 (4
   concepts, all MCQ checkpoints correct; first one under-specified, he said so). Asked for a folder tree of every file discussed;
   gave one (user home vs project). Asked for MCQ-style quizzes; L3.3 quiz 3/3 clean. Learner prefers MCQ for quizzes.
+- M4 exercise (build-along, monorepo) done, all 8 steps, MCQ, all correct on the first answer: hierarchy placement, onboarding
+  diagnosis (personal CLAUDE.md), `/memory`, restructure plan, testing-rule globs, Terraform path, skill frontmatter, `context:
+  fork`, personal variant, skill vs CLAUDE.md. Caveat: every item is cued, MCQ, same day, bare letters. He asked good
+  side questions (why `**/test/*` fails; would `**/*.test.*` work). Learner skipped the justifications the exercise asks for;
+  MCQ made that easy. No cold evidence on any Module 4 concept yet: next fresh conversation should open with a drill on the
+  personal-vs-team decision and one Module 4 concept, free recall.
+- Glossary: added the folder map and 12 Lesson 3.2/3.3 terms (76 terms).
 
 
 ### 2026-11-03 — Session 8 (fresh conversation, same day as Session 7)
