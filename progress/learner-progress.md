@@ -1151,6 +1151,11 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-07` · application · just-taught · correct (B) — MCQ: one convention for every `.test.tsx` across `src/`, `lib/`,
     `tools/` → one `.claude/rules/` file with `paths: ["**/*.test.tsx"]`. Right. Bare letter answer. Close to the lesson's own
     example, so it also covers the start of the next concept (rule vs per-folder CLAUDE.md).
+  - `2026-11-07` · application · cued · correct — M4 exercise step 4 (MCQ): `.claude/rules/testing.md` for every `*.test.ts` and
+    `*.test.tsx` → "A", two globs `**/*.test.ts` and `**/*.test.tsx`. Right. Asked unprompted whether C (`**/test/*`) could work
+    and why: good question. Tutor answer: C matches files inside folders named `test`, not files named `*.test.ts`, so it misses
+    tests placed beside the code and catches non-test files in those folders. The "why a folder CLAUDE.md doesn't fit" half of the
+    step was already covered in L3.3 Q3 / concept 3.
 
 ### Choosing path-specific rules over subdirectory CLAUDE.md files
 - Module: 4 (Lesson 3.3)
