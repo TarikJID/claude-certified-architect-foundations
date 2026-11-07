@@ -1072,6 +1072,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-03` · application · just-taught · correct — MCQ: `/audit-deps` with `context: fork` reads 300 files, writes long
     notes; what reaches the main conversation? → "C" (only the subagent's final summary). Right. Linked to context isolation
     (recall closed this morning).
+  - `2026-11-07` · application · cued · correct — M4 exercise step 6b (MCQ): 35-step skill, many files, long logs, only the
+    outcome needed → "A", use `context: fork`. Right. Bare letter. Premise (what the user needs back) was stated in the
+    question, so the decision rule was nearly handed over. Not yet shown: a case where fork is the WRONG choice.
 
 ### `allowed-tools` frontmatter (pre-approve for the invoking turn; not a block list)
 - Module: 4 (Lesson 3.2)
