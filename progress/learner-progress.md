@@ -1133,6 +1133,11 @@ Status values: `not started` · `in progress` · `completed`
     component in `src/ui/`: doesn't load. Said "I don't know where src/ui is in relation to terraform/... I suppose B".
     Fair: the question did not say the folders are separate at the project root (tutor's question was under-specified, 4th time
     this pattern). Answer right, reasoning cautious. Option A ("rule files always load") would be wrong whatever the layout.
+  - `2026-11-07` · application · cued · correct — M4 exercise step 5 (MCQ, layout given): Terraform rule only for
+    `infra/terraform/` → "B", `"infra/terraform/**/*"`. Right: the pattern starts at the project root, so `terraform/**/*` (A)
+    would miss it and `infra/**/*` (C) is too broad. Bare letter.
+  - `2026-11-07` · asked — would `**/*.test.*` have worked for the testing rule? Tutor: yes for `.test.ts`/`.test.tsx`, but it
+    also matches `.test.js`, `.test.snap`, etc. Depends on whether that wider set is wanted.
 
 ### Path-scoped conditional loading reduces context and token usage
 - Module: 4 (Lesson 3.3)
