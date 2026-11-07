@@ -195,7 +195,11 @@ const ENTRIES = [
   { term: "<code>.claude/rules/</code>", tag: "Harness", src: "Lesson 3.1",
     def: "A folder of topic files (<code>testing.md</code>, <code>api-conventions.md</code>…) instead of one big CLAUDE.md. Every <code>.md</code> in it is found, subfolders too. Without <code>paths</code> frontmatter a rule loads every session, like the project CLAUDE.md: easier to organise, not cheaper." },
   { term: "<code>/memory</code> vs <code>/context</code>", tag: "Harness", src: "Lesson 3.1",
-    def: "<code>/memory</code>: every place Claude Code would look for memory files, even ones not created yet; open and edit them. <code>/context</code>: what actually loaded in this session. Use <code>/context</code> to confirm a CLAUDE.md was picked up." }
+    def: "<code>/memory</code>: every place Claude Code would look for memory files, even ones not created yet; open and edit them. <code>/context</code>: what actually loaded in this session. Use <code>/context</code> to confirm a CLAUDE.md was picked up." },
+  { term: "MCP server scoping: <code>.mcp.json</code> vs <code>~/.claude.json</code>", tag: "Tools", src: "Lesson 2.4",
+    def: "Where an MCP server is defined decides who gets it. <b>Project</b>: <code>.mcp.json</code> at the project root, committed, so the whole team gets it on clone. <b>User</b>: <code>~/.claude.json</code>, a single file in your home folder (not inside <code>.claude/</code>), private to you across all projects. Same server in both: the highest-precedence definition wins, no merging." },
+  { term: "Shared vs personal files (quick map)", tag: "Harness", src: "Lessons 2.4 and 3.1",
+    def: "Same rule for both kinds of file: the <code>~</code> one is yours, the project one is the team's. <b>MCP servers</b>: <code>~/.claude.json</code> (you) / <code>.mcp.json</code> (team). <b>Instructions</b>: <code>~/.claude/CLAUDE.md</code> (you) / <code>./CLAUDE.md</code> (team). Note: <code>~/.claude.json</code> is a file; <code>~/.claude/</code> is a folder." }
 ];
 
 const state = { tag: "All", q: "" };
