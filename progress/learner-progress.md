@@ -1110,6 +1110,16 @@ Status values: `not started` · `in progress` · `completed`
     "C": indentation stays in CLAUDE.md, the checklist moves to a new `/release-publishing` skill. Right split. Named the skill
     himself (option text had no name). Why not stated (every-session token cost vs on-demand), taught but not produced.
 
+### Path-specific rules (`paths` frontmatter in `.claude/rules/`)
+- Module: 4 (Lesson 3.3)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-07` · application · just-taught · correct (B) — MCQ: `paths: ["terraform/**/*"]` rule, session fixing a React
+    component in `src/ui/`: doesn't load. Said "I don't know where src/ui is in relation to terraform/... I suppose B".
+    Fair: the question did not say the folders are separate at the project root (tutor's question was under-specified, 4th time
+    this pattern). Answer right, reasoning cautious. Option A ("rule files always load") would be wrong whatever the layout.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
