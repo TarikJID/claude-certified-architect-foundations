@@ -1022,6 +1022,10 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-03` · application · just-taught · correct — rule in `packages/api/CLAUDE.md` ignored, confirm it loaded this
     session: "Slash context". Right, exact.
   - `2026-11-03` · application · cued · correct — L3.1 quiz Q4 (MCQ): every recognised location incl. non-existent → `/memory`. No hints.
+  - `2026-11-07` · application · cued · correct — M4 exercise step 2b (MCQ): see every place Claude Code would look for memory
+    files, even ones not created yet → "b" (`/memory`). Right, but weak evidence: the question text and option B repeated the
+    lesson's own wording almost word for word, so it tested matching more than understanding. Option A (`/context`) was the
+    real contrast; he did not say why not A.
 
 ### YAML frontmatter in markdown config files (prerequisite)
 - Module: 4 (Lesson 3.2)
