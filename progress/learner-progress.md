@@ -13,7 +13,7 @@
 - Name: Tarik
 - Preferred style: Lecture + checkpoints
 - Started: 2026-09-22
-- Last session: 2026-11-03
+- Last session: 2026-11-07
 - Notes: "i'm rather into short straight forward sentences, long texts and complicated sentences make me zone out" — keep chunks small, plain sentences, check in often.
   Also: "it's a bit weird that you call it 'my' code" — say **the harness**, not "your code". He is
   reasoning about the architecture, not writing it.
@@ -1308,6 +1308,8 @@ Status values: `not started` · `in progress` · `completed`
   MCQ made that easy. No cold evidence on any Module 4 concept yet: next fresh conversation should open with a drill on the
   personal-vs-team decision and one Module 4 concept, free recall.
 - Glossary: added the folder map and 12 Lesson 3.2/3.3 terms (76 terms).
+- Stopped at the learner's request after the Module 4 exercise. Next: Module 5 (Claude Code execution modes and CI/CD), tomorrow.
+  Open with a cold check first (fresh conversation): the personal-vs-team decision plus one Module 4 concept, free recall.
 
 
 ### 2026-11-03 — Session 8 (fresh conversation, same day as Session 7)
