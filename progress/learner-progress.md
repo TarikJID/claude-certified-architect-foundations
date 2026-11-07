@@ -982,6 +982,9 @@ Status values: `not started` · `in progress` · `completed`
     exact path): `.mcp.json`. That is the project MCP config file, answered one question after missing `~/.claude.json`. Wrong
     file type entirely (MCP config vs instructions), and the shape from 11-03 (home → `.claude` → CLAUDE.md) is gone. Likely
     interference from the previous question. Tutor gave `~/.claude/CLAUDE.md`.
+  - `2026-11-07` · application · cued · correct — M4 exercise step 2a (MCQ): new hires lack senior behaviour → "A", seniors have
+    extra rules in their own `~/.claude/CLAUDE.md` that never reach the team. Right. Bare letter. Second half of the step
+    (confirm with `/memory` / `/context`) asked next.
 
 ### `@import` syntax for modular CLAUDE.md (relative to the importing file, max 4 hops)
 - Module: 4 (Lesson 3.1)
