@@ -1083,6 +1083,16 @@ Status values: `not started` · `in progress` · `completed`
     (nothing, display hint only). Right. Recognition from options, so enforcement/default-fill misconceptions are only
     weakly tested.
 
+### Personal skill variants in `~/.claude/skills/<different-name>/`
+- Module: 4 (Lesson 3.2)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-07` · application · just-taught · correct — MCQ: Anna wants her own `/review` variant, private, not replacing the
+    team's → "B", `~/.claude/skills/review-anna/SKILL.md`. Right: home folder + different name. Recognition from options; the
+    distractors (edit the repo file, same name in home folder) were the two collision cases. Why the name must differ was
+    taught, not stated by him.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
