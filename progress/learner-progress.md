@@ -1129,6 +1129,15 @@ Status values: `not started` · `in progress` · `completed`
     frontend-only session → only `testing.md` in context. Right: no-`paths` loads at launch, path-scoped waits for a matching
     file. Bare letter answer; why not stated. The "reads a matching file, not every tool use" detail was taught, not tested.
 
+### Glob patterns for conventions spanning multiple directories
+- Module: 4 (Lesson 3.3)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-07` · application · just-taught · correct (B) — MCQ: one convention for every `.test.tsx` across `src/`, `lib/`,
+    `tools/` → one `.claude/rules/` file with `paths: ["**/*.test.tsx"]`. Right. Bare letter answer. Close to the lesson's own
+    example, so it also covers the start of the next concept (rule vs per-folder CLAUDE.md).
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
