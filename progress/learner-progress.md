@@ -1282,6 +1282,13 @@ Status values: `not started` · `in progress` · `completed`
 <!-- Newest first. What was taught, what landed, what did not, and anything about
      HOW to teach this learner that the next session should know. -->
 
+### 2026-11-08 — Session 10 (fresh conversation, so cold checks count)
+- Opening recap was wrong again, same cause as Session 9: the container's local copy was stale (said Module 3, Lesson 2.1;
+  offered a cold check on Module 1 items). Learner corrected it ("we finished module 4, module 5 to start"). Fetched the
+  remote branch, which had been force-updated, and reset the local branch onto it. Lesson for next time: fetch the remote
+  branch BEFORE reading the progress file, every session, not after the learner notices.
+- Neither Module 1 question from the wrong opener was answered; nothing logged for them.
+
 ### 2026-11-07 — Session 9 (fresh conversation, so cold checks count)
 - Opening recap was wrong: read from a stale local copy (said Module 3, Lesson 2.1). Learner corrected it. Fetched the remote
   branch (it had been force-updated), moved the local branch onto it. CLAUDE.md now says to read from the remote first.
