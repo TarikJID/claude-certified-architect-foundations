@@ -985,6 +985,9 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-07` · application · cued · correct — M4 exercise step 2a (MCQ): new hires lack senior behaviour → "A", seniors have
     extra rules in their own `~/.claude/CLAUDE.md` that never reach the team. Right. Bare letter. Second half of the step
     (confirm with `/memory` / `/context`) asked next.
+  - `2026-11-08` · application · cold · correct — Session 10 drill (personal setting on a team repo, only you get it): "in my
+    home folder". Right scope decision. Free recall, scenario-only, no term named. Exact path not asked (decision not drilled
+    on spelling). One clean cold application; needs one later to close.
 
 ### `@import` syntax for modular CLAUDE.md (relative to the importing file, max 4 hops)
 - Module: 4 (Lesson 3.1)
@@ -1151,6 +1154,8 @@ Status values: `not started` · `in progress` · `completed`
     would miss it and `infra/**/*` (C) is too broad. Bare letter.
   - `2026-11-07` · asked — would `**/*.test.*` have worked for the testing rule? Tutor: yes for `.test.ts`/`.test.tsx`, but it
     also matches `.test.js`, `.test.snap`, etc. Depends on whether that wider set is wanted.
+  - `2026-11-08` · recall · cold · correct — Session 10 drill (rule that loads only when editing test files; which setting in the
+    rule file): "paths". Exact. Fresh conversation, no term in the question. First clean cold recall; one more on a later day closes it.
 
 ### Path-scoped conditional loading reduces context and token usage
 - Module: 4 (Lesson 3.3)
@@ -1288,6 +1293,7 @@ Status values: `not started` · `in progress` · `completed`
   remote branch, which had been force-updated, and reset the local branch onto it. Lesson for next time: fetch the remote
   branch BEFORE reading the progress file, every session, not after the learner notices.
 - Neither Module 1 question from the wrong opener was answered; nothing logged for them.
+- Cold drill (after the corrected opener): personal setting on a team repo → "in my home folder", correct. Rule loaded only for test files → `paths`, correct, exact. Both cold.
 
 ### 2026-11-07 — Session 9 (fresh conversation, so cold checks count)
 - Opening recap was wrong: read from a stale local copy (said Module 3, Lesson 2.1). Learner corrected it. Fetched the remote
