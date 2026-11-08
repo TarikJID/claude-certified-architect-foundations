@@ -45,7 +45,7 @@
 | Module 2 — Workflow Enforcement, Decomposition, and Sessions | in progress | Started 2026-09-28. Lesson 1.4 taught + quizzed 2026-09-28. Lesson 1.5 taught + quizzed (2026-09-28/29). Lesson 1.6 taught 2026-09-29 (4 concepts, all checkpoints correct). Lesson 1.7 taught 2026-09-30 (resume, forking refresh, file changes, fresh vs resume; all checkpoints correct). All Module 2 lessons taught. L1.7 quiz 4/4 (1 hint) 2026-09-30. Exercise done 2026-09-30 (8 steps). Nothing closed yet |
 | Module 3 — Tool Design & MCP Integration | in progress | Started 2026-10-28. Lesson 2.1 taught (3 concepts + prerequisite; all checkpoints correct, 2 needed a retry or one extra piece). L2.1 quiz 3/3 (1 hint, on Q2), all cued, 2026-10-28. Lesson 2.2 taught 2026-11-01 (prerequisite + 4 concepts; all checkpoints correct first try). L2.2 quiz 4/4 (1 hint, on Q1's fourth category name), all cued, 2026-11-01. Lesson 2.3 taught 2026-11-01 (4 concepts; all checkpoints correct first try, `tool_choice` value name `tool` slipped). L2.3 quiz 4/4 clean (MCQ format, tutor-written), all cued, 2026-11-01. Lesson 2.4 taught 2026-11-01 (6 concepts; all checkpoints MCQ, all correct first try). L2.4 quiz 4/4 clean (MCQ, tutor-written), all cued, 2026-11-01. Lesson 2.5 taught 2026-11-01 (prerequisite + 6 concepts; all checkpoints MCQ, all correct first try). All Module 3 lessons taught. L2.5 quiz 4/4 clean (MCQ, tutor-written, harder distractors), all cued, 2026-11-01. All Module 3 lessons taught and quizzed. Exercise done 2026-11-03 (8 steps; 1-4, 5a, 6a, 7b, 8 clean; 5b one slip `isError: false`; 6b missed partial results until asked; 7a personal-server scope wrong and file names not known). Nothing closed in Module 3 yet |
 | Module 4 — Claude Code Memory and Configuration | in progress | Started 2026-11-03. Lesson 3.1 taught 2026-11-03 (prerequisite + 5 concepts; all checkpoints correct in the end; hierarchy wording flagged by learner and fixed; `@import` needed a restart on `..` counting). L3.1 quiz 4/4 (2 hints, on Q3), MCQ tutor-written, all cued, 2026-11-03. Lesson 3.2 taught 2026-11-07 (2 prerequisites + 5 concepts; all checkpoints MCQ, all correct; `argument-hint` needed a second explanation). L3.2 quiz 5/5 (1 hint, on Q3), mixed reworded scenarios, all cued, 2026-11-07. Lesson 3.3 taught 2026-11-07 (4 concepts; all checkpoints MCQ, all correct first try; first one under-specified by the tutor). L3.3 quiz 3/3 clean, MCQ tutor-written, all cued, 2026-11-07. All Module 4 lessons (3.1 to 3.3) taught and quizzed. Exercise done 2026-11-07 (8 steps, MCQ at the learner's request; all correct first try; 2b weak evidence because the tutor's wording gave the answer away). Nothing closed in Module 4 yet |
-| Module 5 — Claude Code Execution Modes and CI/CD Workflows | in progress | Started 2026-11-08. Lesson 3.4 taught 2026-11-08 (5 concepts incl. prerequisite recap folded in; all checkpoints MCQ, all correct first try; Explore one was too easy, answer sat in the paragraph above). L3.4 quiz 4/4 clean (MCQ, tutor-written, new scenarios), all cued, 2026-11-08. All Module 5 lessons taught so far: 3.4 only; 3.5 and 3.6 still to come. |
+| Module 5 — Claude Code Execution Modes and CI/CD Workflows | in progress | Started 2026-11-08. Lesson 3.4 taught 2026-11-08 (5 concepts incl. prerequisite recap folded in; all checkpoints MCQ, all correct first try; Explore one was too easy, answer sat in the paragraph above). L3.4 quiz 4/4 clean (MCQ, tutor-written, new scenarios), all cued, 2026-11-08. Lesson 3.5 started 2026-11-08: concept 1 (input/output examples) taught, checkpoint correct. 3.6 still to come. |
 
 Status values: `not started` · `in progress` · `completed`
 
@@ -1224,6 +1224,13 @@ Status values: `not started` · `in progress` · `completed`
 - application: shaky
 - Attempts:
   - `2026-11-08` · application · just-taught · correct (C) — MCQ: payment library in 60 files, call sites unknown → plan mode to map and get approval, then direct execution. Bare letter, right. Rejected "plan mode for every edit" (B) and "direct first" (A, D).
+
+### Concrete input/output examples to clarify transformation requirements
+- Module: 5 (Lesson 3.5)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-08` · application · just-taught · correct (A) — MCQ: product names come out in mixed case after a prose instruction → give 2-3 input/output pairs. Bare letter, right. Rejected longer prose (B), repeating (C), plan mode (D).
 
 ## Quiz attempts
 
