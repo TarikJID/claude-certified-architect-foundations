@@ -1232,6 +1232,7 @@ Status values: `not started` · `in progress` · `completed`
 
 | Date | Module | Question | Attempted | Outcome |
 |------|--------|----------|-----------|---------|
+| 2026-11-08 | 5 | L3.4 Q3 (MCQ, new scenario) — why delegate a caller search to Explore | yes: "B" (bulky output stays in Explore's own context, only a summary returns, main context free for edits) | correct, no hints. Matches the answer file (isolated context, summary only, prevents context exhaustion in later phases). Distractor C was wrong on the read-only fact (Explore is denied Write and Edit). Cued (taught earlier today) |
 | 2026-11-08 | 5 | L3.4 Q2 (MCQ) — why plan mode is safe, mechanically | yes: "C" (read-only until approved, so no edit can land) | correct, no hints. Matches the answer file. Cued (taught earlier today). Mechanism option was one sentence away from the lesson wording, so weak evidence |
 | 2026-11-08 | 5 | L3.4 Q1 (MCQ, new scenario) — date library in 70 files, two candidate replacements: plan or direct, why | yes: "D" (plan mode: explore, compare both options, agree before any edit) | correct, no hints. Matches the answer file: large multi-file change, several valid approaches, avoid committing before trade-offs are known. Cued (taught earlier today) |
 | 2026-11-07 | 4 | L3.3 Q3 (MCQ, tutor-written) — `.test.tsx` files in `src/`, `lib/`, `tools/`, one convention: best setup | yes: "C" | correct, no hints. Path rule with `**/*.test.tsx`. Bare letter; did not say why not per-folder CLAUDE.md or root CLAUDE.md. Cued (near-identical checkpoint earlier today) |
