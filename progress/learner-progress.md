@@ -1232,6 +1232,7 @@ Status values: `not started` · `in progress` · `completed`
 
 | Date | Module | Question | Attempted | Outcome |
 |------|--------|----------|-----------|---------|
+| 2026-11-08 | 5 | L3.4 Q1 (MCQ, new scenario) — date library in 70 files, two candidate replacements: plan or direct, why | yes: "D" (plan mode: explore, compare both options, agree before any edit) | pending grading |
 | 2026-11-07 | 4 | L3.3 Q3 (MCQ, tutor-written) — `.test.tsx` files in `src/`, `lib/`, `tools/`, one convention: best setup | yes: "C" | correct, no hints. Path rule with `**/*.test.tsx`. Bare letter; did not say why not per-folder CLAUDE.md or root CLAUDE.md. Cued (near-identical checkpoint earlier today) |
 | 2026-11-07 | 4 | L3.3 Q2 (MCQ, tutor-written) — 3,000 tokens of Terraform conventions in project CLAUDE.md vs `paths`-scoped rule, frontend-only day: who pays | yes: "B" | correct, no hints. Path-scoped rule loads only when a matching file is read; CLAUDE.md is in context for every call. Bare letter. Cued (same concept checkpointed earlier today) |
 | 2026-11-07 | 4 | L3.3 Q1 (MCQ, tutor-written) — `api.md` with `paths: src/api/**/*.ts` vs `style.md` with no frontmatter: which is conditional | yes: "B" | correct, no hints. `paths` line makes a rule conditional; no `paths` = loads at launch. Bare letter, why not stated. Cued (taught and checkpointed earlier today) |
