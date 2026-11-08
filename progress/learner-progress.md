@@ -1211,6 +1211,13 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-11-08` · application · just-taught · correct (B) — MCQ: main benefit of reviewing the plan first = redirect the approach before any code, avoids rework. Bare letter, right.
 
+### Explore subagent for isolating verbose discovery
+- Module: 5 (Lesson 3.4)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-08` · application · just-taught · correct (C) — MCQ: Explore searches 200 files, main conversation gets a summary. Bare letter, right. Answer sits one paragraph above ("only a short summary comes back"), so weak evidence beyond the explanation landing.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
