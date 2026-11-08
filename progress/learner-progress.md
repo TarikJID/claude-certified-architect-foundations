@@ -1197,6 +1197,13 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-11-08` · application · just-taught · correct (B) — MCQ: monolith split into services across dozens of files. Bare letter, right.
 
+### Direct execution for simple, well-scoped changes
+- Module: 5 (Lesson 3.4)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-08` · application · just-taught · correct (B) — MCQ: stack trace points to one line, add a null check. Bare letter, right.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
