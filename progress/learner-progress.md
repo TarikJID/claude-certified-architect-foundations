@@ -1232,6 +1232,13 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-11-08` · application · just-taught · correct (A) — MCQ: product names come out in mixed case after a prose instruction → give 2-3 input/output pairs. Bare letter, right. Rejected longer prose (B), repeating (C), plan mode (D).
 
+### Test-driven iteration
+- Module: 5 (Lesson 3.5)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-08` · application · just-taught · correct (C) — MCQ: why write tests before implementation = clear pass/fail check, "done" no longer depends on how the code looks. Bare letter, right. Answer sits close to the paragraph above ("executable pass/fail check"), so weak evidence beyond the explanation landing.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
