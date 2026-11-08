@@ -1239,6 +1239,13 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-11-08` · application · just-taught · correct (C) — MCQ: why write tests before implementation = clear pass/fail check, "done" no longer depends on how the code looks. Bare letter, right. Answer sits close to the paragraph above ("executable pass/fail check"), so weak evidence beyond the explanation landing.
 
+### The interview pattern
+- Module: 5 (Lesson 3.5)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-08` · application · just-taught · correct (B) — MCQ: interview pattern fits a large feature in an unfamiliar area. Bare letter, right. Distractors A, C, D each matched a different earlier concept (direct execution, tests, plan-then-direct), so he separated the patterns. `AskUserQuestion` and `SPEC.md` named in the teaching, not yet asked as free recall.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
