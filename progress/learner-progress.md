@@ -1260,6 +1260,13 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-11-08` · application · just-taught · correct (C) — MCQ: a pipeline step that waits for a human to type "yes" never finishes, nobody is there to answer. Bare letter, right. Rejected "pipeline waits" (A), wrong exit code (B), Claude skips the question (D).
 
+### `-p` / `--print` flag for non-interactive mode
+- Module: 5 (Lesson 3.6)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-08` · application · just-taught · correct (B) — MCQ: `claude -p "Review this diff"` prints the result and exits. Bare letter, right. Tutor flaw: distractor C (`claude --print` in a terminal a developer keeps open) is not clearly wrong, since `--print` is the same flag as `-p`; the answer rests on B being the clean option. Told the learner.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
