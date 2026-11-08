@@ -1204,6 +1204,13 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-11-08` · application · just-taught · correct (B) — MCQ: stack trace points to one line, add a null check. Bare letter, right.
 
+### Plan mode enables safe exploration before committing to changes
+- Module: 5 (Lesson 3.4)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-08` · application · just-taught · correct (B) — MCQ: main benefit of reviewing the plan first = redirect the approach before any code, avoids rework. Bare letter, right.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
