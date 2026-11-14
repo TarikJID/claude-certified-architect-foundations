@@ -1299,6 +1299,7 @@ Status values: `not started` · `in progress` · `completed`
 - application: shaky
 - Attempts:
   - `2026-11-14` · application · just-taught · correct (A) — MCQ: CI tests ignore the fixture folder → add the rule to the repo's CLAUDE.md. Bare letter, right. Distractor C (personal `~/.claude/CLAUDE.md`) tested the Module 4 personal-vs-team split: a CI runner would not have his personal file. Rejected per-developer reminders (B) and "`-p` ignores CLAUDE.md" (D).
+  - `2026-11-14` · application · cued · correct — M5 exercise step 8 part 2: standards go "in the CLAUDE.md file, that will still be read with a -p session". Right place and right why. Unaided.
 
 ### Session context isolation for code review
 - Module: 5 (Lesson 3.6)
@@ -1326,6 +1327,7 @@ Status values: `not started` · `in progress` · `completed`
 - application: shaky
 - Attempts:
   - `2026-11-14` · application · just-taught · correct (C) — MCQ: CI test generation proposes tests that already exist → pass the existing test file as context. Bare letter, right. Rejected fewer tests (A), deleting existing tests (B), run twice and pick (D).
+  - `2026-11-14` · application · cued · wrong (part 1) — M5 exercise step 8, what the nightly test job must receive to avoid duplicate tests: "previous findings". That is the review job's answer from step 7 (carry-over from the previous step). Needed: the existing test files. Hint given, retry asked.
 
 ## Quiz attempts
 
