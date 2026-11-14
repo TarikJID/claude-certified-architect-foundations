@@ -1282,6 +1282,13 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-11-14` · application · just-taught · correct (C) — MCQ: CI script loops over review findings → `-p` with `--output-format json --json-schema`, read `structured_output.findings`. Bare letter, right. Rejected guessing from text (A), asking Claude to number findings (B), manual copying (D). Flags and the `structured_output` field named in the teaching, not yet asked as free recall.
 
+### CLAUDE.md as the mechanism for CI-invoked project context
+- Module: 5 (Lesson 3.6)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-14` · application · just-taught · correct (A) — MCQ: CI tests ignore the fixture folder → add the rule to the repo's CLAUDE.md. Bare letter, right. Distractor C (personal `~/.claude/CLAUDE.md`) tested the Module 4 personal-vs-team split: a CI runner would not have his personal file. Rejected per-developer reminders (B) and "`-p` ignores CLAUDE.md" (D).
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
