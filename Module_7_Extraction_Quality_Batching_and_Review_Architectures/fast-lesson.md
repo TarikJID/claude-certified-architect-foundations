@@ -2,29 +2,26 @@
 
 ## 4.4 Validation, retry and feedback loops for extraction
 
-**Exam rule:** Retry only when the model made a format or structure mistake. Send back the document, the failed result and the specific error.
+**Exam rule:** Retry only fixes format or structure mistakes. Send back the document, the failed result and the specific error.
 
-- Pick: follow-up request with original document + failed extraction + exact validation error.
-- Reject: "try again" with no detail, or re-sending the same prompt.
-- Do not retry when the information is not in the source (for example it sits in another document that was not provided).
-- Tool use removes syntax errors. It does not remove semantic errors (items do not sum to total, value in wrong field).
-- `calculated_total` next to `stated_total` exposes a mismatch. A `conflict_detected` boolean flags a source that contradicts itself.
-- `detected_pattern` on each finding lets you see which patterns developers dismiss.
+- Pick: follow-up with original document, failed extraction and exact validation error. Reject: "try again" or the same prompt.
+- No retry when the information is absent from the source (for example it sits in a document not provided).
+- Tool use removes syntax errors, not semantic ones (items do not sum to total, value in wrong field).
+- `calculated_total` beside `stated_total` exposes a mismatch. `conflict_detected` flags a source that contradicts itself.
+- `detected_pattern` on each finding shows which patterns developers dismiss.
 
-**Example:** Items sum to $210, total says $250. Retry message names that exact gap.
+**Example:** Items sum to $210, total says $250. The retry names that gap.
 
-Trap: "retry up to N times" offered for absent information.
+Trap: "retry up to N times" for absent information.
 
 ## 4.5 Efficient batch processing
 
 **Exam rule:** Message Batches API = 50% cheaper, up to 24 hours, no latency guarantee. Use it only when nobody is waiting.
 
-- Pick batch: overnight reports, weekly audits, nightly test generation.
-- Pick synchronous: pre-merge checks and anything that blocks a person.
-- Batch cannot run a tool mid-request and return the result. No multi-turn tool loop inside one request.
-- `custom_id` matches each result to its request. Results may arrive in a different order.
-- On failures, resubmit only the failed `custom_id`s, fixed (for example split long documents).
-- SLA maths: worst case is 24 hours in batch. Submit often enough that 24 + gap fits the SLA. A 30-hour SLA means gaps of 6 hours or less (the guide uses 4).
+- Pick batch: overnight reports, weekly audits, nightly test generation. Pick synchronous: pre-merge checks and anything blocking a person.
+- Batch cannot run a tool mid-request and return the result. No multi-turn tool loop in one request.
+- `custom_id` matches results to requests (order may differ). Resubmit only failed ones, fixed (for example split long documents).
+- SLA maths: worst case is 24 hours in batch. 24 + submission gap must fit the SLA. A 30-hour SLA needs gaps of 6 hours or less (the guide uses 4).
 - Test the prompt on a small sample before the full batch.
 
 Trap: "batch everything to save money".
