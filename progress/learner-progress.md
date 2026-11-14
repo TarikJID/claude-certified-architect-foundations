@@ -1222,6 +1222,7 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-08` · application · just-taught · correct (C) — MCQ: Explore searches 200 files, main conversation gets a summary. Bare letter, right. Answer sits one paragraph above ("only a short summary comes back"), so weak evidence beyond the explanation landing.
   - `2026-11-14` · application · cued · correct — M5 exercise step 2 (free answer): delegate the search to "a new agent that will grep the deprecated ORM in every relevant file"; why: "the main agent only needs the final answer, all the rest is useless context cluttering". Right decision and right reason (context budget, only the summary returns). Did not name the mechanism (Explore); asked for the name next.
   - `2026-11-14` · recall · cued · wrong — step 2, name of the built-in read-only discovery subagent: said "Agent". That is the tool that starts any subagent (Module 1), not the name of this one. Mixes the spawning tool with the specific built-in subagent (`Explore`). Hint given, retry asked.
+  - `2026-11-14` · recall · cued · correct (1 hint) — step 2 retry: "Explore ?". Right, with a question mark. The hint gave it away strongly ("the verb for searching new territory"), so weak evidence; `Explore` is still not a clean recall. Step 2 done.
 
 ### Combining plan mode for investigation with direct execution for implementation
 - Module: 5 (Lesson 3.4)
