@@ -95,22 +95,14 @@ D. Tell the model to return the whole paper text in the citations field.
 ## Task 4.3
 
 ### Q4.3-1 [4.3]
-A system asks Claude to reply with JSON in plain text. The parser sometimes fails because of missing brackets or extra commas. Which change is the most reliable way to get well-formed, schema-compliant output?
+A pipeline receives invoices, receipts, and purchase orders, and the type of each incoming document is not known in advance. The prompt asks Claude to reply with JSON as plain text. The parser sometimes breaks on malformed JSON, and sometimes Claude replies in prose instead. Which design is best?
 
-A. Define an extraction tool whose input schema describes the wanted data, and read the data from the tool call.
-B. Add "Respond with valid JSON only" to the prompt.
-C. Write a text-cleaning step that fixes common JSON mistakes.
-D. Ask the model to answer twice and compare the two replies.
+A. Keep plain-text JSON and add "Respond with valid JSON only" to the prompt.
+B. Define one extraction tool per document type, each with a JSON schema, and leave tool_choice as auto.
+C. Define one extraction tool per document type, each with a JSON schema, set tool_choice to any, and read the data from the tool call.
+D. Define only an invoice extraction tool and force it on every call.
 
 ### Q4.3-2 [4.3]
-A pipeline receives a mixed pile of documents: invoices, receipts, and purchase orders. There is one extraction tool for each type, and the type of each incoming document is not known in advance. Sometimes the model replies in plain text instead of calling a tool. Which tool_choice setting fixes this?
-
-A. auto
-B. A forced call to the invoice extraction tool
-C. any
-D. none
-
-### Q4.3-3 [4.3]
 A document pipeline must always run the extract_metadata tool first on every document. After that, the model should decide freely which enrichment tools to call. Which approach is best?
 
 A. Use auto on the first call and trust the model to start with extract_metadata.
@@ -118,7 +110,7 @@ B. Use any on the first call.
 C. Write in the prompt "Always call extract_metadata first" and keep auto.
 D. Force the named extract_metadata tool on the first call, then use auto for later calls.
 
-### Q4.3-4 [4.3]
+### Q4.3-3 [4.3]
 An invoice extraction passes schema checks. The three line item amounts add up to $210, but the extracted total field says $250. What does this situation show?
 
 A. Tool use failed, so the team should return to plain-text JSON.
@@ -126,10 +118,26 @@ B. Schema enforcement removes syntax errors but does not prevent semantic errors
 C. The total field should be made required in the schema.
 D. The model must have been set to auto.
 
-### Q4.3-5 [4.3]
+### Q4.3-4 [4.3]
 A receipt extraction schema marks customer company as required. Many receipts are personal purchases with no company name, and the model invents company names to fill the field. What is the best fix?
 
-A. Add an "other" value to the company field.
+A. Make the company field optional and nullable so the model can leave it empty.
 B. Add examples that include invented company names.
 C. Force the extraction tool on every call.
-D. Make the company field optional and nullable so the model can leave it empty.
+D. Add an "other" value to the company field.
+
+### Q4.3-5 [4.3]
+A schema has a document_type field with only two allowed values: invoice and receipt. Purchase orders now arrive, and the model labels them "invoice". Some scans are also too blurry to classify. What is the best schema change?
+
+A. Make the document_type field required.
+B. Force the extraction tool on every call.
+C. Add one allowed value for every document type the team can guess.
+D. Add an "other" value with a separate detail text field, plus an "unclear" value for ambiguous documents.
+
+### Q4.3-6 [4.3]
+Invoices arrive with dates written as "03/04/2025" and as "4-Mar-2025". The schema has a date field of type string. Every output is valid against the schema, but the date field mixes formats. What is the best fix?
+
+A. Make the date field required.
+B. Switch back to plain-text replies.
+C. Add a rule in the prompt, alongside the schema, to convert every date to one stated format.
+D. Allow the date field to be null.

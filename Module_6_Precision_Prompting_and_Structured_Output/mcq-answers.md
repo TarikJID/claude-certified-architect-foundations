@@ -81,36 +81,43 @@ Correct: C. Tests: 4.2-S4, 4.2-S5.
 ## Task 4.3
 
 ### Q4.3-1
-Correct: A. Tests: 4.3-K1, 4.3-S1.
-- Why: tool use with a JSON schema removes JSON syntax errors.
-- B wrong: a prompt reminder is not enforced.
-- C wrong: patching text is fragile.
-- D wrong: asking twice does not guarantee valid format.
+Correct: C. Tests: 4.3-K1, 4.3-S1, 4.3-K2, 4.3-S2.
+- Why: schema-defined tools remove JSON syntax errors, and any forces a tool call while letting the model pick the matching schema.
+- A wrong: a prompt reminder is not enforced and prose replies remain possible.
+- B wrong: auto may still return prose instead of a tool call.
+- D wrong: forcing one tool breaks receipts and purchase orders.
 
 ### Q4.3-2
-Correct: C. Tests: 4.3-K2, 4.3-S2.
-- Why: any forces a tool call and lets the model choose which schema fits.
-- A wrong: auto may return text.
-- B wrong: forcing one tool breaks receipts and purchase orders.
-- D wrong: none prevents tool calls.
-
-### Q4.3-3
 Correct: D. Tests: 4.3-S3, 4.3-K2.
 - Why: a forced named tool guarantees the step runs first; auto then follows.
 - A wrong: auto does not guarantee any tool is called.
 - B wrong: any does not control which tool is called.
 - C wrong: a prompt instruction is not a guarantee.
 
-### Q4.3-4
+### Q4.3-3
 Correct: B. Tests: 4.3-K3.
 - Why: schema checks syntax and types, not whether values agree.
 - A wrong: tool use worked; the error is semantic.
 - C wrong: the field already has a valid number, so required adds nothing.
 - D wrong: tool_choice does not affect arithmetic consistency.
 
-### Q4.3-5
-Correct: D. Tests: 4.3-S4, 4.3-K4.
+### Q4.3-4
+Correct: A. Tests: 4.3-S4, 4.3-K4.
 - Why: optional and nullable fields let the model return null instead of fabricating.
-- A wrong: "other" is for categories, not missing values.
 - B wrong: examples of invented values teach fabrication.
 - C wrong: forcing the tool does not change the required field.
+- D wrong: "other" is for categories, not missing values.
+
+### Q4.3-5
+Correct: D. Tests: 4.3-K4, 4.3-S5.
+- Why: "other" plus a detail field keeps categories extensible, and "unclear" gives a truthful option for ambiguous cases.
+- A wrong: required forces a value and does not add a truthful option.
+- B wrong: forcing the tool does not fix the category list.
+- C wrong: guessing every type cannot cover unanticipated ones and leaves no ambiguity option.
+
+### Q4.3-6
+Correct: C. Tests: 4.3-S6.
+- Why: a schema fixes shape, not internal formatting, so normalization rules in the prompt close the gap.
+- A wrong: required does not change the format of the value.
+- B wrong: plain text loses schema guarantees and does not normalize.
+- D wrong: allowing null does nothing about mixed formats.

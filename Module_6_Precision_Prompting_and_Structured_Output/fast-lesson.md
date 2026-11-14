@@ -7,9 +7,8 @@ Exam rule: Tell the model exactly which issues to report and which to skip. Vagu
 - Pick: category rules (report bugs and security; skip minor style and local patterns).
 - Pick: a checkable test, not a feeling.
 - Pick: each severity level paired with a concrete code example.
-- Pick: temporarily disable a category with a high false positive rate, fix its prompt, then re-enable it.
+- Pick: temporarily disable a category with a high false positive rate, fix its prompt, then re-enable it. One noisy category makes developers distrust the accurate ones too.
 - Reject: "be conservative" and "only report high-confidence findings". Trap: they sound safe, but the model's confidence is not calibrated to your tolerance.
-- Why disable: one noisy category makes developers distrust the accurate categories too.
 
 Example: "Flag a comment only when it contradicts what the code does" beats "check that comments are accurate".
 
@@ -27,12 +26,10 @@ Example: An example showing "~2 cups" handled correctly stops the model inventin
 
 ## 4.3 Structured output with tool use and JSON schemas
 
-Exam rule: Get guaranteed-format output by defining a tool with a JSON schema and reading the tool call. A schema fixes syntax, not correctness.
+Exam rule: Define a tool with a JSON schema and read the tool call for guaranteed-format output. A schema fixes syntax, not correctness.
 
-- Pick: tool use with a schema over asking for JSON in plain text.
-- tool_choice: auto may return text. any must call some tool; use it when document type is unknown. A forced named tool must call that tool; use it to run one step first.
-- Schema valid does not mean right. Line items not matching the total is a semantic error; it needs validation.
-- Pick: optional, nullable fields when the source may lack the data. Required fields push the model to invent values.
-- Pick: enums with "other" plus a detail field, and an "unclear" value.
-- Pick: normalization rules in the prompt (for example one date format) alongside the schema.
-- Trap: "the schema makes the data correct". It does not.
+- tool_choice: auto may return text. any must call some tool; use it when the document type is unknown. A forced named tool must be called; use it to run one step first.
+- Schema valid is not the same as right. Line items that miss the total are a semantic error and need validation.
+- Use optional, nullable fields when data may be missing. Required fields push the model to invent values.
+- Use enums with "other" plus a detail field, and "unclear" for ambiguous cases.
+- Put normalization rules in the prompt (for example one date format) alongside the schema. Trap: "the schema makes the data consistent and correct".
