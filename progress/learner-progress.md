@@ -1253,6 +1253,7 @@ Status values: `not started` · `in progress` · `completed`
 - application: shaky
 - Attempts:
   - `2026-11-08` · application · just-taught · correct (B) — MCQ: interview pattern fits a large feature in an unfamiliar area. Bare letter, right. Distractors A, C, D each matched a different earlier concept (direct execution, tests, plan-then-direct), so he separated the patterns. `AskUserQuestion` and `SPEC.md` named in the teaching, not yet asked as free recall.
+  - `2026-11-14` · application · cued · correct — M5 exercise step 4 (free answer): "claude asks me questions about those edge cases first". Right core: Claude interviews the developer before implementation. Did not mention that it often ends with a written spec a fresh session builds from; tutor added it. Short answer, charitable read.
 
 ### Single-message batching vs sequential fixes (interacting vs independent issues)
 - Module: 5 (Lesson 3.5)
