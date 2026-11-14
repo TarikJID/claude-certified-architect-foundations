@@ -1289,6 +1289,13 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-11-14` · application · just-taught · correct (A) — MCQ: CI tests ignore the fixture folder → add the rule to the repo's CLAUDE.md. Bare letter, right. Distractor C (personal `~/.claude/CLAUDE.md`) tested the Module 4 personal-vs-team split: a CI runner would not have his personal file. Rejected per-developer reminders (B) and "`-p` ignores CLAUDE.md" (D).
 
+### Session context isolation for code review
+- Module: 5 (Lesson 3.6)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-14` · application · just-taught · correct (B) — MCQ: pipeline generates a feature then reviews it → separate fresh `claude -p` run reviews the diff, no memory of the writing. Bare letter, right. Rejected same session (A), same session twice (C), skip review (D). Same idea as Module 1 context isolation; he has not been asked to link them.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
