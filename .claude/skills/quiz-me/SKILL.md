@@ -9,7 +9,9 @@ description: Quiz the learner on a module and record the result on both axes. Us
 
 1. Scope it. Only material actually taught — check the progress file, not the course
    folder. Quizzing untaught material is the fastest way to lose a learner's trust.
-2. Open that module's `quiz.md`. **Do not open `quiz-answers.md` yet.**
+2. Open that module's `quiz.md` — or, for Modules 6–10 (fast track), `mcq.md` (A–D,
+   one best answer; grade against `mcq-answers.md`). **Do not open the answers file yet.**
+   On the fast track, skip the axis split: log score + weak spots in one line.
 3. Ask **one question at a time**. Wait for a real attempt.
 4. When they answer, before grading:
    - Write the attempt to the **Quiz attempts** table.

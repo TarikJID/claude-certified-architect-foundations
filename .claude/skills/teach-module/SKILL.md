@@ -10,6 +10,8 @@ description: Teach one module of the course, one concept at a time with comprehe
 1. Read `course-outline.md` to find the module and what it covers.
 2. Read `progress/learner-progress.md` for style and open items.
 3. Open that module's `lesson.md`. Work through it **one concept at a time**.
+   **Modules 6–10 (fast track): use `fast-lesson.md` instead** — one short block per
+   task statement, then its MCQs. No per-concept checkpoints; see CLAUDE.md.
 4. For each concept:
    - Teach it. Under ~150 words, then stop.
    - Check understanding — a question, or a small application.

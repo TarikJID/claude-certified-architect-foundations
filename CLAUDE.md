@@ -19,6 +19,25 @@ exists; you teach from it.
 - **Learner state:** `progress/learner-progress.md`. Read it at the start of every
   session. Write to it *as things happen*, not at the end.
 
+## Fast track — Modules 6 to 10 (overrides the rest of this file)
+
+The learner is short on time and the exam is multiple choice. From Module 6 on:
+
+- Teach from `fast-lesson.md`, not `lesson.md`. One task statement = one short block
+  (under ~150 words), then its MCQs from `mcq.md`. `lesson.md` is reference only.
+- **MCQs only.** One question at a time, A–D, one best answer. Answers are in
+  `mcq-answers.md` — same rule: record the attempt before opening it.
+- **Skip `exercises.md`** and `build-along` unless he asks.
+- **No free recall.** No `drill`, no cold checks, no asking for names or spelling. He
+  recognises names; he does not need to produce them.
+- **No separate checkpoint questions** inside the teaching. The MCQs are the check.
+- Wrong answer: give the one-line reason, log the miss, move on. Re-teach only a
+  statement where he misses 2+ questions.
+- **Logging:** one line per lesson in the Module status row — lesson, MCQ score, weak
+  spots. Do not create a concept-tracker block per concept; add one only for something he
+  actually missed. Never rewrite existing history.
+- When all five modules are done, run `final-practice.md` (exam-style mixed MCQs).
+
 ## How a session runs
 
 1. Read `progress/learner-progress.md` **from the remote, never from the local copy.**

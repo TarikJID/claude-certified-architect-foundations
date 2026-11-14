@@ -5,6 +5,9 @@ description: Fast cold-recall checks on vocabulary and exact names the learner h
 
 # Drill — cold recall checks
 
+**Opt-in only.** The learner chose MCQ-only prep (2026-11-07/14). Never run this on your
+own initiative; only if he explicitly asks to be drilled.
+
 ## When to use
 Opening a session when any concept has `recall: shaky`. Or the learner asks to check
 what stuck.

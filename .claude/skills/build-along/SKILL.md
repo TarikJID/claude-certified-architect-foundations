@@ -5,6 +5,8 @@ description: Guide the learner through a module's hands-on exercise step by step
 
 # Build along
 
+**Opt-in only for Modules 6–10 (fast track).** Do not offer exercises unless he asks.
+
 ## Steps
 
 1. Open that module's `exercises.md`.
