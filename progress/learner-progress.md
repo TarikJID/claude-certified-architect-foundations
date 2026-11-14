@@ -1261,6 +1261,7 @@ Status values: `not started` · `in progress` · `completed`
 - application: shaky
 - Attempts:
   - `2026-11-08` · application · just-taught · correct (B) — MCQ: tax and shipping bugs both in `calculateTotal` (interacting) → report together in one message. Bare letter, right. Only the interacting half was asked; the independent half (sequential) is untested. Scenario mirrors the lesson example (same function), so weak evidence.
+  - `2026-11-14` · application · cued · correct — M5 exercise step 5: learner did not answer as asked; he said the question was badly written (three independent items plus ONE bug on the retry logic: a single bug has nothing to be grouped with) and then stated the rule fully, unaided: bugs touching the same logic go together for one coherent fix (one-by-one fixes could undo each other); independent ones one by one to keep fixes small and manageable. Fair challenge: the exercise wording in `exercises.md` is underspecified, and the tutor passed it on without checking its logic. Only coherent reading: the bug interacts with the retry logic the refactor is already changing, so it goes with that work and the nits go one by one. Both halves of the concept now shown, which closes the gap left by the 11-08 checkpoint.
 
 ### Non-interactive scripting and CI/CD pipeline steps
 - Module: 5 (Lesson 3.6, prerequisite concept)
@@ -1439,6 +1440,7 @@ Status values: `not started` · `in progress` · `completed`
      HOW to teach this learner that the next session should know. -->
 
 ### 2026-11-08 — Session 10 (fresh conversation, so cold checks count)
+- M5 exercise (free answers, not MCQ): step 1 plan mode, correct (plan contents needed 1 hint); step 2 delegate + why correct, `Explore` named only after a strong hint; step 3 idea correct, learner declined to invent code; step 4 correct; step 5 learner called the exercise question badly written (true: one bug on its own cannot interact), then stated the rule fully. Learner said the real exam is MCQ and that exact names are not needed; recorded in the profile. Tutor tendency to correct: passing exercise text on without checking it.
 - Lesson 3.6 taught across the date rollover (11-08 to 11-14, same conversation). Learner said "i don't understand" on JSON Schema; the
   raw schema syntax was the barrier, and I had put the premise after the syntax. Re-taught with three plain-word rules, then correct.
   Prior review findings: my first scenario (a null check that was then fixed) did not show a real duplicate, he asked why a fresh run
