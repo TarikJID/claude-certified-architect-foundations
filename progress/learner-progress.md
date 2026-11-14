@@ -1296,6 +1296,14 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-11-14` · application · just-taught · correct (B) — MCQ: pipeline generates a feature then reviews it → separate fresh `claude -p` run reviews the diff, no memory of the writing. Bare letter, right. Rejected same session (A), same session twice (C), skip review (D). Same idea as Module 1 context isolation; he has not been asked to link them.
 
+### Including prior review findings to avoid duplicate PR comments
+- Module: 5 (Lesson 3.6)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-14` · application · just-taught · correct (D) — MCQ: re-running review keeps re-posting comments → pass earlier findings in and tell Claude to report only new or still-open issues. Bare letter, right.
+  - `2026-11-14` · asked — "a fresh session has no memory of commit 1, so it may post the same comment again: but why? The run reviews commit 2 with the null check fixed. Why would it not just review that?" Fair, and it exposes a tutor error: the scenario only flagged a null check that was then fixed, so a fresh review of commit 2 would not re-flag it. The real duplicate risk is findings the developer has NOT fixed (still in the code, a fresh run flags them again) plus the fresh run being unable to say a finding is now resolved. Corrected with a two-finding example and one MCQ on it. The lesson's own example (null check fixed, then "report only new issues") has the same weakness.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
