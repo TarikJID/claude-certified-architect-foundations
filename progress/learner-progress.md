@@ -28,6 +28,7 @@
   instead of marking it as a gap afterwards. Don't ask for multi-part lists when one part is the point.
   Also (2026-11-03): a re-explanation that stacks an analogy, a contrast and a diagram was "really not clear at all".
   When re-teaching, use ONE picture and ONE rule. No analogy on top.
+- Exact names (2026-11-07, 2026-11-14): says the exam is multiple choice, so exact names and paths are not needed from memory; he is not technical and cannot invent code or syntax. Do NOT ask for spelling or for made-up code. Test recognition and application of ideas. Free recall of names stays untested by choice; do not nag. (Tutor had said it would re-check `Explore` later; withdrawn.)
 - Quiz format (2026-11-01): wants quizzes as exam-style multiple choice (one best answer, plausible distractors).
   Tutor writes them live; the quiz files are not rewritten. Keep cold drills as free recall.
 - Glossary: https://claude.ai/artifact/DF2gqN4scYhQ6v9uyvVce6 (source: `progress/glossary.html`,
@@ -1237,6 +1238,7 @@ Status values: `not started` · `in progress` · `completed`
 - application: shaky
 - Attempts:
   - `2026-11-08` · application · just-taught · correct (A) — MCQ: product names come out in mixed case after a prose instruction → give 2-3 input/output pairs. Bare letter, right. Rejected longer prose (B), repeating (C), plan mode (D).
+  - `2026-11-14` · application · cued · correct (idea) — M5 exercise step 3: "give both the old names that need to change and the targeted new name". Right concept (input/output pairs). Declined to invent example calls (not technical); tutor showed one made-up pair and said a good set includes an awkward call site. Did not mention the edge case, charitable read.
 
 ### Test-driven iteration
 - Module: 5 (Lesson 3.5)
