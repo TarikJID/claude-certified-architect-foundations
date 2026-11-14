@@ -1275,6 +1275,13 @@ Status values: `not started` · `in progress` · `completed`
   - `2026-11-08` · application · just-taught · did not land — first explanation showed a raw schema (`{"type":"object","properties":...}`) and a four-option MCQ on it. Learner: "i don't understand". Tutor error: the braces were the barrier and the premise (the next pipeline step is a script that needs a fixed shape) came after the syntax. Needed an ELI5.
   - `2026-11-14` · application · just-taught · correct (A) after the re-teach — rules in plain words (field named `bugs`, a list, every item text), then MCQ: `{"bugs": ["null check", "typo"]}`. Bare letter, right. Rejected wrong field name (B), a string instead of a list (C), numbers instead of text (D). Landed only for reading rules in plain words; reading or writing actual schema syntax is untested. Date rolled over mid-session (same conversation), so nothing here is cold.
 
+### `--output-format json` and `--json-schema` for structured CI output
+- Module: 5 (Lesson 3.6)
+- recall: shaky
+- application: shaky
+- Attempts:
+  - `2026-11-14` · application · just-taught · correct (C) — MCQ: CI script loops over review findings → `-p` with `--output-format json --json-schema`, read `structured_output.findings`. Bare letter, right. Rejected guessing from text (A), asking Claude to number findings (B), manual copying (D). Flags and the `structured_output` field named in the teaching, not yet asked as free recall.
+
 ## Quiz attempts
 
 <!-- Written BEFORE quiz-answers.md is opened. This is what makes an answer leak
