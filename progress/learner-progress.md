@@ -1423,6 +1423,8 @@ Status values: `not started` · `in progress` · `completed`
      HOW to teach this learner that the next session should know. -->
 
 ### 2026-11-08 — Session 10 (fresh conversation, so cold checks count)
+- Glossary: added 17 terms for Lessons 3.4 to 3.6 (two new tags, Workflow and CI/CD), republished, 93 terms. This was overdue:
+  the profile says to add each concept as it is taught, and Lessons 3.4 and 3.5 had been taught without it.
 - Module 5 started. Lesson 3.4 taught in the lecture + checkpoints style: 5 concepts, 5 MCQ checkpoints, all correct first try, bare
   letters. The Explore checkpoint was too easy (answer sat in the paragraph above); tutor flagged it and made the last one a real
   decision. Prerequisite recap (subagent context isolation) folded into the Explore concept, no separate question.

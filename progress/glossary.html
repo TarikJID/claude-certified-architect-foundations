@@ -5,7 +5,7 @@
 :root{
   --bg:#f5f6f4; --surface:#ffffff; --ink:#1c2321; --muted:#5b6662; --line:#dde2df;
   --accent:#2f6b5a; --accent-soft:#e3efea;
-  --t-api:#3d5a99; --t-tools:#8a5a1f; --t-loop:#2f6b5a; --t-design:#7a3f6e; --t-harness:#55605c; --t-multi:#a8432f; --t-hooks:#1f6a8a;
+  --t-api:#3d5a99; --t-tools:#8a5a1f; --t-loop:#2f6b5a; --t-design:#7a3f6e; --t-harness:#55605c; --t-multi:#a8432f; --t-hooks:#1f6a8a; --t-flow:#7a6a1f; --t-ci:#6a4f9a;
   --code-bg:#eef1ef;
 }
 @media (prefers-color-scheme: dark){
@@ -13,7 +13,7 @@
     color-scheme:dark;
     --bg:#131816; --surface:#1b2220; --ink:#e4e9e6; --muted:#9aa6a1; --line:#2c3532;
     --accent:#7cc4ad; --accent-soft:#1f302a;
-    --t-api:#93acea; --t-tools:#e0b070; --t-loop:#7cc4ad; --t-design:#d69ac8; --t-harness:#aab5b0; --t-multi:#f0937c; --t-hooks:#74c0e0;
+    --t-api:#93acea; --t-tools:#e0b070; --t-loop:#7cc4ad; --t-design:#d69ac8; --t-harness:#aab5b0; --t-multi:#f0937c; --t-hooks:#74c0e0; --t-flow:#d8c870; --t-ci:#b9a3e6;
     --code-bg:#242d2a;
   }
 }
@@ -21,7 +21,7 @@
   color-scheme:dark;
   --bg:#131816; --surface:#1b2220; --ink:#e4e9e6; --muted:#9aa6a1; --line:#2c3532;
   --accent:#7cc4ad; --accent-soft:#1f302a;
-  --t-api:#93acea; --t-tools:#e0b070; --t-loop:#7cc4ad; --t-design:#d69ac8; --t-harness:#aab5b0; --t-multi:#f0937c; --t-hooks:#74c0e0;
+  --t-api:#93acea; --t-tools:#e0b070; --t-loop:#7cc4ad; --t-design:#d69ac8; --t-harness:#aab5b0; --t-multi:#f0937c; --t-hooks:#74c0e0; --t-flow:#d8c870; --t-ci:#b9a3e6;
   --code-bg:#242d2a;
 }
 body{background:var(--bg);color:var(--ink);font:16px/1.55 "Public Sans",system-ui,sans-serif;}
@@ -69,7 +69,9 @@ const TAGS = {
   "Design":  "var(--t-design)",
   "Harness": "var(--t-harness)",
   "Multi-agent": "var(--t-multi)",
-  "Hooks":   "var(--t-hooks)"
+  "Hooks":   "var(--t-hooks)",
+  "Workflow": "var(--t-flow)",
+  "CI/CD":   "var(--t-ci)"
 };
 
 // Only concepts that have been taught. Added to as the course goes on.
@@ -225,7 +227,41 @@ const ENTRIES = [
   { term: "Glob patterns in <code>paths</code>", tag: "Harness", src: "Lesson 3.3",
     def: "A pattern matches files by type or name, wherever they live. <code>**</code> means any number of folders, <code>*</code> any file name. <code>**/*.test.tsx</code> matches every test file in <code>src/</code>, <code>lib/</code>, <code>tools/</code> and anywhere else. A folder CLAUDE.md cannot do this, because it covers only its own folder." },
   { term: "Path rule vs folder CLAUDE.md", tag: "Harness", src: "Lesson 3.3",
-    def: "Ask: does the convention follow a <b>place</b> or a <b>file type</b>? A convention about one folder's contents goes in that folder's <code>CLAUDE.md</code>. A convention defined by file type or pattern, spread across folders, goes in one <code>.claude/rules/</code> file with a <code>paths</code> glob." }
+    def: "Ask: does the convention follow a <b>place</b> or a <b>file type</b>? A convention about one folder's contents goes in that folder's <code>CLAUDE.md</code>. A convention defined by file type or pattern, spread across folders, goes in one <code>.claude/rules/</code> file with a <code>paths</code> glob." },
+  { term: "Plan mode", tag: "Workflow", src: "Lesson 3.4",
+    def: "A read-only state. Claude reads files and runs read-only commands, then drafts a step-by-step plan. It changes nothing until you approve. Start it with <code>Shift+Tab</code>, <code>/plan</code> or <code>claude --permission-mode plan</code>. Best for big jobs: many files, several valid approaches, architecture decisions." },
+  { term: "Direct execution", tag: "Workflow", src: "Lesson 3.4",
+    def: "Skipping plan mode and letting Claude make the change. Use it when the scope is clear and you could describe the whole change in one sentence, such as a one-line fix with a stack trace pointing at it. Plan mode would add an approval step that is not worth it." },
+  { term: "Safe exploration (plan mode)", tag: "Workflow", src: "Lesson 3.4",
+    def: "Because plan mode cannot edit until you approve, Claude can investigate freely and no wrong edit can land. You review the plan and can change the approach before any code exists, which prevents rework." },
+  { term: "Explore subagent", tag: "Workflow", src: "Lesson 3.4",
+    def: "A built-in, read-only subagent (no Write, no Edit) that does codebase searching. The bulky search output stays in its own context and only a summary returns, so the main conversation stays free for the real work." },
+  { term: "Plan, then execute directly", tag: "Workflow", src: "Lesson 3.4",
+    def: "Use plan mode for the uncertain part (map the usage, get an approved plan), then switch to direct execution to apply the approved plan. You do not need plan mode for every step." },
+  { term: "Concrete input/output examples", tag: "Workflow", src: "Lesson 3.5",
+    def: "When a prose instruction is read inconsistently, give 2 or 3 pairs of an input and the exact output you want. Examples leave nothing to interpret. The same trick fixes one stubborn edge case." },
+  { term: "Test-driven iteration", tag: "Workflow", src: "Lesson 3.5",
+    def: "Write the tests first. Claude implements, runs the tests, reads which fail, and fixes until all pass. The pass/fail check closes the loop without anyone judging whether it \"looks done\"." },
+  { term: "Interview pattern", tag: "Workflow", src: "Lesson 3.5",
+    def: "For a large feature in an unfamiliar area, Claude asks you questions first (edge cases, trade-offs), usually with the <code>AskUserQuestion</code> tool, then writes a spec such as <code>SPEC.md</code> for a fresh session to build from." },
+  { term: "Interacting vs independent fixes", tag: "Workflow", src: "Lesson 3.5",
+    def: "Issues that touch the same logic go together in one message, so Claude designs one coherent fix. Independent issues are fixed one at a time, so each change stays small and easy to attribute." },
+  { term: "Pipeline step (non-interactive)", tag: "CI/CD", src: "Lesson 3.6",
+    def: "A CI/CD step runs unattended: no human to answer a prompt. It must finish without input and report the result by exit code (0 = success) or output." },
+  { term: "<code>-p</code> / <code>--print</code>", tag: "CI/CD", src: "Lesson 3.6",
+    def: "Runs Claude Code non-interactively: it takes the prompt, does the work, prints the result and exits. Example: <code>claude -p \"Review this diff\"</code>. Exit code 0 on success, non-zero on failure. <code>--allowedTools</code> pre-approves tools because nobody can click allow." },
+  { term: "JSON Schema", tag: "CI/CD", src: "Lesson 3.6",
+    def: "A standard way to describe the shape of JSON: which fields must exist and what type each is. In plain words: \"an object with a field <code>bugs</code>, which is a list of text items.\" Lets a script rely on a fixed shape." },
+  { term: "<code>--output-format json</code> and <code>--json-schema</code>", tag: "CI/CD", src: "Lesson 3.6",
+    def: "<code>--output-format json</code> returns the answer as one JSON object. Adding <code>--json-schema</code> makes the answer follow your schema, and it comes back in <code>structured_output</code>. A script can loop over <code>structured_output.findings</code> and post one comment each." },
+  { term: "CLAUDE.md in CI", tag: "CI/CD", src: "Lesson 3.6",
+    def: "A <code>claude -p</code> run in CI still loads the project's CLAUDE.md. Put testing standards, fixture conventions and review criteria there. A personal <code>~/.claude/CLAUDE.md</code> does not reach a CI runner." },
+  { term: "Fresh session for review", tag: "CI/CD", src: "Lesson 3.6",
+    def: "The session that wrote the code carries the reasoning behind it, including its blind spots. A separate, fresh <code>claude -p</code> run reviews the diff with no memory of the writing, and catches more subtle problems." },
+  { term: "Prior review findings", tag: "CI/CD", src: "Lesson 3.6",
+    def: "A review that re-runs on each push reads the current code fresh, so a problem still in the code gets reported again. Pass the earlier findings in and say \"report only new or still-open issues not listed here\" to stop duplicate PR comments." },
+  { term: "Existing test files as context", tag: "CI/CD", src: "Lesson 3.6",
+    def: "When CI generates tests, pass the existing test file along with the source file. Claude then sees what is already covered and writes tests only for missing cases." }
 ];
 
 const state = { tag: "All", q: "" };
