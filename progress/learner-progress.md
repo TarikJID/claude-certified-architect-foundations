@@ -1197,6 +1197,7 @@ Status values: `not started` · `in progress` · `completed`
 - Attempts:
   - `2026-11-08` · application · just-taught · correct (B) — MCQ: monolith split into services across dozens of files. Bare letter, right.
   - `2026-11-14` · application · cued · correct — M5 exercise step 1 (free answer, not MCQ): ORM replacement across ~60 files, call sites unmapped → plan mode, "claude should first read the files, establish a plan and validate it with the user". Right choice, right reason (uncertainty, unmapped sites), unaided. Did not yet say what the plan must contain; asked for that piece next.
+  - `2026-11-14` · application · cued · partial — step 1b, what the plan names before any code: "the steps and expected outcome". Generic; missing the specific content the lesson names (which files will change, and how each call-site pattern changes). Asked for that one piece.
 
 ### Direct execution for simple, well-scoped changes
 - Module: 5 (Lesson 3.4)
