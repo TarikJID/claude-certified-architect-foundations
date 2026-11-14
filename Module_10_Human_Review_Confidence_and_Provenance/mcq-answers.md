@@ -13,7 +13,7 @@ ANSWERS. Do not reveal before the learner has attempted the question.
 - D wrong: Document-level confidence is coarser. Errors happen at field level.
 - Tests: 5.5-K1, 5.5-S2, 5.5-K4
 
-**Q2** [5.5] Correct: A
+**Q2 [5.5]** Correct: A
 - Why: A random sample from every segment, including high-confidence, can find confident-but-wrong failures.
 - B wrong: Reviewing fewer items finds fewer errors.
 - C wrong: The model's own check is not independent human verification.
