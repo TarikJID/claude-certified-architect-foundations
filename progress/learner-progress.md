@@ -1291,6 +1291,7 @@ Status values: `not started` · `in progress` · `completed`
 - application: shaky
 - Attempts:
   - `2026-11-14` · application · just-taught · correct (C) — MCQ: CI script loops over review findings → `-p` with `--output-format json --json-schema`, read `structured_output.findings`. Bare letter, right. Rejected guessing from text (A), asking Claude to number findings (B), manual copying (D). Flags and the `structured_output` field named in the teaching, not yet asked as free recall.
+  - `2026-11-14` · application · cued · correct (D) — M5 exercise step 6 (MCQ of four commands, recognition only at the learner's request): `claude -p ... --output-format json --json-schema '{...}'` with no `--resume`. Rejected missing `-p` (A, hangs), plain text (B), and `--resume` of the generation session (C, shares state). Bare letter, right.
 
 ### CLAUDE.md as the mechanism for CI-invoked project context
 - Module: 5 (Lesson 3.6)
