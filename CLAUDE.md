@@ -24,7 +24,17 @@ exists; you teach from it.
 The learner is short on time and the exam is multiple choice. From Module 6 on:
 
 - Teach from `fast-lesson.md`, not `lesson.md`. One task statement = one short block
-  (under ~150 words), then its MCQs from `mcq.md`. `lesson.md` is reference only.
+  (about 200 words), then its MCQs from `mcq.md`. `lesson.md` is reference only.
+- **Situation before rules.** He is not technical and cannot reason about a rule he
+  cannot picture. Start every block with the setting: who uses what system, what it
+  produces, what goes wrong. Then the rules, each tied back to that picture. A trap
+  needs one line on what it looks like in practice and why it fails, not just its name.
+- **Plain words for every technical term**, the first time it appears — in the
+  lesson, in a question setup, or in an option. Explain it before asking, never after.
+- **Before each question**, check the setup gives him the situation and the deciding
+  constraint as a plain sentence. If it only implies it, say it plainly before he
+  answers (do not hint at the answer). "What does this mean?" is always allowed and is
+  never logged as a miss.
 - **MCQs only.** One question at a time, A–D, one best answer. Answers are in
   `mcq-answers.md` — same rule: record the attempt before opening it.
 - **Skip `exercises.md`** and `build-along` unless he asks.
