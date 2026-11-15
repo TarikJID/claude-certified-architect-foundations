@@ -1,41 +1,46 @@
 # Module 7 Fast Lesson (4.4, 4.5, 4.6)
 
-## 4.4 Validation, retry and feedback loops for extraction
+## 4.4 Checking and retrying extraction results
 
-**Exam rule:** Retry only fixes format or structure mistakes. Send back the document, the failed result and the specific error.
+**Setting:** A company uses Claude to read invoices and fill in a fixed form: vendor, line items, total. This is *extraction*. The form's rulebook is the *schema*. A *validation* step checks the filled form. Sometimes numbers do not add up.
 
-- Pick: follow-up with original document, failed extraction and exact validation error. Reject: "try again" or the same prompt.
-- No retry when the information is absent from the source (for example it sits in a document not provided).
-- Tool use removes syntax errors, not semantic ones (items do not sum to total, value in wrong field).
-- `calculated_total` beside `stated_total` exposes a mismatch. `conflict_detected` flags a source that contradicts itself.
-- `detected_pattern` on each finding shows which patterns developers dismiss.
+**Before:** The check fails; the system says only "try again". Claude guesses again.
+**After:** Send back the invoice, Claude's first answer and the exact problem: "items add up to $210 but total says $250".
 
-**Example:** Items sum to $210, total says $250. The retry names that gap.
+**Exam rule:** Retry with the specific error, only if the answer is in the document.
 
-Trap: "retry up to N times" for absent information.
+- Pick the "after" retry. Trap: a bare "try again" gives Claude nothing to fix.
+- If the due date sits in a separate document Claude never received, retrying cannot help. Trap: "retry 5 times" repeats the gap. Allow an empty value or supply the document.
+- *Tool use* (Claude fills the form through a defined tool) stops broken formatting, not wrong values: a wrong sum, or a value in the wrong field.
+- Ask for `stated_total` (what the invoice says) and `calculated_total` (Claude's own sum); a mismatch flags itself. A `conflict_detected` yes/no field shows when the invoice contradicts itself.
+- Separate setting: developers often dismiss a code-review bot's comments. A `detected_pattern` field records what triggered each one, showing which kinds get dismissed.
 
-## 4.5 Efficient batch processing
+## 4.5 Batch processing: cheap but slow
 
-**Exam rule:** Message Batches API = 50% cheaper, up to 24 hours, no latency guarantee. Use it only when nobody is waiting.
+**Setting:** The same company processes 50,000 invoices nightly; nobody reads results until morning. Two ways to send work: *Synchronous*: one request, answer in seconds. The *Message Batches API*: many requests at once, 50% cheaper, but up to 24 hours, with no promised speed.
 
-- Pick batch: overnight reports, weekly audits, nightly test generation. Pick synchronous: pre-merge checks and anything blocking a person.
-- Batch cannot run a tool mid-request and return the result. No multi-turn tool loop in one request.
-- `custom_id` matches results to requests (order may differ). Resubmit only failed ones, fixed (for example split long documents).
-- SLA maths: worst case is 24 hours in batch. 24 + submission gap must fit the SLA. A 30-hour SLA needs gaps of 6 hours or less (the guide uses 4).
-- Test the prompt on a small sample before the full batch.
+**Before:** The nightly job runs synchronously at full price.
+**After:** One batch at half price, still ready by morning.
 
-Trap: "batch everything to save money".
+**Exam rule:** Use batch only when nobody is waiting for the answer.
 
-## 4.6 Multi-instance and multi-pass review
+- Separate setting: a check that blocks a developer's merge button must be synchronous. Trap: "batch everything to save money" leaves him waiting hours.
+- A batch request cannot pause, let your code run a tool (such as a database lookup), and continue. Work needing several lookup rounds does not fit.
+- Each request carries a `custom_id` (your own label); results return in any order; the label matches them. If 40 fail for being too long, resubmit only those, split smaller. Trap: resubmitting all 50,000 pays twice.
+- Deadline maths: up to 24 hours in the batch, plus waiting for the next submission. A 30-hour promise needs a batch every 6 hours or less (the guide uses 4).
+- Test the prompt synchronously on about 20 invoices first. Trap: a mistake found at the end means rerunning all 50,000.
 
-**Exam rule:** The session that wrote the output is a weak reviewer. Use a fresh, independent instance that sees only the output.
+## 4.6 Who reviews the work, and in how many passes
 
-- Why self-review is weak: the model keeps its own reasoning and rarely questions it.
-- Reject: "review your work" in the same session, or extended thinking in the same session.
-- Big reviews: one pass per file for local issues, plus one separate cross-file pass for data flow between files.
-- One giant pass causes thin attention and contradictory findings.
-- Ask the verifier for a confidence value with each finding. Route low-confidence ones to an extra check or human. Do not just drop them.
+**Setting:** A team's automatic checking system uses Claude to write code and review pull requests (proposed code changes). A *session* is one conversation; an *instance* is a separate Claude call starting fresh. Problem: reviews miss subtle bugs.
 
-**Example:** 40-file PR = 40 file passes + 1 integration pass.
+**Before:** The writing session is asked "review your code". It finds nothing.
+**After:** A fresh instance gets only the code and review rules, and spots the flaw.
 
-Trap: "more thinking in the same session".
+**Exam rule:** The writer is a weak reviewer. Use an independent one; split big reviews.
+
+- The writing session still holds its own reasoning, so it defends rather than questions its choices.
+- Trap: "think harder" using *extended thinking* (Claude reasons step by step before answering) in the same session. Same session, same blind spot.
+- 40-file change: one pass (one review run) per file for local bugs, plus a separate pass for how data moves between files. Trap: one giant pass spreads attention thin and contradicts itself (flags a pattern in file 3, accepts it in file 17).
+- Per-file passes alone miss file B breaking because file A changed. The cross-file pass catches it.
+- The checker gives a confidence score per finding. Post high ones; send low ones to another check or a person. Trap: deleting low ones silently loses real problems.
