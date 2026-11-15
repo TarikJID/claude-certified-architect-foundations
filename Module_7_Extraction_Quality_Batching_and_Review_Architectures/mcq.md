@@ -51,7 +51,7 @@ The extraction system also reads contracts. One scanned contract says the total 
 ## 4.5 Batch processing: cheap but slow
 
 ### Q4.5-1 [4.5]
-Claude can be called two ways. Synchronous: one request, answer in seconds, full price. The Message Batches API: many requests sent together, 50% cheaper, but results can take up to 24 hours and no speed is promised. A team has two jobs. Job 1: a check on every code change that keeps the developer's merge button locked until the check finishes. Job 2: a weekly audit of 10,000 documents that nobody reads until Monday. Deciding constraint: in Job 1 a person is waiting; in Job 2 nobody is. Which assignment is best?
+Claude can be called two ways. Synchronous: one request, answer in seconds, full price. The Message Batches API: many requests sent together, 50% cheaper, but results can take up to 24 hours and no speed is promised. A team has two jobs. Job 1: a check on every code change that keeps the developer's merge button (which adds his change to the main code) locked until the check finishes. Job 2: a weekly audit of 10,000 documents that nobody reads until Monday. Deciding constraint: in Job 1 a person is waiting; in Job 2 nobody is. Which assignment is best?
 
 - A. Batch for both jobs, to save the most money.
 - B. Synchronous for both jobs, to keep things simple.
@@ -97,7 +97,7 @@ A team will extract data from 50,000 documents using the Message Batches API (ch
 ### Q4.6-1 [4.6]
 In one conversation (session), Claude wrote a login-checking function. In that same conversation, the developer then asked "Review your code for bugs." Claude found none. A subtle flaw was later found by users. Deciding constraint: the reviewer was the same conversation that made the design choices. What best explains the missed flaw?
 
-- A. The review should have used a stricter output form so the findings were neatly formatted.
+- A. The review should have used a stricter output form so the findings (reported problems) were neatly formatted.
 - B. The review request was too short.
 - C. Code review only works when run through the cheap, slow batch service.
 - D. The conversation still held its own reasoning behind the design choices, so it was unlikely to question them.
@@ -119,7 +119,7 @@ A proposed code change touches 40 files. One review run (pass) over all 40 at on
 - D. Split the files at random into four groups of ten, one pass per group.
 
 ### Q4.6-4 [4.6]
-A checking step re-examines the comments a code-review bot wants to post. The team wants strong comments posted straight away, doubtful ones checked again, and nothing silently thrown away. Deciding constraint: the system must be able to tell strong comments from doubtful ones. What should the checking step produce?
+A checking step re-examines the comments a code-review bot wants to post. The team wants strong comments posted straight away, doubtful ones checked again, and nothing silently thrown away. A confidence score means how sure the checker is that a comment points to a real problem. Deciding constraint: the system must be able to tell strong comments from doubtful ones. What should the checking step produce?
 
 - A. A list where every comment below a fixed score is deleted.
 - B. A plain yes/no for each comment, with every "yes" posted the same way.
