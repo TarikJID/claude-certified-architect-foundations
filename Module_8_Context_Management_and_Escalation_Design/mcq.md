@@ -6,76 +6,76 @@ Pick the single best answer. Answers are in `mcq-answers.md`. Attempt first.
 
 ## Task statement 5.1
 
-**Q1 [5.1]** A support agent handles a long chat in which the customer raises two separate problems. Problem A is a late order (order A-100, promised by the 14th). Problem B is a billing error (invoice 55, $12 overcharge). The app compacts old turns into a short summary to save space. After compaction, the agent quotes the $12 overcharge in a reply about the late order and no longer knows the promised date. What is the best fix?
+**Q1 [5.1]** A company's customer support agent, built on Claude, is in a long chat about two separate problems. Problem A is a late order: order A-100, promised by the 14th. Problem B is a billing error: invoice 55 charged $12 too much. To save space, the app replaces older messages with a short summary. Afterwards the agent mentions the $12 in a reply about the late order and no longer knows the promised date. The fix must keep the exact amounts and dates of both problems correct for the rest of the chat. What is the best fix?
 
-A. Switch to a model with a larger context window so compaction is never needed.
-B. Keep a separate structured facts block for each issue (IDs, amounts, dates, statuses), sent verbatim every turn and never summarized.
-C. Ask the summarizer to produce longer, more detailed summaries.
-D. Tell the agent in the system prompt to be careful with amounts and dates.
+A. Switch to a model that can see more text at once, so older messages never need summarizing.
+B. Keep a short fixed note for each problem (its number, amount, date, status), sent unchanged with every message and never summarized.
+C. Ask for longer, more detailed summaries.
+D. Add an instruction telling the agent to be careful with amounts and dates.
 
-**Q2 [5.1]** A lead agent combines eight subagent reports into one long input. Each report is similar in length. The final answer regularly misses an important warning that appears in reports 4 and 5, but it includes findings from reports 1 and 8. What is the best change?
+**Q2 [5.1]** In a research system, a main agent combines reports from eight helper agents into one long text, then writes a final answer. The reports are similar in length. The final answer keeps missing an important warning found in reports 4 and 5, but it uses findings from reports 1 and 8. All eight reports must stay together in one input so the main agent can compare them. What is the best change?
 
 A. Add the instruction "read every report carefully" at the top.
-B. Split the reports across eight separate API calls and concatenate the answers.
-C. Ask each subagent to write longer reports so warnings stand out.
-D. Put a short key-findings summary at the start of the input and organize the detailed reports under explicit section headers.
+B. Send each report to the main agent separately and join the eight answers.
+C. Ask each helper to write longer reports so warnings stand out.
+D. Put a short summary of key findings at the start of the input, and place each full report under its own clear heading.
 
-**Q3 [5.1]** An order-lookup tool returns 40 fields per call. For return requests, only four fields matter: order ID, status, amount, and return-eligible. After several lookups, the agent's context is nearly full and responses get worse. What is the best fix?
+**Q3 [5.1]** A support agent uses an order lookup tool (an action that fetches an order's details). Each lookup returns 40 pieces of data. For return requests only four matter: order number, status, amount, and whether the order can be returned. After several lookups the agent's working memory is nearly full and its replies get worse. The agent must still be able to look up orders. What is the best fix?
 
-A. Trim each tool result to the four relevant fields before it is added to the conversation.
-B. Remove the order-lookup tool and ask the customer for the details.
-C. Summarize the whole conversation after every turn.
-D. Keep all 40 fields so no information is ever lost.
+A. Cut each lookup result down to the four needed pieces before it is added to the chat.
+B. Remove the lookup tool and ask the customer for the details instead.
+C. Summarize the whole chat after every message.
+D. Keep all 40 pieces so no information is ever lost.
 
-**Q4 [5.1]** A developer builds a quote assistant on the Messages API. To save tokens, each request sends only the customer's newest message. The customer already gave car make, model, and year. The assistant keeps asking for the year again. What is the cause and best fix?
+**Q4 [5.1]** A developer builds a car-insurance quote app on Claude. To save cost, each time the app contacts Claude it sends only the customer's newest message. The customer already gave the car's make, model, and year, but the app keeps asking for the year again. The fix must stop the repeated questions without changing the model. What is the cause and best fix?
 
-A. The model has a bug; wait for the provider to fix it.
-B. Add "remember earlier answers" to the system prompt.
-C. The API keeps no memory between requests; the app must send the full message history (or a faithful summary) each time.
-D. Use a higher temperature so the model recalls earlier turns.
+A. The model has a bug; wait for it to be fixed.
+B. Add "remember earlier answers" to the instructions.
+C. Claude keeps no memory between requests, so the app must send the full chat history every time.
+D. Turn up the setting that makes replies more random, so the model recalls earlier answers.
 
-**Q5 [5.1]** A research subagent produces an 8,000-token transcript of its reasoning plus findings. The downstream report-writer agent has a small context budget. It also gets two similar statistics from two subagents and cannot tell which is newer or where each came from. What is the best redesign?
+**Q5 [5.1]** In a research system, a helper agent sends a writer agent its full notes: 8,000 words of reasoning plus findings. The writer can only take in a small amount of text. It also receives two similar figures from two helpers and cannot tell which is newer or where each came from. The writer must fit everything in its small space and must know when and where each figure came from. What is the best redesign?
 
-A. Have the subagent return a compact structured payload (key facts, citations, relevance scores) that includes dates, source locations, and method for each finding.
-B. Pass the full transcript and ask the writer agent to find what matters.
-C. Have the subagent return one paragraph of prose with no sources, to keep it short.
-D. Have the writer agent re-run the research itself.
+A. Helpers send short structured results (key facts, sources, how relevant each is), with the date, source location, and method for each finding.
+B. Helpers send their full notes, and the writer picks out what matters.
+C. Helpers send one short paragraph with no sources, to keep it small.
+D. The writer redoes the research itself.
 
 ---
 
 ## Task statement 5.2
 
-**Q1 [5.2]** A store's written policy allows price-matching against the store's own earlier sale prices. It says nothing about competitor prices. A customer politely asks the support agent to match a competitor's lower price. What should the agent do?
+**Q1 [5.2]** A store's support agent follows a written policy. The policy lets customers get a refund of the difference if the store's own price drops later. It says nothing about matching other stores' prices. A customer politely asks the agent to match a competitor's lower price. The written policy is the agent's only rulebook, and it does not mention competitors at all. What should the agent do?
 
 A. Approve the match, because the policy does not forbid it.
-B. Deny the request, because the policy only mentions the store's own prices.
-C. Escalate to a human, because the policy is silent on this request.
+B. Refuse, because the policy only mentions the store's own prices.
+C. Escalate (hand the chat to a human), because the policy does not cover this request.
 D. Approve it only if the customer sounds upset.
 
-**Q2 [5.2]** A customer writes: "Get me a human agent now." The issue is a simple address change the agent could handle in one step. What should the agent do?
+**Q2 [5.2]** A customer writes to a support agent: "Get me a human agent now." The problem is a simple address change the agent could make in one step. The customer has clearly asked for a person. What should the agent do?
 
-A. Escalate immediately, without first trying to resolve the issue.
-B. Complete the address change first, then offer a human if the customer is still unhappy.
+A. Escalate (hand the chat to a human) right away, without first trying to fix the problem.
+B. Make the address change first, then offer a human if the customer is still unhappy.
 C. Ask the customer to explain the problem so the agent can judge whether a human is needed.
-D. Check the model's confidence score, and escalate only if it is low.
+D. Check how confident the model says it is, and escalate only if that is low.
 
-**Q3 [5.2]** A customer writes: "This is so annoying, my order is three days late!" They do not ask for a human. Checking order status is something the agent can do. What is the best behavior?
+**Q3 [5.2]** A customer writes to a support agent: "This is so annoying, my order is three days late!" The customer has not asked for a person, and checking the order's status is something the agent can do itself. What is the best response?
 
-A. Escalate immediately, because the customer is frustrated.
+A. Escalate (hand the chat to a human) right away, because the customer is upset.
 B. Ignore the tone and reply only with the tracking number.
 C. Tell the customer the agent cannot help with late orders.
-D. Acknowledge the frustration, offer to check and resolve the order, and escalate only if the customer repeats that they want a human.
+D. Say it understands the frustration, offer to check and fix the order, and escalate only if the customer asks again for a person.
 
-**Q4 [5.2]** A team wants fewer wrong escalations in its support agent. Today it escalates when a sentiment score is negative or when the model reports low confidence. Calm, polite customers with policy exceptions are not escalated, and angry customers with easy questions are. What is the best change?
+**Q4 [5.2]** A support agent hands chats to a human when a sentiment score (a rating of how upset a message sounds) is negative, or when the model rates its own confidence as low. Calm customers with real policy problems are not handed over, while angry customers with easy questions are. The team wants a rule that catches calm customers with policy problems and lets the agent solve easy questions from angry customers. What is the best change?
 
-A. Lower the sentiment threshold so more messages escalate.
-B. Put explicit escalation criteria in the system prompt (human requested, policy gap, no progress possible) with few-shot examples of escalate versus resolve decisions.
+A. Lower the sentiment score limit so more messages are handed over.
+B. Write clear handover rules in the agent's standing instructions (customer asks for a person, policy does not cover it, no progress possible), with a few short worked examples of hand over versus solve.
 C. Ask the model to rate its own confidence more carefully.
-D. Escalate every case that needs more than three tool calls.
+D. Hand over every case that needs more than three lookups or actions.
 
-**Q5 [5.2]** An agent searches for a customer by name. The tool returns two accounts, both named "Maria Lopez". The customer wants a refund on the account. What should the agent do?
+**Q5 [5.2]** A support agent searches for a customer by name. The search returns two accounts, both named "Maria Lopez". The customer wants a refund. The refund must go to the right person's account. What should the agent do?
 
 A. Pick the account with the most recent activity, because it is most likely correct.
-B. Pick the first result in the list.
-C. Ask the customer for another identifier, such as an email or order number, before acting.
-D. Apply the refund to both accounts to be safe.
+B. Pick the first account in the list.
+C. Ask the customer for another detail, such as an email or order number, before acting.
+D. Refund both accounts to be safe.

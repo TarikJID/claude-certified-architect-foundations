@@ -1,25 +1,29 @@
 # Module 8 Fast Track: Context and Escalation
 
-## 5.1 Manage conversation context across long interactions
+## 5.1 Keep key facts alive in long conversations
 
-**Exam rule:** Long chats lose details. Keep key facts safe, keep inputs small, put important things first.
+**Setting:** A support agent built on Claude chats with customers and uses tools (actions it can call, such as "look up order"). In long chats it mixes up amounts and dates, and its memory fills with unneeded data.
 
-- Summaries blur exact amounts, dates, order numbers. Pick: a "case facts" block sent verbatim every turn, outside the summary. Several issues: one block per issue. Trap: "bigger context window" or "summarize harder" does not save exact details.
-- Tool results pile up. Pick: trim to the needed fields before they enter context.
-- Models miss the middle of long inputs. Pick: key-findings summary at the start, section headers below.
-- The API is stateless. Pick: send the full history every request.
-- Subagent feeding another agent: return compact structured data (facts, citations, relevance) plus dates and source info. Reject: full reasoning text.
+**Before/after:** Before: old messages are shortened to "customer wants a quick fix, discussed price". After: a fixed note goes with every message: "order A-88213, refund $47.50, promised by 19 Sept".
 
-**Example:** Order lookup returns 40 fields. Keep order ID, status, amount, return-eligible. Drop the rest.
+**Exam rule:** Protect exact facts, keep memory small, put important things first.
 
-## 5.2 Design escalation and ambiguity resolution
+- Summaries blur numbers and dates. Pick: a "case facts" block (that fixed note), sent unchanged every turn, never summarized. Two problems: one block each. Trap: "use a bigger context window" (how much text the model sees at once). Fails: accuracy drops as text grows.
+- An order lookup returns 40 pieces of data; 5 matter. Pick: keep only those 5.
+- Claude keeps no memory between messages. Pick: the app resends the full chat each time.
+- Own setting: a main agent combines reports from several helper agents. Models miss the middle of long text. Pick: key-findings summary first, clear headings below.
+- Same setting: helpers return short structured results (facts, sources, relevance) with dates and method. Trap: sending their full reasoning. Fails: it overflows the next agent's limited space.
 
-**Exam rule:** Escalate on a clear trigger, not on a feeling. Ask when unsure who the customer is.
+## 5.2 Decide when to hand a chat to a human
 
-- Three triggers: customer asks for a human; policy is silent or an exception is needed; no progress is possible. Explicit request for a human: escalate now. No investigating first.
-- Frustrated but no request, and the issue is simple: acknowledge, offer to fix it. Escalate if they repeat the request.
-- Policy silent (for example, competitor price match): escalate. Silence is not permission.
-- Several customer matches: ask for another identifier. Never pick the most recent or first.
-- Trap: sentiment score or the model's own confidence as the trigger. Both are unreliable. Best fix: explicit criteria with few-shot examples in the system prompt.
+**Setting:** The same support agent can look up customers, refund, or escalate (hand the chat to a human). It escalates easy cases and misses real policy problems.
 
-**Example:** Five tool calls, clean policy fit: do not escalate. Complexity alone is not a trigger.
+**Before/after:** Before: "escalate if the customer seems upset or the case looks hard". After: "escalate if they ask for a person, the policy does not cover it, or you cannot make progress", with examples.
+
+**Exam rule:** Escalate on those three triggers only. A five-step refund that fits the policy stays with the agent.
+
+- "I want a person": escalate at once. Investigating first ignores the request.
+- Annoyed ("my order is three days late"), no request for a person, simple fix: acknowledge, offer to fix. Escalate only if they ask again.
+- Policy covers the store's own past prices, says nothing about competitors. Competitor price match: escalate. Guessing can make a wrong promise.
+- Name search finds two "John Smith" accounts: ask for email or order number. Trap: picking the newest. Fails: it can refund the wrong person.
+- Trap: escalating on a sentiment score (rating of how upset a message sounds) or the model's own confidence. Fails: angry customers can have easy problems; the model can be confidently wrong. Fix: the three triggers in the system prompt (standing instructions) with few-shot examples (short worked examples).
