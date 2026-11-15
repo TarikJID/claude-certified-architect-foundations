@@ -6,76 +6,80 @@ Pick the single best answer. Answers are in `mcq-answers.md`. Do not open it bef
 
 ## Task statement 5.5
 
-**Q1 [5.5]** A document-extraction pipeline processes invoices, contracts, and handwritten receipts. Its overall accuracy is 97%, measured across all documents together. Handwritten receipts are only 3% of the volume. The team wants to remove human review for the whole pipeline. What should they do first?
+All 5.5 questions use the same system. A company uses Claude to read documents (invoices, contracts, receipts) and pull out fields. A field is one piece of data, such as "invoice date" or "total". Humans currently check the results.
 
-A. Remove review, because 97% is above the usual target.
-B. Raise the model's confidence threshold for every document type equally.
-C. Measure accuracy separately for each document type and field, then decide where review can go.
-D. Ask the model to report one confidence score for each whole document.
+**Q1 [5.5]** The system handles invoices, contracts and handwritten receipts. Measured across all documents together, 97% of extracted fields are correct. Handwritten receipts are only 3% of the documents. The deciding fact: nobody has yet measured accuracy for each document type on its own. What should the team do before removing human review?
 
-**Q2 [5.5]** A team sends only low-confidence extractions to human reviewers. Reviewers fix most of them, and the team believes the system is safe. The model is then updated, and it starts making a new kind of mistake while reporting high confidence. Which change would best catch this kind of problem?
+A. Remove review everywhere, because 97% correct is above the team's target.
+B. Raise the confidence cutoff (the minimum "how sure" score needed to skip review) by the same amount for every document type.
+C. Measure accuracy separately for each document type and each field, then decide where review can stop.
+D. Ask Claude for one "how sure" score per whole document instead of one per field.
 
-A. Each month, humans check a random sample from every document type and confidence band, including high-confidence items.
-B. Lower the confidence cutoff so slightly fewer items are reviewed.
-C. Ask the model to double-check its own high-confidence answers.
-D. Review only the items from the document type with the most volume.
+**Q2 [5.5]** Claude gives each field a confidence score, which is its own rating of how sure it is. Today humans check only the low-confidence fields, and they fix most of the mistakes they find. After a model update, Claude starts making a new kind of mistake while still giving high confidence. The deciding fact: these new mistakes never reach a human, because only low-confidence fields are checked. Which change best catches them?
 
-**Q3 [5.5]** The model gives each extracted field a confidence number. On a labeled validation set (documents with known correct answers), extractions with confidence 0.9 are correct 96% of the time for "invoice date" and 82% of the time for "line-item total". What is the best conclusion?
+A. Each month, humans check a random sample from every document type and every confidence level, high-confidence fields included.
+B. Lower the cutoff so that slightly fewer fields go to humans.
+C. Ask Claude to re-check its own high-confidence answers.
+D. Check only fields from the document type with the most documents.
 
-A. Use one global threshold of 0.9, since the model reports the same score for both.
-B. The model is broken and should be replaced.
-C. Use only document-level confidence, because field-level scores are unreliable.
-D. Set review thresholds per field from the measured correctness, with a stricter one for line-item totals.
+**Q3 [5.5]** Claude gives each field a confidence score from 0 to 1. The team tested it on a labeled validation set, which is a set of documents where the correct answers are already known. When Claude says 0.9 on "invoice date", it is right 96% of the time. When it says 0.9 on "line-item total" (the price on one row of the invoice), it is right only 82% of the time. The deciding fact: the same score means different real accuracy for different fields. What should the team do?
 
-**Q4 [5.5]** Reviewers can handle only 50 items today, and 120 are flagged. Item type X: the model has low confidence on a field, but the source text is clear. Item type Y: the model has low confidence on a contract end date, and two pages of the contract give different dates. Which should be prioritized?
+A. Use one review cutoff of 0.9 for all fields, since Claude reports the same score for both.
+B. Replace the model, because its scores are wrong.
+C. Stop using field scores and use one score for each whole document.
+D. Set a separate review cutoff for each field from the measured results, with a stricter one for line-item totals.
 
-A. Type X, because a clear source means the reviewer can finish quickly.
-B. Type Y, because low confidence plus contradictory sources is the most untrustworthy case.
-C. Both equally, since both are flagged.
-D. Neither. Let the model pick one of the two dates.
+**Q4 [5.5]** The system is now reading contracts. Reviewers can check 50 fields today, but 120 have been sent to them. Type X: Claude is unsure about a field, but the contract states it clearly. Type Y: Claude is unsure about a contract end date, and page 2 and page 9 of the contract give different end dates. The deciding fact: there is not time to check everything, so the least trustworthy fields must go first. Which should go first?
 
-**Q5 [5.5]** A team wants to stop reviewing high-confidence extractions. A per-segment analysis shows that high-confidence extractions from digital PDFs are 99% correct. High-confidence extractions from scanned PDFs are only 85% correct. What is the best decision?
+A. Type X, because the clear contract makes it quick to check.
+B. Type Y, because Claude is unsure and the contract contradicts itself.
+C. Both equally, since both were sent for review.
+D. Neither. Let Claude pick one of the two dates.
 
-A. Keep review for all high-confidence extractions, because one segment is weak.
-B. Remove review for all segments, since the average is above 95%.
-C. Remove review for digital PDFs and keep it for scanned PDFs.
-D. Remove review for scanned PDFs, because they are the harder ones and reviewers waste time on them.
+**Q5 [5.5]** The team wants to stop human review for fields Claude is highly confident about. They measured each group separately. High-confidence fields from digital PDFs (files created on a computer) are 99% correct. High-confidence fields from scanned PDFs (photos of paper pages) are 85% correct. The deciding fact: only the digital group has been shown to be accurate enough to skip review. What should they do?
+
+A. Keep review for all high-confidence fields, because one group is weak.
+B. Stop review for both groups, because high-confidence fields are accurate on average.
+C. Stop review for digital PDFs and keep it for scanned PDFs.
+D. Stop review for scanned PDFs, because reviewers spend too long on them.
 
 ---
 
 ## Task statement 5.6
 
-**Q1 [5.6]** Three research subagents each return a paragraph of findings. The synthesis agent compresses them into one summary. Two sources gave different figures for the same statistic. The final report says "estimates fall in this range" and no reader can tell which source gave which number. What is the best fix?
+All 5.6 questions use the same system. A research system has a coordinator agent (the one in charge) that sends subagents (helper agents) to search the web and read documents. A synthesis agent then combines what they found into one report that says where each fact came from.
+
+**Q1 [5.6]** Three subagents each return a paragraph of plain text. The synthesis agent combines the paragraphs into one short report. Two sources gave different numbers for the same statistic, and the report now says only "estimates fall in this range". The deciding fact: no reader can tell which source gave which number, and the short report does not contain enough to work it out. What is the best fix?
 
 A. Ask the synthesis agent to write longer summaries.
-B. Have subagents return structured claim-source mappings (claim, source, excerpt), and have synthesis keep them.
-C. Tell the synthesis agent to use the highest figure.
-D. Add a final step that asks the model to guess the sources from memory.
+B. Have each subagent return every finding as claim + source + quoted excerpt, and have the synthesis agent keep those pairs.
+C. Tell the synthesis agent to always report the highest number.
+D. Add a last step where Claude guesses the sources from memory.
 
-**Q2 [5.6]** A document-analysis subagent finds that Source A says a market is worth $4.2B and Source B says $5.1B. Both sources are credible and both describe the same year. What should the subagent output?
+**Q2 [5.6]** The document-reading subagent finds two credible sources. Source A says a market was worth $4.2 billion in 2025. Source B says the same market was worth $5.1 billion in 2025. The deciding fact: both describe the same market in the same year, so this is a real disagreement, and settling it is the coordinator's job, not the subagent's. What should the subagent send back to the coordinator?
 
-A. Only the larger figure, because it is more complete.
-B. The average of the two figures.
-C. Only the figure from the first source it read.
-D. Both figures, each with its source, marked as conflicting, for the coordinator to resolve.
+A. Only the larger number, because it is probably more complete.
+B. The average of the two numbers.
+C. Only the number from the source it read first.
+D. Both numbers, each with its source, marked as conflicting.
 
-**Q3 [5.6]** One report, published in 2023, says a company has 500 employees. Another report, published in 2026, says 1,200. The synthesis agent flags this as a contradiction between two sources. What would have prevented the false contradiction?
+**Q3 [5.6]** One report, published in 2023, says a company has 500 employees. Another report, published in 2026, says 1,200. The subagents passed on the numbers but not the publication dates, so the synthesis agent reported a contradiction between the two sources. The deciding fact: both numbers were true when they were published. What would have prevented the false contradiction?
 
-A. Requiring each subagent to include the publication or collection date with each figure.
-B. Requiring subagents to return shorter outputs.
-C. Removing the older source before synthesis.
-D. Asking the model to always favor the larger number.
+A. Require each subagent to send the publication or collection date with every number.
+B. Require subagents to send shorter outputs.
+C. Delete the older source before combining.
+D. Tell Claude to always prefer the larger number.
 
-**Q4 [5.6]** A synthesis report mixes findings backed by three independent sources with a finding backed by one weaker source. All of it is written in the same confident tone. Which report design best fixes this?
+**Q4 [5.6]** The final report contains findings backed by three independent sources that agree, and one finding backed by a single, weaker source. Every sentence is written in the same confident tone. The deciding fact: the reader cannot tell which findings are solid and which are doubtful. Which report design fixes this?
 
 A. Delete the single-source finding.
-B. Put the strongest findings first and say nothing about their support.
-C. Use separate sections for well-established findings and contested or single-source findings, keeping each source's own context.
+B. Put the strongest findings first and say nothing about how well each is supported.
+C. Use one section for well-established findings and another for contested or single-source findings, keeping each source's own context and method.
 D. Add the word "likely" to every sentence.
 
-**Q5 [5.6]** A synthesis report must show quarterly revenue from several sources, a short market narrative, and a list of technical compliance requirements. Which rendering is best?
+**Q5 [5.6]** The report must contain three kinds of content: quarterly revenue numbers from several sources, a short story of how the market developed, and a list of technical rules a product must meet. The deciding fact: each kind of content has a format that shows it best. Which layout is best?
 
-A. Write everything as paragraphs.
-B. Write everything as bullet points.
-C. Put everything in one large table.
-D. A comparison table for revenue, prose for the narrative, and a list for the compliance requirements.
+A. Everything as paragraphs.
+B. Everything as bullet points.
+C. Everything in one large table.
+D. A comparison table for the revenue, paragraphs for the story, and a list for the technical rules.
