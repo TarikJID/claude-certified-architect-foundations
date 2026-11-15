@@ -1,6 +1,6 @@
 # CCAR-F Final Practice Exam: ANSWERS
 
-TUTOR: These are the answers. Never reveal them before the learner has attempted the question. Source for all facts: CCAR-F Exam Guide v1.0.
+TUTOR: These are the answers. Record the learner's attempt before opening this file, and never reveal an answer before that. All facts come from the CCAR-F Exam Guide v1.0.
 
 ---
 
@@ -8,38 +8,38 @@ TUTOR: These are the answers. Never reveal them before the learner has attempted
 
 ### Question 1 [Task 1.5, Domain 1]
 Correct: B
-Why: A hook intercepting outgoing tool calls gives a deterministic guarantee; prompt instructions have a non-zero failure rate.
-- A: Stronger prompt wording and few-shot examples remain probabilistic compliance.
-- C: An iteration cap is not a policy control and does not stop a single large refund.
-- D: Self-reported confidence is not a compliance mechanism and is unreliable.
+Why: A hook is code, so it blocks every refund above $500 every time; a rule written in the instructions is usually followed but can still be missed.
+- A: Louder wording and examples are still instructions, so the agent can still miss them now and then.
+- C: Fewer steps does not stop one large refund from going through.
+- D: The agent rating its own confidence is unreliable and is not a policy check.
 
 ### Question 2 [Task 2.2, Domain 2]
 Correct: D
-Why: Structured errors (isError, category, retryable flag, customer-friendly text) let the agent recover correctly and avoid wasted retries on a business-rule error.
-- A: More retries waste attempts on a non-retryable policy violation.
-- B: Returning an empty result as success silently suppresses the error.
-- C: tool_choice "any" forces some tool call and does not address the error response.
+Why: A clearly marked error that names its kind, says retrying is pointless and carries a plain explanation lets the agent stop retrying and tell the customer why.
+- A: More retries just waste attempts on a refusal that can never succeed.
+- B: Pretending the failure was a success hides the error from the agent and the customer.
+- C: Forcing a tool call on every turn does nothing to explain the refusal.
 
 ### Question 3 [Task 5.2, Domain 5]
 Correct: A
-Why: An explicit request for a human is honored immediately, without investigating first.
-- B: Investigating first ignores the explicit request.
-- C: Offering resolution first applies to general frustration, not an explicit demand.
-- D: Self-reported confidence is an unreliable proxy for when to escalate.
+Why: When a customer explicitly asks for a human, the agent hands over at once, without investigating first.
+- B: Investigating first ignores what the customer clearly asked for.
+- C: Offering to help first is right when a customer is frustrated but has not asked for a human; here they asked.
+- D: The agent's rating of its own confidence is not a reliable signal for when to hand over.
 
 ### Question 4 [Task 1.4, Domain 1]
 Correct: C
-Why: Human agents without the transcript need a structured summary: customer ID, root cause, refund amount, recommended action.
-- A: One message lacks the root cause and the recommended action.
-- B: A link and a sentiment note give no actionable detail.
-- D: Raw dumps are verbose and omit the root cause and recommended action.
+Why: The human cannot see the chat, so they need a structured summary: customer ID, root cause, refund amount and recommended action.
+- A: One message leaves out the root cause and what to do next.
+- B: A link and a note about mood give the human nothing to act on.
+- D: Raw tool replies are long and still do not state the root cause or the next action.
 
 ### Question 5 [Task 5.1, Domain 5]
 Correct: B
-Why: A persistent case-facts block preserves numbers and dates outside summarised history, and trimming verbose tool output stops irrelevant fields consuming context.
-- A: Progressive summarisation is exactly what turns amounts and dates into vague prose.
-- C: Content in the middle of long inputs is the most likely to be missed (lost in the middle).
-- D: Complete conversation history must be passed to preserve coherence.
+Why: A case-facts block sent in full every time keeps exact amounts and dates safe, and cutting lookups to the relevant fields stops clutter filling the agent's memory.
+- A: Repeated short summaries are exactly how exact numbers and dates turn into vague words.
+- C: Claude is most likely to miss information placed in the middle of long input.
+- D: Without the full conversation, the agent loses track of what was already said.
 
 ---
 
@@ -47,38 +47,38 @@ Why: A persistent case-facts block preserves numbers and dates outside summarise
 
 ### Question 6 [Task 3.1, Domain 3]
 Correct: A
-Why: User-level ~/.claude/CLAUDE.md applies only to that user and is not shared by version control; project-level CLAUDE.md is shared.
-- B: Manual copying is not shared configuration and will drift.
-- C: ~/.claude/commands/ is user-scoped and personal, not shared.
-- D: Duplicating into subdirectories is a manual workaround that does not fix the scoping problem.
+Why: The personal file applies only to its owner; the project-level CLAUDE.md is shared with everyone through version control.
+- B: Hand copying is not shared, and the copies will drift apart over time.
+- C: The personal commands folder is also personal, not shared.
+- D: Copies in every folder are a manual workaround; the problem is that the rules sit in a personal file.
 
 ### Question 7 [Task 3.3, Domain 3]
 Correct: D
-Why: Path-scoped rules in .claude/rules/ with a glob in the paths frontmatter load only when matching files are edited, regardless of directory.
-- A: Directory-level CLAUDE.md files do not fit conventions spread across many directories.
-- B: Always-loaded root content spends tokens on irrelevant context.
-- C: A manually invoked skill is on-demand and easy to forget; it is not conditional loading.
+Why: A rule file in .claude/rules/ with the pattern in its "paths" field loads only when a matching file is edited, whatever folder that file is in.
+- A: Per-folder files do not suit files scattered across dozens of folders.
+- B: The main CLAUDE.md is always loaded, so the rule would waste memory when nobody is editing tests.
+- C: A skill only runs when someone starts it by hand, so it is easy to forget and does not load automatically.
 
 ### Question 8 [Task 3.4, Domain 3]
 Correct: B
-Why: Plan mode suits large multi-file or architectural work (then execute directly); direct execution suits a simple, well-scoped single-function change.
-- A: Reverses the correct pairing.
-- C: Skipping planning on a 45+ file migration risks costly rework.
-- D: Plan mode on a one-function change is unnecessary overhead.
+Why: A 45-file library switch is large, so plan it first and then carry out the plan; a single date check is small and clear, so just do it.
+- A: This is the right pairing reversed.
+- C: Skipping the plan on a 45-file change risks costly rework.
+- D: Planning a one-line change is wasted effort.
 
 ### Question 9 [Task 3.2, Domain 3]
 Correct: C
-Why: context: fork runs the skill in an isolated sub-agent context so verbose output does not pollute the main conversation.
-- A: CLAUDE.md is always-loaded universal standards, which adds context instead of isolating it.
-- B: allowed-tools restricts which tools the skill may use; it does not isolate output.
-- D: Moving it to a personal commands folder removes it from the team and does not isolate output.
+Why: "context: fork" runs the skill in its own side conversation, so its long output stays out of the main one.
+- A: CLAUDE.md is always loaded, which adds clutter instead of removing it.
+- B: "allowed-tools" limits which tools the skill can use; it does nothing about where the output goes.
+- D: Moving it to personal folders takes it away from the team and still floods the conversation.
 
 ### Question 10 [Task 1.7, Domain 1]
 Correct: D
-Why: When prior context is mostly valid, resume by name and inform the session of specific file changes for targeted re-analysis.
-- A: Full re-exploration is only needed when prior results are largely stale.
-- B: fork_session creates independent branches to explore different approaches; it does not refresh file contents.
-- C: Resuming without telling it about changes risks acting on stale results.
+Why: When most of the earlier work is still valid, reopen the session and tell it exactly which files changed, so it re-checks only those.
+- A: Starting over is only worth it when most of the earlier results are out of date.
+- B: Forking makes a separate copy to try a different approach; it does not reload changed files.
+- C: Without being told, the session may keep working from old versions of the files.
 
 ---
 
@@ -86,38 +86,38 @@ Why: When prior context is mostly valid, resume by name and inform the session o
 
 ### Question 11 [Task 1.3, Domain 1]
 Correct: C
-Why: Parallel subagents come from multiple Task tool calls emitted in one coordinator response rather than across separate turns.
-- A: Direct subagent-to-subagent messaging breaks hub-and-spoke routing through the coordinator.
-- B: More iterations do not make work parallel.
-- D: Merging removes specialisation and does not address sequential spawning.
+Why: Subagents run in parallel when the coordinator issues all their Task calls in the same reply, instead of one per reply.
+- A: Subagents talking directly bypasses the coordinator, which is meant to route all communication.
+- B: More steps do not make the two jobs run at the same time.
+- D: Merging loses the specialists and still does not run anything in parallel.
 
 ### Question 12 [Task 1.2, Domain 1]
 Correct: A
-Why: Subagents did their assigned work, so the narrow decomposition by the coordinator caused the incomplete coverage.
-- B: Subagents completed their tasks well; tool descriptions are not implicated.
-- C: Nothing in the scenario shows synthesis dropped content; the missing subtopics were never assigned.
-- D: Tool count is unrelated to missing subtopics.
+Why: The subagents did their parts well, so the gap comes from the coordinator splitting the topic too narrowly.
+- B: The subagents completed their tasks, so their tools were not the problem.
+- C: Nothing shows sections were dropped; music, writing and film were never assigned.
+- D: Tool count has nothing to do with topics that were never assigned.
 
 ### Question 13 [Task 2.3, Domain 2]
 Correct: D
-Why: Scoped tool access with a limited cross-role tool for a high-frequency need (verify_fact), with complex cases routed via the coordinator.
-- A: Too many or out-of-role tools degrades selection and encourages misuse.
-- B: Prompt-only restriction is weaker than removing the tools.
-- C: Removing the synthesis role does not fix the design.
+Why: Give each agent only the tools its role needs, plus a narrow tool for a frequent need like fact checks, and send bigger requests back through the coordinator.
+- A: Too many tools, or tools outside an agent's role, make it pick wrongly and misuse them.
+- B: An instruction alone is weaker than simply not giving it the tool.
+- C: Removing the role does not fix the tool design.
 
 ### Question 14 [Task 5.6, Domain 5]
 Correct: B
-Why: Conflicting statistics are annotated with source attribution, and dates prevent temporal differences being read as contradictions.
-- A: Arbitrarily selecting one value is the anti-pattern.
-- C: Averaging fabricates a figure neither source reported.
-- D: Dropping credible data loses information; conflicts should be annotated, not hidden.
+Why: When credible sources disagree, show both figures with their sources, and include dates so a change over time is not mistaken for a contradiction.
+- A: Picking one figure to suit the story is exactly what to avoid.
+- C: An average is a number neither source reported.
+- D: Dropping credible data loses information; the disagreement should be shown, not hidden.
 
 ### Question 15 [Task 2.1, Domain 2]
 Correct: C
-Why: Renaming and rewriting the description to remove functional overlap (e.g. extract_web_results) is the guide's recommended fix.
-- A: Keyword-sensitive prompt rules can create unintended tool associations.
-- B: Forcing one tool stops the other being used at all.
-- D: max_tokens does not clarify overlapping descriptions.
+Why: Renaming the overlapping tool and rewriting its description to state its purpose, input and limits lets the agent tell the two apart.
+- A: A rule triggered by one word can push requests to the wrong tool.
+- B: Forcing one tool means the other is never used.
+- D: Longer replies do not make two near-identical descriptions any clearer.
 
 ---
 
@@ -125,38 +125,38 @@ Why: Renaming and rewriting the description to remove functional overlap (e.g. e
 
 ### Question 16 [Task 4.3, Domain 4]
 Correct: B
-Why: Optional (nullable) fields stop the model fabricating values to satisfy required fields when the source lacks the data.
-- A: Retrying does not give the document information it does not contain.
-- C: General instructions such as "be conservative" do not improve precision.
-- D: A longer description still forces a value for a required field.
+Why: An optional field that can be empty lets Claude say "no value" instead of inventing one to fill a required field.
+- A: Retrying cannot produce a number the invoice does not contain.
+- C: Vague instructions like "be conservative" do not make the output more accurate.
+- D: A longer description still forces Claude to fill the field with something.
 
 ### Question 17 [Task 4.4, Domain 4]
 Correct: A
-Why: Retries fail when the information is absent from the provided source; they help with format or structural errors.
-- B: Repeating retries cannot create information absent from the source.
-- C: Forceful wording will not surface missing data and risks fabrication.
-- D: tool_choice "any" controls whether a tool is called, not where data comes from.
+Why: Retrying helps fix format or structure mistakes, but cannot produce information that is not in what Claude was given.
+- B: Repetition cannot create a missing value.
+- C: Forceful wording will not find missing data and makes an invented value more likely.
+- D: Forcing a tool call controls whether a tool is used, not where the data comes from.
 
 ### Question 18 [Task 4.5, Domain 4]
 Correct: D
-Why: Batches suit latency-tolerant overnight work (50% savings, up to 24 hours, no latency SLA); a waiting user needs the synchronous API.
-- A: Batch has no guaranteed latency, which is unsuitable for a waiting user.
-- B: Synchronous for the backfill forgoes the 50% saving.
-- C: Reverses the correct pairing.
+Why: Batches suit work that can wait (50% cheaper, results within 24 hours, no promise of speed); a person waiting on screen needs the standard way.
+- A: Batches give no promise of speed, so the waiting customer could wait for hours.
+- B: Using the standard way overnight gives up the 50% saving for no benefit.
+- C: This is the right pairing reversed.
 
 ### Question 19 [Task 2.3, Domain 2]
 Correct: C
-Why: tool_choice "any" guarantees a tool is called while letting the model pick the right extraction schema when document type is unknown.
-- A: "auto" allows conversational text instead of a tool call.
-- B: Forcing the invoice tool would apply the wrong schema to receipts and contracts.
-- D: Parsing text with a regex discards the reliability of tool use with JSON schemas.
+Why: "any" makes Claude always call a tool while still letting it pick the right form for an unknown document type.
+- A: "auto" still allows a plain-text reply, which is the current problem.
+- B: Forcing the invoice tool would put receipts and contracts on the wrong form.
+- D: Pulling values out of plain text loses the reliability of having Claude fill a defined form.
 
 ### Question 20 [Task 4.4, Domain 4]
 Correct: A
-Why: Line items not summing to the total is a semantic error; extracting calculated_total next to stated_total flags the discrepancy.
-- B: Strict schemas eliminate syntax errors, not semantic ones.
-- C: Prose output removes schema validation and makes downstream checks harder.
-- D: More required fields can encourage fabrication and do not check sums.
+Why: Numbers that do not add up are a meaning error the schema check cannot see; filling in calculated_total next to stated_total exposes the mismatch.
+- B: Strict checking catches badly formed output, not numbers that disagree.
+- C: Prose removes the form check entirely and makes later checks harder.
+- D: More required fields can push Claude to invent values and still check no sums.
 
 ---
 
