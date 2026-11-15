@@ -9,65 +9,65 @@ Answer key: 5.3 Q1 B, Q2 D, Q3 A, Q4 C, Q5 B. 5.4 Q1 C, Q2 A, Q3 D, Q4 B, Q5 C.
 ## Task statement 5.3
 
 **Q1 — Correct: B.** Tests 5.3-K1, 5.3-S1, 5.3-K3.
-Why: Failure type, attempt, partial results and alternatives let the coordinator choose a recovery.
-- A wrong: a generic status hides exactly the context the coordinator needs.
-- C wrong: partial results presented as complete misleads the coordinator.
-- D wrong: an empty result returned as success is silent suppression of a real failure.
+Why: Saying what failed, what was tried, what was found and what else could work lets the coordinator pick the next step.
+- A wrong: "search failed" gives the coordinator nothing to decide with.
+- C wrong: calling 2 of 5 articles the full result misleads the coordinator.
+- D wrong: an empty list marked "success" hides a real failure.
 
 **Q2 — Correct: D.** Tests 5.3-K2, 5.3-S2.
-Why: A timeout may be worth retrying; a completed query with zero matches is a trustworthy answer.
-- A wrong: merging them removes the information needed to decide on a retry.
-- B wrong: a valid empty result is not an error, and labelling it one wastes retries.
-- C wrong: it is reversed; it hides the failure and flags the valid result.
+Why: The timeout might work on a retry; a search that worked and found nothing will give the same answer again.
+- A wrong: lumping them together removes what the coordinator needs to decide on a retry.
+- B wrong: a search that worked is not an error, and calling it one wastes retries.
+- C wrong: it is the wrong way round; it hides the failure and flags the good result.
 
 **Q3 — Correct: A.** Tests 5.3-K4, 5.3-S4.
-Why: Targeted recovery keeps the three finished results and discloses the gap.
-- B wrong: stopping everything over one failure wastes completed work.
-- C wrong: "no data found" suppresses the error and presents incomplete work as complete.
-- D wrong: it throws away successful work and may loop on a source that is down.
+Why: The user gets a report today, the three good findings are kept, and the gap is stated.
+- B wrong: stopping everything over one failure throws away finished work and gives no report.
+- C wrong: "no data found" pretends the search worked, so the report looks complete when it is not.
+- D wrong: it wastes the good results and may keep failing while the source is down.
 
 **Q4 — Correct: C.** Tests 5.3-S3, 5.3-K3, 5.3-S1.
-Why: The subagent recovers locally first, and only escalates with what it tried and partial results.
-- A wrong: it escalates too early with a generic message.
-- B wrong: it hides the failure as a successful empty result.
-- D wrong: subagents should handle transient failures themselves before propagating.
+Why: The subagent fixes short glitches itself and only reports up, with what it tried, when it cannot.
+- A wrong: it reports too early, and with a vague message.
+- B wrong: it hides the failure as a successful empty search.
+- D wrong: subagents should handle short glitches themselves before reporting up.
 
 **Q5 — Correct: B.** Tests 5.3-S4, 5.3-K4.
-Why: Coverage annotations separate well-supported findings from gaps caused by unavailable sources.
-- A wrong: silent omission looks like full coverage.
-- C wrong: unlabelled filler presents unsupported content as established.
-- D wrong: a partial, honestly labelled report is better than none.
+Why: Coverage notes tell readers which parts are well supported and which have gaps.
+- A wrong: silently leaving a topic out makes the report look complete.
+- C wrong: unlabelled filler looks as reliable as the sourced findings, which it is not.
+- D wrong: an honest partial report is better than none.
 
 ---
 
 ## Task statement 5.4
 
 **Q1 — Correct: C.** Tests 5.4-K1, 5.4-K2, 5.4-S2.
-Why: Generic "typical patterns" answers are the sign of context degradation. A scratchpad file or fresh session counters it.
-- A wrong: the model did read the class; the earlier finding was lost, not missing.
-- B wrong: nothing indicates the tool results were wrong, and rerunning adds more bloat.
-- D wrong: the symptom concerns the model's recall, not a code defect.
+Why: "Typically" answers about code it already read are the sign of a long session losing track. A notes file or a fresh session fixes it.
+- A wrong: the agent did read the code; the finding faded, it was never missing.
+- B wrong: nothing says the searches were wrong, and rerunning adds more clutter.
+- D wrong: the problem is the agent's memory, not a fault in the code.
 
 **Q2 — Correct: A.** Tests 5.4-K3, 5.4-S1.
-Why: A subagent explores in its own context and returns only a summary, so the main context stays clean.
-- B wrong: all raw search output would accumulate in the main context.
-- C wrong: reading every file upfront is the worst case for context bloat.
-- D wrong: it pushes the work onto the user and does not use subagents.
+Why: The subagent does the long search in its own memory and hands back only a summary, so the main agent stays clear.
+- B wrong: all the raw search output would pile up in the main agent's context.
+- C wrong: opening every file first fills the context the fastest.
+- D wrong: it pushes the work onto the engineer and does not use a subagent.
 
 **Q3 — Correct: D.** Tests 5.4-S5.
-Why: `/compact` summarizes the history and can be steered; using it before context is full gives more control than waiting.
-- A wrong: automatic compaction gives less control over what survives.
-- B wrong: it discards the refund-flow findings that are still needed.
-- C wrong: CLAUDE.md is project configuration, not the verbose discovery output causing the problem.
+Why: Running `/compact` early with an instruction frees space and keeps the refund findings on purpose.
+- A wrong: automatic compaction waits until nearly full and takes no instructions, so you control less of what survives.
+- B wrong: it throws away the refund findings that are still needed.
+- C wrong: CLAUDE.md holds team instructions; it is not what is filling the context.
 
 **Q4 — Correct: B.** Tests 5.4-K4, 5.4-S4.
-Why: State exports plus a manifest let the coordinator reload finished work and inject it into prompts.
-- A wrong: state held only in context is lost in a crash or truncation.
-- C wrong: it repeats completed work, which is the thing to avoid.
-- D wrong: compaction shrinks context in a live session; it is not crash recovery.
+Why: Saved progress files plus a manifest let the lead agent reload finished work instead of redoing it.
+- A wrong: progress held only in working memory is lost in the crash.
+- C wrong: it reruns finished subagents, which the constraint forbids.
+- D wrong: compaction shrinks a running conversation; it does not survive a crash.
 
 **Q5 — Correct: C.** Tests 5.4-S3.
-Why: A summary gives the next phase relevant context without the bloated history.
-- A wrong: the full transcript bloats each subagent's context.
-- B wrong: the next phase would have to rediscover what phase 1 found.
-- D wrong: subagents start with a fresh context and do not inherit parent history.
+Why: A summary gives phase 2 what phase 1 learned without the long record.
+- A wrong: the full record floods each subagent.
+- B wrong: phase 2 would have to rediscover what phase 1 already found.
+- D wrong: new subagents start blank and do not see earlier work unless given it.
