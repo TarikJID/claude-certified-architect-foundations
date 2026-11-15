@@ -46,7 +46,7 @@ ANSWERS. Do not reveal before the learner has attempted the question.
 ## Task statement 5.6
 
 **Q1 [5.6]** Correct: B
-- Why: Combining into prose loses which source said what. Keeping claim + source + excerpt pairs preserves it, and Claude's citations feature does this.
+- Why: Combining into prose loses which source said what. Keeping claim + source + excerpt pairs preserves it, and Claude's citations feature (which tags each sentence with the exact document text it came from) does this.
 - A wrong: A longer summary still does not say which source said what.
 - C wrong: Taking the highest number throws away the other source and still loses who said what.
 - D wrong: Guessing sources makes them up.

@@ -65,7 +65,7 @@ D. Both numbers, each with its source, marked as conflicting.
 
 **Q3 [5.6]** One report, published in 2023, says a company has 500 employees. Another report, published in 2026, says 1,200. The subagents passed on the numbers but not the publication dates, so the synthesis agent reported a contradiction between the two sources. The deciding fact: both numbers were true when they were published. What would have prevented the false contradiction?
 
-A. Require each subagent to send the publication or collection date with every number.
+A. Require each subagent to send the publication date or collection date (the date the data was gathered) with every number.
 B. Require subagents to send shorter outputs.
 C. Delete the older source before combining.
 D. Tell Claude to always prefer the larger number.
@@ -74,7 +74,7 @@ D. Tell Claude to always prefer the larger number.
 
 A. Delete the single-source finding.
 B. Put the strongest findings first and say nothing about how well each is supported.
-C. Use one section for well-established findings and another for contested or single-source findings, keeping each source's own context and method.
+C. Use one section for well-established findings and another for contested (sources disagree) or single-source findings, keeping each source's own context and method.
 D. Add the word "likely" to every sentence.
 
 **Q5 [5.6]** The report must contain three kinds of content: quarterly revenue numbers from several sources, a short story of how the market developed, and a list of technical rules a product must meet. The deciding fact: each kind of content has a format that shows it best. Which layout is best?
