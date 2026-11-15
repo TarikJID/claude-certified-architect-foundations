@@ -74,7 +74,7 @@ D. Send the agent only the customer's latest message each time, to keep its memo
 
 ## Scenario 2: Code Generation with Claude Code
 
-A software team uses Claude Code, an AI coding assistant that runs in a developer's terminal and can read, write and change the team's code. They use it to write new code, restructure existing code, fix bugs and write documentation. The team is setting it up with shared instruction files and reusable commands, and deciding when Claude should plan before acting. The code lives in one very large shared repository (the project's folder of code, stored in version control so the whole team gets the same files). Test files, which are code that checks other code works, are spread across many folders.
+A software team uses Claude Code, an AI coding assistant that runs in a developer's terminal and can read, write and change the team's code. They use it to write new code, restructure existing code, fix bugs and write documentation. The team is setting it up with shared instruction files and reusable commands. A command is a saved set of instructions a developer runs by typing a slash and its name, for example /review. Commands kept in the project's .claude/commands/ folder are shared with the whole team; commands kept in a developer's personal commands folder (~/.claude/commands/, in their home folder) are for that developer only. The team is also deciding when Claude should plan before acting. The code lives in one very large shared repository (the project's folder of code, stored in version control so the whole team gets the same files). Test files, which are code that checks other code works, are spread across many folders.
 
 ### Question 6 [Task 3.1]
 Claude Code reads standing instructions from files called CLAUDE.md. A file in a developer's personal home folder (~/.claude/CLAUDE.md) applies only to that developer. A CLAUDE.md inside the project folder is shared with everyone through version control. A senior developer wrote the team's testing rules in their personal file. Their Claude follows the rules; a new hire's Claude ignores them.
@@ -140,7 +140,7 @@ D. Resume the session by name and tell it exactly which three files changed, so 
 
 ## Scenario 3: Multi-Agent Research System
 
-A team builds an AI research system made of several cooperating AI agents. One agent, the coordinator, receives the research question, splits it into parts and hands each part to a specialist agent, called a subagent: one searches the web, one analyses documents, one combines the findings, and one writes the final report. The coordinator starts each subagent through a tool called Task. The system produces long reports on broad topics, with a source cited for every claim.
+A team builds an AI research system made of several cooperating AI agents. One agent, the coordinator, receives the research question, splits it into parts and hands each part to a specialist agent, called a subagent: one searches the web, one analyses documents, one combines the findings, and one writes the final report. Each agent acts through tools, which are functions it can call, such as one that runs a web search. The coordinator starts each subagent through a tool called Task. The system produces long reports on broad topics, with a source cited for every claim.
 
 ### Question 11 [Task 1.3]
 The web-search subagent and the document-analysis subagent work on separate, independent parts of the question. Yet the whole job is slow, because the coordinator starts them one at a time: it starts one subagent, waits for its reply, and only then starts the next.
@@ -206,7 +206,7 @@ D. Allow the agent longer replies, so it has more room to think about which tool
 
 ## Scenario 6: Structured Data Extraction
 
-A company builds a system that reads business documents (invoices, receipts and contracts) and pulls out specific pieces of information, such as totals, dates and ID numbers. It fills these into a fixed form with named fields. A schema defines that form: which fields exist, what type each one is, and whether each must be filled in ("required") or may be left empty ("optional"). The filled form is checked against the schema and then passed to other business systems. Document types are not known in advance.
+A company builds a system that reads business documents (invoices, receipts and contracts) and pulls out specific pieces of information, such as totals, dates and ID numbers. It fills these into a fixed form with named fields. A schema defines that form: which fields exist, what type each one is, and whether each must be filled in ("required") or may be left empty ("optional"). Claude fills the form by calling a tool, a function it can call whose input is the form defined by the schema. The filled form is checked against the schema and then passed to other business systems. Document types are not known in advance.
 
 ### Question 16 [Task 4.3]
 The schema marks the field po_number (the purchase-order number) as required. Many invoices simply do not have one. For those invoices, Claude sometimes fills in a believable but made-up number.
@@ -264,6 +264,6 @@ Deciding constraint: the schema check only confirms the form's shape, not whethe
 What is the best response?
 
 A. Have Claude also fill in a calculated_total (the line items added up) next to the stated_total (the total printed on the invoice), so mismatches can be spotted and flagged.
-B. Turn on strict schema checking, which will stop the mismatch.
+B. Turn on strict schema checking (a stricter mode that guarantees the filled form is always well formed, with every field present and of the right type), which will stop the mismatch.
 C. Ask Claude for free-form prose instead of a filled form.
 D. Mark more fields as required, so Claude pays closer attention.
