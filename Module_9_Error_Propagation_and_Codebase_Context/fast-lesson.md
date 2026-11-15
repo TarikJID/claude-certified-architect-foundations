@@ -17,15 +17,15 @@ Exam rule: say exactly what failed, so the coordinator can adapt. Hide nothing, 
 
 ## 5.4 Keeping the agent's working memory clean in a big codebase
 
-Setting (exam scenario: developer productivity): An engineer uses an agent to explore an unfamiliar codebase (a project's program files). Every file and search result piles into its context (the text it can "see" at once). In a long session (one continuous conversation), early findings fade.
+Setting (exam scenario: developer productivity): An engineer's main agent (the one she talks to) explores an unfamiliar codebase (a project's program files). Files and search results pile into its context (the text it can "see" at once). In a long session (one continuous conversation), early findings fade.
 
-Before: asked if RefundProcessor checks currency codes, the agent (which read that code earlier) says what such code "typically" does. Warning sign.
-After: it saved "RefundProcessor: no currency check" in a notes file, re-reads it, answers exactly.
+Before: asked if RefundProcessor (the refund-handling code) checks currency, the agent, though it read it, says what such code "typically" does.
+After: it re-reads its notes ("RefundProcessor: no currency check"), then answers exactly.
 
-Exam rule: keep bulky output out of the main agent; keep key findings outside its context.
+Exam rule: send bulky work to subagents; keep key findings in files.
 
-- Pick: a scratchpad file (notes saved on disk) the agent re-reads, or a fresh session for a new task.
-- Pick: a subagent for a narrow question ("find all test files"). It works in its own context and returns a short summary. Trap: the main agent reading every file buries its context.
-- Pick: between phases, give phase 2 subagents a summary of phase 1, since they start blank. Trap: the full phase 1 record floods them.
-- Pick: crash recovery: each agent saves progress to a known file; on restart the coordinator reads a manifest (a list of those files).
-- Pick: `/compact` (replaces the history with a summary), run early, saying what to keep. Trap: waiting for automatic compaction gives less control.
+- Pick: a scratchpad file (notes on disk) to re-read, or a fresh session per task.
+- Pick: a subagent (a helper with its own context) for a narrow question ("find all test files"), returning a short summary. Trap: the main agent reading every file buries its context.
+- Setting: work runs in phases (stages): map the code, then trace refunds. Pick: give phase 2 subagents a phase 1 summary; they cannot see the main conversation. Trap: the full record floods them.
+- Setting: agents run for hours; the program crashes. Pick: each saves progress to a known file; on restart the main agent reads a manifest (list of those files).
+- Pick: `/compact` (swaps history for a summary) early, saying what to keep. Trap: automatic compaction (the same, run alone when nearly full) gives less control.

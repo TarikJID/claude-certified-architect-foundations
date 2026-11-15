@@ -66,14 +66,14 @@ B. Start a brand new session and discard everything learned.
 C. Delete the project's CLAUDE.md file (the file of team instructions the agent reads) to free up space.
 D. Run `/compact` now, telling it to keep the refund-flow findings and drop the file lists.
 
-**Q4 [5.4]** A lead agent runs several subagents (helper agents) that explore a very large codebase for hours. Midway, the program crashes, and everything held only in the agents' working memory is lost. The deciding constraint: on restart, subagents that already finished must not be run again. Which design supports this?
+**Q4 [5.4]** A main agent (the agent that hands out work and collects results) runs several subagents (helper agents) that explore a very large codebase for hours. Midway, the program crashes, and everything held only in the agents' working memory is lost. The deciding constraint: on restart, subagents that already finished must not be run again. Which design supports this?
 
-A. Keep all progress only in the lead agent's working memory.
-B. Each subagent saves its progress to a file in a known place. On restart, the lead agent reads a manifest (a list of those saved files) and puts that progress back into each agent's instructions.
+A. Keep all progress only in the main agent's working memory.
+B. Each subagent saves its progress to a file in a known place. On restart, the main agent reads a manifest (a list of those saved files) and puts that progress back into each agent's instructions.
 C. Restart everything from scratch each time.
 D. Rely on automatic compaction (the agent summarizing its own conversation when it gets full) to keep the progress.
 
-**Q5 [5.4]** Phase 1 of exploring a codebase mapped how its parts are organized and produced a very long record of every step. Phase 2 will start new subagents (helper agents) to trace how refunds move through the code. New subagents start blank: they see nothing from the main conversation unless it is put in their starting instructions. The deciding constraint: phase 2 needs what phase 1 learned, without being flooded by it. How should the lead agent start them?
+**Q5 [5.4]** Phase 1 of exploring a codebase mapped how its parts are organized and produced a very long record of every step. Phase 2 will start new subagents (helper agents) to trace how refunds move through the code. New subagents start blank: they see nothing from the main conversation unless it is put in their starting instructions. The deciding constraint: phase 2 needs what phase 1 learned, without being flooded by it. How should the main agent (the agent that hands out work and collects results) start them?
 
 A. Paste the full phase 1 record into each subagent's instructions.
 B. Give them only the task, with no phase 1 information.

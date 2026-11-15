@@ -61,7 +61,7 @@ Why: Running `/compact` early with an instruction frees space and keeps the refu
 - C wrong: CLAUDE.md holds team instructions; it is not what is filling the context.
 
 **Q4 — Correct: B.** Tests 5.4-K4, 5.4-S4.
-Why: Saved progress files plus a manifest let the lead agent reload finished work instead of redoing it.
+Why: Saved progress files plus a manifest let the main agent reload finished work instead of redoing it.
 - A wrong: progress held only in working memory is lost in the crash.
 - C wrong: it reruns finished subagents, which the constraint forbids.
 - D wrong: compaction shrinks a running conversation; it does not survive a crash.
