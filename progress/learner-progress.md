@@ -1452,6 +1452,7 @@ Status values: `not started` · `in progress` · `completed`
 - Asked whether "start again" meant carry on or restart from Module 1: carry on.
 - Warm-up (asked before the fast-track rules were re-read; no more cold checks from here): personal preference rule on a shared team project → "a CLAUDE.md in a personal folder on his machine". Correct on the idea (user-level, not shared). Cold, situation phrased.
 - Module 7, fast track: all three lessons taught, 15/15 MCQ clean, first try each. Next: Module 8.
+- After M7, asked for a more detailed definition of synchronous vs batch. Gave a plain recap from lesson.md 4.5 (phone call vs drop-off, under an hour typical, 24h cap and expiry, one-shot requests, custom_id, comparison table). Not a miss.
 - M7 MCQ attempts (logged before opening mcq-answers.md): Q4.4-1 B. Q4.4-2 D. Q4.4-3 A. Q4.4-4 C. Q4.4-5 B. Q4.5-1 C. Q4.5-2 A. Q4.5-3 D. Q4.5-4 B. Q4.5-5 C. Q4.6-1 D. Q4.6-2 B. Q4.6-3 A. Q4.6-5 D. Q4.6-4 C.
 
 ### 2026-11-08 — Session 10 (fresh conversation, so cold checks count)
