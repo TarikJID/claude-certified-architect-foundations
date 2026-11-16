@@ -13,7 +13,7 @@
 - Name: Tarik
 - Preferred style: Lecture + checkpoints
 - Started: 2026-09-22
-- Last session: 2026-11-14
+- Last session: 2026-11-16
 - Notes: "i'm rather into short straight forward sentences, long texts and complicated sentences make me zone out" — keep chunks small, plain sentences, check in often.
   Also: "it's a bit weird that you call it 'my' code" — say **the harness**, not "your code". He is
   reasoning about the architecture, not writing it.
@@ -1444,6 +1444,13 @@ Status values: `not started` · `in progress` · `completed`
 
 <!-- Newest first. What was taught, what landed, what did not, and anything about
      HOW to teach this learner that the next session should know. -->
+
+### 2026-11-16 — Session 12 (fresh conversation)
+- Local copy was stale again (remote force-updated); fetched first, reset local onto the remote before reading. Recap was right this time.
+- Note: the 2026-11-15 Module 6 fast-track session has a Module status row but no session log entry; not reconstructed here.
+- Asked whether "start again" meant carry on or restart from Module 1: carry on.
+- Warm-up (asked before the fast-track rules were re-read; no more cold checks from here): personal preference rule on a shared team project → "a CLAUDE.md in a personal folder on his machine". Correct on the idea (user-level, not shared). Cold, situation phrased.
+- Module 7 started, fast track.
 
 ### 2026-11-08 — Session 10 (fresh conversation, so cold checks count)
 - **M5 exercise done, all 8 steps.** Step 6 recognition MCQ correct; step 7 correct on the course wording; step 8 part 2 (CLAUDE.md read by `-p`) correct unaided, part 1 first answer was the previous step's answer ("previous findings"), correct after 1 hint (existing tests). Module 5 is complete as taught; next is Module 6 (precise prompting and structured output). Open the next fresh conversation with a cold check, free recall, on one Module 4 concept plus one Module 5 idea, phrased as a situation, not a name.
