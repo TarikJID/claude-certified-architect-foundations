@@ -1452,7 +1452,7 @@ Status values: `not started` · `in progress` · `completed`
 - Asked whether "start again" meant carry on or restart from Module 1: carry on.
 - Warm-up (asked before the fast-track rules were re-read; no more cold checks from here): personal preference rule on a shared team project → "a CLAUDE.md in a personal folder on his machine". Correct on the idea (user-level, not shared). Cold, situation phrased.
 - Module 7 started, fast track.
-- M7 MCQ attempts (logged before opening mcq-answers.md): Q4.4-1 B. Q4.4-2 D. Q4.4-3 A. Q4.4-4 C. Q4.4-5 B. Q4.5-1 C. Q4.5-2 A. Q4.5-3 D. Q4.5-4 B. Q4.5-5 C.
+- M7 MCQ attempts (logged before opening mcq-answers.md): Q4.4-1 B. Q4.4-2 D. Q4.4-3 A. Q4.4-4 C. Q4.4-5 B. Q4.5-1 C. Q4.5-2 A. Q4.5-3 D. Q4.5-4 B. Q4.5-5 C. Q4.6-1 D.
 
 ### 2026-11-08 — Session 10 (fresh conversation, so cold checks count)
 - **M5 exercise done, all 8 steps.** Step 6 recognition MCQ correct; step 7 correct on the course wording; step 8 part 2 (CLAUDE.md read by `-p`) correct unaided, part 1 first answer was the previous step's answer ("previous findings"), correct after 1 hint (existing tests). Module 5 is complete as taught; next is Module 6 (precise prompting and structured output). Open the next fresh conversation with a cold check, free recall, on one Module 4 concept plus one Module 5 idea, phrased as a situation, not a name.
